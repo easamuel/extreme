@@ -10,11 +10,6 @@
         <div class="brand-glow top-0 left-1/3 w-[600px] h-[350px] bg-gradient-to-br from-[#1e3a5f] via-[#00ff88]/10 to-transparent"></div>
 
         <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-            <div class="inline-flex items-center gap-2 rounded-full border border-[#00ff88]/30 bg-[#00ff88]/10 px-4 py-1.5 text-xs text-[#00ff88] backdrop-blur-md mb-8 reveal">
-                <span class="w-2 h-2 rounded-full bg-[#00ff88]"></span>
-                <span class="font-bold uppercase tracking-wider">COHORT MENTORSHIP &middot; APPLICATIONS OPENING SOON</span>
-            </div>
-
             <h1 class="mx-auto max-w-4xl text-3xl sm:text-5xl lg:text-[58px] tracking-tight leading-[1.14] reveal">
                 <span class="font-light text-white/90">We Build Great Software</span><br/>
                 <span class="font-bold text-white">We Also Build Nigerian Tech Careers</span>

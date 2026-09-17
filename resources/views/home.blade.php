@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'ExtremeSolutions | Custom Software, School Systems & Digital Automation')
-@section('description', 'ExtremeSolutions designs and builds custom software, school management platforms, and digital workflow automation for institutions in Lagos, Abuja, and across Nigeria. Live at sms.extremesolutions.com.ng.')
+@section('description', 'ExtremeSolutions designs and builds custom software, school management platforms, and digital workflow automation for modern institutions and enterprises worldwide. Live at sms.extremesolutions.com.ng.')
 
 @php
     $faqSchema = json_encode([
@@ -63,12 +63,6 @@
         <div class="brand-glow top-0 left-1/2 -translate-x-1/2 w-[550px] h-[300px] bg-gradient-to-br from-[#0f2444] via-[#00ff88]/15 to-transparent"></div>
 
         <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center w-full">
-            <!-- Top Operational Badge -->
-            <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs text-white/90 backdrop-blur-md mb-8 reveal">
-                <span class="w-2 h-2 rounded-full bg-[#00ff88] animate-pulse"></span>
-                <span class="font-medium tracking-wide">High-Performance Systems &middot; Operating Worldwide</span>
-            </div>
-
             <!-- Two-Tone Headline (Zero Trailing Dot) -->
             <h1 class="mx-auto max-w-4xl text-3xl sm:text-5xl lg:text-[60px] tracking-tight leading-[1.14] reveal">
                 <span class="font-light text-white/90">Software Engineered to Fit</span><br/>
@@ -158,7 +152,7 @@
                         </h2>
                         <p class="mt-4 text-sm sm:text-base leading-relaxed text-white/80">
                             Too many vendors deliver unfinished software and vanish into silence. 
-                            At ExtremeSolutions, we build systems we operate ourselves. Based in Lagos and engineering dependable software for ambitious organizations worldwide, we work directly with your operational leaders to eliminate friction, automate workflows, and maintain your software with 24/7 reliability.
+                            At ExtremeSolutions, we build systems we operate ourselves. Engineering dependable software for ambitious organizations worldwide, we work directly with your operational leaders to eliminate friction, automate workflows, and maintain your software with 24/7 reliability.
                         </p>
                     </div>
 
@@ -376,7 +370,7 @@
                     </div>
                     <h3 class="text-xl font-bold text-white mb-2">Talk to Us (Free Discovery)</h3>
                     <p class="text-sm leading-relaxed text-white/75">
-                        A focused, zero-obligation call or in-person session in Lagos or Abuja. We audit your manual paperwork, fee tracking, and operational bottlenecks.
+                        A focused, zero-obligation technical discovery call or virtual audit. We review your workflows, fee tracking, and operational bottlenecks.
                     </p>
                 </div>
 
@@ -745,7 +739,7 @@
                             What happens if we encounter an issue during a critical deadline?
                         </h3>
                         <p class="mt-3 text-xs sm:text-sm text-gray-700 leading-relaxed pl-8">
-                            You have direct telephone and WhatsApp access to our lead engineers (<a href="tel:09052585622" class="font-bold text-[#1e3a5f]">09052585622</a>). We do not send you through generic ticket queues. If term results or gate check-ins are underway, our team is on active standby.
+                            You have direct WhatsApp access to our lead engineers (<a href="https://wa.me/2349052585622" target="_blank" rel="noopener noreferrer" class="font-bold text-[#1e3a5f]">09052585622</a>). We do not send you through generic ticket queues. If term results or gate check-ins are underway, our team is on active standby.
                         </p>
                     </div>
 
@@ -788,7 +782,7 @@
                         </div>
                         <div class="flex items-center gap-3 text-sm text-gray-700">
                             <div class="w-7 h-7 rounded-full bg-[#1e3a5f] text-[#00ff88] flex items-center justify-center font-bold text-xs">✓</div>
-                            <span>In-person discovery in Lagos or global virtual screen-share</span>
+                            <span>One-on-one discovery consultation or virtual screen-share</span>
                         </div>
                     </div>
 
@@ -913,14 +907,14 @@
                         <span class="font-light text-white/90">With High-Performance Software</span>
                     </h2>
                     <p class="mt-4 text-sm sm:text-base leading-relaxed text-white/80">
-                        Headquartered in Lagos, engineering dependable systems for ambitious organizations worldwide.
+                        Engineering dependable, high-performance software systems for ambitious organizations worldwide.
                     </p>
                     <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
                         <a href="{{ route('contact') }}" class="rounded-full bg-[#00ff88] px-8 py-3.5 text-sm font-bold text-[#1e3a5f] hover:bg-[#00cc6a] transition-colors shadow-lg">
                             Schedule Free Consultation
                         </a>
-                        <a href="tel:09052585622" class="rounded-full border border-white/30 bg-white/10 px-7 py-3.5 text-sm font-medium text-white hover:bg-white/20 transition-colors">
-                            Call 09052585622
+                        <a href="https://wa.me/2349052585622" target="_blank" rel="noopener noreferrer" class="rounded-full border border-white/30 bg-white/10 px-7 py-3.5 text-sm font-medium text-white hover:bg-white/20 transition-colors">
+                            WhatsApp 09052585622
                         </a>
                     </div>
                 </div>

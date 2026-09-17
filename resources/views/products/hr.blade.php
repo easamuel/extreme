@@ -10,10 +10,6 @@
         <div class="brand-glow top-0 right-1/4 w-[500px] h-[300px] bg-[#00ff88]/10"></div>
 
         <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-            <span class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs text-white/90 backdrop-blur-md mb-6 reveal">
-                <span class="text-[#00ff88] font-bold">Enterprise Bespoke Solutions</span>
-            </span>
-
             <h1 class="mx-auto max-w-4xl text-3xl sm:text-5xl lg:text-[56px] tracking-tight leading-[1.15] reveal">
                 <span class="font-light text-white/90">Custom Workforce Systems</span><br/>
                 <span class="font-bold text-white">Engineered Around Your Team</span>

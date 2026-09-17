@@ -23,11 +23,8 @@
 
                 <div class="mt-5 flex flex-wrap items-center gap-2.5">
                     <span class="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/80">
-                        <svg class="h-3.5 w-3.5 text-[#00ff88]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                        Headquartered in Lagos &middot; Serving Worldwide
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#00ff88]"></span>
+                        Serving Organizations Worldwide
                     </span>
 
                     <a href="https://wa.me/2349052585622" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full border border-[#00ff88]/30 bg-[#00ff88]/10 px-3 py-1 text-xs text-[#00ff88] hover:bg-[#00ff88]/20 transition-colors">
@@ -113,11 +110,11 @@
                             </a>
                         </li>
                         <li class="pt-2">
-                            <a href="tel:09052585622" class="text-xs text-white/80 hover:text-[#00ff88] transition-colors flex items-center gap-1.5">
+                            <a href="https://wa.me/2349052585622" target="_blank" rel="noopener noreferrer" class="text-xs text-white/80 hover:text-[#00ff88] transition-colors flex items-center gap-1.5">
                                 <svg class="h-3.5 w-3.5 text-[#00ff88]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                 </svg>
-                                09052585622
+                                09052585622 (WhatsApp)
                             </a>
                         </li>
                     </ul>
@@ -131,7 +128,7 @@
                 &copy; {{ date('Y') }} ExtremeSolutions. All rights reserved. Technology built around how your organization operates.
             </p>
             <p class="text-center md:text-right text-white/50">
-                Headquartered in Lagos &middot; Serving Organizations Worldwide
+                Engineering Dependable Systems Worldwide
             </p>
         </div>
     </div>

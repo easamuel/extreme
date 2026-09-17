@@ -7,7 +7,7 @@
 
     @php
         $seoTitle = trim($__env->yieldContent('title', 'ExtremeSolutions | Custom Software, School Systems & Digital Automation'));
-        $seoDescription = trim($__env->yieldContent('description', 'ExtremeSolutions designs and builds high-performance custom software, school management systems, event ticketing platforms, and digital automation for institutions and businesses in Lagos, Abuja, and across Nigeria.'));
+        $seoDescription = trim($__env->yieldContent('description', 'ExtremeSolutions designs and builds high-performance custom software, school management systems, event ticketing platforms, and digital automation for modern institutions and enterprises worldwide.'));
         $canonicalUrl = url()->current();
         $ogImage = asset('favicon.svg');
 
@@ -16,20 +16,14 @@
             '@type' => 'ProfessionalService',
             '@id' => url('/') . '#organization',
             'name' => 'ExtremeSolutions',
-            'legalName' => 'ExtremeSolutions Nigeria',
+            'legalName' => 'ExtremeSolutions',
             'url' => url('/'),
             'logo' => asset('favicon.svg'),
             'image' => asset('favicon.svg'),
-            'description' => 'ExtremeSolutions designs and builds custom software, school management systems, ticketing solutions, and digital automation for businesses and institutions in Lagos and Abuja, Nigeria.',
+            'description' => 'ExtremeSolutions designs and builds custom software, school management systems, ticketing solutions, and digital automation for ambitious organizations worldwide.',
             'telephone' => '+2349052585622',
             'email' => 'info@extremesolutions.com.ng',
-            'address' => [
-                '@type' => 'PostalAddress',
-                'addressLocality' => 'Lagos',
-                'addressRegion' => 'Lagos State',
-                'addressCountry' => 'NG',
-            ],
-            'areaServed' => ['Lagos', 'Abuja', 'Nigeria', 'Africa'],
+            'areaServed' => 'Worldwide',
             'priceRange' => '$$',
             'knowsAbout' => [
                 'Custom Software Development',
