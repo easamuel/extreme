@@ -1,75 +1,131 @@
 @extends('layouts.app')
 
-@section('title', $title ?? 'ESPass Ticketing Platform - ExtremeSolutions')
-@section('description', $description ?? 'Sell tickets, manage attendees, and check people in at the door — live at espass.extremesolutions.com.ng.')
+@section('title', 'ESPass Event Ticketing & Access Engine | ExtremeSolutions')
+@section('description', 'High-throughput event ticketing, instant fraud-proof QR validation, and real-time attendee revenue reconciliation. Live in production at espass.extremesolutions.com.ng.')
+
+@section('structured-data')
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ESPass Event Ticketing & Access Engine",
+  "operatingSystem": "All modern browsers (Web / Mobile)",
+  "applicationCategory": "BusinessApplication",
+  "url": "https://espass.extremesolutions.com.ng",
+  "description": "Cloud ticketing and gate verification system for modern events, conferences, and venue operations across Nigeria.",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "NGN",
+    "price": "Contact for event tier pricing"
+  },
+  "publisher": {
+    "@id": "{{ url('/') }}#organization"
+  }
+}
+</script>
+@endsection
 
 @section('content')
-    <!-- Hero -->
-    <section class="bg-gradient-to-r from-[#1e3a5f] to-[#2a4d7a] py-20">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto text-center text-white reveal">
-                <span class="inline-block bg-[#00ff88] text-[#1e3a5f] text-xs font-bold uppercase tracking-wide px-3 py-1 rounded-full mb-4">Live Now</span>
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">Sell Tickets, Manage Events, Check People In</h1>
-                <p class="text-xl text-white/90 mb-8">
-                    ESPass is our event ticketing platform — from putting an event on sale to scanning guests in
-                    at the door, without juggling spreadsheets and third-party tools.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="{{ route('contact', ['subject' => 'ESPass Demo Request']) }}" class="bg-[#00ff88] text-[#1e3a5f] px-8 py-3 rounded-lg font-semibold hover:bg-[#00cc6a] transition-colors shadow-lg">
-                        Book a Free Demo
-                    </a>
-                    <a href="https://espass.extremesolutions.com.ng" target="_blank" rel="noopener" class="bg-white text-[#1e3a5f] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                        See the Live Platform →
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Hero Surface -->
+    <section class="brand-surface relative overflow-hidden bg-[#0c1f3a] text-white pt-16 pb-20 md:pt-24 md:pb-32">
+        <div class="brand-texture" aria-hidden="true"></div>
+        <div class="brand-glow top-0 right-1/4 w-[600px] h-[350px] bg-gradient-to-br from-[#1e3a5f] via-[#d4a373]/15 to-transparent"></div>
 
-    <!-- Features -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto reveal">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Everything to Run an Event</h2>
-                    <div class="w-24 h-1 bg-[#1e3a5f] mx-auto mb-6"></div>
-                </div>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="bg-gray-50 rounded-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-                        <h3 class="font-semibold text-gray-900 mb-2">Event Creation &amp; Ticket Sales</h3>
-                        <p class="text-gray-600 text-sm">Put an event on sale with different ticket types, then track sales as they come in.</p>
-                    </div>
-                    <div class="bg-gray-50 rounded-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-                        <h3 class="font-semibold text-gray-900 mb-2">Digital Tickets</h3>
-                        <p class="text-gray-600 text-sm">Attendees get a scannable digital ticket — no printing, no manual guest lists.</p>
-                    </div>
-                    <div class="bg-gray-50 rounded-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-                        <h3 class="font-semibold text-gray-900 mb-2">Check-In at the Door</h3>
-                        <p class="text-gray-600 text-sm">Scan tickets on arrival so you know exactly who's in the room, in real time.</p>
-                    </div>
-                    <div class="bg-gray-50 rounded-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-                        <h3 class="font-semibold text-gray-900 mb-2">Attendee Dashboard</h3>
-                        <p class="text-gray-600 text-sm">See registrations, check-ins, and sales in one place instead of a scattered spreadsheet.</p>
-                    </div>
-                </div>
+        <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center gap-2 rounded-full border border-[#00ff88]/30 bg-[#00ff88]/10 px-4 py-1.5 text-xs text-[#00ff88] backdrop-blur-md mb-8 reveal">
+                <span class="w-2 h-2 rounded-full bg-[#00ff88] animate-pulse"></span>
+                <span class="font-bold">LIVE PRODUCTION PLATFORM &middot; espass.extremesolutions.com.ng</span>
             </div>
-        </div>
-    </section>
 
-    <!-- Trust / CTA -->
-    <section class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center reveal">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Built and Run by Our Own Team</h2>
-                <div class="w-24 h-1 bg-[#1e3a5f] mx-auto mb-6"></div>
-                <p class="text-lg text-gray-700 mb-8">
-                    Like everything we build, ESPass is a live product, not a mockup. See it running at
-                    <a href="https://espass.extremesolutions.com.ng" target="_blank" rel="noopener" class="text-[#1e3a5f] font-semibold underline">espass.extremesolutions.com.ng</a>,
-                    or tell us about your event and we'll walk you through it.
-                </p>
-                <a href="{{ route('contact', ['subject' => 'ESPass Demo Request']) }}" class="inline-block bg-[#1e3a5f] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#152a47] transition-colors">
-                    Talk to Us About Your Event
+            <h1 class="mx-auto max-w-4xl text-3xl sm:text-5xl lg:text-[58px] tracking-tight leading-[1.14] reveal">
+                <span class="font-light text-white/90">Sell Out Your Events.</span><br/>
+                <span class="font-bold text-white">Check Guests In In Under a Second<span class="text-[#d4a373]">.</span></span>
+            </h1>
+
+            <p class="mx-auto mt-6 max-w-2xl text-sm sm:text-base leading-relaxed text-white/75 reveal">
+                ESPass is our event ticketing and access control infrastructure. Eliminate counterfeit paper passes, chaotic door bottlenecks, and fragmented payment spreadsheets with an automated cloud platform.
+            </p>
+
+            <div class="mt-10 flex flex-wrap items-center justify-center gap-4 reveal">
+                <a href="{{ route('contact', ['subject' => 'ESPass Demo Request']) }}" class="inline-flex items-center rounded-full bg-[#d4a373] px-8 py-3.5 text-sm font-bold text-[#0c1f3a] hover:bg-[#c5935f] transition-all shadow-lg hover:-translate-y-0.5">
+                    Schedule an Event Walkthrough
                 </a>
+                <a href="https://espass.extremesolutions.com.ng" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-7 py-3.5 text-sm font-medium text-white hover:bg-white/20 transition-all">
+                    <span>Explore Live Platform</span>
+                    <svg class="h-4 w-4 text-[#d4a373] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17l10-10M7 7h10v10" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Operational Advantages Grid -->
+    <section class="bg-white py-20 md:py-28">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mb-14 reveal">
+                <span class="text-xs font-bold uppercase tracking-wider text-[#d4a373]">Engineered for Organizers</span>
+                <h2 class="mt-2 text-3xl sm:text-4xl font-bold text-[#0c1f3a]">
+                    Zero Guesswork. 100% Gate Control.
+                </h2>
+                <p class="mt-4 text-sm sm:text-base text-gray-600">
+                    Designed for corporate conferences, campus celebrations, private summits, and commercial ticketed venues.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="rounded-2xl bg-[#f8fafc] p-6 border border-gray-200/80 shadow-sm reveal">
+                    <div class="w-10 h-10 rounded-xl bg-[#0c1f3a] text-[#d4a373] flex items-center justify-center font-bold text-sm mb-4">
+                        01
+                    </div>
+                    <h4 class="font-bold text-[#0c1f3a] mb-2">Instant QR Pass Generation</h4>
+                    <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">Unique encrypted QR tokens delivered directly to the attendee's email and smartphone immediately upon ticket purchase.</p>
+                </div>
+
+                <div class="rounded-2xl bg-[#f8fafc] p-6 border border-gray-200/80 shadow-sm reveal">
+                    <div class="w-10 h-10 rounded-xl bg-[#0c1f3a] text-[#00ff88] flex items-center justify-center font-bold text-sm mb-4">
+                        02
+                    </div>
+                    <h4 class="font-bold text-[#0c1f3a] mb-2">Sub-Second Gate Scan</h4>
+                    <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">Turn any mobile phone camera or handheld scanner into an ultra-fast gate scanner with zero lag or duplicate entry.</p>
+                </div>
+
+                <div class="rounded-2xl bg-[#f8fafc] p-6 border border-gray-200/80 shadow-sm reveal">
+                    <div class="w-10 h-10 rounded-xl bg-[#0c1f3a] text-[#d4a373] flex items-center justify-center font-bold text-sm mb-4">
+                        03
+                    </div>
+                    <h4 class="font-bold text-[#0c1f3a] mb-2">Live Attendance Metrics</h4>
+                    <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">Watch real-time headcounts, entry rates, VIP check-ins, and ticket revenue live from the central organizer console.</p>
+                </div>
+
+                <div class="rounded-2xl bg-[#f8fafc] p-6 border border-gray-200/80 shadow-sm reveal">
+                    <div class="w-10 h-10 rounded-xl bg-[#0c1f3a] text-[#00ff88] flex items-center justify-center font-bold text-sm mb-4">
+                        04
+                    </div>
+                    <h4 class="font-bold text-[#0c1f3a] mb-2">Direct Bank Settlement</h4>
+                    <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">Seamless integration with Nigerian payment channels with transparent auditing and instant settlement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom CTA Banner -->
+    <section class="bg-white pb-20">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="brand-surface relative overflow-hidden rounded-3xl p-10 sm:p-14 text-center text-white reveal">
+                <div class="brand-texture" aria-hidden="true"></div>
+                <div class="relative z-10 max-w-2xl mx-auto">
+                    <h3 class="text-2xl sm:text-4xl font-bold tracking-tight">Planning an Upcoming Event?</h3>
+                    <p class="mt-4 text-sm text-white/75">Talk to our team about deploying ESPass for your next conference or venue.</p>
+                    <div class="mt-8 flex flex-wrap justify-center gap-4">
+                        <a href="{{ route('contact', ['subject' => 'ESPass Demo Request']) }}" class="rounded-full bg-[#d4a373] px-7 py-3 text-sm font-bold text-[#0c1f3a] hover:bg-[#c5935f] transition-colors">
+                            Request Event Deployment
+                        </a>
+                        <a href="https://espass.extremesolutions.com.ng" target="_blank" rel="noopener noreferrer" class="rounded-full border border-white/20 px-6 py-3 text-sm font-medium text-white hover:bg-white/10 transition-colors">
+                            Open Live Platform
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

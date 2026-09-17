@@ -1,80 +1,69 @@
 @extends('layouts.app')
 
-@section('title', $title ?? 'HR Management Solution - ExtremeSolutions')
-@section('description', $description ?? 'Comprehensive HR management platform for businesses.')
+@section('title', 'Custom HR & Workforce Systems | ExtremeSolutions')
+@section('description', 'Bespoke workforce management, automated payroll collation, leave administration, and staff records engineered for Nigerian enterprises.')
 
 @section('content')
-    <section class="bg-gradient-to-r from-[#1e3a5f] to-[#2a4d7a] py-20">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto text-center text-white">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">HR Management Solution</h1>
-                <p class="text-xl text-white/90">
-                    Streamline your human resources operations with our comprehensive platform
-                </p>
-            </div>
+    <!-- Hero Surface -->
+    <section class="brand-surface relative overflow-hidden bg-[#0c1f3a] text-white pt-16 pb-20 md:pt-24 md:pb-28">
+        <div class="brand-texture" aria-hidden="true"></div>
+        <div class="brand-glow top-0 right-1/4 w-[500px] h-[300px] bg-[#d4a373]/15"></div>
+
+        <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+            <span class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs text-white/90 backdrop-blur-md mb-6 reveal">
+                <span class="text-[#d4a373] font-bold">Enterprise Bespoke Solutions</span>
+            </span>
+
+            <h1 class="mx-auto max-w-4xl text-3xl sm:text-5xl lg:text-[56px] tracking-tight leading-[1.15] reveal">
+                <span class="font-light text-white/90">Custom Workforce Systems</span><br/>
+                <span class="font-bold text-white">Engineered Around Your Team<span class="text-[#d4a373]">.</span></span>
+            </h1>
+
+            <p class="mx-auto mt-6 max-w-2xl text-sm sm:text-base leading-relaxed text-white/75 reveal">
+                We design and build bespoke workforce management, automated staff records, and payroll calculation systems tailored to your specific organizational hierarchy.
+            </p>
         </div>
     </section>
 
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto">
-                <div class="prose prose-lg max-w-none">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Overview</h2>
-                    <p class="text-lg text-gray-700 mb-6">
-                        Our HR Management solution is designed to help businesses of all sizes manage their workforce 
-                        efficiently. From employee onboarding to payroll processing, our platform provides all the tools 
-                        you need to streamline HR operations.
+    <!-- Details -->
+    <section class="bg-white py-20 md:py-28">
+        <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto">
+                <span class="text-xs font-bold uppercase tracking-wider text-[#d4a373]">Workforce Operations</span>
+                <h2 class="mt-2 text-2xl sm:text-3xl font-bold text-[#0c1f3a]">
+                    Tailor-Built for Your Exact Corporate Processes
+                </h2>
+                <div class="w-16 h-1 bg-[#d4a373] mt-4 mb-8"></div>
+
+                <div class="grid sm:grid-cols-2 gap-6 my-10">
+                    <div class="p-6 rounded-2xl bg-[#f8fafc] border border-gray-200">
+                        <h3 class="font-bold text-[#0c1f3a] text-lg mb-2">Employee Records &amp; Bio Data</h3>
+                        <p class="text-xs sm:text-sm text-gray-600">Centralized staff profiles, digital contract archives, and automated anniversary alerts.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-[#f8fafc] border border-gray-200">
+                        <h3 class="font-bold text-[#0c1f3a] text-lg mb-2">Automated Payroll Rules</h3>
+                        <p class="text-xs sm:text-sm text-gray-600">Calculations tailored to your local tax brackets, pension deductions, and bonus formulas.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-[#f8fafc] border border-gray-200">
+                        <h3 class="font-bold text-[#0c1f3a] text-lg mb-2">Multi-Tier Leave Approvals</h3>
+                        <p class="text-xs sm:text-sm text-gray-600">Self-service staff requests with automatic routing to department heads and HR managers.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-[#f8fafc] border border-gray-200">
+                        <h3 class="font-bold text-[#0c1f3a] text-lg mb-2">Secure Audit Trails</h3>
+                        <p class="text-xs sm:text-sm text-gray-600">Enterprise data encryption, role-based viewing permissions, and immutable access logs.</p>
+                    </div>
+                </div>
+
+                <div class="rounded-3xl bg-[#0c1f3a] text-white p-8 sm:p-10 text-center">
+                    <h3 class="text-xl sm:text-2xl font-bold">Need a Custom Workforce Platform?</h3>
+                    <p class="mt-3 text-sm text-white/75 max-w-xl mx-auto">
+                        Tell us about your organization size, department structure, and operational requirements. We engineer the exact system you need.
                     </p>
-
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Key Features</h3>
-                    <ul class="space-y-3 text-gray-700 mb-8">
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-[#00ff88] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                            </svg>
-                            <span><strong>Employee Management:</strong> Complete employee database with profiles, documents, and history</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-[#00ff88] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                            </svg>
-                            <span><strong>Payroll Processing:</strong> Automated payroll calculations and processing</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-[#00ff88] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                            </svg>
-                            <span><strong>Attendance Tracking:</strong> Real-time attendance monitoring and reporting</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-[#00ff88] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                            </svg>
-                            <span><strong>Leave Management:</strong> Request and approve leave requests seamlessly</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-[#00ff88] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                            </svg>
-                            <span><strong>Performance Reviews:</strong> Track and manage employee performance evaluations</span>
-                        </li>
-                    </ul>
-
-                    <div class="bg-[#e8f4f0] border-l-4 border-[#1e3a5f] p-6 my-8">
-                        <p class="text-gray-700">
-                            <strong>Note:</strong> This is a placeholder page. The full HR Management solution will be available 
-                            at <code class="bg-white px-2 py-1 rounded">hr.extremesolutions.com</code> in the future.
-                        </p>
-                    </div>
-
-                    <div class="mt-8">
-                        <a href="{{ route('contact') }}" class="inline-block bg-[#1e3a5f] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#152a47] transition-colors">
-                            Contact Us for More Information
-                        </a>
-                    </div>
+                    <a href="{{ route('contact', ['subject' => 'Custom HR System Scope']) }}" class="mt-6 inline-block rounded-full bg-[#d4a373] px-8 py-3 text-xs uppercase font-bold text-[#0c1f3a] hover:bg-[#c5935f] transition-all">
+                        Request System Architecture Call
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 @endsection
-
