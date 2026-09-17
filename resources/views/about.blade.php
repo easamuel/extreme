@@ -3,19 +3,21 @@
 @section('title', 'About ExtremeSolutions | Engineering Dependable Software & Systems')
 @section('description', 'ExtremeSolutions designs, builds, and operates custom software, school management systems, and enterprise automation across Nigeria and Africa.')
 
+@php
+    $aboutSchema = json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'AboutPage',
+        'name' => 'About ExtremeSolutions',
+        'url' => route('about'),
+        'description' => 'ExtremeSolutions is a digital solutions and software engineering company committed to building dependable, tailored systems for institutions and businesses.',
+        'publisher' => [
+            '@id' => url('/') . '#organization',
+        ],
+    ]);
+@endphp
+
 @section('structured-data')
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "AboutPage",
-  "name": "About ExtremeSolutions",
-  "url": "{{ route('about') }}",
-  "description": "ExtremeSolutions is a digital solutions and software engineering company committed to building dependable, tailored systems for institutions and businesses.",
-  "publisher": {
-    "@id": "{{ url('/') }}#organization"
-  }
-}
-</script>
+<script type="application/ld+json">{!! $aboutSchema !!}</script>
 @endsection
 
 @section('content')

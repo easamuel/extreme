@@ -3,27 +3,29 @@
 @section('title', 'ExtremeSolutions SMS | School Management System for Forward-Thinking Schools')
 @section('description', 'Run your entire school from one dashboard: automated term results, fee ledger reconciliation, student attendance, and instant parent portals. Live at sms.extremesolutions.com.ng.')
 
+@php
+    $schoolSchema = json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'SoftwareApplication',
+        'name' => 'ExtremeSolutions School Management System (SMS)',
+        'operatingSystem' => 'All modern browsers (Cloud SaaS)',
+        'applicationCategory' => 'EducationalApplication',
+        'url' => 'https://sms.extremesolutions.com.ng',
+        'description' => 'Unified school administration platform covering student fee tracking, automated term result collation, attendance monitoring, and parent communication.',
+        'offers' => [
+            '@type' => 'Offer',
+            'priceCurrency' => 'NGN',
+            'price' => 'Contact for per-student term rate',
+            'description' => 'Low-commitment per-student, per-term subscription that scales with school enrollment.',
+        ],
+        'publisher' => [
+            '@id' => url('/') . '#organization',
+        ],
+    ]);
+@endphp
+
 @section('structured-data')
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "ExtremeSolutions School Management System (SMS)",
-  "operatingSystem": "All modern browsers (Cloud SaaS)",
-  "applicationCategory": "EducationalApplication",
-  "url": "https://sms.extremesolutions.com.ng",
-  "description": "Unified school administration platform covering student fee tracking, automated term result collation, attendance monitoring, and parent communication.",
-  "offers": {
-    "@type": "Offer",
-    "priceCurrency": "NGN",
-    "price": "Contact for per-student term rate",
-    "description": "Low-commitment per-student, per-term subscription that scales with school enrollment."
-  },
-  "publisher": {
-    "@id": "{{ url('/') }}#organization"
-  }
-}
-</script>
+<script type="application/ld+json">{!! $schoolSchema !!}</script>
 @endsection
 
 @section('content')

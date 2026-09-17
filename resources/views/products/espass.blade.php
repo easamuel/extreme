@@ -3,26 +3,28 @@
 @section('title', 'ESPass Event Ticketing & Access Engine | ExtremeSolutions')
 @section('description', 'High-throughput event ticketing, instant fraud-proof QR validation, and real-time attendee revenue reconciliation. Live in production at espass.extremesolutions.com.ng.')
 
+@php
+    $espassSchema = json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'SoftwareApplication',
+        'name' => 'ESPass Event Ticketing & Access Engine',
+        'operatingSystem' => 'All modern browsers (Web / Mobile)',
+        'applicationCategory' => 'BusinessApplication',
+        'url' => 'https://espass.extremesolutions.com.ng',
+        'description' => 'Cloud ticketing and gate verification system for modern events, conferences, and venue operations across Nigeria.',
+        'offers' => [
+            '@type' => 'Offer',
+            'priceCurrency' => 'NGN',
+            'price' => 'Contact for event tier pricing',
+        ],
+        'publisher' => [
+            '@id' => url('/') . '#organization',
+        ],
+    ]);
+@endphp
+
 @section('structured-data')
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "ESPass Event Ticketing & Access Engine",
-  "operatingSystem": "All modern browsers (Web / Mobile)",
-  "applicationCategory": "BusinessApplication",
-  "url": "https://espass.extremesolutions.com.ng",
-  "description": "Cloud ticketing and gate verification system for modern events, conferences, and venue operations across Nigeria.",
-  "offers": {
-    "@type": "Offer",
-    "priceCurrency": "NGN",
-    "price": "Contact for event tier pricing"
-  },
-  "publisher": {
-    "@id": "{{ url('/') }}#organization"
-  }
-}
-</script>
+<script type="application/ld+json">{!! $espassSchema !!}</script>
 @endsection
 
 @section('content')

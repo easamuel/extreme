@@ -3,20 +3,22 @@
 @section('title', 'Contact ExtremeSolutions | Book a Discovery Consultation')
 @section('description', 'Talk directly with senior software engineers about your school, ticketing, or custom software requirements. Free consultation &middot; zero obligation.')
 
+@php
+    $contactSchema = json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'ContactPage',
+        'name' => 'Contact ExtremeSolutions',
+        'url' => route('contact'),
+        'description' => 'Book a free discovery consultation or request a live school system demo from ExtremeSolutions.',
+        'mainEntity' => [
+            '@type' => 'ProfessionalService',
+            '@id' => url('/') . '#organization',
+        ],
+    ]);
+@endphp
+
 @section('structured-data')
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ContactPage",
-  "name": "Contact ExtremeSolutions",
-  "url": "{{ route('contact') }}",
-  "description": "Book a free discovery consultation or request a live school system demo from ExtremeSolutions.",
-  "mainEntity": {
-    "@type": "ProfessionalService",
-    "@id": "{{ url('/') }}#organization"
-  }
-}
-</script>
+<script type="application/ld+json">{!! $contactSchema !!}</script>
 @endsection
 
 @section('content')
@@ -115,7 +117,7 @@
                                 value="{{ old('email') }}"
                                 required
                                 class="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm text-gray-900 focus:border-[#0c1f3a] focus:ring-1 focus:ring-[#0c1f3a] bg-white @error('email') border-red-500 @enderror"
-                                placeholder="you@organization.com"
+                                placeholder="you@@organization.com"
                             >
                             @error('email')
                                 <p class="mt-1 text-xs text-red-600">{{ $message }}</p>

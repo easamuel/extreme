@@ -3,55 +3,57 @@
 @section('title', 'ExtremeSolutions | Building Modern Software & Digital Systems for Institutions')
 @section('description', 'ExtremeSolutions engineers custom software, school management systems, and automated digital platforms for institutions and businesses across Nigeria. See our live School System & ESPass platforms.')
 
+@php
+    $faqSchema = json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => [
+            [
+                '@type' => 'Question',
+                'name' => 'How does ExtremeSolutions differ from generic software vendors?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'We do not just consult or resell third-party tools. We engineer and operate our own live production platforms — such as the ExtremeSolutions School Management System (sms.extremesolutions.com.ng) and ESPass (espass.extremesolutions.com.ng). When we build your system, you deal directly with senior software engineers, see working software early, and receive dedicated post-launch support.',
+                ],
+            ],
+            [
+                '@type' => 'Question',
+                'name' => 'How does the School Management System work for my school?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'ExtremeSolutions SMS unifies student fee tracking, automated term result collation, attendance monitoring, and parent communication into one secure cloud dashboard. We assist your school with data migration, onboarding, and comprehensive staff training so your team never struggles with paper registers or spreadsheet errors again.',
+                ],
+            ],
+            [
+                '@type' => 'Question',
+                'name' => 'How is pricing structured?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'For our School Management System, we use a transparent, low-commitment per-student, per-term model that scales naturally with your school. For custom software and business systems, we agree on clear, milestone-based pricing upfront with zero hidden fees.',
+                ],
+            ],
+            [
+                '@type' => 'Question',
+                'name' => 'Can we test the live platforms before making a commitment?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Yes. Both sms.extremesolutions.com.ng and espass.extremesolutions.com.ng are live in production. You can book a free, no-obligation walkthrough with our team where we demonstrate the system with your exact operational context in mind.',
+                ],
+            ],
+            [
+                '@type' => 'Question',
+                'name' => 'What level of support do you provide after launch?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'We never hand over software into silence. We provide ongoing maintenance, automated cloud backups, 24/7 server monitoring, and direct phone and WhatsApp access to a real engineer whenever your staff needs assistance.',
+                ],
+            ],
+        ],
+    ]);
+@endphp
+
 @section('structured-data')
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How does ExtremeSolutions differ from generic software vendors?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We do not just consult or resell third-party tools. We engineer and operate our own live production platforms — such as the ExtremeSolutions School Management System (sms.extremesolutions.com.ng) and ESPass (espass.extremesolutions.com.ng). When we build your system, you deal directly with senior software engineers, see working software early, and receive dedicated post-launch support."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How does the School Management System work for my school?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "ExtremeSolutions SMS unifies student fee tracking, automated term result collation, attendance monitoring, and parent communication into one secure cloud dashboard. We assist your school with data migration, onboarding, and comprehensive staff training so your team never struggles with paper registers or spreadsheet errors again."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How is pricing structured?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "For our School Management System, we use a transparent, low-commitment per-student, per-term model that scales naturally with your school. For custom software and business systems, we agree on clear, milestone-based pricing upfront with zero hidden fees."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can we test the live platforms before making a commitment?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Both sms.extremesolutions.com.ng and espass.extremesolutions.com.ng are live in production. You can book a free, no-obligation walkthrough with our team where we demonstrate the system with your exact operational context in mind."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What level of support do you provide after launch?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We never hand over software into silence. We provide ongoing maintenance, automated cloud backups, 24/7 server monitoring, and direct phone and WhatsApp access to a real engineer whenever your staff needs assistance."
-      }
-    }
-  ]
-}
-</script>
+<script type="application/ld+json">{!! $faqSchema !!}</script>
 @endsection
 
 @section('content')
@@ -1129,7 +1131,7 @@
                                 </div>
                                 <div>
                                     <label for="input-email" class="block text-xs font-semibold text-gray-600 mb-1">Your Email Address *</label>
-                                    <input type="email" id="input-email" name="email" required class="w-full rounded-xl border border-gray-300 px-4 py-2.5 text-sm text-gray-900 focus:border-[#0c1f3a] focus:ring-1 focus:ring-[#0c1f3a] bg-white" placeholder="you@organization.com">
+                                    <input type="email" id="input-email" name="email" required class="w-full rounded-xl border border-gray-300 px-4 py-2.5 text-sm text-gray-900 focus:border-[#0c1f3a] focus:ring-1 focus:ring-[#0c1f3a] bg-white" placeholder="you@@organization.com">
                                 </div>
                                 <div>
                                     <label for="input-phone" class="block text-xs font-semibold text-gray-600 mb-1">Phone / WhatsApp Number (Optional)</label>
