@@ -42,7 +42,7 @@
 
             <h1 class="mx-auto max-w-4xl text-3xl sm:text-5xl lg:text-[58px] tracking-tight leading-[1.14] reveal">
                 <span class="font-light text-white/90">Run Your Entire School</span><br/>
-                <span class="font-bold text-white">From One Clean Dashboard<span class="text-[#00ff88]">.</span></span>
+                <span class="font-bold text-white">From One Clean Dashboard</span>
             </h1>
 
             <p class="mx-auto mt-6 max-w-2xl text-sm sm:text-base leading-relaxed text-white/75 reveal">
@@ -198,8 +198,8 @@
                 <div class="relative z-10 text-center">
                     <span class="text-xs font-bold uppercase tracking-wider text-[#00ff88]">Risk-Reversal Pricing</span>
                     <h2 class="mt-4 text-2xl sm:text-4xl font-bold tracking-tight">
-                        You Pay Per Student, Per Term.<br class="hidden sm:inline" />
-                        It Grows With Your School &mdash; Never Traps You.
+                        You Pay Per Student, Per Term<br class="hidden sm:inline" />
+                        It Grows With Your School, Never Traps You
                     </h2>
                     <p class="mt-4 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed text-white/75">
                         No massive multi-million Naira upfront software licenses. If your enrollment changes, your investment adjusts automatically. We onboard your staff and configure your school completely before term begins.

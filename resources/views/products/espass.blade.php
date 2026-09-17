@@ -40,8 +40,8 @@
             </div>
 
             <h1 class="mx-auto max-w-4xl text-3xl sm:text-5xl lg:text-[58px] tracking-tight leading-[1.14] reveal">
-                <span class="font-light text-white/90">Sell Out Your Events.</span><br/>
-                <span class="font-bold text-white">Check Guests In In Under a Second<span class="text-[#00ff88]">.</span></span>
+                <span class="font-light text-white/90">Sell Out Your Events</span><br/>
+                <span class="font-bold text-white">Check Guests In In Under a Second</span>
             </h1>
 
             <p class="mx-auto mt-6 max-w-2xl text-sm sm:text-base leading-relaxed text-white/75 reveal">
@@ -68,7 +68,7 @@
             <div class="max-w-3xl mb-14 reveal">
                 <span class="text-xs font-bold uppercase tracking-wider text-emerald-600">Engineered for Organizers</span>
                 <h2 class="mt-2 text-3xl sm:text-4xl font-bold text-[#0c1f3a]">
-                    Zero Guesswork. 100% Gate Control.
+                    Zero Guesswork, 100% Gate Control
                 </h2>
                 <p class="mt-4 text-sm sm:text-base text-gray-600">
                     Designed for corporate conferences, campus celebrations, private summits, and commercial ticketed venues.

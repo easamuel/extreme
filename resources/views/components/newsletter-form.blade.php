@@ -5,7 +5,7 @@
 
     @if(session('newsletter_success'))
         <p class="text-sm font-medium mb-3 {{ $theme === 'dark' ? 'text-[#00ff88]' : 'text-green-600' }}">
-            You're subscribed — we will notify you when applications open.
+            You're subscribed, we will notify you when applications open.
         </p>
     @endif
 

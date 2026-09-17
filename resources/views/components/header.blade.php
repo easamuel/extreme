@@ -16,12 +16,9 @@
                 <a href="{{ route('home') }}#how-we-work" class="text-[13px] text-white/80 hover:text-white transition-colors">
                     The 3-Step Process
                 </a>
-                <a href="{{ route('home') }}#featured-projects" class="text-[13px] text-white/80 hover:text-white transition-colors">
-                    Live Systems
-                </a>
-                <a href="{{ route('products.school') }}" class="text-[13px] text-white/80 hover:text-white transition-colors flex items-center gap-1.5">
-                    <span>School Platform</span>
-                    <span class="inline-block w-1.5 h-1.5 rounded-full bg-[#00ff88]" title="Live Platform"></span>
+                <a href="{{ route('home') }}#featured-projects" class="text-[13px] text-white/80 hover:text-white transition-colors flex items-center gap-1.5">
+                    <span>Live Systems</span>
+                    <span class="inline-block w-1.5 h-1.5 rounded-full bg-[#00ff88]" title="Live Platforms"></span>
                 </a>
                 <a href="{{ route('about') }}" class="text-[13px] text-white/80 hover:text-white transition-colors {{ request()->routeIs('about') ? 'text-[#00ff88] font-semibold' : '' }}">
                     About Us
@@ -65,15 +62,8 @@
             <a href="{{ route('home') }}#how-we-work" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-sm font-medium text-white/85 hover:text-white hover:bg-white/5 transition-colors">
                 The 3-Step Process
             </a>
-            <a href="{{ route('home') }}#featured-projects" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-sm font-medium text-white/85 hover:text-white hover:bg-white/5 transition-colors">
-                Live Systems
-            </a>
-            <a href="{{ route('products.school') }}" class="mobile-nav-link flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium text-white/85 hover:text-white hover:bg-white/5 transition-colors">
-                <span>School Management System</span>
-                <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-[#00ff88]/20 text-[#00ff88]">Live</span>
-            </a>
-            <a href="{{ route('products.espass') }}" class="mobile-nav-link flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium text-white/85 hover:text-white hover:bg-white/5 transition-colors">
-                <span>ESPass Ticketing</span>
+            <a href="{{ route('home') }}#featured-projects" class="mobile-nav-link flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium text-white/85 hover:text-white hover:bg-white/5 transition-colors">
+                <span>Live Systems in Production</span>
                 <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-[#00ff88]/20 text-[#00ff88]">Live</span>
             </a>
             <a href="{{ route('about') }}" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-sm font-medium text-white/85 hover:text-white hover:bg-white/5 transition-colors {{ request()->routeIs('about') ? 'text-[#00ff88]' : '' }}">

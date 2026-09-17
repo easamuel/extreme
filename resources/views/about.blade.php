@@ -32,12 +32,12 @@
             </span>
 
             <h1 class="mx-auto max-w-4xl text-3xl sm:text-5xl lg:text-[56px] tracking-tight leading-[1.15] reveal">
-                <span class="font-light text-white/90">We Don't Just Advise.</span><br/>
-                <span class="font-bold text-white">We Build, Train &amp; Ship<span class="text-[#00ff88]">.</span></span>
+                <span class="font-light text-white/90">We Don't Just Advise</span><br/>
+                <span class="font-bold text-white">We Build, Train &amp; Ship</span>
             </h1>
 
             <p class="mx-auto mt-6 max-w-2xl text-sm sm:text-base leading-relaxed text-white/75 reveal">
-                ExtremeSolutions is a software engineering company dedicated to closing the gap between off-the-shelf software limitations and how institutions actually operate.
+                ExtremeSolutions is a software engineering company dedicated to closing the gap between off-the-shelf software limitations and how modern organizations actually operate.
             </p>
         </div>
     </section>
@@ -54,13 +54,13 @@
 
                 <div class="space-y-6 text-base sm:text-lg leading-relaxed text-gray-700">
                     <p>
-                        ExtremeSolutions started with a pervasive frustration: too much enterprise software is built for a theoretical market instead of the real people operating it. School proprietors and business administrators were stuck navigating fragmented spreadsheets, clunky generic tools, or paying vendors who produced half-finished software and vanished.
+                        ExtremeSolutions started with a pervasive frustration: too much enterprise software is built for a theoretical market instead of the real people operating it. Administrators and executive teams were stuck navigating fragmented spreadsheets, clunky generic tools, or paying vendors who produced half-finished software and vanished.
                     </p>
                     <p>
-                        We set out to build the opposite. We believe that technology should bend to fit how your institution runs — not force your team into convoluted workarounds.
+                        We set out to build the opposite. We believe that technology should bend to fit how your organization runs, not force your team into convoluted workarounds.
                     </p>
                     <p>
-                        To guarantee our software is dependable, we run our own platforms in live production every day: our School Management System (<a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-emerald-600 font-semibold underline">sms.extremesolutions.com.ng</a>) and our ESPass ticketing engine (<a href="https://espass.extremesolutions.com.ng" target="_blank" class="text-emerald-600 font-semibold underline">espass.extremesolutions.com.ng</a>). When we build your platform, you are benefiting from production-tested architectures.
+                        To guarantee our software is dependable, we run our own platforms in live production every day: our School Management System (<a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-emerald-600 font-semibold underline">sms.extremesolutions.com.ng</a>) and our ESPass ticketing engine (<a href="https://espass.extremesolutions.com.ng" target="_blank" class="text-emerald-600 font-semibold underline">espass.extremesolutions.com.ng</a>). When we build your platform, you are benefiting from battle-tested architectures.
                     </p>
                 </div>
             </div>
@@ -78,7 +78,7 @@
                     </div>
                     <h3 class="text-2xl font-bold text-[#0c1f3a]">Our Mission</h3>
                     <p class="mt-4 text-sm sm:text-base leading-relaxed text-gray-600">
-                        To architect, build, and support dependable software and automated systems that liberate institutions and businesses from manual friction — while training and mentoring the next generation of Nigerian software talent.
+                        To build transformative digital software solutions that redefine how things are done and bring effortless ease to every organization, institution, and enterprise we partner with, while cultivating and mentoring the next generation of Nigerian software talent.
                     </p>
                 </div>
 
@@ -89,7 +89,7 @@
                     </div>
                     <h3 class="text-2xl font-bold text-[#0c1f3a]">Our Vision</h3>
                     <p class="mt-4 text-sm sm:text-base leading-relaxed text-gray-600">
-                        To be the digital partner Nigerian and African institutions trust first when they need mission-critical technology that works flawlessly on day one and scales indefinitely.
+                        To be the digital engineering partner organizations trust first when they need mission-critical technology that brings complete operational ease, works flawlessly on day one, and scales indefinitely.
                     </p>
                 </div>
             </div>

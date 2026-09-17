@@ -16,10 +16,10 @@
                             <p style="font-size:15px;line-height:1.6;color:#444;margin:0 0 16px;">
                                 Thanks for subscribing. You'll get occasional emails on new things we're building,
                                 practical tech and automation ideas for your business, and updates from our
-                                mentorship program &mdash; no spam, unsubscribe anytime.
+                                mentorship program, no spam, unsubscribe anytime.
                             </p>
                             <p style="font-size:15px;line-height:1.6;color:#444;margin:0;">
-                                &mdash; The ExtremeSolutions Team
+                                - The ExtremeSolutions Team
                             </p>
                         </td>
                     </tr>

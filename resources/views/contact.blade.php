@@ -34,11 +34,11 @@
 
             <h1 class="mx-auto max-w-4xl text-3xl sm:text-5xl lg:text-[56px] tracking-tight leading-[1.15] reveal">
                 <span class="font-light text-white/90">Talk to the Engineers</span><br/>
-                <span class="font-bold text-white">Who Will Build Your System<span class="text-[#00ff88]">.</span></span>
+                <span class="font-bold text-white">Who Will Build Your System</span>
             </h1>
 
             <p class="mx-auto mt-6 max-w-2xl text-sm sm:text-base leading-relaxed text-white/75 reveal">
-                Tell us about your organization and what you are looking to solve. We schedule a free discovery session — zero sales pressure, practical technical solutions.
+                Tell us about your organization and what you are looking to solve. We schedule a free discovery session, zero sales pressure, practical technical solutions.
             </p>
         </div>
     </section>

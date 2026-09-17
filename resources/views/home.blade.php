@@ -13,7 +13,7 @@
                 'name' => 'How does ExtremeSolutions differ from other software vendors?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'We do not just advise or resell third-party tools. We engineer and operate our own live production platforms — such as the ExtremeSolutions School Management System (sms.extremesolutions.com.ng) and ESPass (espass.extremesolutions.com.ng). When we build your system, you deal directly with senior software engineers, see working software early, and receive dedicated post-launch support.',
+                    'text' => 'We do not just advise or resell third-party tools. We engineer and operate our own live production platforms, including the ExtremeSolutions School Management System (sms.extremesolutions.com.ng) and ESPass (espass.extremesolutions.com.ng). When we build your system, you deal directly with senior software engineers, see working software early, and receive dedicated post-launch support.',
                 ],
             ],
             [
@@ -66,25 +66,25 @@
             <!-- Top Operational Badge -->
             <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs text-white/90 backdrop-blur-md mb-8 reveal">
                 <span class="w-2 h-2 rounded-full bg-[#00ff88] animate-pulse"></span>
-                <span class="font-medium tracking-wide">Live in Production &middot; Lagos &amp; Abuja, Nigeria</span>
+                <span class="font-medium tracking-wide">High-Performance Systems &middot; Operating Worldwide</span>
             </div>
 
-            <!-- Two-Tone Headline with Emerald Period -->
+            <!-- Two-Tone Headline (Zero Trailing Dot) -->
             <h1 class="mx-auto max-w-4xl text-3xl sm:text-5xl lg:text-[60px] tracking-tight leading-[1.14] reveal">
                 <span class="font-light text-white/90">Software Engineered to Fit</span><br/>
-                <span class="font-bold text-white">How Your Institution Runs<span class="text-[#00ff88]">.</span></span>
+                <span class="font-bold text-white">How Modern Organizations Run</span>
             </h1>
 
             <!-- SB7 Problem & Empathy Subline -->
             <p class="mx-auto mt-6 max-w-2xl text-sm sm:text-base leading-relaxed text-white/80 reveal">
-                Your organization shouldn't have to contort around generic software that fights you. 
-                We engineer reliable school management systems, ticketing platforms, and custom software &mdash; replacing paper registers and error-prone spreadsheets with technology your team runs with ease.
+                Your operations shouldn't have to contort around rigid, generic software that breaks under pressure. 
+                We engineer reliable school management platforms, event ticketing infrastructure, and bespoke enterprise software, replacing fragmented tools and manual errors with digital ease.
             </p>
 
             <!-- Dual Direct & Transitional CTAs -->
             <div class="mt-10 flex flex-wrap items-center justify-center gap-4 reveal">
                 <a href="#request-quote" class="inline-flex items-center rounded-full bg-[#00ff88] px-8 py-3.5 text-sm font-bold text-[#1e3a5f] hover:bg-[#00cc6a] transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
-                    Book a Free School Demo
+                    Schedule Your Consultation
                 </a>
                 <a href="#featured-projects" class="group inline-flex items-center gap-2 rounded-full border border-white/30 px-7 py-3.5 text-sm font-medium text-white hover:bg-white/10 transition-colors">
                     <span>Inspect Live Platforms</span>
@@ -154,18 +154,18 @@
                             <span>Our Engineering Position</span>
                         </div>
                         <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">
-                            We Don't Just Advise. We Build, Operate, and Maintain<span class="text-[#00ff88]">.</span>
+                            We Don't Just Advise. We Build, Operate, and Maintain
                         </h2>
                         <p class="mt-4 text-sm sm:text-base leading-relaxed text-white/80">
                             Too many vendors deliver unfinished software and vanish into silence. 
-                            At ExtremeSolutions, we build systems we operate ourselves. We work directly with your school leadership and admin staff in Lagos, Abuja, and across Nigeria to migrate records, train your operators, and keep your software humming 24/7.
+                            At ExtremeSolutions, we build systems we operate ourselves. Based in Lagos and engineering dependable software for ambitious organizations worldwide, we work directly with your operational leaders to eliminate friction, automate workflows, and maintain your software with 24/7 reliability.
                         </p>
                     </div>
 
                     <!-- Direct Credibility Badge -->
                     <div class="w-full lg:max-w-sm rounded-2xl bg-white/10 border border-white/15 p-6 backdrop-blur-md text-white">
                         <p class="text-xs sm:text-sm leading-relaxed text-white/90 italic">
-                            "Every platform we deploy carries our reputation. We engineer software the way we run our own production systems — secure, fast, and fail-proof."
+                            "Every platform we deploy carries our reputation. We engineer software the way we run our own production systems: secure, fast, and fail-proof."
                         </p>
                         <div class="mt-4 pt-4 border-t border-white/10 flex items-center justify-between">
                             <div>
@@ -188,7 +188,7 @@
             <div class="max-w-3xl">
                 <h2 class="text-3xl sm:text-5xl tracking-tight leading-[1.15] reveal">
                     <span class="font-light text-gray-500">Purpose-Built</span>
-                    <span class="font-bold text-[#1e3a5f]">Platforms &amp; Systems</span><span class="text-[#00ff88]">.</span>
+                    <span class="font-bold text-[#1e3a5f]">Platforms &amp; Systems</span>
                 </h2>
                 <p class="mt-4 text-sm sm:text-base text-gray-600 leading-relaxed reveal">
                     We architect solutions that directly remove manual overhead, eliminate human calculation errors, and give leaders total visibility.
@@ -267,7 +267,7 @@
                     <div class="mt-6 px-2">
                         <h3 class="text-lg font-bold text-[#1e3a5f]">Custom Software Engineering</h3>
                         <p class="mt-2.5 text-xs sm:text-sm text-gray-600 leading-relaxed">
-                            Purpose-built web applications and institutional software designed around your actual internal procedures &mdash; never forcing you into off-the-shelf limits.
+                            Purpose-built web applications and institutional software designed around your actual internal procedures, never forcing you into off-the-shelf limits.
                         </p>
                         <a href="#request-quote" class="mt-4 inline-flex items-center gap-1.5 text-xs font-bold text-[#1e3a5f] hover:text-[#00994d] transition-colors">
                             <span>Scope a Custom Build</span>
@@ -339,7 +339,7 @@
                             <span class="text-[10px] uppercase font-bold text-[#00994d] bg-[#00ff88]/20 px-2 py-0.5 rounded">Coming Soon</span>
                         </div>
                         <p class="mt-2.5 text-xs sm:text-sm text-gray-600 leading-relaxed">
-                            Cohort-based practical mentorship training young Nigerian software talent on real production architectures &mdash; not toy exercises.
+                            Cohort-based practical mentorship training young Nigerian software talent on real production architectures, not toy exercises.
                         </p>
                         <a href="{{ route('academy') }}" class="mt-4 inline-flex items-center gap-1.5 text-xs font-bold text-[#1e3a5f] hover:text-[#00994d] transition-colors">
                             <span>Join Academy Waitlist</span>
@@ -361,7 +361,7 @@
             <div class="text-center max-w-3xl mx-auto mb-16 reveal">
                 <span class="text-xs font-bold uppercase tracking-wider text-[#00ff88]">The Clear Plan</span>
                 <h2 class="mt-2 text-3xl sm:text-5xl font-bold tracking-tight">
-                    How We Get Your Organization Live<span class="text-[#00ff88]">.</span>
+                    How We Get Your Organization Live
                 </h2>
                 <p class="mt-4 text-sm sm:text-base text-white/80 leading-relaxed">
                     Zero guesswork. A structured, transparent 3-step path from manual confusion to clean digital operations.
@@ -411,215 +411,168 @@
         </div>
     </section>
 
-    <!-- 6. Featured Live Systems (Interactive Proof Showcase) -->
+    <!-- 6. Featured Live Systems (Direct High-Contrast Product Cards) -->
     <section id="featured-projects" class="bg-white py-20 md:py-28 w-full max-w-full overflow-hidden">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mb-12">
+            <div class="max-w-3xl mb-14 reveal">
                 <span class="text-xs font-bold uppercase tracking-wider text-[#00994d]">Operational Proof</span>
-                <h2 class="mt-2 text-3xl sm:text-5xl tracking-tight leading-[1.15] reveal">
+                <h2 class="mt-2 text-3xl sm:text-5xl tracking-tight leading-[1.15]">
                     <span class="font-light text-gray-500">Live Systems</span>
-                    <span class="font-bold text-[#1e3a5f]">In Production Today</span><span class="text-[#00ff88]">.</span>
+                    <span class="font-bold text-[#1e3a5f]">In Production Today</span>
                 </h2>
-                <p class="mt-4 text-sm sm:text-base text-gray-600 leading-relaxed reveal">
+                <p class="mt-4 text-sm sm:text-base text-gray-600 leading-relaxed">
                     We don't pitch mockups. These platforms are live, cloud-hosted, and actively operated by ExtremeSolutions.
                 </p>
             </div>
 
-            <!-- Tabbed Selector and Showcase -->
-            <div class="grid gap-8 lg:grid-cols-12 lg:gap-12 items-start">
-                <!-- Left: Tabs -->
-                <div class="lg:col-span-5 order-2 lg:order-1 border-t border-gray-200">
-                    <!-- Tab 1 -->
-                    <div class="cursor-pointer border-b border-gray-200 py-6 transition-colors hover:bg-gray-50/70" data-project-tab="sms" role="tab" aria-selected="true">
-                        <div class="flex items-baseline gap-4">
-                            <span class="project-num text-base font-bold tabular-nums text-[#00ff88]">01</span>
-                            <div class="min-w-0 flex-1">
-                                <div class="flex items-center justify-between">
-                                    <h3 class="project-title text-xl font-bold text-[#1e3a5f]">School Management System</h3>
-                                    <svg class="h-5 w-5 text-[#00994d]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17l10-10M7 7h10v10" />
-                                    </svg>
-                                </div>
-                                <p class="mt-1.5 text-xs font-medium text-gray-500">
-                                    <span>Cloud Platform</span> &middot; <span class="text-[#1e3a5f] font-semibold">sms.extremesolutions.com.ng</span>
-                                </p>
-                                <p class="mt-2.5 text-xs sm:text-sm text-gray-600 leading-relaxed">
-                                    Term fee tracking, automated exam grade computation, attendance registers, and parent portals.
-                                </p>
+            <!-- 3 High-Impact Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1: School Management System -->
+                <div class="rounded-3xl bg-[#1e3a5f] border border-white/15 p-8 text-white shadow-xl flex flex-col justify-between relative overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:border-[#00ff88]/40 reveal">
+                    <div class="brand-texture opacity-30" aria-hidden="true"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center justify-between">
+                            <span class="inline-flex items-center gap-2 rounded-full bg-[#00ff88]/20 px-3 py-1 text-xs font-bold text-[#00ff88]">
+                                <span class="w-2 h-2 rounded-full bg-[#00ff88] animate-pulse"></span>
+                                Live Production
+                            </span>
+                            <span class="text-2xl font-black text-[#00ff88]/90 font-mono">01</span>
+                        </div>
+
+                        <h3 class="mt-5 text-2xl font-bold tracking-tight text-white">School Management System</h3>
+                        <a href="https://sms.extremesolutions.com.ng" target="_blank" rel="noopener noreferrer" class="mt-1.5 inline-flex items-center gap-1 text-xs font-mono text-[#00ff88] hover:underline">
+                            <span>sms.extremesolutions.com.ng</span>
+                            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                        </a>
+
+                        <p class="mt-4 text-sm text-white/80 leading-relaxed">
+                            Term fee tracking, automated exam grade computation, attendance registers, and parent portals. Built to run nursery, primary, and secondary schools with zero spreadsheet confusion.
+                        </p>
+
+                        <!-- Live Metrics -->
+                        <div class="mt-6 pt-5 border-t border-white/10 grid grid-cols-3 gap-2 text-center">
+                            <div class="bg-white/5 rounded-xl p-2.5">
+                                <p class="text-lg font-extrabold text-[#00ff88]">100%</p>
+                                <p class="text-[10px] text-white/70 leading-tight mt-0.5">Automated Grades</p>
+                            </div>
+                            <div class="bg-white/5 rounded-xl p-2.5">
+                                <p class="text-lg font-extrabold text-white">0</p>
+                                <p class="text-[10px] text-white/70 leading-tight mt-0.5">Paper Registers</p>
+                            </div>
+                            <div class="bg-white/5 rounded-xl p-2.5">
+                                <p class="text-lg font-extrabold text-white">Instant</p>
+                                <p class="text-[10px] text-white/70 leading-tight mt-0.5">Parent Access</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Tab 2 -->
-                    <div class="cursor-pointer border-b border-gray-200 py-6 transition-colors hover:bg-gray-50/70" data-project-tab="espass" role="tab" aria-selected="false">
-                        <div class="flex items-baseline gap-4">
-                            <span class="project-num text-base font-bold tabular-nums text-gray-400">02</span>
-                            <div class="min-w-0 flex-1">
-                                <div class="flex items-center justify-between">
-                                    <h3 class="project-title text-xl font-medium text-gray-500">ESPass Digital Ticketing</h3>
-                                    <svg class="h-5 w-5 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17l10-10M7 7h10v10" />
-                                    </svg>
-                                </div>
-                                <p class="mt-1.5 text-xs font-medium text-gray-400">
-                                    <span>Event Access SaaS</span> &middot; <span>espass.extremesolutions.com.ng</span>
-                                </p>
-                                <p class="mt-2.5 text-xs sm:text-sm text-gray-500 leading-relaxed">
-                                    Fraud-proof barcode passes, sub-second gate validation, and transparent revenue settlement.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tab 3 -->
-                    <div class="cursor-pointer border-b border-gray-200 py-6 transition-colors hover:bg-gray-50/70" data-project-tab="automation" role="tab" aria-selected="false">
-                        <div class="flex items-baseline gap-4">
-                            <span class="project-num text-base font-bold tabular-nums text-gray-400">03</span>
-                            <div class="min-w-0 flex-1">
-                                <div class="flex items-center justify-between">
-                                    <h3 class="project-title text-xl font-medium text-gray-500">Bespoke Enterprise Systems</h3>
-                                    <svg class="h-5 w-5 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17l10-10M7 7h10v10" />
-                                    </svg>
-                                </div>
-                                <p class="mt-1.5 text-xs font-medium text-gray-400">
-                                    <span>Enterprise Build</span> &middot; <span>Custom Architecture</span>
-                                </p>
-                                <p class="mt-2.5 text-xs sm:text-sm text-gray-500 leading-relaxed">
-                                    Database integrations, payment pipelines, and internal operator control panels.
-                                </p>
-                            </div>
-                        </div>
+                    <div class="mt-8 pt-6 border-t border-white/10 relative z-10 flex flex-wrap items-center gap-3">
+                        <a href="{{ route('products.school') }}" class="rounded-full bg-[#00ff88] px-5 py-2.5 text-xs font-bold text-[#1e3a5f] hover:bg-[#00cc6a] transition-colors shadow">
+                            Read Details &rarr;
+                        </a>
+                        <a href="https://sms.extremesolutions.com.ng" target="_blank" rel="noopener noreferrer" class="rounded-full border border-white/25 bg-white/10 px-4 py-2.5 text-xs font-medium text-white hover:bg-white/20 transition-colors">
+                            Open Live Demo
+                        </a>
                     </div>
                 </div>
 
-                <!-- Right: Active Showcase Panel -->
-                <div class="lg:col-span-7 order-1 lg:order-2">
-                    <!-- Panel 1: School System -->
-                    <div data-project-panel="sms" class="block tab-panel rounded-3xl bg-[#1e3a5f] text-white p-7 sm:p-10 shadow-xl border border-white/10 relative overflow-hidden">
-                        <div class="brand-texture opacity-30" aria-hidden="true"></div>
-                        <div class="relative z-10">
-                            <div class="flex items-center justify-between gap-4">
-                                <span class="inline-flex items-center gap-2 rounded-full bg-[#00ff88]/20 px-3 py-1 text-xs font-bold text-[#00ff88]">
-                                    <span class="w-2 h-2 rounded-full bg-[#00ff88]"></span>
-                                    Live in Production
-                                </span>
-                                <a href="https://sms.extremesolutions.com.ng" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-[#00ff88] hover:underline flex items-center gap-1">
-                                    sms.extremesolutions.com.ng &rarr;
-                                </a>
-                            </div>
-
-                            <h4 class="mt-5 text-2xl sm:text-3xl font-bold tracking-tight">ExtremeSolutions SMS Platform</h4>
-                            <p class="mt-3 text-sm text-white/80 leading-relaxed">
-                                Tested and operating live. Built specifically for Nigerian nursery, primary, and secondary schools. Eradicates term-end result collation headaches and manual fee ledger discrepancies completely.
-                            </p>
-
-                            <!-- Live Stats -->
-                            <div class="mt-8 grid grid-cols-3 gap-4 pt-6 border-t border-white/10">
-                                <div>
-                                    <p class="text-2xl sm:text-3xl font-extrabold text-[#00ff88] tracking-tight">100%</p>
-                                    <p class="mt-1 text-[11px] text-white/70">Automated Grade Computation</p>
-                                </div>
-                                <div>
-                                    <p class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">0</p>
-                                    <p class="mt-1 text-[11px] text-white/70">Paper Registers Required</p>
-                                </div>
-                                <div>
-                                    <p class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Instant</p>
-                                    <p class="mt-1 text-[11px] text-white/70">Parent Result Access</p>
-                                </div>
-                            </div>
-
-                            <div class="mt-8 flex flex-wrap gap-3">
-                                <a href="{{ route('products.school') }}" class="rounded-full bg-[#00ff88] px-6 py-2.5 text-xs font-bold text-[#1e3a5f] hover:bg-[#00cc6a] transition-colors">
-                                    Read School Pitch Details
-                                </a>
-                                <a href="https://sms.extremesolutions.com.ng" target="_blank" rel="noopener noreferrer" class="rounded-full border border-white/20 bg-white/10 px-6 py-2.5 text-xs font-medium text-white hover:bg-white/20 transition-colors">
-                                    Open Live Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Panel 2: ESPass -->
-                    <div data-project-panel="espass" class="hidden tab-panel rounded-3xl bg-[#1e3a5f] text-white p-7 sm:p-10 shadow-xl border border-white/10 relative overflow-hidden">
-                        <div class="brand-texture opacity-30" aria-hidden="true"></div>
-                        <div class="relative z-10">
-                            <div class="flex items-center justify-between gap-4">
-                                <span class="inline-flex items-center gap-2 rounded-full bg-[#00ff88]/20 px-3 py-1 text-xs font-bold text-[#00ff88]">
-                                    <span class="w-2 h-2 rounded-full bg-[#00ff88]"></span>
-                                    Live in Production
-                                </span>
-                                <a href="https://espass.extremesolutions.com.ng" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-[#00ff88] hover:underline flex items-center gap-1">
-                                    espass.extremesolutions.com.ng &rarr;
-                                </a>
-                            </div>
-
-                            <h4 class="mt-5 text-2xl sm:text-3xl font-bold tracking-tight">ESPass Event &amp; Ticketing Engine</h4>
-                            <p class="mt-3 text-sm text-white/80 leading-relaxed">
-                                Scalable event ticketing and access control infrastructure. Checks guests in via rapid barcode validation with real-time attendee reconciliation and settlement.
-                            </p>
-
-                            <div class="mt-8 grid grid-cols-3 gap-4 pt-6 border-t border-white/10">
-                                <div>
-                                    <p class="text-2xl sm:text-3xl font-extrabold text-[#00ff88] tracking-tight">&lt; 0.5s</p>
-                                    <p class="mt-1 text-[11px] text-white/70">Gate Scan Verification</p>
-                                </div>
-                                <div>
-                                    <p class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">100%</p>
-                                    <p class="mt-1 text-[11px] text-white/70">Reconciliation Accuracy</p>
-                                </div>
-                                <div>
-                                    <p class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">0</p>
-                                    <p class="mt-1 text-[11px] text-white/70">Duplicate Ticket Fraud</p>
-                                </div>
-                            </div>
-
-                            <div class="mt-8 flex flex-wrap gap-3">
-                                <a href="{{ route('products.espass') }}" class="rounded-full bg-[#00ff88] px-6 py-2.5 text-xs font-bold text-[#1e3a5f] hover:bg-[#00cc6a] transition-colors">
-                                    Explore ESPass System
-                                </a>
-                                <a href="https://espass.extremesolutions.com.ng" target="_blank" rel="noopener noreferrer" class="rounded-full border border-white/20 bg-white/10 px-6 py-2.5 text-xs font-medium text-white hover:bg-white/20 transition-colors">
-                                    Open Live Platform
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Panel 3: Automation -->
-                    <div data-project-panel="automation" class="hidden tab-panel rounded-3xl bg-[#1e3a5f] text-white p-7 sm:p-10 shadow-xl border border-white/10 relative overflow-hidden">
-                        <div class="brand-texture opacity-30" aria-hidden="true"></div>
-                        <div class="relative z-10">
-                            <span class="inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-xs font-bold text-[#00ff88]">
-                                Enterprise Custom
+                <!-- Card 2: ESPass Ticketing -->
+                <div class="rounded-3xl bg-[#1e3a5f] border border-white/15 p-8 text-white shadow-xl flex flex-col justify-between relative overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:border-[#00ff88]/40 reveal">
+                    <div class="brand-texture opacity-30" aria-hidden="true"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center justify-between">
+                            <span class="inline-flex items-center gap-2 rounded-full bg-[#00ff88]/20 px-3 py-1 text-xs font-bold text-[#00ff88]">
+                                <span class="w-2 h-2 rounded-full bg-[#00ff88] animate-pulse"></span>
+                                Live Production
                             </span>
+                            <span class="text-2xl font-black text-[#00ff88]/90 font-mono">02</span>
+                        </div>
 
-                            <h4 class="mt-5 text-2xl sm:text-3xl font-bold tracking-tight">Bespoke Operations &amp; Database Pipelines</h4>
-                            <p class="mt-3 text-sm text-white/80 leading-relaxed">
-                                Tailor-engineered internal applications connecting inventory, customer invoices, payment gateways, and staff permissions into an automated control panel.
-                            </p>
+                        <h3 class="mt-5 text-2xl font-bold tracking-tight text-white">ESPass Event &amp; Gate Engine</h3>
+                        <a href="https://espass.extremesolutions.com.ng" target="_blank" rel="noopener noreferrer" class="mt-1.5 inline-flex items-center gap-1 text-xs font-mono text-[#00ff88] hover:underline">
+                            <span>espass.extremesolutions.com.ng</span>
+                            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                        </a>
 
-                            <div class="mt-8 grid grid-cols-3 gap-4 pt-6 border-t border-white/10">
-                                <div>
-                                    <p class="text-2xl sm:text-3xl font-extrabold text-[#00ff88] tracking-tight">10x</p>
-                                    <p class="mt-1 text-[11px] text-white/70">Faster Process Execution</p>
-                                </div>
-                                <div>
-                                    <p class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Role</p>
-                                    <p class="mt-1 text-[11px] text-white/70">Strict Granular Access</p>
-                                </div>
-                                <div>
-                                    <p class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Audit</p>
-                                    <p class="mt-1 text-[11px] text-white/70">Immutable Activity Logs</p>
-                                </div>
+                        <p class="mt-4 text-sm text-white/80 leading-relaxed">
+                            Scalable event ticketing and access control infrastructure. Checks guests in via rapid barcode validation with real-time attendee reconciliation and settlement.
+                        </p>
+
+                        <!-- Live Metrics -->
+                        <div class="mt-6 pt-5 border-t border-white/10 grid grid-cols-3 gap-2 text-center">
+                            <div class="bg-white/5 rounded-xl p-2.5">
+                                <p class="text-lg font-extrabold text-[#00ff88]">&lt; 0.5s</p>
+                                <p class="text-[10px] text-white/70 leading-tight mt-0.5">Gate Scan Speed</p>
                             </div>
-
-                            <div class="mt-8">
-                                <a href="#request-quote" class="rounded-full bg-[#00ff88] px-6 py-2.5 text-xs font-bold text-[#1e3a5f] hover:bg-[#00cc6a] transition-colors">
-                                    Request Architecture Scope
-                                </a>
+                            <div class="bg-white/5 rounded-xl p-2.5">
+                                <p class="text-lg font-extrabold text-white">100%</p>
+                                <p class="text-[10px] text-white/70 leading-tight mt-0.5">Reconciliation</p>
+                            </div>
+                            <div class="bg-white/5 rounded-xl p-2.5">
+                                <p class="text-lg font-extrabold text-white">0</p>
+                                <p class="text-[10px] text-white/70 leading-tight mt-0.5">Duplicate Fraud</p>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-white/10 relative z-10 flex flex-wrap items-center gap-3">
+                        <a href="{{ route('products.espass') }}" class="rounded-full bg-[#00ff88] px-5 py-2.5 text-xs font-bold text-[#1e3a5f] hover:bg-[#00cc6a] transition-colors shadow">
+                            Read Details &rarr;
+                        </a>
+                        <a href="https://espass.extremesolutions.com.ng" target="_blank" rel="noopener noreferrer" class="rounded-full border border-white/25 bg-white/10 px-4 py-2.5 text-xs font-medium text-white hover:bg-white/20 transition-colors">
+                            Open Live Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Custom Software & Enterprise Architecture -->
+                <div class="rounded-3xl bg-[#1e3a5f] border border-white/15 p-8 text-white shadow-xl flex flex-col justify-between relative overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:border-[#00ff88]/40 reveal">
+                    <div class="brand-texture opacity-30" aria-hidden="true"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center justify-between">
+                            <span class="inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-xs font-bold text-[#00ff88]">
+                                Enterprise Bespoke
+                            </span>
+                            <span class="text-2xl font-black text-[#00ff88]/90 font-mono">03</span>
+                        </div>
+
+                        <h3 class="mt-5 text-2xl font-bold tracking-tight text-white">Custom Software &amp; Automation</h3>
+                        <p class="mt-1.5 text-xs font-mono text-[#00ff88]">
+                            Proprietary Cloud Architecture
+                        </p>
+
+                        <p class="mt-4 text-sm text-white/80 leading-relaxed">
+                            Tailor-engineered internal applications connecting inventory, customer invoicing, payment gateways, and staff permissions into automated operator control panels.
+                        </p>
+
+                        <!-- Live Metrics -->
+                        <div class="mt-6 pt-5 border-t border-white/10 grid grid-cols-3 gap-2 text-center">
+                            <div class="bg-white/5 rounded-xl p-2.5">
+                                <p class="text-lg font-extrabold text-[#00ff88]">10x</p>
+                                <p class="text-[10px] text-white/70 leading-tight mt-0.5">Execution Speed</p>
+                            </div>
+                            <div class="bg-white/5 rounded-xl p-2.5">
+                                <p class="text-lg font-extrabold text-white">Role</p>
+                                <p class="text-[10px] text-white/70 leading-tight mt-0.5">Strict Hierarchy</p>
+                            </div>
+                            <div class="bg-white/5 rounded-xl p-2.5">
+                                <p class="text-lg font-extrabold text-white">100%</p>
+                                <p class="text-[10px] text-white/70 leading-tight mt-0.5">Code Ownership</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-white/10 relative z-10 flex flex-wrap items-center gap-3">
+                        <a href="#request-quote" class="rounded-full bg-[#00ff88] px-5 py-2.5 text-xs font-bold text-[#1e3a5f] hover:bg-[#00cc6a] transition-colors shadow">
+                            Scope Your Build &rarr;
+                        </a>
+                        <a href="https://wa.me/2349052585622?text=Hello%20ExtremeSolutions,%20I%20would%20like%20to%20discuss%20a%20custom%20software%20project." target="_blank" rel="noopener noreferrer" class="rounded-full border border-white/25 bg-white/10 px-4 py-2.5 text-xs font-medium text-white hover:bg-white/20 transition-colors">
+                            Chat Lead Engineer
+                        </a>
                     </div>
                 </div>
             </div>
@@ -706,7 +659,7 @@
             <div class="text-center max-w-3xl mx-auto mb-12 reveal">
                 <span class="text-xs font-bold uppercase tracking-wider text-[#00994d]">Operational Clarity</span>
                 <h2 class="mt-2 text-3xl sm:text-4xl font-bold text-[#1e3a5f]">
-                    Key Decisions &amp; Direct Answers<span class="text-[#00ff88]">.</span>
+                    Key Decisions &amp; Direct Answers
                 </h2>
                 <p class="mt-4 text-sm sm:text-base text-gray-600">
                     Select your area of interest to see direct, transparent operational answers for your team.
@@ -818,10 +771,10 @@
                     <span class="text-xs font-bold uppercase tracking-wider text-[#00994d]">Free &middot; Zero Obligation</span>
                     <h2 class="mt-2 text-3xl sm:text-5xl tracking-tight leading-[1.15] reveal">
                         <span class="font-light text-gray-500">Schedule Your</span>
-                        <span class="font-bold text-[#1e3a5f]">Consultation<span class="text-[#00ff88]">.</span></span>
+                        <span class="font-bold text-[#1e3a5f]">Consultation</span>
                     </h2>
                     <p class="mt-4 text-sm sm:text-base text-gray-600 leading-relaxed max-w-md reveal">
-                        Tell us about your school or business operations. We review your requirements and respond promptly with practical options and transparent per-term or milestone costs.
+                        Tell us about your organization or business operations. We review your requirements and respond promptly with practical options and transparent per-term or milestone costs.
                     </p>
 
                     <div class="mt-8 space-y-4 reveal">
@@ -835,7 +788,7 @@
                         </div>
                         <div class="flex items-center gap-3 text-sm text-gray-700">
                             <div class="w-7 h-7 rounded-full bg-[#1e3a5f] text-[#00ff88] flex items-center justify-center font-bold text-xs">✓</div>
-                            <span>In-person in Lagos &amp; Abuja, or virtual screen-share</span>
+                            <span>In-person discovery in Lagos or global virtual screen-share</span>
                         </div>
                     </div>
 
@@ -896,9 +849,14 @@
 
                         <!-- Step 2: Operational Scale & Timeline -->
                         <div class="wizard-step hidden space-y-4">
-                            <label class="block text-sm font-bold text-[#1e3a5f]">
-                                2. Describe your current operations and target timeline
-                            </label>
+                            <div>
+                                <label class="block text-sm font-bold text-[#1e3a5f]">
+                                    2. Describe your current operations and target timeline
+                                </label>
+                                <p class="text-xs text-gray-500 leading-relaxed mt-1">
+                                    Briefly describe your current process (e.g. 350 students currently tracked across paper registers ahead of next term, or an upcoming event for 1,500 attendees, or bespoke software requirements)...
+                                </p>
+                            </div>
                             <textarea name="message" rows="4" required class="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm text-gray-900 focus:border-[#1e3a5f] focus:ring-1 focus:ring-[#1e3a5f] bg-[#f8fafc] placeholder-gray-400" placeholder="Briefly describe your current process (e.g. 350 students currently tracked across paper registers ahead of next term, or an upcoming event for 1,500 attendees)..."></textarea>
                         </div>
 
@@ -910,7 +868,7 @@
                             <div class="space-y-3">
                                 <div>
                                     <label for="input-name" class="block text-xs font-bold text-gray-700 mb-1">Your Full Name *</label>
-                                    <input type="text" id="input-name" name="name" required class="w-full rounded-xl border border-gray-300 px-4 py-2.5 text-sm text-gray-900 focus:border-[#1e3a5f] focus:ring-1 focus:ring-[#1e3a5f] bg-[#f8fafc]" placeholder="e.g. Pastor / Dr. Adamu Johnson">
+                                    <input type="text" id="input-name" name="name" required class="w-full rounded-xl border border-gray-300 px-4 py-2.5 text-sm text-gray-900 focus:border-[#1e3a5f] focus:ring-1 focus:ring-[#1e3a5f] bg-[#f8fafc]" placeholder="e.g. Dr. Adamu Johnson">
                                 </div>
                                 <div>
                                     <label for="input-email" class="block text-xs font-bold text-gray-700 mb-1">Email Address *</label>
@@ -952,14 +910,14 @@
                 <div class="relative z-10 max-w-3xl mx-auto">
                     <h2 class="text-3xl sm:text-5xl font-bold tracking-tight leading-tight">
                         Modernize Your Operations <br class="hidden sm:inline" />
-                        <span class="font-light text-white/90">Ahead of Next Term</span><span class="text-[#00ff88]">.</span>
+                        <span class="font-light text-white/90">With High-Performance Software</span>
                     </h2>
                     <p class="mt-4 text-sm sm:text-base leading-relaxed text-white/80">
-                        Serving institutions across Lagos, Abuja, and Nigeria. In-person and virtual demos available.
+                        Headquartered in Lagos, engineering dependable systems for ambitious organizations worldwide.
                     </p>
                     <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
                         <a href="{{ route('contact') }}" class="rounded-full bg-[#00ff88] px-8 py-3.5 text-sm font-bold text-[#1e3a5f] hover:bg-[#00cc6a] transition-colors shadow-lg">
-                            Schedule Free Demo Call
+                            Schedule Free Consultation
                         </a>
                         <a href="tel:09052585622" class="rounded-full border border-white/30 bg-white/10 px-7 py-3.5 text-sm font-medium text-white hover:bg-white/20 transition-colors">
                             Call 09052585622

@@ -27,7 +27,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                         </svg>
-                        Lagos &amp; Abuja, Nigeria
+                        Headquartered in Lagos &middot; Serving Worldwide
                     </span>
 
                     <a href="https://wa.me/2349052585622" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full border border-[#00ff88]/30 bg-[#00ff88]/10 px-3 py-1 text-xs text-[#00ff88] hover:bg-[#00ff88]/20 transition-colors">
@@ -131,7 +131,7 @@
                 &copy; {{ date('Y') }} ExtremeSolutions. All rights reserved. Technology built around how your organization operates.
             </p>
             <p class="text-center md:text-right text-white/50">
-                Lagos &middot; Abuja &middot; Serving Institutions Across Nigeria
+                Headquartered in Lagos &middot; Serving Organizations Worldwide
             </p>
         </div>
     </div>
