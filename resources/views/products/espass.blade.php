@@ -31,7 +31,7 @@
     <!-- Hero Surface -->
     <section class="brand-surface relative overflow-hidden bg-[#0c1f3a] text-white pt-16 pb-20 md:pt-24 md:pb-32">
         <div class="brand-texture" aria-hidden="true"></div>
-        <div class="brand-glow top-0 right-1/4 w-[600px] h-[350px] bg-gradient-to-br from-[#1e3a5f] via-[#d4a373]/15 to-transparent"></div>
+        <div class="brand-glow top-0 right-1/4 w-[600px] h-[350px] bg-gradient-to-br from-[#1e3a5f] via-[#00ff88]/10 to-transparent"></div>
 
         <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
             <div class="inline-flex items-center gap-2 rounded-full border border-[#00ff88]/30 bg-[#00ff88]/10 px-4 py-1.5 text-xs text-[#00ff88] backdrop-blur-md mb-8 reveal">
@@ -41,7 +41,7 @@
 
             <h1 class="mx-auto max-w-4xl text-3xl sm:text-5xl lg:text-[58px] tracking-tight leading-[1.14] reveal">
                 <span class="font-light text-white/90">Sell Out Your Events.</span><br/>
-                <span class="font-bold text-white">Check Guests In In Under a Second<span class="text-[#d4a373]">.</span></span>
+                <span class="font-bold text-white">Check Guests In In Under a Second<span class="text-[#00ff88]">.</span></span>
             </h1>
 
             <p class="mx-auto mt-6 max-w-2xl text-sm sm:text-base leading-relaxed text-white/75 reveal">
@@ -49,12 +49,12 @@
             </p>
 
             <div class="mt-10 flex flex-wrap items-center justify-center gap-4 reveal">
-                <a href="{{ route('contact', ['subject' => 'ESPass Demo Request']) }}" class="inline-flex items-center rounded-full bg-[#d4a373] px-8 py-3.5 text-sm font-bold text-[#0c1f3a] hover:bg-[#c5935f] transition-all shadow-lg hover:-translate-y-0.5">
+                <a href="{{ route('contact', ['subject' => 'ESPass Demo Request']) }}" class="inline-flex items-center rounded-full bg-[#00ff88] px-8 py-3.5 text-sm font-bold text-[#0a192f] hover:bg-[#00e67a] transition-all shadow-lg hover:-translate-y-0.5">
                     Schedule an Event Walkthrough
                 </a>
                 <a href="https://espass.extremesolutions.com.ng" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-7 py-3.5 text-sm font-medium text-white hover:bg-white/20 transition-all">
                     <span>Explore Live Platform</span>
-                    <svg class="h-4 w-4 text-[#d4a373] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg class="h-4 w-4 text-[#00ff88] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17l10-10M7 7h10v10" />
                     </svg>
                 </a>
@@ -66,7 +66,7 @@
     <section class="bg-white py-20 md:py-28">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mb-14 reveal">
-                <span class="text-xs font-bold uppercase tracking-wider text-[#d4a373]">Engineered for Organizers</span>
+                <span class="text-xs font-bold uppercase tracking-wider text-emerald-600">Engineered for Organizers</span>
                 <h2 class="mt-2 text-3xl sm:text-4xl font-bold text-[#0c1f3a]">
                     Zero Guesswork. 100% Gate Control.
                 </h2>
@@ -77,7 +77,7 @@
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="rounded-2xl bg-[#f8fafc] p-6 border border-gray-200/80 shadow-sm reveal">
-                    <div class="w-10 h-10 rounded-xl bg-[#0c1f3a] text-[#d4a373] flex items-center justify-center font-bold text-sm mb-4">
+                    <div class="w-10 h-10 rounded-xl bg-[#0c1f3a] text-[#00ff88] flex items-center justify-center font-bold text-sm mb-4">
                         01
                     </div>
                     <h4 class="font-bold text-[#0c1f3a] mb-2">Instant QR Pass Generation</h4>
@@ -93,7 +93,7 @@
                 </div>
 
                 <div class="rounded-2xl bg-[#f8fafc] p-6 border border-gray-200/80 shadow-sm reveal">
-                    <div class="w-10 h-10 rounded-xl bg-[#0c1f3a] text-[#d4a373] flex items-center justify-center font-bold text-sm mb-4">
+                    <div class="w-10 h-10 rounded-xl bg-[#0c1f3a] text-[#00ff88] flex items-center justify-center font-bold text-sm mb-4">
                         03
                     </div>
                     <h4 class="font-bold text-[#0c1f3a] mb-2">Live Attendance Metrics</h4>
@@ -120,7 +120,7 @@
                     <h3 class="text-2xl sm:text-4xl font-bold tracking-tight">Planning an Upcoming Event?</h3>
                     <p class="mt-4 text-sm text-white/75">Talk to our team about deploying ESPass for your next conference or venue.</p>
                     <div class="mt-8 flex flex-wrap justify-center gap-4">
-                        <a href="{{ route('contact', ['subject' => 'ESPass Demo Request']) }}" class="rounded-full bg-[#d4a373] px-7 py-3 text-sm font-bold text-[#0c1f3a] hover:bg-[#c5935f] transition-colors">
+                        <a href="{{ route('contact', ['subject' => 'ESPass Demo Request']) }}" class="rounded-full bg-[#00ff88] px-7 py-3 text-sm font-bold text-[#0a192f] hover:bg-[#00e67a] transition-colors">
                             Request Event Deployment
                         </a>
                         <a href="https://espass.extremesolutions.com.ng" target="_blank" rel="noopener noreferrer" class="rounded-full border border-white/20 px-6 py-3 text-sm font-medium text-white hover:bg-white/10 transition-colors">

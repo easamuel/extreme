@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="scroll-smooth">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="scroll-smooth overflow-x-hidden">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     @php
         $seoTitle = trim($__env->yieldContent('title', 'ExtremeSolutions | Custom Software, School Systems & Digital Automation'));
-        $seoDescription = trim($__env->yieldContent('description', 'ExtremeSolutions designs and builds high-performance custom software, school management systems, event ticketing platforms, and digital automation for institutions and businesses across Nigeria and Africa.'));
+        $seoDescription = trim($__env->yieldContent('description', 'ExtremeSolutions designs and builds high-performance custom software, school management systems, event ticketing platforms, and digital automation for institutions and businesses in Lagos, Abuja, and across Nigeria.'));
         $canonicalUrl = url()->current();
         $ogImage = asset('favicon.svg');
 
@@ -20,15 +20,16 @@
             'url' => url('/'),
             'logo' => asset('favicon.svg'),
             'image' => asset('favicon.svg'),
-            'description' => 'ExtremeSolutions designs and builds custom software, school management systems, ticketing solutions, and digital automation for businesses and institutions.',
+            'description' => 'ExtremeSolutions designs and builds custom software, school management systems, ticketing solutions, and digital automation for businesses and institutions in Lagos and Abuja, Nigeria.',
             'telephone' => '+2349052585622',
             'email' => 'info@extremesolutions.com.ng',
             'address' => [
                 '@type' => 'PostalAddress',
-                'addressLocality' => 'Abuja',
+                'addressLocality' => 'Lagos',
+                'addressRegion' => 'Lagos State',
                 'addressCountry' => 'NG',
             ],
-            'areaServed' => ['Nigeria', 'Africa', 'Worldwide'],
+            'areaServed' => ['Lagos', 'Abuja', 'Nigeria', 'Africa'],
             'priceRange' => '$$',
             'knowsAbout' => [
                 'Custom Software Development',
@@ -51,7 +52,7 @@
     <meta name="description" content="{!! $seoDescription !!}">
     <link rel="canonical" href="{{ $canonicalUrl }}">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="theme-color" content="#0c1f3a">
+    <meta name="theme-color" content="#1e3a5f">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -87,12 +88,12 @@
     <!-- Vite Styles & JS -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="bg-white text-gray-900 font-sans antialiased selection:bg-[#d4a373]/20 selection:text-[#0c1f3a]">
+<body class="bg-white text-gray-900 font-sans antialiased overflow-x-hidden w-full max-w-full selection:bg-[#00ff88]/20 selection:text-[#1e3a5f]">
     <!-- Header Navigation -->
     @include('components.header')
 
     <!-- Main Content -->
-    <main id="main-content">
+    <main id="main-content" class="overflow-x-hidden w-full max-w-full">
         @yield('content')
     </main>
 

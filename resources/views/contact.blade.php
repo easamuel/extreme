@@ -25,16 +25,16 @@
     <!-- Hero Surface -->
     <section class="brand-surface relative overflow-hidden bg-[#0c1f3a] text-white pt-16 pb-20 md:pt-24 md:pb-28">
         <div class="brand-texture" aria-hidden="true"></div>
-        <div class="brand-glow top-0 right-1/4 w-[500px] h-[300px] bg-[#d4a373]/15"></div>
+        <div class="brand-glow top-0 right-1/4 w-[500px] h-[300px] bg-[#00ff88]/10"></div>
 
         <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
             <span class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs text-white/90 backdrop-blur-md mb-6 reveal">
-                <span class="text-[#d4a373] font-bold">Start Your Project</span>
+                <span class="text-[#00ff88] font-bold">Start Your Project</span>
             </span>
 
             <h1 class="mx-auto max-w-4xl text-3xl sm:text-5xl lg:text-[56px] tracking-tight leading-[1.15] reveal">
                 <span class="font-light text-white/90">Talk to the Engineers</span><br/>
-                <span class="font-bold text-white">Who Will Build Your System<span class="text-[#d4a373]">.</span></span>
+                <span class="font-bold text-white">Who Will Build Your System<span class="text-[#00ff88]">.</span></span>
             </h1>
 
             <p class="mx-auto mt-6 max-w-2xl text-sm sm:text-base leading-relaxed text-white/75 reveal">
@@ -49,7 +49,7 @@
             <!-- Direct Quick-Contact Pill Cards -->
             <div class="grid sm:grid-cols-2 gap-4 mb-12 reveal">
                 <a href="tel:09052585622" class="flex items-center gap-4 p-5 rounded-2xl bg-[#f8fafc] border border-gray-200/80 hover:border-[#0c1f3a] transition-all group">
-                    <div class="w-12 h-12 rounded-xl bg-[#0c1f3a] text-[#d4a373] flex items-center justify-center flex-shrink-0 group-hover:bg-[#162f55] transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-[#0c1f3a] text-[#00ff88] flex items-center justify-center flex-shrink-0 group-hover:bg-[#162f55] transition-colors">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                         </svg>

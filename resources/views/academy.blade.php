@@ -17,7 +17,7 @@
 
             <h1 class="mx-auto max-w-4xl text-3xl sm:text-5xl lg:text-[58px] tracking-tight leading-[1.14] reveal">
                 <span class="font-light text-white/90">We Build Great Software.</span><br/>
-                <span class="font-bold text-white">We Also Build Nigerian Tech Careers<span class="text-[#d4a373]">.</span></span>
+                <span class="font-bold text-white">We Also Build Nigerian Tech Careers<span class="text-[#00ff88]">.</span></span>
             </h1>
 
             <p class="mx-auto mt-6 max-w-2xl text-sm sm:text-base leading-relaxed text-white/75 reveal">
@@ -25,7 +25,7 @@
             </p>
 
             <div class="mt-10 flex flex-wrap items-center justify-center gap-4 reveal">
-                <a href="#waitlist" class="inline-flex items-center rounded-full bg-[#d4a373] px-8 py-3.5 text-sm font-bold text-[#0c1f3a] hover:bg-[#c5935f] transition-all shadow-lg hover:-translate-y-0.5">
+                <a href="#waitlist" class="inline-flex items-center rounded-full bg-[#00ff88] px-8 py-3.5 text-sm font-bold text-[#0a192f] hover:bg-[#00e67a] transition-all shadow-lg hover:-translate-y-0.5">
                     Join the Priority Waitlist
                 </a>
                 <a href="{{ route('about') }}" class="rounded-full border border-white/20 bg-white/10 px-7 py-3.5 text-sm font-medium text-white hover:bg-white/20 transition-all">
@@ -39,11 +39,11 @@
     <section class="bg-white py-20 md:py-28">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto text-center mb-16 reveal">
-                <span class="text-xs font-bold uppercase tracking-wider text-[#d4a373]">Beyond Basic Tutorials</span>
+                <span class="text-xs font-bold uppercase tracking-wider text-emerald-600">Beyond Basic Tutorials</span>
                 <h2 class="mt-2 text-3xl sm:text-4xl font-bold text-[#0c1f3a]">
                     Learn on Real Production Code, Not Academic Toy Projects
                 </h2>
-                <div class="w-16 h-1 bg-[#d4a373] mx-auto mt-4"></div>
+                <div class="w-16 h-1 bg-[#00ff88] mx-auto mt-4"></div>
                 <p class="mt-4 text-sm sm:text-base text-gray-600 leading-relaxed">
                     Most tech bootcamps stop at synthetic exercises and todo-list apps. Our mentees learn inside a company that deploys and maintains live production software serving actual organizations.
                 </p>
@@ -51,7 +51,7 @@
 
             <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                 <div class="rounded-2xl bg-[#f8fafc] p-8 border border-gray-200/80 shadow-sm reveal">
-                    <div class="w-12 h-12 rounded-xl bg-[#0c1f3a] text-[#d4a373] flex items-center justify-center font-bold text-base mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-[#0c1f3a] text-[#00ff88] flex items-center justify-center font-bold text-base mb-6">
                         01
                     </div>
                     <h3 class="text-xl font-bold text-[#0c1f3a] mb-2">Cohort-Based Learning</h3>
@@ -71,7 +71,7 @@
                 </div>
 
                 <div class="rounded-2xl bg-[#f8fafc] p-8 border border-gray-200/80 shadow-sm reveal">
-                    <div class="w-12 h-12 rounded-xl bg-[#0c1f3a] text-[#d4a373] flex items-center justify-center font-bold text-base mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-[#0c1f3a] text-[#00ff88] flex items-center justify-center font-bold text-base mb-6">
                         03
                     </div>
                     <h3 class="text-xl font-bold text-[#0c1f3a] mb-2">Job-Ready Portfolio</h3>
@@ -86,11 +86,11 @@
     <!-- Priority Waitlist Signup Section -->
     <section id="waitlist" class="bg-[#f8fafc] py-20 md:py-28 border-t border-gray-200/70">
         <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center reveal">
-            <span class="text-xs font-bold uppercase tracking-wider text-[#d4a373]">Limited Cohort Size</span>
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-600">Limited Cohort Size</span>
             <h2 class="mt-2 text-3xl sm:text-4xl font-bold text-[#0c1f3a]">
                 Be the First to Know When Applications Open
             </h2>
-            <div class="w-16 h-1 bg-[#d4a373] mx-auto mt-4 mb-6"></div>
+            <div class="w-16 h-1 bg-[#00ff88] mx-auto mt-4 mb-6"></div>
             <p class="text-sm sm:text-base text-gray-600 leading-relaxed mb-8">
                 To guarantee deep 1-on-1 mentorship, every cohort is capped at a small group of dedicated students. Subscribe to receive curriculum outlines, dates, and early application access.
             </p>

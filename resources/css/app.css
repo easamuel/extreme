@@ -7,30 +7,33 @@
 
 @theme {
     --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    --color-brand-navy: #0c1f3a;
-    --color-brand-navy-dark: #071324;
-    --color-brand-navy-light: #162f55;
-    --color-brand-gold: #d4a373;
-    --color-brand-gold-hover: #c5935f;
-    --color-brand-emerald: #00ff88;
-    --color-brand-emerald-dark: #00cc6a;
+    --color-brand-navy: #1e3a5f;
+    --color-brand-navy-dark: #0f2444;
+    --color-brand-navy-deep: #0a192f;
+    --color-brand-green: #00ff88;
+    --color-brand-green-hover: #00cc6a;
+    --color-brand-green-dark: #00994d;
 }
 
 :root {
-    --brand-navy: #0c1f3a;
-    --brand-navy-dark: #071324;
-    --brand-navy-light: #162f55;
-    --gold: #d4a373;
-    --gold-hover: #c5935f;
-    --emerald: #00ff88;
+    --brand-navy: #1e3a5f;
+    --brand-navy-dark: #0f2444;
+    --brand-navy-deep: #0a192f;
+    --brand-green: #00ff88;
+    --brand-green-hover: #00cc6a;
+    --brand-green-dark: #00994d;
     --panel: #f8fafc;
-    --ink: #0c1f3a;
+    --ink: #1e3a5f;
 }
 
-/* Base HTML styles */
-html {
+/* Base HTML styles & strict mobile horizontal overflow fix */
+html, body {
     scroll-behavior: smooth;
     color-scheme: light;
+    overflow-x: hidden !important;
+    width: 100%;
+    max-width: 100vw;
+    position: relative;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -39,7 +42,7 @@ html {
     }
 }
 
-/* Sericode-inspired Brand Surfaces & Textures */
+/* Brand Surfaces & Architectural Textures */
 .brand-surface {
     background-color: var(--brand-navy);
     position: relative;
@@ -47,6 +50,11 @@ html {
 
 .brand-surface-dark {
     background-color: var(--brand-navy-dark);
+    position: relative;
+}
+
+.brand-surface-deep {
+    background-color: var(--brand-navy-deep);
     position: relative;
 }
 
@@ -63,7 +71,7 @@ html {
     border-radius: 9999px;
     filter: blur(80px);
     pointer-events: none;
-    opacity: 0.25;
+    opacity: 0.2;
 }
 
 /* Glassmorphism & Borders */
@@ -81,11 +89,12 @@ html {
     border: 1px solid rgba(226, 232, 240, 0.8);
 }
 
-/* Infinite Marquee */
+/* Infinite Marquee - Strict Overflow Guard */
 .marquee-container {
     overflow: hidden;
     user-select: none;
     display: flex;
+    max-width: 100%;
     mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
     -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
@@ -116,8 +125,8 @@ html {
 /* Scroll-reveal animation */
 .reveal {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(18px);
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal.is-visible {
@@ -136,7 +145,7 @@ html {
     }
 }
 
-/* Custom Accordion Transition */
+/* Accordion Transition */
 .accordion-content {
     display: grid;
     grid-template-rows: 0fr;
@@ -151,7 +160,7 @@ html {
     overflow: hidden;
 }
 
-/* Smooth Tab transitions */
+/* Tab transitions */
 .tab-panel {
     transition: opacity 0.3s ease-in-out;
 }

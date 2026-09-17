@@ -29,8 +29,8 @@
             type="submit"
             class="px-7 py-3 rounded-full text-xs uppercase font-bold tracking-wider whitespace-nowrap transition-all shadow-md hover:-translate-y-0.5
                 {{ $theme === 'dark'
-                    ? 'bg-[#d4a373] text-[#0c1f3a] hover:bg-[#c5935f]'
-                    : 'bg-[#0c1f3a] text-white hover:bg-[#162f55]' }}"
+                    ? 'bg-[#00ff88] text-[#0a192f] hover:bg-[#00e67a]'
+                    : 'bg-[#1e3a5f] text-white hover:bg-[#2a4d7d]' }}"
         >
             Join Waitlist
         </button>

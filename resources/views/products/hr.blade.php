@@ -7,16 +7,16 @@
     <!-- Hero Surface -->
     <section class="brand-surface relative overflow-hidden bg-[#0c1f3a] text-white pt-16 pb-20 md:pt-24 md:pb-28">
         <div class="brand-texture" aria-hidden="true"></div>
-        <div class="brand-glow top-0 right-1/4 w-[500px] h-[300px] bg-[#d4a373]/15"></div>
+        <div class="brand-glow top-0 right-1/4 w-[500px] h-[300px] bg-[#00ff88]/10"></div>
 
         <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
             <span class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs text-white/90 backdrop-blur-md mb-6 reveal">
-                <span class="text-[#d4a373] font-bold">Enterprise Bespoke Solutions</span>
+                <span class="text-[#00ff88] font-bold">Enterprise Bespoke Solutions</span>
             </span>
 
             <h1 class="mx-auto max-w-4xl text-3xl sm:text-5xl lg:text-[56px] tracking-tight leading-[1.15] reveal">
                 <span class="font-light text-white/90">Custom Workforce Systems</span><br/>
-                <span class="font-bold text-white">Engineered Around Your Team<span class="text-[#d4a373]">.</span></span>
+                <span class="font-bold text-white">Engineered Around Your Team<span class="text-[#00ff88]">.</span></span>
             </h1>
 
             <p class="mx-auto mt-6 max-w-2xl text-sm sm:text-base leading-relaxed text-white/75 reveal">
@@ -29,11 +29,11 @@
     <section class="bg-white py-20 md:py-28">
         <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto">
-                <span class="text-xs font-bold uppercase tracking-wider text-[#d4a373]">Workforce Operations</span>
+                <span class="text-xs font-bold uppercase tracking-wider text-emerald-600">Workforce Operations</span>
                 <h2 class="mt-2 text-2xl sm:text-3xl font-bold text-[#0c1f3a]">
                     Tailor-Built for Your Exact Corporate Processes
                 </h2>
-                <div class="w-16 h-1 bg-[#d4a373] mt-4 mb-8"></div>
+                <div class="w-16 h-1 bg-[#00ff88] mt-4 mb-8"></div>
 
                 <div class="grid sm:grid-cols-2 gap-6 my-10">
                     <div class="p-6 rounded-2xl bg-[#f8fafc] border border-gray-200">
@@ -59,7 +59,7 @@
                     <p class="mt-3 text-sm text-white/75 max-w-xl mx-auto">
                         Tell us about your organization size, department structure, and operational requirements. We engineer the exact system you need.
                     </p>
-                    <a href="{{ route('contact', ['subject' => 'Custom HR System Scope']) }}" class="mt-6 inline-block rounded-full bg-[#d4a373] px-8 py-3 text-xs uppercase font-bold text-[#0c1f3a] hover:bg-[#c5935f] transition-all">
+                    <a href="{{ route('contact', ['subject' => 'Custom HR System Scope']) }}" class="mt-6 inline-block rounded-full bg-[#00ff88] px-8 py-3 text-xs uppercase font-bold text-[#0a192f] hover:bg-[#00e67a] transition-all">
                         Request System Architecture Call
                     </a>
                 </div>

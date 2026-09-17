@@ -42,7 +42,7 @@
 
             <h1 class="mx-auto max-w-4xl text-3xl sm:text-5xl lg:text-[58px] tracking-tight leading-[1.14] reveal">
                 <span class="font-light text-white/90">Run Your Entire School</span><br/>
-                <span class="font-bold text-white">From One Clean Dashboard<span class="text-[#d4a373]">.</span></span>
+                <span class="font-bold text-white">From One Clean Dashboard<span class="text-[#00ff88]">.</span></span>
             </h1>
 
             <p class="mx-auto mt-6 max-w-2xl text-sm sm:text-base leading-relaxed text-white/75 reveal">
@@ -50,12 +50,12 @@
             </p>
 
             <div class="mt-10 flex flex-wrap items-center justify-center gap-4 reveal">
-                <a href="{{ route('contact', ['subject' => 'School Demo Request']) }}" class="inline-flex items-center rounded-full bg-[#d4a373] px-8 py-3.5 text-sm font-bold text-[#0c1f3a] hover:bg-[#c5935f] transition-all shadow-lg hover:-translate-y-0.5">
+                <a href="{{ route('contact', ['subject' => 'School Demo Request']) }}" class="inline-flex items-center rounded-full bg-[#00ff88] px-8 py-3.5 text-sm font-bold text-[#0a192f] hover:bg-[#00e67a] transition-all shadow-lg hover:-translate-y-0.5">
                     Book a Free School Demo
                 </a>
                 <a href="https://sms.extremesolutions.com.ng" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-7 py-3.5 text-sm font-medium text-white hover:bg-white/20 transition-all">
                     <span>See the Live System</span>
-                    <svg class="h-4 w-4 text-[#d4a373] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg class="h-4 w-4 text-[#00ff88] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17l10-10M7 7h10v10" />
                     </svg>
                 </a>
@@ -71,11 +71,11 @@
     <section class="bg-white py-20 md:py-28">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto text-center mb-16 reveal">
-                <span class="text-xs font-bold uppercase tracking-wider text-[#d4a373]">Operational Contrast</span>
+                <span class="text-xs font-bold uppercase tracking-wider text-emerald-600">Operational Contrast</span>
                 <h2 class="mt-2 text-3xl sm:text-4xl font-bold text-[#0c1f3a]">
                     What Does Your Term Look Like Today?
                 </h2>
-                <div class="w-16 h-1 bg-[#d4a373] mx-auto mt-4"></div>
+                <div class="w-16 h-1 bg-[#00ff88] mx-auto mt-4"></div>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -145,7 +145,7 @@
     <section class="bg-[#f8fafc] py-20 md:py-28 border-y border-gray-200/70">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mb-14 reveal">
-                <span class="text-xs font-bold uppercase tracking-wider text-[#d4a373]">Platform Capabilities</span>
+                <span class="text-xs font-bold uppercase tracking-wider text-emerald-600">Platform Capabilities</span>
                 <h2 class="mt-2 text-3xl sm:text-4xl font-bold text-[#0c1f3a]">
                     Engineered for Complete School Peace of Mind
                 </h2>
@@ -156,7 +156,7 @@
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="rounded-2xl bg-white p-6 border border-gray-200/80 shadow-sm reveal">
-                    <div class="w-10 h-10 rounded-xl bg-[#0c1f3a] text-[#d4a373] flex items-center justify-center font-bold text-sm mb-4">
+                    <div class="w-10 h-10 rounded-xl bg-[#0c1f3a] text-[#00ff88] flex items-center justify-center font-bold text-sm mb-4">
                         01
                     </div>
                     <h4 class="font-bold text-[#0c1f3a] mb-2">Automated Result Collation</h4>
@@ -172,7 +172,7 @@
                 </div>
 
                 <div class="rounded-2xl bg-white p-6 border border-gray-200/80 shadow-sm reveal">
-                    <div class="w-10 h-10 rounded-xl bg-[#0c1f3a] text-[#d4a373] flex items-center justify-center font-bold text-sm mb-4">
+                    <div class="w-10 h-10 rounded-xl bg-[#0c1f3a] text-[#00ff88] flex items-center justify-center font-bold text-sm mb-4">
                         03
                     </div>
                     <h4 class="font-bold text-[#0c1f3a] mb-2">Attendance &amp; Bio Records</h4>
@@ -196,7 +196,7 @@
             <div class="max-w-4xl mx-auto rounded-3xl bg-[#0c1f3a] text-white p-8 sm:p-14 shadow-2xl relative overflow-hidden reveal">
                 <div class="brand-texture" aria-hidden="true"></div>
                 <div class="relative z-10 text-center">
-                    <span class="text-xs font-bold uppercase tracking-wider text-[#d4a373]">Risk-Reversal Pricing</span>
+                    <span class="text-xs font-bold uppercase tracking-wider text-[#00ff88]">Risk-Reversal Pricing</span>
                     <h2 class="mt-4 text-2xl sm:text-4xl font-bold tracking-tight">
                         You Pay Per Student, Per Term.<br class="hidden sm:inline" />
                         It Grows With Your School &mdash; Never Traps You.
@@ -206,7 +206,7 @@
                     </p>
 
                     <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
-                        <a href="{{ route('contact', ['subject' => 'School Demo Request']) }}" class="rounded-full bg-[#d4a373] px-8 py-3.5 text-sm font-bold text-[#0c1f3a] hover:bg-[#c5935f] transition-all shadow-lg">
+                        <a href="{{ route('contact', ['subject' => 'School Demo Request']) }}" class="rounded-full bg-[#00ff88] px-8 py-3.5 text-sm font-bold text-[#0a192f] hover:bg-[#00e67a] transition-all shadow-lg">
                             Schedule Your School Demo
                         </a>
                         <a href="https://wa.me/2349052585622?text=Hello%20ExtremeSolutions,%20I%20would%20like%20to%20request%20a%20demo%20of%20the%20School%20Management%20System" target="_blank" rel="noopener noreferrer" class="rounded-full border border-[#00ff88]/40 bg-[#00ff88]/10 px-7 py-3.5 text-sm font-medium text-[#00ff88] hover:bg-[#00ff88]/20 transition-all">

@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     });
                 },
-                { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+                { threshold: 0.08, rootMargin: '0px 0px -30px 0px' }
             );
             revealEls.forEach((el) => observer.observe(el));
         }
@@ -72,19 +72,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     const title = t.querySelector('.project-title');
 
                     if (isCurrent) {
-                        num?.classList.add('text-[#d4a373]');
+                        num?.classList.add('text-[#00ff88]');
                         num?.classList.remove('text-gray-400');
-                        title?.classList.add('text-[#0c1f3a]', 'font-semibold');
+                        title?.classList.add('text-[#1e3a5f]', 'font-bold');
                         title?.classList.remove('text-gray-400');
                     } else {
-                        num?.classList.remove('text-[#d4a373]');
+                        num?.classList.remove('text-[#00ff88]');
                         num?.classList.add('text-gray-400');
-                        title?.classList.remove('text-[#0c1f3a]', 'font-semibold');
+                        title?.classList.remove('text-[#1e3a5f]', 'font-bold');
                         title?.classList.add('text-gray-400');
                     }
                 });
 
-                // Show target panel with fade
+                // Show target panel
                 projectPanels.forEach((panel) => {
                     if (panel.getAttribute('data-project-panel') === targetId) {
                         panel.classList.remove('hidden');
@@ -98,28 +98,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 4. Interactive Testimonial Switcher (01, 02, 03 tabs)
-    const testimonialTabs = document.querySelectorAll('[data-testimonial-tab]');
-    const testimonialPanels = document.querySelectorAll('[data-testimonial-panel]');
+    // 4. Interactive Operational Clarity / FAQ Category Switcher
+    const clarityCategoryBtns = document.querySelectorAll('[data-clarity-category]');
+    const clarityCategoryPanels = document.querySelectorAll('[data-clarity-panel]');
 
-    if (testimonialTabs.length && testimonialPanels.length) {
-        testimonialTabs.forEach((tab) => {
-            tab.addEventListener('click', () => {
-                const target = tab.getAttribute('data-testimonial-tab');
+    if (clarityCategoryBtns.length && clarityCategoryPanels.length) {
+        clarityCategoryBtns.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                const targetCat = btn.getAttribute('data-clarity-category');
 
-                testimonialTabs.forEach((t) => {
-                    const active = t === tab;
-                    if (active) {
-                        t.classList.add('border-[#d4a373]', 'text-[#d4a373]', 'font-bold');
-                        t.classList.remove('border-gray-200', 'text-gray-400');
+                clarityCategoryBtns.forEach((b) => {
+                    const isActive = b === btn;
+                    if (isActive) {
+                        b.classList.add('bg-[#1e3a5f]', 'text-white', 'shadow-md');
+                        b.classList.remove('bg-white', 'text-gray-700', 'border-gray-200');
                     } else {
-                        t.classList.remove('border-[#d4a373]', 'text-[#d4a373]', 'font-bold');
-                        t.classList.add('border-gray-200', 'text-gray-400');
+                        b.classList.remove('bg-[#1e3a5f]', 'text-white', 'shadow-md');
+                        b.classList.add('bg-white', 'text-gray-700', 'border-gray-200');
                     }
                 });
 
-                testimonialPanels.forEach((panel) => {
-                    if (panel.getAttribute('data-testimonial-panel') === target) {
+                clarityCategoryPanels.forEach((panel) => {
+                    if (panel.getAttribute('data-clarity-panel') === targetCat) {
                         panel.classList.remove('hidden');
                     } else {
                         panel.classList.add('hidden');
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 5. Interactive FAQ Accordion
+    // 5. Interactive Accordion (Universal)
     const faqButtons = document.querySelectorAll('.faq-trigger');
 
     faqButtons.forEach((button) => {
@@ -139,21 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const iconPlus = button.querySelector('.icon-plus');
             const iconMinus = button.querySelector('.icon-minus');
 
-            // Close other open accordions
-            faqButtons.forEach((otherBtn) => {
-                if (otherBtn !== button) {
-                    otherBtn.setAttribute('aria-expanded', 'false');
-                    const otherContent = otherBtn.nextElementSibling;
-                    if (otherContent) {
-                        otherContent.classList.remove('is-open');
-                        otherContent.classList.add('hidden');
-                    }
-                    otherBtn.querySelector('.icon-plus')?.classList.remove('hidden');
-                    otherBtn.querySelector('.icon-minus')?.classList.add('hidden');
-                }
-            });
-
-            // Toggle clicked item
             if (isExpanded) {
                 button.setAttribute('aria-expanded', 'false');
                 content?.classList.remove('is-open');
@@ -217,7 +202,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (nextBtn) {
             nextBtn.addEventListener('click', () => {
-                // Check if step 1 inputs or radios are filled
                 if (currentStep < totalSteps) {
                     currentStep++;
                     updateWizard();

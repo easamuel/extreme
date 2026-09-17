@@ -2,10 +2,10 @@
 
 @php
     $isDark = $theme === 'dark';
-    $strokeE = $isDark ? '#ffffff' : '#0c1f3a';
+    $strokeE = $isDark ? '#ffffff' : '#1e3a5f';
     $strokeS = '#00ff88';
-    $textPrimary = $isDark ? 'text-white' : 'text-[#0c1f3a]';
-    $textAccent = $isDark ? 'text-[#d4a373]' : 'text-[#0c1f3a]';
+    $textPrimary = $isDark ? 'text-white' : 'text-[#1e3a5f]';
+    $textAccent = 'text-[#00ff88]';
 @endphp
 
 <div class="flex items-center space-x-2.5 sm:space-x-3">
@@ -35,7 +35,7 @@
         <span class="text-sm sm:text-base font-bold tracking-tight leading-none {{ $textPrimary }}">
             EXTREME<span class="font-extrabold {{ $textAccent }} ml-1">SOLUTIONS</span>
         </span>
-        <span class="text-[9px] uppercase tracking-[0.25em] {{ $isDark ? 'text-white/50' : 'text-gray-500' }} mt-0.5">
+        <span class="text-[9px] uppercase tracking-[0.25em] {{ $isDark ? 'text-white/60' : 'text-[#1e3a5f]/60' }} mt-0.5">
             Systems &amp; Software
         </span>
     </div>
