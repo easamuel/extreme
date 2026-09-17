@@ -366,8 +366,62 @@
         </div>
     </section>
 
-    <!-- Final CTA -->
+    <!-- Failure / Success -->
     <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto reveal">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Two Paths From Here</h2>
+                    <div class="w-24 h-1 bg-[#1e3a5f] mx-auto"></div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-gray-50 border border-gray-200 rounded-lg p-8">
+                        <h3 class="font-semibold text-gray-500 uppercase text-sm tracking-wide mb-4">Stay As You Are</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <span class="text-gray-400 mr-2">—</span>
+                                <span>Keep absorbing the cost of manual work and mismatched tools</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-gray-400 mr-2">—</span>
+                                <span>Watch competitors who've modernized pull further ahead</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-gray-400 mr-2">—</span>
+                                <span>Risk hiring the wrong developer and being left with an abandoned half-system</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-[#e8f4f0] border-2 border-[#00ff88] rounded-lg p-8">
+                        <h3 class="font-semibold text-[#1e3a5f] uppercase text-sm tracking-wide mb-4">Work With Us</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-[#00ff88] mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                <span>One system that actually fits how you work</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-[#00ff88] mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Hours back every week, and a professional face to staff and customers</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-[#00ff88] mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Room to grow without technology being what holds you back</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-2xl mx-auto text-center reveal">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Ready to Start?</h2>

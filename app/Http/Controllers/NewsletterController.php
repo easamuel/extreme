@@ -41,6 +41,12 @@ class NewsletterController extends Controller
                 "You're subscribed to ExtremeSolutions",
                 view('emails.newsletter-welcome')->render()
             );
+
+            ResendMailer::send(
+                config('mail.from.address'),
+                'New newsletter subscriber',
+                view('emails.newsletter-notification', ['email' => $email])->render()
+            );
         }
 
         return redirect()->back()->with('newsletter_success', true);

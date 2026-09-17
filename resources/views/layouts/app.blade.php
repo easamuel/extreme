@@ -46,7 +46,7 @@
         "description": "Digital solutions company building custom software, systems, and automation for businesses and institutions.",
         "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+234-803-637-5292",
+            "telephone": "+234-905-258-5622",
             "contactType": "customer service",
             "areaServed": "NG"
         }
