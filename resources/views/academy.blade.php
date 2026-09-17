@@ -8,14 +8,14 @@
     <section class="bg-gradient-to-br from-[#1e3a5f] to-[#152a47] py-20 lg:py-28">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-4xl mx-auto text-center text-white">
-                <span class="inline-block bg-[#00ff88] text-[#1e3a5f] text-xs font-bold uppercase tracking-wide px-3 py-1 rounded-full mb-4">ExtremeSolutions Academy</span>
+                <span class="inline-block bg-[#00ff88] text-[#1e3a5f] text-xs font-bold uppercase tracking-wide px-3 py-1 rounded-full mb-4">Coming Soon</span>
                 <h1 class="text-4xl md:text-5xl font-bold mb-6">We Build Software. We Also Build Tech Careers.</h1>
                 <p class="text-xl text-white/90 mb-8 leading-relaxed">
                     A structured, cohort-based mentorship program for young Nigerians learning to build real
-                    software — guided by the same engineers who build and run our own products.
+                    software — guided by the same engineers who build and run our own products. Not open yet.
                 </p>
-                <a href="{{ route('home') }}?subject=Mentorship+Program+Application#contact" class="inline-block bg-[#00ff88] text-[#1e3a5f] px-8 py-3 rounded-lg font-semibold hover:bg-[#00cc6a] transition-colors shadow-lg">
-                    Apply for the Next Cohort
+                <a href="{{ route('home') }}#newsletter" class="inline-block bg-[#00ff88] text-[#1e3a5f] px-8 py-3 rounded-lg font-semibold hover:bg-[#00cc6a] transition-colors shadow-lg">
+                    Get Notified When We Launch
                 </a>
             </div>
         </div>
@@ -31,10 +31,9 @@
                 </div>
                 <p class="text-lg text-gray-700 leading-relaxed mb-6">
                     A lot of tech training stops at tutorials and sample projects. Ours doesn't have to — because
-                    we're a company that builds and runs real software every day (our School Management System
-                    and ESPass ticketing platform are both live, in production, right now). Mentees learn from
-                    people actively doing the work, not just teaching it from a curriculum written once and reused
-                    forever.
+                    we're a company that builds and runs real software in production every day. Mentees will learn
+                    from people actively doing the work, not just teaching it from a curriculum written once and
+                    reused forever.
                 </p>
                 <div class="grid md:grid-cols-3 gap-8 mt-12">
                     <div class="text-center">
@@ -76,12 +75,12 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Interested in Joining?</h2>
                 <div class="w-24 h-1 bg-[#1e3a5f] mx-auto mb-6"></div>
                 <p class="text-lg text-gray-700 mb-8">
-                    Tell us a bit about yourself and where you are in your tech journey — we'll reach out about
-                    the next cohort.
+                    The Academy isn't open yet. Subscribe to our newsletter and you'll be the first to know when
+                    applications open.
                 </p>
-                <a href="{{ route('home') }}?subject=Mentorship+Program+Application#contact" class="inline-block bg-[#1e3a5f] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#152a47] transition-colors">
-                    Apply for the Next Cohort
-                </a>
+                <div class="max-w-md mx-auto">
+                    @include('components.newsletter-form', ['theme' => 'light'])
+                </div>
             </div>
         </div>
     </section>

@@ -65,7 +65,7 @@
                         <a href="{{ route('home') }}" class="hover:text-[#00ff88] transition-colors">Home</a>
                     </li>
                     <li>
-                        <a href="{{ route('home') }}#products" class="hover:text-[#00ff88] transition-colors">Our Work</a>
+                        <a href="{{ route('about') }}" class="hover:text-[#00ff88] transition-colors">About</a>
                     </li>
                     <li>
                         <a href="{{ route('academy') }}" class="hover:text-[#00ff88] transition-colors">Academy</a>
@@ -80,14 +80,6 @@
             <div>
                 <h4 class="text-white font-semibold mb-4">Contact Us</h4>
                 <ul class="space-y-3">
-                    <li>
-                        <a href="mailto:contact@extremesolutions.com.ng" class="flex items-center gap-2 hover:text-[#00ff88] transition-colors">
-                            <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                            </svg>
-                            <span class="text-sm">contact@extremesolutions.com.ng</span>
-                        </a>
-                    </li>
                     <li>
                         <a href="tel:08036375292" class="flex items-center gap-2 hover:text-[#00ff88] transition-colors">
                             <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">

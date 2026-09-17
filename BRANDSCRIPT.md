@@ -240,6 +240,26 @@ A third audience now exists alongside businesses and schools: young Nigerians tr
 | Failure / Success | Another year of tutorials with nothing real to show, vs. real, mentor-guided experience that actually leads somewhere. |
 
 > The copy on `/academy` is deliberately generic about cohort length, cost, and curriculum specifics — none of that was confirmed. Fill those in as soon as they're locked; vague claims about a real program read worse than no claim at all.
+>
+> **Round 3 update:** the Academy isn't active yet. "Apply for the Next Cohort" was removed everywhere — it implied an open program that doesn't exist. CTAs now point to the newsletter ("Get Notified When We Launch" / subscribe) instead.
+
+---
+
+## 11 · Round 3 — simplify, add About, fix the CTA lie
+
+Feedback after seeing the live site: the homepage mentioned SMS and ESPass too often, the two-product-card section made the company look narrow ("just two solutions"), there was no About page or Mission/Vision, and the Academy CTA ("Apply for the Next Cohort") was actively false since the program isn't open yet.
+
+**Changes made:**
+
+- **New `/about` page** — Our Story, Mission, Vision, and Values (4 concrete commitments, distinct wording from the homepage's "Why Trust Us" to avoid duplication). Nav updated: Home · About · Academy · Contact.
+- **Homepage "Who We Are" cut down** to a short teaser + "Learn more about us →" link to `/about`, instead of a full section repeating the mission paragraph and naming both products.
+- **The two-product-card "Our Solutions" section replaced with a slim "Proof Strip"** — one line ("Proof, not just a pitch — we run our own products in production") plus two small pill links to the School System and ESPass pages. Same authority claim, without making the homepage look like a 2-item menu. The full-detail product pages (`/products/school`, `/products/espass`) are unchanged — schools being pitched still get the deep page.
+- **SMS/ESPass mentions trimmed** everywhere they were named twice in the same section (About teaser, Why Trust Us item 3, Academy page's "why it's different" section) — said once, plainly, instead of repeated by name.
+- **Academy CTA fixed**: "Apply for the Next Cohort" is gone from the hero, the "What We Build" card, and the bottom CTA. Replaced with "Coming Soon" badges and a newsletter signup ("Get Notified When We Launch") — honest about where the program actually is.
+- **Added a full-bleed dark "Academy Teaser" section** on the homepage (navy background) — doubles as a visual break in the page rhythm and a soft, honest plug for the Academy without overselling it.
+- **Removed `contact@extremesolutions.com.ng` everywhere** (contact section, footer) — phone number (08036375292) is now the only direct contact method shown outside the form itself.
+
+**Explicitly not copied from the reference site (gratech.coevs.com):** its fake testimonials, fake "6,561+ satisfied clients" style stats, a hosting-style pricing table, and a lorem-ipsum blog section. Those would violate the honesty standard this whole rework has been built on — inventing social proof or stats we don't have would hurt trust more than the sparse-feeling homepage it's replacing. What was carried over is the *structural instinct*: a cleaner, more spaced-out, less cluttered section rhythm, and a proper About page with Mission/Vision — not the fabricated content.
 
 ---
 

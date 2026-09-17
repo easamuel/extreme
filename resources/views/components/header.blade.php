@@ -13,8 +13,8 @@
                 <a href="{{ route('home') }}" class="text-gray-700 hover:text-[#1e3a5f] transition-colors {{ request()->routeIs('home') ? 'text-[#1e3a5f] font-medium' : '' }}">
                     Home
                 </a>
-                <a href="{{ route('home') }}#products" class="text-gray-700 hover:text-[#1e3a5f] transition-colors">
-                    Our Work
+                <a href="{{ route('about') }}" class="text-gray-700 hover:text-[#1e3a5f] transition-colors {{ request()->routeIs('about') ? 'text-[#1e3a5f] font-medium' : '' }}">
+                    About
                 </a>
                 <a href="{{ route('academy') }}" class="text-gray-700 hover:text-[#1e3a5f] transition-colors {{ request()->routeIs('academy') ? 'text-[#1e3a5f] font-medium' : '' }}">
                     Academy
@@ -45,8 +45,8 @@
                 <a href="{{ route('home') }}" class="px-3 py-2 text-gray-700 hover:text-[#1e3a5f] hover:bg-gray-50 rounded-md transition-colors {{ request()->routeIs('home') ? 'text-[#1e3a5f] font-medium bg-gray-50' : '' }}">
                     Home
                 </a>
-                <a href="{{ route('home') }}#products" class="px-3 py-2 text-gray-700 hover:text-[#1e3a5f] hover:bg-gray-50 rounded-md transition-colors">
-                    Our Work
+                <a href="{{ route('about') }}" class="px-3 py-2 text-gray-700 hover:text-[#1e3a5f] hover:bg-gray-50 rounded-md transition-colors {{ request()->routeIs('about') ? 'text-[#1e3a5f] font-medium bg-gray-50' : '' }}">
+                    About
                 </a>
                 <a href="{{ route('academy') }}" class="px-3 py-2 text-gray-700 hover:text-[#1e3a5f] hover:bg-gray-50 rounded-md transition-colors {{ request()->routeIs('academy') ? 'text-[#1e3a5f] font-medium bg-gray-50' : '' }}">
                     Academy

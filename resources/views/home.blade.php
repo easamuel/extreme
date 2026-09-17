@@ -29,60 +29,21 @@
         </div>
     </section>
 
-    <!-- Mission Section -->
+    <!-- About Teaser Section -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Who We Are</h2>
-                    <div class="w-24 h-1 bg-[#1e3a5f] mx-auto mb-6"></div>
-                </div>
-                <div class="prose prose-lg max-w-none text-gray-700">
-                    <p class="text-lg leading-relaxed mb-6">
-                        We know what it's like to run a business on tools that fight you instead of helping you —
-                        spreadsheets standing in for real systems, software that was never built for how you
-                        actually work. That's the problem ExtremeSolutions exists to solve.
-                    </p>
-                    <p class="text-lg leading-relaxed mb-6">
-                        We're not consultants who hand over a document and disappear. We design and build custom
-                        software, systems, and automation — and we run our own products in production every day:
-                        our School Management System at
-                        <a href="https://sms.extremesolutions.com.ng" target="_blank" rel="noopener" class="text-[#1e3a5f] font-semibold underline">sms.extremesolutions.com.ng</a>
-                        and our ESPass ticketing platform at
-                        <a href="https://espass.extremesolutions.com.ng" target="_blank" rel="noopener" class="text-[#1e3a5f] font-semibold underline">espass.extremesolutions.com.ng</a>.
-                        If we're pitching you on building software, it's because we already know what it takes to
-                        build and operate it ourselves — and we're not narrowing ourselves to any one industry to do it.
-                    </p>
-                    <div class="grid md:grid-cols-3 gap-8 mt-12">
-                        <div class="text-center">
-                            <div class="bg-[#e8f4f0] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <svg class="w-8 h-8 text-[#1e3a5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                                </svg>
-                            </div>
-                            <h3 class="font-semibold text-gray-900 mb-2">We Build &amp; Run Software</h3>
-                            <p class="text-gray-600">Not just advice — live products we operate ourselves</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="bg-[#e8f4f0] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <svg class="w-8 h-8 text-[#00ff88]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                </svg>
-                            </div>
-                            <h3 class="font-semibold text-gray-900 mb-2">Built to Fit You</h3>
-                            <p class="text-gray-600">Scoped to what your business actually needs, not a bloated package</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="bg-[#e8f4f0] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <svg class="w-8 h-8 text-[#1e3a5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                                </svg>
-                            </div>
-                            <h3 class="font-semibold text-gray-900 mb-2">Support After Launch</h3>
-                            <p class="text-gray-600">Training and a real person to call — never a handoff into silence</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Who We Are</h2>
+                <div class="w-24 h-1 bg-[#1e3a5f] mx-auto mb-6"></div>
+                <p class="text-lg leading-relaxed text-gray-700 mb-6">
+                    We're not consultants who hand over a document and disappear. We design and build custom
+                    software, systems, and automation — and we run our own products in production every day. If
+                    we're pitching you on building software, it's because we already know what it takes to build
+                    and operate it ourselves.
+                </p>
+                <a href="{{ route('about') }}" class="inline-block text-[#1e3a5f] font-semibold hover:underline">
+                    Learn more about us →
+                </a>
             </div>
         </div>
     </section>
@@ -134,7 +95,7 @@
                             </svg>
                         </div>
                         <h3 class="font-semibold text-gray-900 mb-2">Training &amp; Mentorship</h3>
-                        <p class="text-gray-600 text-sm">A cohort-based Academy mentoring the next generation of Nigerian tech talent.</p>
+                        <p class="text-gray-600 text-sm">A cohort-based Academy mentoring the next generation of Nigerian tech talent. <span class="text-[#00994d] font-semibold">Coming soon.</span></p>
                         <a href="{{ route('academy') }}" class="inline-block mt-3 text-sm font-semibold text-[#1e3a5f] hover:underline">Learn more →</a>
                     </div>
                 </div>
@@ -142,108 +103,23 @@
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section id="products" class="py-20 bg-white">
+    <!-- Proof Strip -->
+    <section id="products" class="py-16 bg-white border-y border-gray-100">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Software We've Built and Run</h2>
-                    <div class="w-24 h-1 bg-[#1e3a5f] mx-auto mb-6"></div>
-                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Proof, not just a pitch — these are live products, not mockups.
-                    </p>
-                </div>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- School/Education -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border-2 border-[#00ff88]">
-                        <div class="bg-gradient-to-r from-[#00ff88] to-[#00cc6a] p-8">
-                            <div class="flex items-center justify-between mb-4">
-                                <div class="bg-white w-16 h-16 rounded-lg flex items-center justify-center">
-                                    <svg class="w-8 h-8 text-[#00ff88]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                                    </svg>
-                                </div>
-                                <span class="bg-white/90 text-[#1e3a5f] text-xs font-bold uppercase tracking-wide px-3 py-1 rounded-full">Live Now</span>
-                            </div>
-                            <h3 class="text-2xl font-bold text-white mb-2">School Management System</h3>
-                            <p class="text-white/90">Run your whole school from one dashboard</p>
-                        </div>
-                        <div class="p-8">
-                            <p class="text-gray-600 mb-6">
-                                Fees, attendance, results, and parent communication in one platform — replacing
-                                registers, spreadsheets, and disconnected tools with a single system your staff
-                                actually use.
-                            </p>
-                            <ul class="space-y-3 mb-6 text-gray-700">
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-[#00ff88] mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                                    </svg>
-                                    <span>Fees, Attendance &amp; Results in One Place</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-[#00ff88] mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                                    </svg>
-                                    <span>Parent Portal — No More Chasing the Office</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-[#00ff88] mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                                    </svg>
-                                    <span>Priced Per Student, Per Term</span>
-                                </li>
-                            </ul>
-                            <a href="{{ route('products.school') }}" class="inline-block bg-[#00ff88] text-[#1e3a5f] px-6 py-2 rounded-lg hover:bg-[#00cc6a] transition-colors font-semibold">
-                                Book a Free Demo →
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- ESPass Ticketing -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                        <div class="bg-gradient-to-r from-[#1e3a5f] to-[#2a4d7a] p-8">
-                            <div class="flex items-center justify-between mb-4">
-                                <div class="bg-white w-16 h-16 rounded-lg flex items-center justify-center">
-                                    <svg class="w-8 h-8 text-[#1e3a5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                                    </svg>
-                                </div>
-                                <span class="bg-white/90 text-[#1e3a5f] text-xs font-bold uppercase tracking-wide px-3 py-1 rounded-full">Live Now</span>
-                            </div>
-                            <h3 class="text-2xl font-bold text-white mb-2">ESPass Ticketing</h3>
-                            <p class="text-white/90">Sell tickets, check people in at the door</p>
-                        </div>
-                        <div class="p-8">
-                            <p class="text-gray-600 mb-6">
-                                Put an event on sale, hand out digital tickets, and scan people in at the door —
-                                one platform instead of spreadsheets and a guest list on paper.
-                            </p>
-                            <ul class="space-y-3 mb-6 text-gray-700">
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-[#00ff88] mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                                    </svg>
-                                    <span>Event Creation &amp; Ticket Sales</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-[#00ff88] mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                                    </svg>
-                                    <span>Scannable Digital Tickets</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-[#00ff88] mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                                    </svg>
-                                    <span>Real-Time Check-In</span>
-                                </li>
-                            </ul>
-                            <a href="{{ route('products.espass') }}" class="inline-block bg-[#1e3a5f] text-white px-6 py-2 rounded-lg hover:bg-[#152a47] transition-colors">
-                                Learn More →
-                            </a>
-                        </div>
-                    </div>
+            <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+                <p class="text-gray-700 text-lg text-center md:text-left">
+                    <span class="font-semibold text-gray-900">Proof, not just a pitch</span> — we run our own
+                    products in production.
+                </p>
+                <div class="flex flex-wrap items-center justify-center gap-4">
+                    <a href="{{ route('products.school') }}" class="inline-flex items-center gap-2 bg-gray-50 hover:bg-gray-100 border border-gray-200 px-5 py-2.5 rounded-lg font-medium text-gray-800 transition-colors">
+                        School Management System
+                        <span class="w-2 h-2 rounded-full bg-[#00ff88]"></span>
+                    </a>
+                    <a href="{{ route('products.espass') }}" class="inline-flex items-center gap-2 bg-gray-50 hover:bg-gray-100 border border-gray-200 px-5 py-2.5 rounded-lg font-medium text-gray-800 transition-colors">
+                        ESPass Ticketing
+                        <span class="w-2 h-2 rounded-full bg-[#00ff88]"></span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -311,7 +187,7 @@
                         <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#1e3a5f] text-white flex items-center justify-center font-bold">3</div>
                         <div>
                             <h3 class="font-semibold text-gray-900 mb-2">We Run What We Build</h3>
-                            <p class="text-gray-600">Our School Management System and ESPass are live products we operate ourselves — not case studies from someone else's brief.</p>
+                            <p class="text-gray-600">Our own products are live and in production — not case studies from someone else's brief.</p>
                         </div>
                     </div>
                     <div class="flex gap-4">
@@ -379,6 +255,23 @@
         </div>
     </section>
 
+    <!-- Academy Teaser -->
+    <section class="py-20 bg-[#1e3a5f]">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl mx-auto text-center text-white">
+                <span class="inline-block bg-[#00ff88] text-[#1e3a5f] text-xs font-bold uppercase tracking-wide px-3 py-1 rounded-full mb-4">Coming Soon</span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">ExtremeSolutions Academy</h2>
+                <p class="text-lg text-white/90 mb-6">
+                    We're building a cohort-based mentorship program to train the next generation of Nigerian tech
+                    talent on real software, not just tutorials. Not open yet — subscribe below to hear when it is.
+                </p>
+                <a href="{{ route('academy') }}" class="inline-block text-white font-semibold hover:underline">
+                    Learn more about the Academy →
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Newsletter Section -->
     <section id="newsletter" class="py-20 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -405,13 +298,7 @@
                         Tell us about the problem you're trying to solve. We'll get back to you to set up a free
                         consultation — no obligation.
                     </p>
-                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-gray-700">
-                        <a href="mailto:contact@extremesolutions.com.ng" class="flex items-center gap-2 hover:text-[#1e3a5f] transition-colors">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                            </svg>
-                            <span>contact@extremesolutions.com.ng</span>
-                        </a>
+                    <div class="flex items-center justify-center gap-2 text-gray-700 text-lg font-medium">
                         <a href="tel:08036375292" class="flex items-center gap-2 hover:text-[#1e3a5f] transition-colors">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />

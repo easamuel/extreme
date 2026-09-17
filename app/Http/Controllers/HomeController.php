@@ -18,6 +18,14 @@ class HomeController extends Controller
     }
 
     /**
+     * Display the About Us page
+     */
+    public function about()
+    {
+        return view('about');
+    }
+
+    /**
      * Display the tech mentorship / training program page
      */
     public function academy()
