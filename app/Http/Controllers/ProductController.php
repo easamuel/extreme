@@ -26,8 +26,8 @@ class ProductController extends Controller
     public function school()
     {
         return view('products.school', [
-            'title' => 'School/Education Management System - ExtremeSolutions',
-            'description' => 'Complete education management system for schools and institutions to manage students, courses, and administrative tasks.',
+            'title' => 'School Management System - ExtremeSolutions',
+            'description' => 'Run your whole school from one dashboard — fees, attendance, results, and parent communication, live at sms.extremesolutions.com.ng.',
         ]);
     }
 }

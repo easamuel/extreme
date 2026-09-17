@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,9 +25,3 @@ Route::get('/products/school', [ProductController::class, 'school'])->name('prod
 
 // Contact Form (CSRF protected by default)
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
-
-// Dashboard (requires authentication)
-Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth')->name('dashboard');
-
-// Authentication Routes
-require __DIR__.'/auth.php';

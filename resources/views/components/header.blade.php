@@ -24,28 +24,11 @@
                 </a>
             </div>
 
-            <!-- Auth Links / Mobile Menu Toggle -->
+            <!-- CTA / Mobile Menu Toggle -->
             <div class="flex items-center space-x-4">
-                @auth
-                    <a href="{{ route('dashboard') }}" class="text-gray-700 hover:text-[#1e3a5f] transition-colors hidden md:inline">
-                        Dashboard
-                    </a>
-                    <form method="POST" action="{{ route('logout') }}" class="hidden md:inline">
-                        @csrf
-                        <button type="submit" class="text-gray-700 hover:text-[#1e3a5f] transition-colors">
-                            Logout
-                        </button>
-                    </form>
-                @else
-                    <a href="{{ route('login') }}" class="text-gray-700 hover:text-[#1e3a5f] transition-colors hidden md:inline">
-                        Login
-                    </a>
-                    @if (Route::has('register'))
-                        <a href="{{ route('register') }}" class="bg-[#1e3a5f] text-white px-4 py-2 rounded-lg hover:bg-[#152a47] transition-colors hidden md:inline">
-                            Register
-                        </a>
-                    @endif
-                @endauth
+                <a href="{{ route('home') }}#contact" class="bg-[#1e3a5f] text-white px-4 py-2 rounded-lg hover:bg-[#152a47] transition-colors hidden md:inline">
+                    Book a Consultation
+                </a>
 
                 <!-- Mobile menu button -->
                 <button type="button" class="md:hidden p-2 rounded-md text-gray-700 hover:text-[#1e3a5f] focus:outline-none focus:ring-2 focus:ring-[#1e3a5f]" id="mobile-menu-button">
@@ -71,26 +54,9 @@
                 <a href="{{ route('home') }}#contact" class="px-3 py-2 text-gray-700 hover:text-[#1e3a5f] hover:bg-gray-50 rounded-md transition-colors">
                     Contact
                 </a>
-                @auth
-                    <a href="{{ route('dashboard') }}" class="px-3 py-2 text-gray-700 hover:text-[#1e3a5f] hover:bg-gray-50 rounded-md transition-colors">
-                        Dashboard
-                    </a>
-                    <form method="POST" action="{{ route('logout') }}">
-                        @csrf
-                        <button type="submit" class="w-full text-left px-3 py-2 text-gray-700 hover:text-[#1e3a5f] hover:bg-gray-50 rounded-md transition-colors">
-                            Logout
-                        </button>
-                    </form>
-                @else
-                    <a href="{{ route('login') }}" class="px-3 py-2 text-gray-700 hover:text-[#1e3a5f] hover:bg-gray-50 rounded-md transition-colors">
-                        Login
-                    </a>
-                    @if (Route::has('register'))
-                        <a href="{{ route('register') }}" class="px-3 py-2 bg-[#1e3a5f] text-white rounded-md hover:bg-[#152a47] transition-colors text-center">
-                            Register
-                        </a>
-                    @endif
-                @endauth
+                <a href="{{ route('home') }}#contact" class="px-3 py-2 bg-[#1e3a5f] text-white rounded-md hover:bg-[#152a47] transition-colors text-center">
+                    Book a Consultation
+                </a>
             </div>
         </div>
     </nav>

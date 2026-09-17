@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'ExtremeSolutions - Digital Solutions for Business')
-@section('description', 'ExtremeSolutions builds digital solutions that solve real business problems. Our platforms simplify workflows in HR management, education systems, and other sectors.')
+@section('title', 'ExtremeSolutions - Custom Software, Systems & Automation')
+@section('description', 'ExtremeSolutions designs and builds custom software, systems, and automation for businesses and institutions. See our live School Management System and HR platform.')
 
 @section('content')
     <!-- Hero Section -->
@@ -9,19 +9,20 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-4xl mx-auto text-center">
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                    Digital Solutions That
-                    <span class="text-[#1e3a5f]">Solve Real Problems</span>
+                    Software Built to Fit
+                    <span class="text-[#1e3a5f]">How You Work</span>
                 </h1>
                 <p class="text-xl text-gray-700 mb-8 leading-relaxed">
-                    ExtremeSolutions builds specialized platforms and tools for businesses and institutions. 
-                    We make software intuitive, reliable, and secure.
+                    ExtremeSolutions designs and builds custom software, systems, and automation for businesses and
+                    institutions who don't have an in-house team to build it. We don't just advise — we build things
+                    we run ourselves.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#products" class="bg-[#1e3a5f] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#152a47] transition-colors shadow-lg">
-                        Explore Solutions
+                    <a href="#contact" class="bg-[#1e3a5f] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#152a47] transition-colors shadow-lg">
+                        Book a Consultation
                     </a>
-                    <a href="#contact" class="bg-white text-[#1e3a5f] px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors border-2 border-[#1e3a5f]">
-                        Get in Touch
+                    <a href="#products" class="bg-white text-[#1e3a5f] px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors border-2 border-[#1e3a5f]">
+                        See Our Work
                     </a>
                 </div>
             </div>
@@ -38,12 +39,17 @@
                 </div>
                 <div class="prose prose-lg max-w-none text-gray-700">
                     <p class="text-lg leading-relaxed mb-6">
-                        ExtremeSolutions builds digital solutions that solve real business problems. Our platforms simplify 
-                        workflows in HR management, education systems, and other sectors.
+                        We know what it's like to run a business on tools that fight you instead of helping you —
+                        spreadsheets standing in for real systems, software that was never built for how you
+                        actually work. That's the problem ExtremeSolutions exists to solve.
                     </p>
                     <p class="text-lg leading-relaxed mb-6">
-                        We build secure, scalable products that help organizations automate processes, 
-                        improve accuracy, and enhance operational efficiency.
+                        We're not consultants who hand over a document and disappear. We design and build custom
+                        software, systems, and automation — and we run our own products in production every day,
+                        including our School Management System at
+                        <a href="https://sms.extremesolutions.com.ng" target="_blank" rel="noopener" class="text-[#1e3a5f] font-semibold underline">sms.extremesolutions.com.ng</a>.
+                        If we're pitching you on building software, it's because we already know what it takes to
+                        build and operate it ourselves.
                     </p>
                     <div class="grid md:grid-cols-3 gap-8 mt-12">
                         <div class="text-center">
@@ -52,8 +58,8 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                                 </svg>
                             </div>
-                            <h3 class="font-semibold text-gray-900 mb-2">Secure</h3>
-                            <p class="text-gray-600">Enterprise-grade security built into every solution</p>
+                            <h3 class="font-semibold text-gray-900 mb-2">We Build &amp; Run Software</h3>
+                            <p class="text-gray-600">Not just advice — live products we operate ourselves</p>
                         </div>
                         <div class="text-center">
                             <div class="bg-[#e8f4f0] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -61,8 +67,8 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                                 </svg>
                             </div>
-                            <h3 class="font-semibold text-gray-900 mb-2">Scalable</h3>
-                            <p class="text-gray-600">Grows with your business needs</p>
+                            <h3 class="font-semibold text-gray-900 mb-2">Built to Fit You</h3>
+                            <p class="text-gray-600">Scoped to what your business actually needs, not a bloated package</p>
                         </div>
                         <div class="text-center">
                             <div class="bg-[#e8f4f0] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -70,8 +76,8 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                                 </svg>
                             </div>
-                            <h3 class="font-semibold text-gray-900 mb-2">Intuitive</h3>
-                            <p class="text-gray-600">Easy to use, easy to learn</p>
+                            <h3 class="font-semibold text-gray-900 mb-2">Support After Launch</h3>
+                            <p class="text-gray-600">Training and a real person to call — never a handoff into silence</p>
                         </div>
                     </div>
                 </div>
@@ -79,18 +85,109 @@
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section id="products" class="py-20 bg-gray-50">
+    <!-- What We Build Section -->
+    <section id="what-we-build" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Solutions</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What We Build</h2>
                     <div class="w-24 h-1 bg-[#1e3a5f] mx-auto mb-6"></div>
                     <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Specialized platforms designed to streamline operations and improve efficiency
+                        HR and School Management are two things we've built. They're proof of how we work — not the
+                        limit of what we do.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow p-8 text-center">
+                        <div class="bg-[#e8f4f0] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-[#1e3a5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Custom Software</h3>
+                        <p class="text-gray-600 text-sm">Purpose-built applications designed around how your business actually operates.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-8 text-center">
+                        <div class="bg-[#e8f4f0] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-[#1e3a5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Systems &amp; Automation</h3>
+                        <p class="text-gray-600 text-sm">Connecting the tools you already use and automating the manual work in between.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-8 text-center">
+                        <div class="bg-[#e8f4f0] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-[#1e3a5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">AI &amp; Innovation</h3>
+                        <p class="text-gray-600 text-sm">Practical AI features added where they genuinely save time — not for their own sake.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Software We've Built and Run</h2>
+                    <div class="w-24 h-1 bg-[#1e3a5f] mx-auto mb-6"></div>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Proof, not just a pitch — these are live products, not mockups.
                     </p>
                 </div>
                 <div class="grid md:grid-cols-2 gap-8">
+                    <!-- School/Education -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border-2 border-[#00ff88]">
+                        <div class="bg-gradient-to-r from-[#00ff88] to-[#00cc6a] p-8">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="bg-white w-16 h-16 rounded-lg flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-[#00ff88]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                    </svg>
+                                </div>
+                                <span class="bg-white/90 text-[#1e3a5f] text-xs font-bold uppercase tracking-wide px-3 py-1 rounded-full">Live Now</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-2">School Management System</h3>
+                            <p class="text-white/90">Run your whole school from one dashboard</p>
+                        </div>
+                        <div class="p-8">
+                            <p class="text-gray-600 mb-6">
+                                Fees, attendance, results, and parent communication in one platform — replacing
+                                registers, spreadsheets, and disconnected tools with a single system your staff
+                                actually use.
+                            </p>
+                            <ul class="space-y-3 mb-6 text-gray-700">
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-[#00ff88] mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Fees, Attendance &amp; Results in One Place</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-[#00ff88] mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Parent Portal — No More Chasing the Office</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-[#00ff88] mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Priced Per Student, Per Term</span>
+                                </li>
+                            </ul>
+                            <a href="{{ route('products.school') }}" class="inline-block bg-[#00ff88] text-[#1e3a5f] px-6 py-2 rounded-lg hover:bg-[#00cc6a] transition-colors font-semibold">
+                                Book a Free Demo →
+                            </a>
+                        </div>
+                    </div>
+
                     <!-- HR Management -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                         <div class="bg-gradient-to-r from-[#1e3a5f] to-[#2a4d7a] p-8">
@@ -104,7 +201,7 @@
                         </div>
                         <div class="p-8">
                             <p class="text-gray-600 mb-6">
-                                Streamline your human resources operations with our comprehensive HR management solution. 
+                                Streamline your human resources operations with our comprehensive HR management solution.
                                 Manage employees, payroll, attendance, and more from a single platform.
                             </p>
                             <ul class="space-y-3 mb-6 text-gray-700">
@@ -132,47 +229,37 @@
                             </a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <!-- School/Education -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                        <div class="bg-gradient-to-r from-[#00ff88] to-[#00cc6a] p-8">
-                            <div class="bg-white w-16 h-16 rounded-lg flex items-center justify-center mb-4">
-                                <svg class="w-8 h-8 text-[#00ff88]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                                </svg>
-                            </div>
-                            <h3 class="text-2xl font-bold text-white mb-2">School/Education</h3>
-                            <p class="text-white/90">Complete education management</p>
-                        </div>
-                        <div class="p-8">
-                            <p class="text-gray-600 mb-6">
-                                Manage your educational institution efficiently with our comprehensive school management system. 
-                                Handle students, courses, grades, and administrative tasks seamlessly.
-                            </p>
-                            <ul class="space-y-3 mb-6 text-gray-700">
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-[#00ff88] mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                                    </svg>
-                                    <span>Student Management</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-[#00ff88] mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                                    </svg>
-                                    <span>Course & Grade Management</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-[#00ff88] mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                                    </svg>
-                                    <span>Parent & Teacher Portal</span>
-                                </li>
-                            </ul>
-                            <a href="{{ route('products.school') }}" class="inline-block bg-[#00ff88] text-[#1e3a5f] px-6 py-2 rounded-lg hover:bg-[#00cc6a] transition-colors font-semibold">
-                                Learn More →
-                            </a>
-                        </div>
+    <!-- How We Work Section -->
+    <section id="how-we-work" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How We Work</h2>
+                    <div class="w-24 h-1 bg-[#1e3a5f] mx-auto mb-6"></div>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        A simple path from problem to working software.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center relative">
+                        <div class="bg-[#1e3a5f] text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Talk to Us</h3>
+                        <p class="text-gray-600">A free consultation to understand your problem — no obligation.</p>
+                    </div>
+                    <div class="text-center relative">
+                        <div class="bg-[#1e3a5f] text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
+                        <h3 class="font-semibold text-gray-900 mb-2">We Design &amp; Build</h3>
+                        <p class="text-gray-600">Scoped to what you actually need — not a bloated off-the-shelf package.</p>
+                    </div>
+                    <div class="text-center relative">
+                        <div class="bg-[#1e3a5f] text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>
+                        <h3 class="font-semibold text-gray-900 mb-2">You Launch, With Support</h3>
+                        <p class="text-gray-600">Training and onboarding, then ongoing support — never a handoff into silence.</p>
                     </div>
                 </div>
             </div>
@@ -237,10 +324,11 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-4xl mx-auto">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get in Touch</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Start Your Project</h2>
                     <div class="w-24 h-1 bg-[#1e3a5f] mx-auto mb-6"></div>
                     <p class="text-lg text-gray-600 mb-4">
-                        Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+                        Tell us about the problem you're trying to solve. We'll get back to you to set up a free
+                        consultation — no obligation.
                     </p>
                     <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-gray-700">
                         <a href="mailto:contact@extremesolutions.com.ng" class="flex items-center gap-2 hover:text-[#1e3a5f] transition-colors">
@@ -313,9 +401,9 @@
                             </label>
                             <input 
                                 type="text" 
-                                id="subject" 
-                                name="subject" 
-                                value="{{ old('subject') }}"
+                                id="subject"
+                                name="subject"
+                                value="{{ old('subject', request('subject')) }}"
                                 required
                                 class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1e3a5f] focus:border-[#1e3a5f] @error('subject') border-red-500 @enderror"
                                 placeholder="What is this regarding?"

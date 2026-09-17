@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title', 'ExtremeSolutions - Digital Solutions for Business')</title>
-    <meta name="description" content="@yield('description', 'ExtremeSolutions builds digital solutions that solve real business problems. Our platforms simplify workflows in HR management, education systems, and other sectors.')">
+    <title>@yield('title', 'ExtremeSolutions - Custom Software, Systems & Automation')</title>
+    <meta name="description" content="@yield('description', 'ExtremeSolutions designs and builds custom software, systems, and automation for businesses and institutions. See our live School Management System and HR platform.')">
 
     <!-- Favicon / Site Icons -->
     <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
