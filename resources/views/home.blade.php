@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'ExtremeSolutions - Custom Software, Systems & Automation')
-@section('description', 'ExtremeSolutions designs and builds custom software, systems, and automation for businesses and institutions. See our live School Management System and HR platform.')
+@section('description', 'ExtremeSolutions designs and builds custom software, systems, and automation for businesses and institutions — plus a tech mentorship Academy. See our live School Management System and ESPass ticketing platform.')
 
 @section('content')
     <!-- Hero Section -->
@@ -45,11 +45,13 @@
                     </p>
                     <p class="text-lg leading-relaxed mb-6">
                         We're not consultants who hand over a document and disappear. We design and build custom
-                        software, systems, and automation — and we run our own products in production every day,
-                        including our School Management System at
-                        <a href="https://sms.extremesolutions.com.ng" target="_blank" rel="noopener" class="text-[#1e3a5f] font-semibold underline">sms.extremesolutions.com.ng</a>.
+                        software, systems, and automation — and we run our own products in production every day:
+                        our School Management System at
+                        <a href="https://sms.extremesolutions.com.ng" target="_blank" rel="noopener" class="text-[#1e3a5f] font-semibold underline">sms.extremesolutions.com.ng</a>
+                        and our ESPass ticketing platform at
+                        <a href="https://espass.extremesolutions.com.ng" target="_blank" rel="noopener" class="text-[#1e3a5f] font-semibold underline">espass.extremesolutions.com.ng</a>.
                         If we're pitching you on building software, it's because we already know what it takes to
-                        build and operate it ourselves.
+                        build and operate it ourselves — and we're not narrowing ourselves to any one industry to do it.
                     </p>
                     <div class="grid md:grid-cols-3 gap-8 mt-12">
                         <div class="text-center">
@@ -93,11 +95,11 @@
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What We Build</h2>
                     <div class="w-24 h-1 bg-[#1e3a5f] mx-auto mb-6"></div>
                     <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                        HR and School Management are two things we've built. They're proof of how we work — not the
-                        limit of what we do.
+                        We're not an HR company or an education company — those are just where our software happens
+                        to live today. We build, train, and ship solutions across tech.
                     </p>
                 </div>
-                <div class="grid md:grid-cols-3 gap-8">
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <div class="bg-white rounded-lg shadow p-8 text-center">
                         <div class="bg-[#e8f4f0] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                             <svg class="w-8 h-8 text-[#1e3a5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -124,6 +126,16 @@
                         </div>
                         <h3 class="font-semibold text-gray-900 mb-2">AI &amp; Innovation</h3>
                         <p class="text-gray-600 text-sm">Practical AI features added where they genuinely save time — not for their own sake.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-8 text-center border-2 border-[#00ff88]">
+                        <div class="bg-[#e8f4f0] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-[#1e3a5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.42A12.02 12.02 0 0122 8.944m-10 5.056l-6.16-3.42A12.02 12.02 0 002 8.944m10 5.056v6M6 12v5c3.33 3 8.67 3 12 0v-5" />
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Training &amp; Mentorship</h3>
+                        <p class="text-gray-600 text-sm">A cohort-based Academy mentoring the next generation of Nigerian tech talent.</p>
+                        <a href="{{ route('academy') }}" class="inline-block mt-3 text-sm font-semibold text-[#1e3a5f] hover:underline">Learn more →</a>
                     </div>
                 </div>
             </div>
@@ -188,43 +200,46 @@
                         </div>
                     </div>
 
-                    <!-- HR Management -->
+                    <!-- ESPass Ticketing -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                         <div class="bg-gradient-to-r from-[#1e3a5f] to-[#2a4d7a] p-8">
-                            <div class="bg-white w-16 h-16 rounded-lg flex items-center justify-center mb-4">
-                                <svg class="w-8 h-8 text-[#1e3a5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                                </svg>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="bg-white w-16 h-16 rounded-lg flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-[#1e3a5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                    </svg>
+                                </div>
+                                <span class="bg-white/90 text-[#1e3a5f] text-xs font-bold uppercase tracking-wide px-3 py-1 rounded-full">Live Now</span>
                             </div>
-                            <h3 class="text-2xl font-bold text-white mb-2">HR Management</h3>
-                            <p class="text-white/90">Comprehensive HR platform</p>
+                            <h3 class="text-2xl font-bold text-white mb-2">ESPass Ticketing</h3>
+                            <p class="text-white/90">Sell tickets, check people in at the door</p>
                         </div>
                         <div class="p-8">
                             <p class="text-gray-600 mb-6">
-                                Streamline your human resources operations with our comprehensive HR management solution.
-                                Manage employees, payroll, attendance, and more from a single platform.
+                                Put an event on sale, hand out digital tickets, and scan people in at the door —
+                                one platform instead of spreadsheets and a guest list on paper.
                             </p>
                             <ul class="space-y-3 mb-6 text-gray-700">
                                 <li class="flex items-start">
                                     <svg class="w-5 h-5 text-[#00ff88] mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                                     </svg>
-                                    <span>Employee Management</span>
+                                    <span>Event Creation &amp; Ticket Sales</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="w-5 h-5 text-[#00ff88] mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                                     </svg>
-                                    <span>Payroll Processing</span>
+                                    <span>Scannable Digital Tickets</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="w-5 h-5 text-[#00ff88] mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                                     </svg>
-                                    <span>Attendance Tracking</span>
+                                    <span>Real-Time Check-In</span>
                                 </li>
                             </ul>
-                            <a href="{{ route('products.hr') }}" class="inline-block bg-[#1e3a5f] text-white px-6 py-2 rounded-lg hover:bg-[#152a47] transition-colors">
+                            <a href="{{ route('products.espass') }}" class="inline-block bg-[#1e3a5f] text-white px-6 py-2 rounded-lg hover:bg-[#152a47] transition-colors">
                                 Learn More →
                             </a>
                         </div>
@@ -266,8 +281,53 @@
         </div>
     </section>
 
+    <!-- Why Trust Us Section -->
+    <section id="why-trust-us" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Businesses Trust Us With Their Systems</h2>
+                    <div class="w-24 h-1 bg-[#1e3a5f] mx-auto mb-6"></div>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Not adjectives — specific commitments about how we actually work.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#1e3a5f] text-white flex items-center justify-center font-bold">1</div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900 mb-2">You Deal Directly With the People Building It</h3>
+                            <p class="text-gray-600">No account manager relaying messages to an engineering team you never meet. You talk to the people actually writing your software.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#1e3a5f] text-white flex items-center justify-center font-bold">2</div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900 mb-2">You See Working Software Early</h3>
+                            <p class="text-gray-600">Not months of documents and wireframes before anything is real. We build in stages you can see and test as we go.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#1e3a5f] text-white flex items-center justify-center font-bold">3</div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900 mb-2">We Run What We Build</h3>
+                            <p class="text-gray-600">Our School Management System and ESPass are live products we operate ourselves — not case studies from someone else's brief.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#1e3a5f] text-white flex items-center justify-center font-bold">4</div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900 mb-2">Support Doesn't End at Launch</h3>
+                            <p class="text-gray-600">Training for your team, then an actual person to call when something's unclear — not a support ticket into the void.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Features Section -->
-    <section id="features" class="py-20 bg-white">
+    <section id="features" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-12">
@@ -315,6 +375,21 @@
                         <p class="text-gray-600 text-sm">Reduce manual work with intelligent automation</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Stay Ahead of the Curve</h2>
+                <div class="w-24 h-1 bg-[#1e3a5f] mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 mb-8">
+                    Occasional emails on new things we're building, practical automation ideas, and updates from
+                    the Academy. No spam.
+                </p>
+                @include('components.newsletter-form', ['theme' => 'light'])
             </div>
         </div>
     </section>
@@ -381,10 +456,10 @@
                                 Email <span class="text-red-500">*</span>
                             </label>
                             <input 
-                                type="email" 
-                                id="email" 
-                                name="email" 
-                                value="{{ old('email') }}"
+                                type="email"
+                                id="email"
+                                name="email"
+                                value="{{ $errors->any() ? old('email') : '' }}"
                                 required
                                 class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1e3a5f] focus:border-[#1e3a5f] @error('email') border-red-500 @enderror"
                                 placeholder="your.email@example.com"

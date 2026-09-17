@@ -30,5 +30,16 @@ class ProductController extends Controller
             'description' => 'Run your whole school from one dashboard — fees, attendance, results, and parent communication, live at sms.extremesolutions.com.ng.',
         ]);
     }
+
+    /**
+     * Display ESPass ticketing platform page
+     */
+    public function espass()
+    {
+        return view('products.espass', [
+            'title' => 'ESPass Ticketing Platform - ExtremeSolutions',
+            'description' => 'Sell tickets, manage attendees, and check people in at the door — live at espass.extremesolutions.com.ng.',
+        ]);
+    }
 }
 

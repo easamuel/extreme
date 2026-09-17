@@ -35,7 +35,8 @@
                     </div>
                 </div>
                 <p class="text-gray-400 mb-4 max-w-md">
-                    Building digital solutions that solve real business problems. Our platforms simplify workflows in HR management, education systems, and other sectors.
+                    We design and build custom software, systems, and automation for businesses and institutions —
+                    and mentor the next generation of Nigerian tech talent through our Academy.
                 </p>
                 <div class="flex space-x-4">
                     <a href="#" class="text-gray-400 hover:text-[#00ff88] transition-colors" aria-label="Facebook">
@@ -64,10 +65,10 @@
                         <a href="{{ route('home') }}" class="hover:text-[#00ff88] transition-colors">Home</a>
                     </li>
                     <li>
-                        <a href="{{ route('home') }}#products" class="hover:text-[#00ff88] transition-colors">Products</a>
+                        <a href="{{ route('home') }}#products" class="hover:text-[#00ff88] transition-colors">Our Work</a>
                     </li>
                     <li>
-                        <a href="{{ route('home') }}#features" class="hover:text-[#00ff88] transition-colors">Features</a>
+                        <a href="{{ route('academy') }}" class="hover:text-[#00ff88] transition-colors">Academy</a>
                     </li>
                     <li>
                         <a href="{{ route('home') }}#contact" class="hover:text-[#00ff88] transition-colors">Contact</a>
@@ -99,7 +100,17 @@
             </div>
         </div>
 
-        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+        <div class="border-t border-gray-800 mt-10 pt-10">
+            <div class="max-w-xl mx-auto text-center">
+                <h4 class="text-white font-semibold mb-2">Tech Insights, Occasionally</h4>
+                <p class="text-gray-400 text-sm mb-5">
+                    New builds, practical automation ideas, and updates from the Academy — no spam.
+                </p>
+                @include('components.newsletter-form', ['theme' => 'dark'])
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-10 pt-8 text-center text-sm text-gray-400">
             <p>&copy; {{ date('Y') }} ExtremeSolutions. All rights reserved.</p>
         </div>
     </div>

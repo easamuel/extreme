@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\ResendMailer;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 
 /**
@@ -50,14 +51,19 @@ class ContactController extends Controller
         $subject = htmlspecialchars($validated['subject'], ENT_QUOTES, 'UTF-8');
         $message = htmlspecialchars($validated['message'], ENT_QUOTES, 'UTF-8');
 
-        // In a production environment, you would send an email here
-        // For now, we'll just log it and return success
-        \Log::info('Contact form submission', [
+        Log::info('Contact form submission', [
             'name' => $name,
             'email' => $email,
             'subject' => $subject,
             'message' => $message,
         ]);
+
+        ResendMailer::send(
+            config('mail.from.address'),
+            'New contact form message: '.$subject,
+            view('emails.contact-notification', compact('name', 'email', 'subject', 'message'))->render(),
+            $email
+        );
 
         // Return success message
         return redirect()->route('home', '#contact')

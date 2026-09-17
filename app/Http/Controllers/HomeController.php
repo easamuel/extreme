@@ -16,5 +16,13 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    /**
+     * Display the tech mentorship / training program page
+     */
+    public function academy()
+    {
+        return view('academy');
+    }
 }
 

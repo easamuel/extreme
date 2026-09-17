@@ -14,10 +14,10 @@
                     Home
                 </a>
                 <a href="{{ route('home') }}#products" class="text-gray-700 hover:text-[#1e3a5f] transition-colors">
-                    Products
+                    Our Work
                 </a>
-                <a href="{{ route('home') }}#features" class="text-gray-700 hover:text-[#1e3a5f] transition-colors">
-                    Features
+                <a href="{{ route('academy') }}" class="text-gray-700 hover:text-[#1e3a5f] transition-colors {{ request()->routeIs('academy') ? 'text-[#1e3a5f] font-medium' : '' }}">
+                    Academy
                 </a>
                 <a href="{{ route('home') }}#contact" class="text-gray-700 hover:text-[#1e3a5f] transition-colors">
                     Contact
@@ -46,10 +46,10 @@
                     Home
                 </a>
                 <a href="{{ route('home') }}#products" class="px-3 py-2 text-gray-700 hover:text-[#1e3a5f] hover:bg-gray-50 rounded-md transition-colors">
-                    Products
+                    Our Work
                 </a>
-                <a href="{{ route('home') }}#features" class="px-3 py-2 text-gray-700 hover:text-[#1e3a5f] hover:bg-gray-50 rounded-md transition-colors">
-                    Features
+                <a href="{{ route('academy') }}" class="px-3 py-2 text-gray-700 hover:text-[#1e3a5f] hover:bg-gray-50 rounded-md transition-colors {{ request()->routeIs('academy') ? 'text-[#1e3a5f] font-medium bg-gray-50' : '' }}">
+                    Academy
                 </a>
                 <a href="{{ route('home') }}#contact" class="px-3 py-2 text-gray-700 hover:text-[#1e3a5f] hover:bg-gray-50 rounded-md transition-colors">
                     Contact
