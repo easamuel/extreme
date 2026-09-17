@@ -5,25 +5,77 @@
 
 @section('content')
     <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-[#f0f7ff] to-[#e0f2e8] py-20 lg:py-32">
+    <section class="bg-gradient-to-br from-[#f0f7ff] to-[#e0f2e8] py-20 lg:py-28 overflow-hidden">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto text-center">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                    Software Built to Fit
-                    <span class="text-[#1e3a5f]">How You Work</span>
-                </h1>
-                <p class="text-xl text-gray-700 mb-8 leading-relaxed">
-                    ExtremeSolutions designs and builds custom software, systems, and automation for businesses and
-                    institutions who don't have an in-house team to build it. We don't just advise — we build things
-                    we run ourselves.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#contact" class="bg-[#1e3a5f] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#152a47] transition-colors shadow-lg">
-                        Book a Consultation
-                    </a>
-                    <a href="#products" class="bg-white text-[#1e3a5f] px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors border-2 border-[#1e3a5f]">
-                        See Our Work
-                    </a>
+            <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Copy -->
+                <div class="text-center lg:text-left">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                        Software Built to Fit
+                        <span class="text-[#1e3a5f]">How You Work</span>
+                    </h1>
+                    <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+                        ExtremeSolutions designs and builds custom software, systems, and automation for businesses
+                        and institutions who don't have an in-house team to build it. We don't just advise — we
+                        build things we run ourselves.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#contact" class="bg-[#1e3a5f] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#152a47] transition-colors shadow-lg">
+                            Book a Consultation
+                        </a>
+                        <a href="#products" class="bg-white text-[#1e3a5f] px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors border-2 border-[#1e3a5f]">
+                            See Our Work
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Visual: abstract dashboard mockup (illustrative, not a real screenshot) -->
+                <div class="relative mx-auto max-w-md lg:max-w-none">
+                    <div class="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
+                        <div class="bg-gray-50 border-b border-gray-100 px-4 py-3 flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-red-300"></span>
+                            <span class="w-3 h-3 rounded-full bg-yellow-300"></span>
+                            <span class="w-3 h-3 rounded-full bg-[#00ff88]"></span>
+                        </div>
+                        <div class="p-6 space-y-5">
+                            <div class="flex items-center justify-between">
+                                <div class="h-3 w-28 bg-[#1e3a5f]/20 rounded-full"></div>
+                                <div class="h-9 w-9 rounded-full bg-[#e8f4f0] flex items-center justify-center">
+                                    <span class="w-3 h-3 rounded-full bg-[#00ff88]"></span>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-3 gap-3">
+                                <div class="h-16 rounded-lg bg-[#e8f4f0]"></div>
+                                <div class="h-16 rounded-lg bg-[#e8f4f0]"></div>
+                                <div class="h-16 rounded-lg bg-[#1e3a5f]"></div>
+                            </div>
+                            <div class="h-28 rounded-lg bg-gray-50 border border-gray-100 flex items-end gap-2 p-3">
+                                <div class="w-1/6 bg-[#1e3a5f] rounded-t" style="height:40%"></div>
+                                <div class="w-1/6 bg-[#1e3a5f] rounded-t" style="height:70%"></div>
+                                <div class="w-1/6 bg-[#00ff88] rounded-t" style="height:90%"></div>
+                                <div class="w-1/6 bg-[#1e3a5f] rounded-t" style="height:55%"></div>
+                                <div class="w-1/6 bg-[#1e3a5f] rounded-t" style="height:65%"></div>
+                                <div class="w-1/6 bg-[#00ff88] rounded-t" style="height:100%"></div>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="h-3 w-full bg-gray-100 rounded-full"></div>
+                                <div class="h-3 w-5/6 bg-gray-100 rounded-full"></div>
+                                <div class="h-3 w-2/3 bg-gray-100 rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Floating badge -->
+                    <div class="hidden sm:flex absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg border border-gray-100 px-4 py-3 items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-[#e8f4f0] flex items-center justify-center flex-shrink-0">
+                            <svg class="w-5 h-5 text-[#00994d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-sm font-semibold text-gray-900">Live in Production</p>
+                            <p class="text-xs text-gray-500">Not a mockup</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
