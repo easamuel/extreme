@@ -71,7 +71,7 @@
                         <a href="{{ route('academy') }}" class="hover:text-[#00ff88] transition-colors">Academy</a>
                     </li>
                     <li>
-                        <a href="{{ route('home') }}#contact" class="hover:text-[#00ff88] transition-colors">Contact</a>
+                        <a href="{{ route('contact') }}" class="hover:text-[#00ff88] transition-colors">Contact</a>
                     </li>
                 </ul>
             </div>

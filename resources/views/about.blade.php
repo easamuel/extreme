@@ -7,7 +7,7 @@
     <!-- Hero -->
     <section class="bg-gradient-to-br from-[#f0f7ff] to-[#e0f2e8] py-20 lg:py-28">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center">
+            <div class="max-w-3xl mx-auto text-center reveal">
                 <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">About ExtremeSolutions</h1>
                 <p class="text-xl text-gray-700 leading-relaxed">
                     A digital solutions company that builds, trains, and ships — not a vendor with two products.
@@ -19,7 +19,7 @@
     <!-- Our Story -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto">
+            <div class="max-w-3xl mx-auto reveal">
                 <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Our Story</h2>
                 <p class="text-lg text-gray-700 leading-relaxed mb-4">
                     ExtremeSolutions started with a simple frustration: too much software gets built for the market
@@ -38,8 +38,8 @@
     <!-- Mission & Vision -->
     <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
-                <div class="bg-white rounded-lg shadow p-8 border-t-4 border-[#1e3a5f]">
+            <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 reveal">
+                <div class="bg-white rounded-lg shadow p-8 border-t-4 border-[#1e3a5f] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                     <h2 class="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
                     <p class="text-gray-700 leading-relaxed">
                         To design and build software, systems, and automation that help businesses and institutions
@@ -47,7 +47,7 @@
                         talent to build the solutions of tomorrow.
                     </p>
                 </div>
-                <div class="bg-white rounded-lg shadow p-8 border-t-4 border-[#00ff88]">
+                <div class="bg-white rounded-lg shadow p-8 border-t-4 border-[#00ff88] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                     <h2 class="text-2xl font-bold text-gray-900 mb-4">Our Vision</h2>
                     <p class="text-gray-700 leading-relaxed">
                         To be the digital partner businesses and institutions turn to first when they need
@@ -61,7 +61,7 @@
     <!-- Values -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-5xl mx-auto">
+            <div class="max-w-5xl mx-auto reveal">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What We Stand On</h2>
                     <div class="w-24 h-1 bg-[#1e3a5f] mx-auto"></div>
@@ -103,9 +103,9 @@
     <!-- CTA -->
     <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-2xl mx-auto text-center">
+            <div class="max-w-2xl mx-auto text-center reveal">
                 <h2 class="text-3xl font-bold text-gray-900 mb-4">Want to Work With Us?</h2>
-                <a href="{{ route('home') }}#contact" class="inline-block bg-[#1e3a5f] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#152a47] transition-colors">
+                <a href="{{ route('contact') }}" class="inline-block bg-[#1e3a5f] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#152a47] transition-colors">
                     Start Your Project
                 </a>
             </div>

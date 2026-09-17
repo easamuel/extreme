@@ -21,6 +21,7 @@ use App\Http\Controllers\NewsletterController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/academy', [HomeController::class, 'academy'])->name('academy');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
 // Product Pages
 Route::get('/products/school', [ProductController::class, 'school'])->name('products.school');

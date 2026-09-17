@@ -68,7 +68,7 @@
                     </div>
 
                     <div class="mt-8">
-                        <a href="{{ route('home') }}#contact" class="inline-block bg-[#1e3a5f] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#152a47] transition-colors">
+                        <a href="{{ route('contact') }}" class="inline-block bg-[#1e3a5f] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#152a47] transition-colors">
                             Contact Us for More Information
                         </a>
                     </div>

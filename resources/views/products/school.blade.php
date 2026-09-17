@@ -7,7 +7,7 @@
     <!-- Hero -->
     <section class="bg-gradient-to-r from-[#00ff88] to-[#00cc6a] py-20">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto text-center text-white">
+            <div class="max-w-4xl mx-auto text-center text-white reveal">
                 <span class="inline-block bg-white/90 text-[#1e3a5f] text-xs font-bold uppercase tracking-wide px-3 py-1 rounded-full mb-4">Live Now</span>
                 <h1 class="text-4xl md:text-5xl font-bold mb-6">Run Your Whole School From One Dashboard</h1>
                 <p class="text-xl text-white/90 mb-8">
@@ -15,7 +15,7 @@
                     disconnected tools with a single system your staff actually use.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="{{ route('home') }}?subject=School+Demo+Request#contact" class="bg-white text-[#1e3a5f] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg">
+                    <a href="{{ route('contact', ['subject' => 'School Demo Request']) }}" class="bg-white text-[#1e3a5f] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg">
                         Book a Free Demo
                     </a>
                     <a href="https://sms.extremesolutions.com.ng" target="_blank" rel="noopener" class="bg-[#1e3a5f] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#152a47] transition-colors">
@@ -29,7 +29,7 @@
     <!-- Before / After -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-5xl mx-auto">
+            <div class="max-w-5xl mx-auto reveal">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What a Term Looks Like</h2>
                     <div class="w-24 h-1 bg-[#1e3a5f] mx-auto mb-6"></div>
@@ -93,33 +93,33 @@
     <!-- Features -->
     <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto">
+            <div class="max-w-4xl mx-auto reveal">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Everything in One Platform</h2>
                     <div class="w-24 h-1 bg-[#1e3a5f] mx-auto mb-6"></div>
                 </div>
                 <div class="grid md:grid-cols-2 gap-6">
-                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="bg-white rounded-lg p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
                         <h3 class="font-semibold text-gray-900 mb-2">Student Management</h3>
                         <p class="text-gray-600 text-sm">Complete student profiles, enrollment, and academic records.</p>
                     </div>
-                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="bg-white rounded-lg p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
                         <h3 class="font-semibold text-gray-900 mb-2">Fees &amp; Payments</h3>
                         <p class="text-gray-600 text-sm">Track and reconcile fee payments per student, per term.</p>
                     </div>
-                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="bg-white rounded-lg p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
                         <h3 class="font-semibold text-gray-900 mb-2">Results &amp; Grades</h3>
                         <p class="text-gray-600 text-sm">Record, compute, and publish results without manual collation.</p>
                     </div>
-                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="bg-white rounded-lg p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
                         <h3 class="font-semibold text-gray-900 mb-2">Attendance Tracking</h3>
                         <p class="text-gray-600 text-sm">Monitor student attendance and generate reports automatically.</p>
                     </div>
-                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="bg-white rounded-lg p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
                         <h3 class="font-semibold text-gray-900 mb-2">Parent Portal</h3>
                         <p class="text-gray-600 text-sm">Real-time updates for parents — no more calling the office.</p>
                     </div>
-                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="bg-white rounded-lg p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
                         <h3 class="font-semibold text-gray-900 mb-2">Teacher Dashboard</h3>
                         <p class="text-gray-600 text-sm">Tools for teachers to manage classes and assignments.</p>
                     </div>
@@ -131,7 +131,7 @@
     <!-- Pricing & Trust -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center">
+            <div class="max-w-3xl mx-auto text-center reveal">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Simple, Fair Pricing</h2>
                 <div class="w-24 h-1 bg-[#1e3a5f] mx-auto mb-6"></div>
                 <p class="text-lg text-gray-700 mb-4">
@@ -145,7 +145,7 @@
                         live, no sales pitch required — <a href="https://sms.extremesolutions.com.ng" target="_blank" rel="noopener" class="text-[#1e3a5f] font-semibold underline">sms.extremesolutions.com.ng</a>.
                     </p>
                 </div>
-                <a href="{{ route('home') }}?subject=School+Demo+Request#contact" class="inline-block bg-[#00ff88] text-[#1e3a5f] px-8 py-3 rounded-lg font-semibold hover:bg-[#00cc6a] transition-colors">
+                <a href="{{ route('contact', ['subject' => 'School Demo Request']) }}" class="inline-block bg-[#00ff88] text-[#1e3a5f] px-8 py-3 rounded-lg font-semibold hover:bg-[#00cc6a] transition-colors">
                     Book a Free Demo for Your School
                 </a>
             </div>

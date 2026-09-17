@@ -20,7 +20,7 @@
                         build things we run ourselves.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="#contact" class="bg-[#1e3a5f] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#152a47] transition-colors shadow-lg">
+                        <a href="{{ route('contact') }}" class="bg-[#1e3a5f] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#152a47] transition-colors shadow-lg">
                             Book a Consultation
                         </a>
                         <a href="#products" class="bg-white text-[#1e3a5f] px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors border-2 border-[#1e3a5f]">
@@ -81,10 +81,37 @@
         </div>
     </section>
 
-    <!-- About Teaser Section -->
+    <!-- Problem Section -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center">
+            <div class="max-w-5xl mx-auto reveal">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Sound Familiar?</h2>
+                    <div class="w-24 h-1 bg-[#1e3a5f] mx-auto"></div>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 mb-10">
+                    <div class="bg-gray-50 rounded-lg p-6 border border-gray-100">
+                        <p class="text-gray-800 font-medium">"Your team spends hours every week on work a system should already be doing for you."</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6 border border-gray-100">
+                        <p class="text-gray-800 font-medium">"The last 'solution' you tried almost fit — until it didn't, and you were back to spreadsheets."</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6 border border-gray-100">
+                        <p class="text-gray-800 font-medium">"You're not sure the next vendor you hire will still be around to support it next year."</p>
+                    </div>
+                </div>
+                <p class="text-center text-lg text-gray-700 max-w-2xl mx-auto">
+                    We've seen it enough times to know it's not your fault — it's what happens when software gets
+                    built for a market instead of for you. <span class="font-semibold text-gray-900">That's exactly the gap we exist to close.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Teaser Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center reveal">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Who We Are</h2>
                 <div class="w-24 h-1 bg-[#1e3a5f] mx-auto mb-6"></div>
                 <p class="text-lg leading-relaxed text-gray-700 mb-6">
@@ -101,9 +128,9 @@
     </section>
 
     <!-- What We Build Section -->
-    <section id="what-we-build" class="py-20 bg-gray-50">
+    <section id="what-we-build" class="py-20 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-6xl mx-auto">
+            <div class="max-w-6xl mx-auto reveal">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What We Build</h2>
                     <div class="w-24 h-1 bg-[#1e3a5f] mx-auto mb-6"></div>
@@ -113,7 +140,7 @@
                     </p>
                 </div>
                 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="bg-white rounded-lg shadow p-8 text-center">
+                    <div class="bg-white rounded-lg shadow p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                         <div class="bg-[#e8f4f0] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                             <svg class="w-8 h-8 text-[#1e3a5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -122,7 +149,7 @@
                         <h3 class="font-semibold text-gray-900 mb-2">Custom Software</h3>
                         <p class="text-gray-600 text-sm">Purpose-built applications designed around how your business actually operates.</p>
                     </div>
-                    <div class="bg-white rounded-lg shadow p-8 text-center">
+                    <div class="bg-white rounded-lg shadow p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                         <div class="bg-[#e8f4f0] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                             <svg class="w-8 h-8 text-[#1e3a5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -131,7 +158,7 @@
                         <h3 class="font-semibold text-gray-900 mb-2">Systems &amp; Automation</h3>
                         <p class="text-gray-600 text-sm">Connecting the tools you already use and automating the manual work in between.</p>
                     </div>
-                    <div class="bg-white rounded-lg shadow p-8 text-center">
+                    <div class="bg-white rounded-lg shadow p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                         <div class="bg-[#e8f4f0] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                             <svg class="w-8 h-8 text-[#1e3a5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
@@ -140,7 +167,7 @@
                         <h3 class="font-semibold text-gray-900 mb-2">AI &amp; Innovation</h3>
                         <p class="text-gray-600 text-sm">Practical AI features added where they genuinely save time — not for their own sake.</p>
                     </div>
-                    <div class="bg-white rounded-lg shadow p-8 text-center border-2 border-[#00ff88]">
+                    <div class="bg-white rounded-lg shadow p-8 text-center border-2 border-[#00ff88] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                         <div class="bg-[#e8f4f0] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                             <svg class="w-8 h-8 text-[#1e3a5f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.42A12.02 12.02 0 0122 8.944m-10 5.056l-6.16-3.42A12.02 12.02 0 002 8.944m10 5.056v6M6 12v5c3.33 3 8.67 3 12 0v-5" />
@@ -158,17 +185,17 @@
     <!-- Proof Strip -->
     <section id="products" class="py-16 bg-white border-y border-gray-100">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 reveal">
                 <p class="text-gray-700 text-lg text-center md:text-left">
                     <span class="font-semibold text-gray-900">Proof, not just a pitch</span> — we run our own
                     products in production.
                 </p>
                 <div class="flex flex-wrap items-center justify-center gap-4">
-                    <a href="{{ route('products.school') }}" class="inline-flex items-center gap-2 bg-gray-50 hover:bg-gray-100 border border-gray-200 px-5 py-2.5 rounded-lg font-medium text-gray-800 transition-colors">
+                    <a href="{{ route('products.school') }}" class="inline-flex items-center gap-2 bg-gray-50 hover:bg-gray-100 border border-gray-200 px-5 py-2.5 rounded-lg font-medium text-gray-800 transition-all hover:-translate-y-0.5">
                         School Management System
                         <span class="w-2 h-2 rounded-full bg-[#00ff88]"></span>
                     </a>
-                    <a href="{{ route('products.espass') }}" class="inline-flex items-center gap-2 bg-gray-50 hover:bg-gray-100 border border-gray-200 px-5 py-2.5 rounded-lg font-medium text-gray-800 transition-colors">
+                    <a href="{{ route('products.espass') }}" class="inline-flex items-center gap-2 bg-gray-50 hover:bg-gray-100 border border-gray-200 px-5 py-2.5 rounded-lg font-medium text-gray-800 transition-all hover:-translate-y-0.5">
                         ESPass Ticketing
                         <span class="w-2 h-2 rounded-full bg-[#00ff88]"></span>
                     </a>
@@ -180,7 +207,7 @@
     <!-- How We Work Section -->
     <section id="how-we-work" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-5xl mx-auto">
+            <div class="max-w-5xl mx-auto reveal">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How We Work</h2>
                     <div class="w-24 h-1 bg-[#1e3a5f] mx-auto mb-6"></div>
@@ -212,7 +239,7 @@
     <!-- Why Trust Us Section -->
     <section id="why-trust-us" class="py-20 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-5xl mx-auto">
+            <div class="max-w-5xl mx-auto reveal">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Businesses Trust Us With Their Systems</h2>
                     <div class="w-24 h-1 bg-[#1e3a5f] mx-auto mb-6"></div>
@@ -257,7 +284,7 @@
     <!-- Features Section -->
     <section id="features" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-6xl mx-auto">
+            <div class="max-w-6xl mx-auto reveal">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Key Features</h2>
                     <div class="w-24 h-1 bg-[#1e3a5f] mx-auto mb-6"></div>
@@ -310,7 +337,7 @@
     <!-- Academy Teaser -->
     <section class="py-20 bg-[#1e3a5f]">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-2xl mx-auto text-center text-white">
+            <div class="max-w-2xl mx-auto text-center text-white reveal">
                 <span class="inline-block bg-[#00ff88] text-[#1e3a5f] text-xs font-bold uppercase tracking-wide px-3 py-1 rounded-full mb-4">Coming Soon</span>
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">ExtremeSolutions Academy</h2>
                 <p class="text-lg text-white/90 mb-6">
@@ -327,7 +354,7 @@
     <!-- Newsletter Section -->
     <section id="newsletter" class="py-20 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-2xl mx-auto text-center">
+            <div class="max-w-2xl mx-auto text-center reveal">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Stay Ahead of the Curve</h2>
                 <div class="w-24 h-1 bg-[#1e3a5f] mx-auto mb-6"></div>
                 <p class="text-lg text-gray-600 mb-8">
@@ -339,123 +366,19 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-50">
+    <!-- Final CTA -->
+    <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Start Your Project</h2>
-                    <div class="w-24 h-1 bg-[#1e3a5f] mx-auto mb-6"></div>
-                    <p class="text-lg text-gray-600 mb-4">
-                        Tell us about the problem you're trying to solve. We'll get back to you to set up a free
-                        consultation — no obligation.
-                    </p>
-                    <div class="flex items-center justify-center gap-2 text-gray-700 text-lg font-medium">
-                        <a href="tel:08036375292" class="flex items-center gap-2 hover:text-[#1e3a5f] transition-colors">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                            </svg>
-                            <span>08036375292</span>
-                        </a>
-                    </div>
-                </div>
-
-                @if(session('success'))
-                    <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6">
-                        {{ session('success') }}
-                    </div>
-                @endif
-
-                <div class="bg-white rounded-lg shadow-lg p-8">
-                    <form method="POST" action="{{ route('contact.store') }}" class="space-y-6">
-                        @csrf
-
-                        <!-- Name Field -->
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
-                                Name <span class="text-red-500">*</span>
-                            </label>
-                            <input 
-                                type="text" 
-                                id="name" 
-                                name="name" 
-                                value="{{ old('name') }}"
-                                required
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1e3a5f] focus:border-[#1e3a5f] @error('name') border-red-500 @enderror"
-                                placeholder="Your full name"
-                            >
-                            @error('name')
-                                <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
-                            @enderror
-                        </div>
-
-                        <!-- Email Field -->
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
-                                Email <span class="text-red-500">*</span>
-                            </label>
-                            <input 
-                                type="email"
-                                id="email"
-                                name="email"
-                                value="{{ $errors->any() ? old('email') : '' }}"
-                                required
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1e3a5f] focus:border-[#1e3a5f] @error('email') border-red-500 @enderror"
-                                placeholder="your.email@example.com"
-                            >
-                            @error('email')
-                                <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
-                            @enderror
-                        </div>
-
-                        <!-- Subject Field -->
-                        <div>
-                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">
-                                Subject <span class="text-red-500">*</span>
-                            </label>
-                            <input 
-                                type="text" 
-                                id="subject"
-                                name="subject"
-                                value="{{ old('subject', request('subject')) }}"
-                                required
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1e3a5f] focus:border-[#1e3a5f] @error('subject') border-red-500 @enderror"
-                                placeholder="What is this regarding?"
-                            >
-                            @error('subject')
-                                <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
-                            @enderror
-                        </div>
-
-                        <!-- Message Field -->
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
-                                Message <span class="text-red-500">*</span>
-                            </label>
-                            <textarea 
-                                id="message" 
-                                name="message" 
-                                rows="6"
-                                required
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1e3a5f] focus:border-[#1e3a5f] @error('message') border-red-500 @enderror"
-                                placeholder="Tell us more about your inquiry..."
-                            >{{ old('message') }}</textarea>
-                            @error('message')
-                                <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
-                            @enderror
-                        </div>
-
-                        <!-- Submit Button -->
-                        <div>
-                            <button 
-                                type="submit" 
-                                class="w-full bg-[#1e3a5f] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#152a47] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1e3a5f] focus:ring-offset-2"
-                            >
-                                Send Message
-                            </button>
-                        </div>
-                    </form>
-                </div>
+            <div class="max-w-2xl mx-auto text-center reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Ready to Start?</h2>
+                <div class="w-24 h-1 bg-[#1e3a5f] mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 mb-8">
+                    Tell us about the problem you're trying to solve. We'll get back to you to set up a free
+                    consultation — no obligation.
+                </p>
+                <a href="{{ route('contact') }}" class="inline-block bg-[#1e3a5f] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#152a47] transition-colors shadow-lg">
+                    Start Your Project
+                </a>
             </div>
         </div>
     </section>

@@ -5,8 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title', 'ExtremeSolutions - Custom Software, Systems & Automation')</title>
-    <meta name="description" content="@yield('description', 'ExtremeSolutions designs and builds custom software, systems, and automation for businesses and institutions. See our live School Management System and HR platform.')">
+    @php
+        $seoTitle = trim($__env->yieldContent('title', 'ExtremeSolutions - Custom Software, Systems & Automation'));
+        $seoDescription = trim($__env->yieldContent('description', 'ExtremeSolutions designs and builds custom software, systems, and automation for businesses and institutions, and mentors the next generation of Nigerian tech talent through our Academy.'));
+    @endphp
+
+    {{-- $seoTitle/$seoDescription are already HTML-escaped by @section()'s inline form — {!! !!} avoids double-escaping "&" into "&amp;amp;" --}}
+    <title>{!! $seoTitle !!}</title>
+    <meta name="description" content="{!! $seoDescription !!}">
+    <link rel="canonical" href="{{ url()->current() }}">
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:site_name" content="ExtremeSolutions">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{!! $seoTitle !!}">
+    <meta property="og:description" content="{!! $seoDescription !!}">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{!! $seoTitle !!}">
+    <meta name="twitter:description" content="{!! $seoDescription !!}">
 
     <!-- Favicon / Site Icons -->
     <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
@@ -18,6 +35,23 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700" rel="stylesheet" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ExtremeSolutions",
+        "url": "{{ url('/') }}",
+        "description": "Digital solutions company building custom software, systems, and automation for businesses and institutions.",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+234-803-637-5292",
+            "contactType": "customer service",
+            "areaServed": "NG"
+        }
+    }
+    </script>
 
     <!-- Styles -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])

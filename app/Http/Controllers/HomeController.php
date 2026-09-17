@@ -26,6 +26,14 @@ class HomeController extends Controller
     }
 
     /**
+     * Display the Contact page
+     */
+    public function contact()
+    {
+        return view('contact');
+    }
+
+    /**
      * Display the tech mentorship / training program page
      */
     public function academy()

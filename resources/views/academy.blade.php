@@ -7,7 +7,7 @@
     <!-- Hero -->
     <section class="bg-gradient-to-br from-[#1e3a5f] to-[#152a47] py-20 lg:py-28">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto text-center text-white">
+            <div class="max-w-4xl mx-auto text-center text-white reveal">
                 <span class="inline-block bg-[#00ff88] text-[#1e3a5f] text-xs font-bold uppercase tracking-wide px-3 py-1 rounded-full mb-4">Coming Soon</span>
                 <h1 class="text-4xl md:text-5xl font-bold mb-6">We Build Software. We Also Build Tech Careers.</h1>
                 <p class="text-xl text-white/90 mb-8 leading-relaxed">
@@ -24,7 +24,7 @@
     <!-- Why it's different -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto">
+            <div class="max-w-4xl mx-auto reveal">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Learn on Real Work, Not Just Exercises</h2>
                     <div class="w-24 h-1 bg-[#1e3a5f] mx-auto mb-6"></div>
@@ -71,7 +71,7 @@
     <!-- CTA -->
     <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center">
+            <div class="max-w-3xl mx-auto text-center reveal">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Interested in Joining?</h2>
                 <div class="w-24 h-1 bg-[#1e3a5f] mx-auto mb-6"></div>
                 <p class="text-lg text-gray-700 mb-8">

@@ -39,7 +39,7 @@ class ContactController extends Controller
 
         // If validation fails, redirect back with errors
         if ($validator->fails()) {
-            return redirect()->route('home', '#contact')
+            return redirect()->route('contact')
                 ->withErrors($validator)
                 ->withInput();
         }
@@ -66,7 +66,7 @@ class ContactController extends Controller
         );
 
         // Return success message
-        return redirect()->route('home', '#contact')
+        return redirect()->route('contact')
             ->with('success', 'Thank you for contacting us! We will get back to you soon.');
     }
 }

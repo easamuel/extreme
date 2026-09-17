@@ -19,14 +19,14 @@
                 <a href="{{ route('academy') }}" class="text-gray-700 hover:text-[#1e3a5f] transition-colors {{ request()->routeIs('academy') ? 'text-[#1e3a5f] font-medium' : '' }}">
                     Academy
                 </a>
-                <a href="{{ route('home') }}#contact" class="text-gray-700 hover:text-[#1e3a5f] transition-colors">
+                <a href="{{ route('contact') }}" class="text-gray-700 hover:text-[#1e3a5f] transition-colors {{ request()->routeIs('contact') ? 'text-[#1e3a5f] font-medium' : '' }}">
                     Contact
                 </a>
             </div>
 
             <!-- CTA / Mobile Menu Toggle -->
             <div class="flex items-center space-x-4">
-                <a href="{{ route('home') }}#contact" class="bg-[#1e3a5f] text-white px-4 py-2 rounded-lg hover:bg-[#152a47] transition-colors hidden md:inline">
+                <a href="{{ route('contact') }}" class="bg-[#1e3a5f] text-white px-4 py-2 rounded-lg hover:bg-[#152a47] transition-colors hidden md:inline">
                     Book a Consultation
                 </a>
 
@@ -51,10 +51,10 @@
                 <a href="{{ route('academy') }}" class="px-3 py-2 text-gray-700 hover:text-[#1e3a5f] hover:bg-gray-50 rounded-md transition-colors {{ request()->routeIs('academy') ? 'text-[#1e3a5f] font-medium bg-gray-50' : '' }}">
                     Academy
                 </a>
-                <a href="{{ route('home') }}#contact" class="px-3 py-2 text-gray-700 hover:text-[#1e3a5f] hover:bg-gray-50 rounded-md transition-colors">
+                <a href="{{ route('contact') }}" class="px-3 py-2 text-gray-700 hover:text-[#1e3a5f] hover:bg-gray-50 rounded-md transition-colors {{ request()->routeIs('contact') ? 'text-[#1e3a5f] font-medium bg-gray-50' : '' }}">
                     Contact
                 </a>
-                <a href="{{ route('home') }}#contact" class="px-3 py-2 bg-[#1e3a5f] text-white rounded-md hover:bg-[#152a47] transition-colors text-center">
+                <a href="{{ route('contact') }}" class="px-3 py-2 bg-[#1e3a5f] text-white rounded-md hover:bg-[#152a47] transition-colors text-center">
                     Book a Consultation
                 </a>
             </div>
