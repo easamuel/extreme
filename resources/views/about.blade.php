@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'About ExtremeSolutions | Engineering Dependable Software & Systems')
-@section('description', 'ExtremeSolutions designs, builds, and operates custom software, school management systems, and enterprise automation across Nigeria and Africa.')
+@section('title', 'About ExtremeSolutions | Dependable Software & Cloud')
+@section('description', 'We design, build, and operate custom software, mobile apps, and enterprise cloud automation for modern organizations worldwide.')
 
 @php
     $aboutSchema = json_encode([

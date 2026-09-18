@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'ESPass Event Ticketing & Access Engine | ExtremeSolutions')
-@section('description', 'High-throughput event ticketing, instant fraud-proof QR validation, and real-time attendee revenue reconciliation. Live in production at espass.extremesolutions.com.ng.')
+@section('title', 'ESPass | Event Ticketing & QR Gate Access Engine')
+@section('description', 'High-throughput event ticketing, fraud-proof QR gate validation, and real-time revenue reconciliation. Live at espass.extremesolutions.com.ng.')
 
 @php
     $espassSchema = json_encode([

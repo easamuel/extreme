@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'ExtremeSolutions SMS | School Management System for Forward-Thinking Schools')
-@section('description', 'Run your entire school from one dashboard: automated term results, fee ledger reconciliation, student attendance, and instant parent portals. Live at sms.extremesolutions.com.ng.')
+@section('title', 'ExtremeSolutions SMS | School Management Cloud Platform')
+@section('description', 'Run your entire school from one dashboard: automated term results, fee tracking, attendance, and parent portals. Live at sms.extremesolutions.com.ng.')
 
 @php
     $schoolSchema = json_encode([

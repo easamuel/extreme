@@ -21,14 +21,14 @@
                     </button>
 
                     <!-- Mega Dropdown Panel -->
-                    <div class="nav-dropdown-menu absolute top-full left-1/2 -translate-x-1/2 w-[760px] rounded-3xl bg-[#0a192f]/98 backdrop-blur-2xl border border-white/15 p-6 shadow-2xl z-50">
+                    <div class="nav-dropdown-menu absolute top-full left-1/2 -translate-x-1/2 w-[780px] rounded-3xl bg-[#0a192f]/98 backdrop-blur-2xl border border-white/15 p-6 shadow-2xl z-50">
                         <div class="grid grid-cols-[1.3fr_1fr] gap-6">
                             <!-- Left: Platforms List with SVG icons and live badges -->
-                            <div class="space-y-1.5">
+                            <div class="space-y-1.5" id="nav-preview-items">
                                 <span class="text-[10px] font-bold uppercase tracking-wider text-[#00ff88] block px-3 mb-1">Live Platforms &amp; Software</span>
 
                                 <!-- SMS -->
-                                <a href="{{ route('products.school') }}" class="group/item flex items-start gap-3.5 p-2.5 rounded-2xl hover:bg-white/5 transition-all">
+                                <a href="{{ route('products.school') }}" data-nav-preview="sms" class="nav-preview-trigger group/item flex items-start gap-3.5 p-2.5 rounded-2xl hover:bg-white/5 border border-transparent hover:border-white/10 transition-all cursor-pointer">
                                     <div class="w-9 h-9 rounded-xl bg-[#1e3a5f] text-[#00ff88] flex items-center justify-center flex-shrink-0 border border-white/10 group-hover/item:border-[#00ff88]/40 group-hover/item:bg-[#00ff88]/10 transition-colors">
                                         <svg class="w-4.5 h-4.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path d="M12 14l9-5-9-5-9 5 9 5z" />
@@ -45,7 +45,7 @@
                                 </a>
 
                                 <!-- ESPass -->
-                                <a href="{{ route('products.espass') }}" class="group/item flex items-start gap-3.5 p-2.5 rounded-2xl hover:bg-white/5 transition-all">
+                                <a href="{{ route('products.espass') }}" data-nav-preview="espass" class="nav-preview-trigger group/item flex items-start gap-3.5 p-2.5 rounded-2xl hover:bg-white/5 border border-transparent hover:border-white/10 transition-all cursor-pointer">
                                     <div class="w-9 h-9 rounded-xl bg-[#1e3a5f] text-[#00ff88] flex items-center justify-center flex-shrink-0 border border-white/10 group-hover/item:border-[#00ff88]/40 group-hover/item:bg-[#00ff88]/10 transition-colors">
                                         <svg class="w-4.5 h-4.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
@@ -61,7 +61,7 @@
                                 </a>
 
                                 <!-- Custom Software -->
-                                <a href="{{ route('home') }}#services" class="group/item flex items-start gap-3.5 p-2.5 rounded-2xl hover:bg-white/5 transition-all">
+                                <a href="{{ route('home') }}#services" data-nav-preview="custom" class="nav-preview-trigger group/item flex items-start gap-3.5 p-2.5 rounded-2xl hover:bg-white/5 border border-transparent hover:border-white/10 transition-all cursor-pointer">
                                     <div class="w-9 h-9 rounded-xl bg-[#1e3a5f] text-[#00ff88] flex items-center justify-center flex-shrink-0 border border-white/10 group-hover/item:border-[#00ff88]/40 group-hover/item:bg-[#00ff88]/10 transition-colors">
                                         <svg class="w-4.5 h-4.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
@@ -69,14 +69,29 @@
                                     </div>
                                     <div class="flex-1">
                                         <div class="flex items-center gap-2">
-                                            <span class="text-xs sm:text-sm font-bold text-white group-hover/item:text-[#00ff88] transition-colors">Custom Software &amp; APIs</span>
+                                            <span class="text-xs sm:text-sm font-bold text-white group-hover/item:text-[#00ff88] transition-colors">Custom Software &amp; Cloud</span>
                                         </div>
                                         <p class="text-[11px] text-white/60 leading-relaxed mt-0.5">Tailor-engineered internal applications &amp; data flows.</p>
                                     </div>
                                 </a>
 
+                                <!-- Automation & APIs -->
+                                <a href="{{ route('home') }}#services" data-nav-preview="automation" class="nav-preview-trigger group/item flex items-start gap-3.5 p-2.5 rounded-2xl hover:bg-white/5 border border-transparent hover:border-white/10 transition-all cursor-pointer">
+                                    <div class="w-9 h-9 rounded-xl bg-[#1e3a5f] text-[#00ff88] flex items-center justify-center flex-shrink-0 border border-white/10 group-hover/item:border-[#00ff88]/40 group-hover/item:bg-[#00ff88]/10 transition-colors">
+                                        <svg class="w-4.5 h-4.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-xs sm:text-sm font-bold text-white group-hover/item:text-[#00ff88] transition-colors">Workflow Automation &amp; APIs</span>
+                                        </div>
+                                        <p class="text-[11px] text-white/60 leading-relaxed mt-0.5">Paystack, Flutterwave &amp; ledger sync pipelines.</p>
+                                    </div>
+                                </a>
+
                                 <!-- Academy -->
-                                <a href="{{ route('academy') }}" class="group/item flex items-start gap-3.5 p-2.5 rounded-2xl hover:bg-white/5 transition-all">
+                                <a href="{{ route('academy') }}" data-nav-preview="academy" class="nav-preview-trigger group/item flex items-start gap-3.5 p-2.5 rounded-2xl hover:bg-white/5 border border-transparent hover:border-white/10 transition-all cursor-pointer">
                                     <div class="w-9 h-9 rounded-xl bg-[#1e3a5f] text-[#00ff88] flex items-center justify-center flex-shrink-0 border border-white/10 group-hover/item:border-[#00ff88]/40 group-hover/item:bg-[#00ff88]/10 transition-colors">
                                         <svg class="w-4.5 h-4.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -92,31 +107,31 @@
                                 </a>
                             </div>
 
-                            <!-- Right: Visual Preview Card (Andela-Inspired) -->
-                            <div class="rounded-2xl bg-[#0c1f3a] border border-white/15 p-4 flex flex-col justify-between overflow-hidden relative group/card hover:border-[#00ff88]/40 transition-colors">
+                            <!-- Right: Visual Preview Card (Dynamic Hover Switcher) -->
+                            <div id="nav-preview-card" class="rounded-2xl bg-[#0c1f3a] border border-white/15 p-4 flex flex-col justify-between overflow-hidden relative group/card hover:border-[#00ff88]/40 transition-all duration-300">
                                 <div class="brand-texture opacity-25"></div>
                                 <div class="relative z-10">
                                     <div class="flex items-center justify-between mb-2.5">
-                                        <span class="text-[10px] font-bold uppercase tracking-wider text-[#00ff88] flex items-center gap-1.5">
+                                        <span id="nav-preview-badge" class="text-[10px] font-bold uppercase tracking-wider text-[#00ff88] flex items-center gap-1.5">
                                             <span class="w-1.5 h-1.5 rounded-full bg-[#00ff88] animate-pulse"></span>
-                                            Live Cloud System
+                                            <span id="nav-preview-badge-text">Live Cloud System</span>
                                         </span>
-                                        <span class="text-[10px] text-white/60 font-mono">sms.extremesolutions.com.ng</span>
+                                        <span id="nav-preview-domain" class="text-[10px] text-white/60 font-mono">sms.extremesolutions.com.ng</span>
                                     </div>
-                                    <!-- Thumbnail Screenshot with subtle zoom -->
+                                    <!-- Thumbnail Screenshot with smooth transition -->
                                     <div class="relative rounded-xl overflow-hidden border border-white/10 shadow-md aspect-video bg-black/40">
-                                        <img src="{{ asset('images/sms-preview.jpg') }}" alt="School Management System Dashboard Preview" class="w-full h-full object-cover img-zoom" />
+                                        <img id="nav-preview-img" src="{{ asset('images/sms-preview.jpg') }}" alt="School Management System Dashboard Preview" class="w-full h-full object-cover transition-opacity duration-200" />
                                         <div class="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-transparent to-transparent opacity-60"></div>
                                         <div class="absolute bottom-2 left-2 right-2">
-                                            <p class="text-xs font-bold text-white leading-tight">SMS Operations Console</p>
-                                            <p class="text-[10px] text-[#00ff88]">Active in production today</p>
+                                            <p id="nav-preview-title" class="text-xs font-bold text-white leading-tight">SMS Operations Console</p>
+                                            <p id="nav-preview-sub" class="text-[10px] text-[#00ff88]">Active in production today</p>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="relative z-10 mt-3.5 pt-3 border-t border-white/10 flex items-center justify-between">
-                                    <a href="https://sms.extremesolutions.com.ng" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-bold text-[#00ff88] hover:text-[#00cc6a] transition-colors">
-                                        <span>Open Live Demo</span>
+                                    <a id="nav-preview-link" href="https://sms.extremesolutions.com.ng" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-bold text-[#00ff88] hover:text-[#00cc6a] transition-colors">
+                                        <span id="nav-preview-cta">Open Live Demo</span>
                                         <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                         </svg>
@@ -206,6 +221,118 @@
             </div>
         </div>
     </nav>
+    <script>
+    (function() {
+        const previewData = {
+            sms: {
+                badge: 'Live Cloud System',
+                domain: 'sms.extremesolutions.com.ng',
+                img: '{{ asset('images/sms-preview.jpg') }}',
+                alt: 'School Management System Dashboard Preview',
+                title: 'SMS Operations Console',
+                sub: 'Term grades, fee tracking & registers',
+                link: 'https://sms.extremesolutions.com.ng',
+                cta: 'Open SMS Demo',
+                target: '_blank'
+            },
+            espass: {
+                badge: 'Live Ticketing Engine',
+                domain: 'espass.extremesolutions.com.ng',
+                img: '{{ asset('images/espass-preview.jpg') }}',
+                alt: 'ESPass Event Ticketing & Gate Scanner Preview',
+                title: 'ESPass Gate Scanner Console',
+                sub: 'Sub-second QR gate check-in & settlement',
+                link: 'https://espass.extremesolutions.com.ng',
+                cta: 'Open ESPass Live',
+                target: '_blank'
+            },
+            custom: {
+                badge: 'Proprietary Architecture',
+                domain: 'cloud-architecture.prod',
+                img: '{{ asset('images/custom-software-preview.jpg') }}',
+                alt: 'Custom Software & Enterprise Cloud Architecture',
+                title: 'Custom Enterprise Cloud Systems',
+                sub: 'Purpose-built software & internal pipelines',
+                link: '{{ route('home') }}#services',
+                cta: 'Scope Your Build',
+                target: '_self'
+            },
+            automation: {
+                badge: 'Automation Pipeline',
+                domain: 'api.extremesolutions.com.ng',
+                img: '{{ asset('images/automation-preview.jpg') }}',
+                alt: 'Workflow Automation & Payment APIs Preview',
+                title: 'Workflow Automation & APIs',
+                sub: 'Paystack, Flutterwave & database sync',
+                link: '{{ route('home') }}#services',
+                cta: 'View Automation',
+                target: '_self'
+            },
+            academy: {
+                badge: 'Mentorship Program',
+                domain: 'academy.extremesolutions.com.ng',
+                img: '{{ asset('images/academy-preview.jpg') }}',
+                alt: 'ExtremeSolutions Engineering Academy Preview',
+                title: 'Engineering Academy Portal',
+                sub: 'Practical mentorship on live code',
+                link: '{{ route('academy') }}',
+                cta: 'Join Academy Waitlist',
+                target: '_self'
+            }
+        };
+
+        function initNavPreviewSwitcher() {
+            const triggers = document.querySelectorAll('.nav-preview-trigger');
+            const badgeText = document.getElementById('nav-preview-badge-text');
+            const domainText = document.getElementById('nav-preview-domain');
+            const imgElem = document.getElementById('nav-preview-img');
+            const titleText = document.getElementById('nav-preview-title');
+            const subText = document.getElementById('nav-preview-sub');
+            const linkElem = document.getElementById('nav-preview-link');
+            const ctaText = document.getElementById('nav-preview-cta');
+
+            if (!triggers.length || !imgElem) return;
+
+            triggers.forEach(function(trigger) {
+                trigger.addEventListener('mouseenter', function() {
+                    const key = this.getAttribute('data-nav-preview');
+                    const data = previewData[key];
+                    if (!data) return;
+
+                    // Highlight active item
+                    triggers.forEach(function(t) {
+                        t.classList.remove('bg-white/10', 'border-[#00ff88]/40');
+                    });
+                    this.classList.add('bg-white/10', 'border-[#00ff88]/40');
+
+                    // Smooth cross-fade image
+                    imgElem.style.opacity = '0.35';
+                    setTimeout(function() {
+                        imgElem.src = data.img;
+                        imgElem.alt = data.alt;
+                        imgElem.style.opacity = '1';
+                    }, 80);
+
+                    if (badgeText) badgeText.textContent = data.badge;
+                    if (domainText) domainText.textContent = data.domain;
+                    if (titleText) titleText.textContent = data.title;
+                    if (subText) subText.textContent = data.sub;
+                    if (linkElem) {
+                        linkElem.href = data.link;
+                        linkElem.target = data.target || '_blank';
+                    }
+                    if (ctaText) ctaText.textContent = data.cta;
+                });
+            });
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initNavPreviewSwitcher);
+        } else {
+            initNavPreviewSwitcher();
+        }
+    })();
+    </script>
 </header>
 <!-- Header height offset spacer so page content isn't obscured -->
 <div class="h-16 sm:h-20" aria-hidden="true"></div>

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Contact ExtremeSolutions | Book a Discovery Consultation')
-@section('description', 'Talk directly with senior software engineers about your school, ticketing, or custom software requirements. Free consultation &middot; zero obligation.')
+@section('description', 'Talk directly with senior software engineers about your custom software, mobile apps, or cloud systems. Free consultation, zero obligation.')
 
 @php
     $contactSchema = json_encode([

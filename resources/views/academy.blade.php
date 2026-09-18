@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'ExtremeSolutions Academy | Practical Tech Mentorship on Real Software')
-@section('description', 'Learn to build real software by working alongside the engineers who build and operate our live production platforms. Join the priority waitlist.')
+@section('title', 'ExtremeSolutions Academy | Practical Tech Mentorship')
+@section('description', 'Learn to build production software alongside senior engineers who build and run live cloud systems. Join the priority waitlist.')
 
 @section('content')
     <!-- Hero Surface -->

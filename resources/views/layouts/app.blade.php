@@ -6,18 +6,13 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     @php
-        $seoTitle = trim($__env->yieldContent('title', 'ExtremeSolutions | Custom Software, School Systems & Digital Automation'));
-        $seoDescription = trim($__env->yieldContent('description', 'ExtremeSolutions designs and builds high-performance custom software, school management systems, event ticketing platforms, and digital automation for modern institutions and enterprises worldwide.'));
+        $seoTitle = trim($__env->yieldContent('title', 'ExtremeSolutions | Custom Software, Apps & Automation'));
+        $seoDescription = trim($__env->yieldContent('description', 'ExtremeSolutions engineers dependable custom software, mobile apps, and cloud automation for modern organizations worldwide.'));
         $canonicalUrl = url()->current();
         
-        $siteHost = config('app.url', 'https://extremesolutions.com.ng');
-        if (!str_starts_with($siteHost, 'http://') && !str_starts_with($siteHost, 'https://')) {
-            $siteHost = 'https://' . $siteHost;
-        }
-        $siteHost = rtrim($siteHost, '/');
-        
-        $ogImageUrl = $siteHost . '/images/og-image.png';
-        $logoUrl = $siteHost . '/images/es-logo-full.png';
+        // Ensure absolute HTTPS production URLs for social scrapers (never localhost)
+        $ogImageUrl = 'https://extremesolutions.com.ng/images/og-image.png';
+        $logoUrl = 'https://extremesolutions.com.ng/images/es-logo-full.png';
 
         $professionalServiceSchema = json_encode([
             '@context' => 'https://schema.org',
@@ -28,18 +23,18 @@
             'url' => url('/'),
             'logo' => $logoUrl,
             'image' => $ogImageUrl,
-            'description' => 'ExtremeSolutions designs and builds custom software, school management systems, ticketing solutions, and digital automation for ambitious organizations worldwide.',
+            'description' => 'ExtremeSolutions engineers dependable custom software, mobile apps, and cloud automation for modern organizations worldwide.',
             'telephone' => '+2349052585622',
             'email' => 'info@extremesolutions.com.ng',
             'areaServed' => 'Worldwide',
             'priceRange' => '$$',
             'knowsAbout' => [
                 'Custom Software Development',
+                'Mobile App Development (iOS & Android)',
+                'Enterprise Workflow Automation & APIs',
                 'School Management Systems (SMS)',
-                'ESPass Event Ticketing & Access Control',
-                'Enterprise Workflow Automation',
-                'Web & Mobile App Development',
-                'AI & Cloud Systems',
+                'ESPass Event Ticketing & Gate Access',
+                'Cloud Architecture & Microservices',
                 'Tech Mentorship & Training'
             ],
             'sameAs' => [
@@ -67,7 +62,7 @@
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="ExtremeSolutions - Dependable Custom Software & Cloud Platforms Operating Worldwide">
+    <meta property="og:image:alt" content="ExtremeSolutions - Custom Software, Mobile Apps & Cloud Automation">
     <meta property="og:locale" content="en_US">
 
     <!-- Twitter / X -->
@@ -76,7 +71,7 @@
     <meta name="twitter:title" content="{!! $seoTitle !!}">
     <meta name="twitter:description" content="{!! $seoDescription !!}">
     <meta name="twitter:image" content="{{ $ogImageUrl }}">
-    <meta name="twitter:image:alt" content="ExtremeSolutions - Dependable Custom Software & Cloud Platforms Operating Worldwide">
+    <meta name="twitter:image:alt" content="ExtremeSolutions - Custom Software, Mobile Apps & Cloud Automation">
 
     <!-- Favicon / Site Icons -->
     <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">

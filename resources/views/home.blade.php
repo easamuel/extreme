@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'ExtremeSolutions | Custom Software, School Systems & Digital Automation')
-@section('description', 'ExtremeSolutions designs and builds custom software, school management platforms, and digital workflow automation for modern institutions and enterprises worldwide. Live at sms.extremesolutions.com.ng.')
+@section('title', 'ExtremeSolutions | Custom Software, Apps & Automation')
+@section('description', 'ExtremeSolutions engineers dependable custom software, mobile apps, and cloud automation for modern organizations worldwide.')
 
 @php
     $faqSchema = json_encode([
@@ -261,13 +261,10 @@
 
                 <!-- 4: Enterprise Systems & Automation -->
                 <div class="group flex flex-col rounded-2xl bg-white p-5 pb-8 border border-gray-200/80 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg reveal">
-                    <div class="h-44 overflow-hidden rounded-xl bg-[#e8f4f0] text-[#1e3a5f] p-5 flex items-center justify-center transition-colors group-hover:bg-[#d8ede5]">
-                        <svg class="h-full w-full" viewBox="0 0 320 180" fill="none" stroke="currentColor">
-                            <circle cx="90" cy="90" r="30" stroke-width="2" fill="currentColor" fill-opacity="0.04" />
-                            <circle cx="230" cy="90" r="30" stroke-width="2" fill="currentColor" fill-opacity="0.04" />
-                            <path d="M120 90h80" stroke-width="2" stroke-dasharray="3 4" />
-                            <path d="M190 80l10 10-10 10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+                    <div class="h-44 overflow-hidden rounded-xl bg-slate-950 relative border border-gray-100 flex items-center justify-center">
+                        <img src="{{ asset('images/automation-preview.jpg') }}" alt="Workflow Automation & APIs Preview" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-3 left-3 text-[10px] font-mono text-[#00ff88] bg-slate-900/80 px-2 py-0.5 rounded border border-white/10 backdrop-blur-sm">paystack-flutterwave.sync</span>
                     </div>
                     <div class="mt-6 px-2">
                         <h3 class="text-lg font-bold text-[#1e3a5f]">Workflow Automation &amp; APIs</h3>
@@ -285,12 +282,10 @@
 
                 <!-- 5: Web & Mobile Portals -->
                 <div class="group flex flex-col rounded-2xl bg-white p-5 pb-8 border border-gray-200/80 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg reveal">
-                    <div class="h-44 overflow-hidden rounded-xl bg-[#e8f4f0] text-[#1e3a5f] p-5 flex items-center justify-center transition-colors group-hover:bg-[#d8ede5]">
-                        <svg class="h-full w-full" viewBox="0 0 320 180" fill="none" stroke="currentColor">
-                            <rect x="70" y="30" width="120" height="120" rx="8" stroke-width="2" fill="currentColor" fill-opacity="0.04" />
-                            <rect x="205" y="45" width="55" height="105" rx="8" stroke-width="2" />
-                            <circle cx="232" cy="138" r="3" fill="currentColor" />
-                        </svg>
+                    <div class="h-44 overflow-hidden rounded-xl bg-slate-950 relative border border-gray-100 flex items-center justify-center">
+                        <img src="{{ asset('images/mobile-apps-preview.jpg') }}" alt="Web & Mobile Applications Preview" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-3 left-3 text-[10px] font-mono text-[#00ff88] bg-slate-900/80 px-2 py-0.5 rounded border border-white/10 backdrop-blur-sm">web-mobile.pwa</span>
                     </div>
                     <div class="mt-6 px-2">
                         <h3 class="text-lg font-bold text-[#1e3a5f]">Web &amp; Mobile Applications</h3>
@@ -308,11 +303,10 @@
 
                 <!-- 6: ExtremeSolutions Academy -->
                 <div class="group flex flex-col rounded-2xl bg-white p-5 pb-8 border border-gray-200/80 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg reveal">
-                    <div class="h-44 overflow-hidden rounded-xl bg-[#e8f4f0] text-[#1e3a5f] p-5 flex items-center justify-center transition-colors group-hover:bg-[#d8ede5]">
-                        <svg class="h-full w-full" viewBox="0 0 320 180" fill="none" stroke="currentColor">
-                            <path d="M160 35l90 45-90 45-90-45 90-45z" stroke-width="2" fill="currentColor" fill-opacity="0.04" />
-                            <path d="M100 95v35c0 15 27 27 60 27s60-12 60-27V95" stroke-width="2" />
-                        </svg>
+                    <div class="h-44 overflow-hidden rounded-xl bg-slate-950 relative border border-gray-100 flex items-center justify-center">
+                        <img src="{{ asset('images/academy-preview.jpg') }}" alt="ExtremeSolutions Academy Preview" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-3 left-3 text-[10px] font-mono text-[#00ff88] bg-slate-900/80 px-2 py-0.5 rounded border border-white/10 backdrop-blur-sm">academy.engineers.dev</span>
                     </div>
                     <div class="mt-6 px-2">
                         <div class="flex items-center justify-between">
