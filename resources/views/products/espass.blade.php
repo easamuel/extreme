@@ -54,6 +54,32 @@
                     </svg>
                 </a>
             </div>
+
+            <!-- Sleek Gate Scanner Console Window -->
+            <div class="mt-12 max-w-5xl mx-auto reveal">
+                <div class="rounded-2xl border border-white/20 bg-slate-900/80 p-2 sm:p-3 shadow-2xl backdrop-blur-md">
+                    <!-- Console Header & Status -->
+                    <div class="flex items-center justify-between px-3 py-2 border-b border-white/10 mb-2">
+                        <div class="flex items-center gap-1.5">
+                            <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+                            <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+                            <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+                        </div>
+                        <div class="flex items-center gap-2 rounded-lg bg-black/40 px-4 py-1 text-xs font-mono text-white/70 border border-white/10">
+                            <span class="w-2 h-2 rounded-full bg-[#00ff88]"></span>
+                            <span>https://espass.extremesolutions.com.ng/gate-console</span>
+                        </div>
+                        <div class="flex items-center gap-1.5 text-xs font-mono font-bold text-[#00ff88]">
+                            <span class="w-2 h-2 rounded-full bg-[#00ff88] animate-ping"></span>
+                            <span>GATE SCANNER READY</span>
+                        </div>
+                    </div>
+                    <!-- Mockup image -->
+                    <div class="overflow-hidden rounded-xl bg-slate-950">
+                        <img src="{{ asset('images/espass-preview.jpg') }}" alt="ExtremeSolutions ESPass Gate Scanner Console & Attendee Metrics" class="w-full h-auto object-cover rounded-xl shadow-2xl" loading="lazy" />
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 

@@ -9,7 +9,15 @@
         $seoTitle = trim($__env->yieldContent('title', 'ExtremeSolutions | Custom Software, School Systems & Digital Automation'));
         $seoDescription = trim($__env->yieldContent('description', 'ExtremeSolutions designs and builds high-performance custom software, school management systems, event ticketing platforms, and digital automation for modern institutions and enterprises worldwide.'));
         $canonicalUrl = url()->current();
-        $ogImage = asset('favicon.svg');
+        
+        $siteHost = config('app.url', 'https://extremesolutions.com.ng');
+        if (!str_starts_with($siteHost, 'http://') && !str_starts_with($siteHost, 'https://')) {
+            $siteHost = 'https://' . $siteHost;
+        }
+        $siteHost = rtrim($siteHost, '/');
+        
+        $ogImageUrl = $siteHost . '/images/og-image.png';
+        $logoUrl = $siteHost . '/images/es-logo-full.png';
 
         $professionalServiceSchema = json_encode([
             '@context' => 'https://schema.org',
@@ -18,8 +26,8 @@
             'name' => 'ExtremeSolutions',
             'legalName' => 'ExtremeSolutions',
             'url' => url('/'),
-            'logo' => asset('favicon.svg'),
-            'image' => asset('favicon.svg'),
+            'logo' => $logoUrl,
+            'image' => $ogImageUrl,
             'description' => 'ExtremeSolutions designs and builds custom software, school management systems, ticketing solutions, and digital automation for ambitious organizations worldwide.',
             'telephone' => '+2349052585622',
             'email' => 'info@extremesolutions.com.ng',
@@ -46,23 +54,29 @@
     <meta name="description" content="{!! $seoDescription !!}">
     <link rel="canonical" href="{{ $canonicalUrl }}">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="theme-color" content="#1e3a5f">
+    <meta name="theme-color" content="#0a192f">
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ExtremeSolutions">
     <meta property="og:url" content="{{ $canonicalUrl }}">
     <meta property="og:title" content="{!! $seoTitle !!}">
     <meta property="og:description" content="{!! $seoDescription !!}">
-    <meta property="og:image" content="{{ $ogImage }}">
-    <meta property="og:locale" content="en_NG">
+    <meta property="og:image" content="{{ $ogImageUrl }}">
+    <meta property="og:image:secure_url" content="{{ $ogImageUrl }}">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="ExtremeSolutions - Dependable Custom Software & Cloud Platforms Operating Worldwide">
+    <meta property="og:locale" content="en_US">
 
-    <!-- Twitter -->
+    <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="{{ $canonicalUrl }}">
     <meta name="twitter:title" content="{!! $seoTitle !!}">
     <meta name="twitter:description" content="{!! $seoDescription !!}">
-    <meta name="twitter:image" content="{{ $ogImage }}">
+    <meta name="twitter:image" content="{{ $ogImageUrl }}">
+    <meta name="twitter:image:alt" content="ExtremeSolutions - Dependable Custom Software & Cloud Platforms Operating Worldwide">
 
     <!-- Favicon / Site Icons -->
     <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">

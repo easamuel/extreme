@@ -1,47 +1,75 @@
+# ==========================================
+# ExtremeSolutions - Robots Exclusion Protocol
+# https://extremesolutions.com.ng
+# ==========================================
+
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /admin
+Disallow: /telescope
+Disallow: /horizon
+Disallow: /nova
+Disallow: /api/
 
-# Explicitly allow major AI crawlers/assistants to read and cite this site
-User-agent: GPTBot
-Disallow:
+# Major Search Engine Crawlers
+User-agent: Googlebot
+Allow: /
 
-User-agent: ChatGPT-User
-Disallow:
+User-agent: Googlebot-Image
+Allow: /
 
-User-agent: OAI-SearchBot
-Disallow:
-
-User-agent: ClaudeBot
-Disallow:
-
-User-agent: Claude-Web
-Disallow:
-
-User-agent: anthropic-ai
-Disallow:
-
-User-agent: Google-Extended
-Disallow:
-
-User-agent: PerplexityBot
-Disallow:
-
-User-agent: Perplexity-User
-Disallow:
-
-User-agent: CCBot
-Disallow:
+User-agent: Bingbot
+Allow: /
 
 User-agent: Applebot
-Disallow:
+Allow: /
 
 User-agent: Applebot-Extended
-Disallow:
+Allow: /
 
-User-agent: Bytespider
-Disallow:
+# Social Media Link Preview Bots
+User-agent: Twitterbot
+Allow: /
 
-User-agent: Meta-ExternalAgent
-Disallow:
+User-agent: facebookexternalhit
+Allow: /
 
+User-agent: WhatsApp
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Slackbot
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+# AI Knowledge & Search Engines
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Canonical Sitemap
 Sitemap: https://extremesolutions.com.ng/sitemap.xml

@@ -12,6 +12,8 @@
     <div class="flex-shrink-0">
         <img src="{{ $markSrc }}" 
              alt="ExtremeSolutions ES Mark" 
+             loading="eager"
+             onerror="if(!this.dataset.tried){ this.dataset.tried=1; this.src='{{ $isDark ? asset('es-mark-white.png') : asset('es-mark.png') }}'; }"
              class="h-7 sm:h-8 w-auto object-contain transition-opacity hover:opacity-95" />
     </div>
     {{-- Brand Name --}}

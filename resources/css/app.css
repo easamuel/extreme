@@ -164,3 +164,86 @@ html, body {
 .tab-panel {
     transition: opacity 0.3s ease-in-out;
 }
+
+/* Andela-Style Mega Menu & Micro-Animations */
+.nav-dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px) scale(0.985);
+    transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1), transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.22s;
+    pointer-events: none;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+/* Floating Mockup Animation */
+@keyframes float-subtle {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+.animate-float {
+    animation: float-subtle 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+    animation: float-subtle 7s ease-in-out 2s infinite;
+}
+
+/* Shimmer / light sweep effect on cards */
+.shimmer-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.shimmer-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        60deg,
+        transparent 35%,
+        rgba(0, 255, 136, 0.08) 50%,
+        transparent 65%
+    );
+    transform: rotate(30deg);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.shimmer-card:hover::after {
+    opacity: 1;
+    animation: shimmer-sweep 1.4s ease-in-out;
+}
+
+@keyframes shimmer-sweep {
+    0% {
+        transform: translate(-100%, -100%) rotate(30deg);
+    }
+    100% {
+        transform: translate(100%, 100%) rotate(30deg);
+    }
+}
+
+/* Image Zoom on hover */
+.img-zoom {
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.group:hover .img-zoom {
+    transform: scale(1.04);
+}

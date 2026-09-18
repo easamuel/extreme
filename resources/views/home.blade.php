@@ -192,18 +192,10 @@
             <div class="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 <!-- 1: School Management System -->
                 <div class="group flex flex-col rounded-2xl bg-white p-5 pb-8 border border-gray-200/80 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg reveal">
-                    <div class="h-44 overflow-hidden rounded-xl bg-[#e8f4f0] text-[#1e3a5f] p-5 flex items-center justify-center transition-colors group-hover:bg-[#d8ede5]">
-                        <svg class="h-full w-full" viewBox="0 0 320 180" fill="none" stroke="currentColor">
-                            <rect x="50" y="25" width="220" height="130" rx="8" stroke-width="2" fill="currentColor" fill-opacity="0.04" />
-                            <path d="M50 55h220" stroke-width="2" />
-                            <circle cx="70" cy="40" r="4" fill="currentColor" />
-                            <circle cx="85" cy="40" r="4" fill="currentColor" />
-                            <circle cx="100" cy="40" r="4" fill="currentColor" />
-                            <rect x="70" y="70" width="85" height="30" rx="4" stroke-width="1.8" />
-                            <rect x="165" y="70" width="85" height="30" rx="4" stroke-width="1.8" />
-                            <path d="M70 120h180" stroke-width="2" stroke-dasharray="4 4" />
-                            <path d="M70 135h120" stroke-width="2" />
-                        </svg>
+                    <div class="h-44 overflow-hidden rounded-xl bg-slate-950 relative border border-gray-100 flex items-center justify-center">
+                        <img src="{{ asset('images/sms-preview.jpg') }}" alt="School Management Platform Preview" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-3 left-3 text-[10px] font-mono text-[#00ff88] bg-slate-900/80 px-2 py-0.5 rounded border border-white/10 backdrop-blur-sm">sms.extremesolutions.com.ng</span>
                     </div>
                     <div class="mt-6 px-2">
                         <div class="flex items-center justify-between">
@@ -224,14 +216,10 @@
 
                 <!-- 2: ESPass Event Ticketing -->
                 <div class="group flex flex-col rounded-2xl bg-white p-5 pb-8 border border-gray-200/80 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg reveal">
-                    <div class="h-44 overflow-hidden rounded-xl bg-[#e8f4f0] text-[#1e3a5f] p-5 flex items-center justify-center transition-colors group-hover:bg-[#d8ede5]">
-                        <svg class="h-full w-full" viewBox="0 0 320 180" fill="none" stroke="currentColor">
-                            <rect x="60" y="35" width="200" height="110" rx="12" stroke-width="2" fill="currentColor" fill-opacity="0.04" />
-                            <path d="M130 35v110" stroke-width="2" stroke-dasharray="4 6" />
-                            <rect x="80" y="60" width="35" height="35" rx="4" stroke-width="1.8" />
-                            <path d="M87 77h21M97 67v21" stroke-width="1.5" />
-                            <path d="M150 65h85M150 85h60M150 105h40" stroke-width="2" />
-                        </svg>
+                    <div class="h-44 overflow-hidden rounded-xl bg-slate-950 relative border border-gray-100 flex items-center justify-center">
+                        <img src="{{ asset('images/espass-preview.jpg') }}" alt="ESPass Event Ticketing Platform Preview" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-3 left-3 text-[10px] font-mono text-[#00ff88] bg-slate-900/80 px-2 py-0.5 rounded border border-white/10 backdrop-blur-sm">espass.extremesolutions.com.ng</span>
                     </div>
                     <div class="mt-6 px-2">
                         <div class="flex items-center justify-between">
@@ -252,11 +240,10 @@
 
                 <!-- 3: Custom Software Engineering -->
                 <div class="group flex flex-col rounded-2xl bg-white p-5 pb-8 border border-gray-200/80 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg reveal">
-                    <div class="h-44 overflow-hidden rounded-xl bg-[#e8f4f0] text-[#1e3a5f] p-5 flex items-center justify-center transition-colors group-hover:bg-[#d8ede5]">
-                        <svg class="h-full w-full" viewBox="0 0 320 180" fill="none" stroke="currentColor">
-                            <rect x="65" y="30" width="190" height="120" rx="8" stroke-width="2" fill="currentColor" fill-opacity="0.04" />
-                            <path d="M100 70l-20 20 20 20M220 70l20 20-20 20M170 65l-20 50" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+                    <div class="h-44 overflow-hidden rounded-xl bg-slate-950 relative border border-gray-100 flex items-center justify-center">
+                        <img src="{{ asset('images/custom-software-preview.jpg') }}" alt="Custom Enterprise Software Architecture Preview" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-3 left-3 text-[10px] font-mono text-[#00ff88] bg-slate-900/80 px-2 py-0.5 rounded border border-white/10 backdrop-blur-sm">cloud-architecture.prod</span>
                     </div>
                     <div class="mt-6 px-2">
                         <h3 class="text-lg font-bold text-[#1e3a5f]">Custom Software Engineering</h3>
@@ -445,6 +432,23 @@
                             Term fee tracking, automated exam grade computation, attendance registers, and parent portals. Built to run nursery, primary, and secondary schools with zero spreadsheet confusion.
                         </p>
 
+                        <!-- Live Browser Mockup -->
+                        <div class="mt-5 overflow-hidden rounded-xl border border-white/20 bg-slate-900/80 shadow-lg group">
+                            <div class="flex items-center justify-between px-3 py-1.5 bg-slate-950/80 border-b border-white/10">
+                                <div class="flex items-center gap-1.5">
+                                    <span class="w-2 h-2 rounded-full bg-red-400/80"></span>
+                                    <span class="w-2 h-2 rounded-full bg-yellow-400/80"></span>
+                                    <span class="w-2 h-2 rounded-full bg-emerald-400/80"></span>
+                                </div>
+                                <span class="text-[10px] font-mono text-white/50">sms.extremesolutions.com.ng</span>
+                                <span class="w-2 h-2 rounded-full bg-[#00ff88]"></span>
+                            </div>
+                            <div class="aspect-[16/10] overflow-hidden bg-slate-950 relative">
+                                <img src="{{ asset('images/sms-preview.jpg') }}" alt="School Management System Dashboard" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-[#1e3a5f]/50 via-transparent to-transparent pointer-events-none"></div>
+                            </div>
+                        </div>
+
                         <!-- Live Metrics -->
                         <div class="mt-6 pt-5 border-t border-white/10 grid grid-cols-3 gap-2 text-center">
                             <div class="bg-white/5 rounded-xl p-2.5">
@@ -496,6 +500,23 @@
                             Scalable event ticketing and access control infrastructure. Checks guests in via rapid barcode validation with real-time attendee reconciliation and settlement.
                         </p>
 
+                        <!-- Live Scanner Console Mockup -->
+                        <div class="mt-5 overflow-hidden rounded-xl border border-white/20 bg-slate-900/80 shadow-lg group">
+                            <div class="flex items-center justify-between px-3 py-1.5 bg-slate-950/80 border-b border-white/10">
+                                <div class="flex items-center gap-1.5">
+                                    <span class="w-2 h-2 rounded-full bg-red-400/80"></span>
+                                    <span class="w-2 h-2 rounded-full bg-yellow-400/80"></span>
+                                    <span class="w-2 h-2 rounded-full bg-emerald-400/80"></span>
+                                </div>
+                                <span class="text-[10px] font-mono text-[#00ff88]">espass.extremesolutions.com.ng</span>
+                                <span class="text-[9px] uppercase font-bold text-[#00ff88] bg-[#00ff88]/15 px-1.5 py-0.5 rounded">Scan Active</span>
+                            </div>
+                            <div class="aspect-[16/10] overflow-hidden bg-slate-950 relative">
+                                <img src="{{ asset('images/espass-preview.jpg') }}" alt="ESPass Gate Validation Console" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-[#1e3a5f]/50 via-transparent to-transparent pointer-events-none"></div>
+                            </div>
+                        </div>
+
                         <!-- Live Metrics -->
                         <div class="mt-6 pt-5 border-t border-white/10 grid grid-cols-3 gap-2 text-center">
                             <div class="bg-white/5 rounded-xl p-2.5">
@@ -542,6 +563,23 @@
                         <p class="mt-4 text-sm text-white/80 leading-relaxed">
                             Tailor-engineered internal applications connecting inventory, customer invoicing, payment gateways, and staff permissions into automated operator control panels.
                         </p>
+
+                        <!-- Cloud Architecture Mockup -->
+                        <div class="mt-5 overflow-hidden rounded-xl border border-white/20 bg-slate-900/80 shadow-lg group">
+                            <div class="flex items-center justify-between px-3 py-1.5 bg-slate-950/80 border-b border-white/10">
+                                <div class="flex items-center gap-1.5">
+                                    <span class="w-2 h-2 rounded-full bg-red-400/80"></span>
+                                    <span class="w-2 h-2 rounded-full bg-yellow-400/80"></span>
+                                    <span class="w-2 h-2 rounded-full bg-emerald-400/80"></span>
+                                </div>
+                                <span class="text-[10px] font-mono text-white/50">enterprise-orchestration.internal</span>
+                                <span class="text-[9px] uppercase font-bold text-white/60 bg-white/10 px-1.5 py-0.5 rounded">Secure Node</span>
+                            </div>
+                            <div class="aspect-[16/10] overflow-hidden bg-slate-950 relative">
+                                <img src="{{ asset('images/custom-software-preview.jpg') }}" alt="Enterprise Cloud Orchestration System" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-[#1e3a5f]/50 via-transparent to-transparent pointer-events-none"></div>
+                            </div>
+                        </div>
 
                         <!-- Live Metrics -->
                         <div class="mt-6 pt-5 border-t border-white/10 grid grid-cols-3 gap-2 text-center">

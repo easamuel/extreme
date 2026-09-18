@@ -33,3 +33,28 @@ Route::post('/contact', [ContactController::class, 'store'])->name('contact.stor
 
 // Newsletter Signup
 Route::post('/newsletter', [NewsletterController::class, 'store'])->name('newsletter.subscribe');
+
+// Direct SEO Discovery Routes (ensures valid headers on cPanel / Nginx / Apache)
+Route::get('/robots.txt', function () {
+    $path = public_path('robots.txt');
+    if (file_exists($path)) {
+        return response(file_get_contents($path), 200, [
+            'Content-Type' => 'text/plain; charset=UTF-8',
+            'Cache-Control' => 'public, max-age=86400',
+        ]);
+    }
+    return response("User-agent: *\nAllow: /\nSitemap: https://extremesolutions.com.ng/sitemap.xml\n", 200, [
+        'Content-Type' => 'text/plain; charset=UTF-8',
+    ]);
+});
+
+Route::get('/sitemap.xml', function () {
+    $path = public_path('sitemap.xml');
+    if (file_exists($path)) {
+        return response(file_get_contents($path), 200, [
+            'Content-Type' => 'application/xml; charset=UTF-8',
+            'Cache-Control' => 'public, max-age=86400',
+        ]);
+    }
+    abort(404);
+});

@@ -59,6 +59,34 @@
             <p class="mt-6 text-xs text-white/50 reveal">
                 * Zero hardware required. Runs seamlessly on any laptop, tablet, or phone.
             </p>
+
+            <!-- Sleek Live Portal Showcase Window -->
+            <div class="mt-12 max-w-5xl mx-auto reveal">
+                <div class="rounded-2xl border border-white/20 bg-slate-900/80 p-2 sm:p-3 shadow-2xl backdrop-blur-md">
+                    <!-- Window Controls & Address bar -->
+                    <div class="flex items-center justify-between px-3 py-2 border-b border-white/10 mb-2">
+                        <div class="flex items-center gap-1.5">
+                            <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+                            <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+                            <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+                        </div>
+                        <div class="flex items-center gap-2 rounded-lg bg-black/40 px-4 py-1 text-xs font-mono text-white/70 border border-white/10">
+                            <svg class="w-3 h-3 text-[#00ff88]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                            </svg>
+                            <span>https://sms.extremesolutions.com.ng/portal</span>
+                        </div>
+                        <div class="flex items-center gap-1.5 text-white/50 text-xs font-medium">
+                            <span class="w-2 h-2 rounded-full bg-[#00ff88] animate-pulse"></span>
+                            <span class="hidden sm:inline">Live Production</span>
+                        </div>
+                    </div>
+                    <!-- Mockup image -->
+                    <div class="overflow-hidden rounded-xl bg-slate-950">
+                        <img src="{{ asset('images/sms-preview.jpg') }}" alt="ExtremeSolutions SMS Live Administration Dashboard" class="w-full h-auto object-cover rounded-xl shadow-2xl" loading="lazy" />
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
