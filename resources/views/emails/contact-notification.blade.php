@@ -14,8 +14,11 @@
                         <td style="padding:32px;color:#1b1b18;">
                             <p style="font-size:14px;margin:0 0 8px;"><strong>Name:</strong> {{ $name }}</p>
                             <p style="font-size:14px;margin:0 0 8px;"><strong>Email:</strong> {{ $email }}</p>
+                            @if(!empty($phone))
+                                <p style="font-size:14px;margin:0 0 8px;"><strong>Phone / WhatsApp:</strong> {{ $phone }}</p>
+                            @endif
                             <p style="font-size:14px;margin:0 0 16px;"><strong>Subject:</strong> {{ $subject }}</p>
-                            <p style="font-size:14px;margin:0 0 8px;"><strong>Message:</strong></p>
+                            <p style="font-size:14px;margin:0 0 8px;"><strong>Operational Context / Message:</strong></p>
                             <p style="font-size:14px;line-height:1.6;color:#444;white-space:pre-wrap;margin:0;">{{ $message }}</p>
                         </td>
                     </tr>
