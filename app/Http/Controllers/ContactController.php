@@ -61,8 +61,10 @@ class ContactController extends Controller
             'message' => $message,
         ]);
 
+        $recipient = env('CONTACT_NOTIFICATION_EMAIL', env('MAIL_TO_ADDRESS', config('mail.from.address')));
+
         ResendMailer::send(
-            config('mail.from.address'),
+            $recipient,
             'New consultation request: '.$subject,
             view('emails.contact-notification', compact('name', 'email', 'phone', 'subject', 'message'))->render(),
             $email

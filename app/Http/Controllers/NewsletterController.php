@@ -42,8 +42,10 @@ class NewsletterController extends Controller
                 view('emails.newsletter-welcome')->render()
             );
 
+            $recipient = env('CONTACT_NOTIFICATION_EMAIL', env('MAIL_TO_ADDRESS', config('mail.from.address')));
+
             ResendMailer::send(
-                config('mail.from.address'),
+                $recipient,
                 'New newsletter subscriber',
                 view('emails.newsletter-notification', ['email' => $email])->render()
             );
