@@ -200,8 +200,34 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
+        const messageEl = quoteWizard.querySelector('textarea[name="message"]');
+        const messageErrorEl = quoteWizard.querySelector('#wizard-message-error');
+
+        if (messageEl) {
+            messageEl.addEventListener('input', () => {
+                if (messageEl.value.trim().length >= 10) {
+                    messageEl.classList.remove('border-rose-500', 'ring-2', 'ring-rose-200');
+                    if (messageErrorEl) messageErrorEl.classList.add('hidden');
+                }
+            });
+        }
+
         if (nextBtn) {
             nextBtn.addEventListener('click', () => {
+                // Step 2 Guard: Message / Description is strictly mandatory (min 10 chars)
+                if (currentStep === 2) {
+                    if (!messageEl || messageEl.value.trim().length < 10) {
+                        if (messageEl) {
+                            messageEl.classList.add('border-rose-500', 'ring-2', 'ring-rose-200');
+                            messageEl.focus();
+                        }
+                        if (messageErrorEl) {
+                            messageErrorEl.classList.remove('hidden');
+                        }
+                        return;
+                    }
+                }
+
                 if (currentStep < totalSteps) {
                     currentStep++;
                     updateWizard();

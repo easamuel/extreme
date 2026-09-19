@@ -59,7 +59,7 @@
             </div>
 
             <!-- Main Form Card -->
-            <div class="rounded-3xl bg-[#f8fafc] border border-gray-200/90 p-8 sm:p-12 shadow-sm reveal">
+            <div id="contact-form" class="rounded-3xl bg-[#f8fafc] border border-gray-200/90 p-8 sm:p-12 shadow-sm reveal">
                 @if(session('success'))
                     <div class="mb-8 rounded-2xl bg-green-50 border border-green-200 p-5 text-sm font-medium text-green-800">
                         {{ session('success') }}

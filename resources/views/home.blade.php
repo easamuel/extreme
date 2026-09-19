@@ -828,101 +828,170 @@
 
                 <!-- Wizard Intake Container -->
                 <div class="rounded-3xl bg-white border border-gray-200 p-6 sm:p-10 shadow-lg reveal" id="quote-wizard">
-                    <!-- Wizard Progress Header -->
-                    <div class="mb-8">
-                        <div class="flex items-center justify-between text-xs font-bold text-gray-500 mb-2">
-                            <span>Step <span class="wizard-step-counter">1 of 3 (33%)</span></span>
-                            <span class="text-[#00994d]">Consultation Intake</span>
-                        </div>
-                        <div class="h-1.5 w-full bg-gray-200 rounded-full overflow-hidden">
-                            <div class="wizard-progress-bar h-full bg-[#00ff88] rounded-full transition-all duration-300" style="width: 33%"></div>
-                        </div>
-                    </div>
-
                     @if(session('success'))
-                        <div class="mb-6 rounded-xl bg-green-50 border border-green-200 p-4 text-sm font-medium text-green-800">
-                            {{ session('success') }}
+                        <!-- Dedicated Confirmation Card -->
+                        <div class="rounded-2xl bg-gradient-to-br from-emerald-50/90 via-white to-green-50/70 border-2 border-[#00ff88]/50 p-8 text-center shadow-lg animate-in fade-in duration-300">
+                            <div class="w-16 h-16 bg-[#00ff88] text-[#1e3a5f] rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
+                                <svg class="w-8 h-8 text-[#1e3a5f]" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
+                                </svg>
+                            </div>
+                            <span class="inline-block px-3 py-1 bg-[#1e3a5f] text-[#00ff88] rounded-full text-xs font-bold uppercase tracking-wider mb-3">
+                                Consultation Request Confirmed
+                            </span>
+                            <h3 class="text-2xl font-bold text-[#1e3a5f]">Thank You! We've Received Your Details.</h3>
+                            <p class="text-sm text-gray-600 mt-2 max-w-md mx-auto leading-relaxed">
+                                {{ session('success') }}
+                            </p>
+                            <div class="mt-6 p-4 rounded-xl bg-white border border-gray-200 text-xs text-gray-600 max-w-sm mx-auto space-y-2.5 shadow-sm">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-medium text-gray-500">Typical response time:</span>
+                                    <span class="font-bold text-[#1e3a5f]">Within 2 to 4 hours</span>
+                                </div>
+                                <div class="flex items-center justify-between pt-2 border-t border-gray-100">
+                                    <span class="font-medium text-gray-500">Need immediate answers?</span>
+                                    <a href="https://wa.me/2349052585622?text=Hello%20ExtremeSolutions,%20I%20just%20submitted%20a%20consultation%20request%20on%20the%20website." target="_blank" rel="noopener noreferrer" class="font-bold text-[#00994d] hover:underline flex items-center gap-1">
+                                        WhatsApp 09052585622 &rarr;
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mt-6">
+                                <a href="{{ route('home') }}#request-quote" class="inline-flex items-center text-xs font-bold text-gray-500 hover:text-[#1e3a5f] transition-colors">
+                                    &larr; Submit another project request
+                                </a>
+                            </div>
                         </div>
-                    @endif
-
-                    <form method="POST" action="{{ route('contact.store') }}" id="wizard-form" class="space-y-6">
-                        @csrf
-
-                        <!-- Step 1: Solution Category -->
-                        <div class="wizard-step space-y-4">
-                            <label class="block text-sm font-bold text-[#1e3a5f]">
-                                1. What type of platform or system do you need?
-                            </label>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                <label class="flex items-center gap-3 p-3.5 rounded-xl border border-gray-200 bg-[#f8fafc] hover:border-[#1e3a5f] cursor-pointer transition-colors text-xs sm:text-sm font-medium text-gray-800">
-                                    <input type="radio" name="subject" value="School Management Demo Request" class="text-[#1e3a5f] focus:ring-[#1e3a5f]" checked>
-                                    <span>School Management (SMS)</span>
-                                </label>
-                                <label class="flex items-center gap-3 p-3.5 rounded-xl border border-gray-200 bg-[#f8fafc] hover:border-[#1e3a5f] cursor-pointer transition-colors text-xs sm:text-sm font-medium text-gray-800">
-                                    <input type="radio" name="subject" value="ESPass Event Ticketing Inquiry" class="text-[#1e3a5f] focus:ring-[#1e3a5f]">
-                                    <span>ESPass Event Ticketing</span>
-                                </label>
-                                <label class="flex items-center gap-3 p-3.5 rounded-xl border border-gray-200 bg-[#f8fafc] hover:border-[#1e3a5f] cursor-pointer transition-colors text-xs sm:text-sm font-medium text-gray-800">
-                                    <input type="radio" name="subject" value="Custom Software Build" class="text-[#1e3a5f] focus:ring-[#1e3a5f]">
-                                    <span>Custom Software Build</span>
-                                </label>
-                                <label class="flex items-center gap-3 p-3.5 rounded-xl border border-gray-200 bg-[#f8fafc] hover:border-[#1e3a5f] cursor-pointer transition-colors text-xs sm:text-sm font-medium text-gray-800">
-                                    <input type="radio" name="subject" value="Automation & Integration" class="text-[#1e3a5f] focus:ring-[#1e3a5f]">
-                                    <span>Workflow Automation</span>
-                                </label>
+                    @else
+                        <!-- Wizard Progress Header -->
+                        <div class="mb-8">
+                            <div class="flex items-center justify-between text-xs font-bold text-gray-500 mb-2">
+                                <span>Step <span class="wizard-step-counter">1 of 3 (33%)</span></span>
+                                <span class="text-[#00994d]">Consultation Intake</span>
+                            </div>
+                            <div class="h-1.5 w-full bg-gray-200 rounded-full overflow-hidden">
+                                <div class="wizard-progress-bar h-full bg-[#00ff88] rounded-full transition-all duration-300" style="width: 33%"></div>
                             </div>
                         </div>
 
-                        <!-- Step 2: Operational Scale & Timeline -->
-                        <div class="wizard-step hidden space-y-4">
-                            <div>
+                        @if($errors->any())
+                            <div class="mb-6 rounded-xl bg-rose-50 border border-rose-200 p-4 text-xs font-medium text-rose-800 space-y-1">
+                                @foreach($errors->all() as $err)
+                                    <p class="flex items-center gap-1.5">
+                                        <span class="text-rose-500">&bull;</span> {{ $err }}
+                                    </p>
+                                @endforeach
+                            </div>
+                        @endif
+
+                        <form method="POST" action="{{ route('contact.store') }}" id="wizard-form" class="space-y-6">
+                            @csrf
+
+                            <!-- Step 1: Solution Category (8 Options) -->
+                            <div class="wizard-step space-y-4">
                                 <label class="block text-sm font-bold text-[#1e3a5f]">
-                                    2. Describe your current operations and target timeline
+                                    1. What type of platform or system do you need?
                                 </label>
-                                <p class="text-xs text-gray-500 leading-relaxed mt-1">
-                                    Briefly describe your current process (e.g. 350 students currently tracked across paper registers ahead of next term, or an upcoming event for 1,500 attendees, or bespoke software requirements)...
-                                </p>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                    <label class="flex items-center gap-3 p-3.5 rounded-xl border border-gray-200 bg-[#f8fafc] hover:border-[#1e3a5f] cursor-pointer transition-all text-xs sm:text-sm font-medium text-gray-800 hover:bg-white has-[:checked]:border-[#1e3a5f] has-[:checked]:bg-emerald-50/50 has-[:checked]:ring-1 has-[:checked]:ring-[#1e3a5f]">
+                                        <input type="radio" name="subject" value="School Management (SMS)" class="text-[#1e3a5f] focus:ring-[#1e3a5f]" checked>
+                                        <span>School Management (SMS)</span>
+                                    </label>
+                                    <label class="flex items-center gap-3 p-3.5 rounded-xl border border-gray-200 bg-[#f8fafc] hover:border-[#1e3a5f] cursor-pointer transition-all text-xs sm:text-sm font-medium text-gray-800 hover:bg-white has-[:checked]:border-[#1e3a5f] has-[:checked]:bg-emerald-50/50 has-[:checked]:ring-1 has-[:checked]:ring-[#1e3a5f]">
+                                        <input type="radio" name="subject" value="ESPass Event Ticketing Inquiry" class="text-[#1e3a5f] focus:ring-[#1e3a5f]">
+                                        <span>ESPass Event Ticketing & Gates</span>
+                                    </label>
+                                    <label class="flex items-center gap-3 p-3.5 rounded-xl border border-gray-200 bg-[#f8fafc] hover:border-[#1e3a5f] cursor-pointer transition-all text-xs sm:text-sm font-medium text-gray-800 hover:bg-white has-[:checked]:border-[#1e3a5f] has-[:checked]:bg-emerald-50/50 has-[:checked]:ring-1 has-[:checked]:ring-[#1e3a5f]">
+                                        <input type="radio" name="subject" value="Custom Software & Database Engineering" class="text-[#1e3a5f] focus:ring-[#1e3a5f]">
+                                        <span>Custom Software & Databases</span>
+                                    </label>
+                                    <label class="flex items-center gap-3 p-3.5 rounded-xl border border-gray-200 bg-[#f8fafc] hover:border-[#1e3a5f] cursor-pointer transition-all text-xs sm:text-sm font-medium text-gray-800 hover:bg-white has-[:checked]:border-[#1e3a5f] has-[:checked]:bg-emerald-50/50 has-[:checked]:ring-1 has-[:checked]:ring-[#1e3a5f]">
+                                        <input type="radio" name="subject" value="Web & Mobile App Development" class="text-[#1e3a5f] focus:ring-[#1e3a5f]">
+                                        <span>Web & Mobile App Development</span>
+                                    </label>
+                                    <label class="flex items-center gap-3 p-3.5 rounded-xl border border-gray-200 bg-[#f8fafc] hover:border-[#1e3a5f] cursor-pointer transition-all text-xs sm:text-sm font-medium text-gray-800 hover:bg-white has-[:checked]:border-[#1e3a5f] has-[:checked]:bg-emerald-50/50 has-[:checked]:ring-1 has-[:checked]:ring-[#1e3a5f]">
+                                        <input type="radio" name="subject" value="Workflow Automation & API Integrations" class="text-[#1e3a5f] focus:ring-[#1e3a5f]">
+                                        <span>Workflow Automation & APIs</span>
+                                    </label>
+                                    <label class="flex items-center gap-3 p-3.5 rounded-xl border border-gray-200 bg-[#f8fafc] hover:border-[#1e3a5f] cursor-pointer transition-all text-xs sm:text-sm font-medium text-gray-800 hover:bg-white has-[:checked]:border-[#1e3a5f] has-[:checked]:bg-emerald-50/50 has-[:checked]:ring-1 has-[:checked]:ring-[#1e3a5f]">
+                                        <input type="radio" name="subject" value="Payment Gateway & Ledger Sync" class="text-[#1e3a5f] focus:ring-[#1e3a5f]">
+                                        <span>Payment Gateway & Ledger Sync</span>
+                                    </label>
+                                    <label class="flex items-center gap-3 p-3.5 rounded-xl border border-gray-200 bg-[#f8fafc] hover:border-[#1e3a5f] cursor-pointer transition-all text-xs sm:text-sm font-medium text-gray-800 hover:bg-white has-[:checked]:border-[#1e3a5f] has-[:checked]:bg-emerald-50/50 has-[:checked]:ring-1 has-[:checked]:ring-[#1e3a5f]">
+                                        <input type="radio" name="subject" value="Legacy System Modernization" class="text-[#1e3a5f] focus:ring-[#1e3a5f]">
+                                        <span>Legacy Modernization & Cloud</span>
+                                    </label>
+                                    <label class="flex items-center gap-3 p-3.5 rounded-xl border border-gray-200 bg-[#f8fafc] hover:border-[#1e3a5f] cursor-pointer transition-all text-xs sm:text-sm font-medium text-gray-800 hover:bg-white has-[:checked]:border-[#1e3a5f] has-[:checked]:bg-emerald-50/50 has-[:checked]:ring-1 has-[:checked]:ring-[#1e3a5f]">
+                                        <input type="radio" name="subject" value="Academy Mentorship & Corporate Training" class="text-[#1e3a5f] focus:ring-[#1e3a5f]">
+                                        <span>Academy Training & Mentorship</span>
+                                    </label>
+                                </div>
                             </div>
-                            <textarea name="message" rows="4" required class="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm text-gray-900 focus:border-[#1e3a5f] focus:ring-1 focus:ring-[#1e3a5f] bg-[#f8fafc] placeholder-gray-400" placeholder="Briefly describe your current process (e.g. 350 students currently tracked across paper registers ahead of next term, or an upcoming event for 1,500 attendees)..."></textarea>
-                        </div>
 
-                        <!-- Step 3: Contact Information -->
-                        <div class="wizard-step hidden space-y-4">
-                            <label class="block text-sm font-bold text-[#1e3a5f]">
-                                3. Where should we send the walkthrough details?
-                            </label>
-                            <div class="space-y-3">
+                            <!-- Step 2: Operational Scale & Requirements (Strictly Mandatory) -->
+                            <div class="wizard-step hidden space-y-4">
                                 <div>
-                                    <label for="input-name" class="block text-xs font-bold text-gray-700 mb-1">Your Full Name *</label>
-                                    <input type="text" id="input-name" name="name" required class="w-full rounded-xl border border-gray-300 px-4 py-2.5 text-sm text-gray-900 focus:border-[#1e3a5f] focus:ring-1 focus:ring-[#1e3a5f] bg-[#f8fafc]" placeholder="e.g. Dr. Adamu Johnson">
+                                    <label class="block text-sm font-bold text-[#1e3a5f]">
+                                        2. Describe your operations and project requirements <span class="text-rose-500">*</span>
+                                    </label>
+                                    <p class="text-xs text-gray-500 leading-relaxed mt-1">
+                                        Please provide details regarding your current workflow, user scale, or specific requirements so our engineering team can prepare tailored recommendations.
+                                    </p>
                                 </div>
-                                <div>
-                                    <label for="input-email" class="block text-xs font-bold text-gray-700 mb-1">Email Address *</label>
-                                    <input type="email" id="input-email" name="email" required class="w-full rounded-xl border border-gray-300 px-4 py-2.5 text-sm text-gray-900 focus:border-[#1e3a5f] focus:ring-1 focus:ring-[#1e3a5f] bg-[#f8fafc]" placeholder="you@@organization.com">
-                                </div>
-                                <div>
-                                    <label for="input-phone" class="block text-xs font-bold text-gray-700 mb-1">Phone / WhatsApp (Optional)</label>
-                                    <input type="tel" id="input-phone" name="phone" class="w-full rounded-xl border border-gray-300 px-4 py-2.5 text-sm text-gray-900 focus:border-[#1e3a5f] focus:ring-1 focus:ring-[#1e3a5f] bg-[#f8fafc]" placeholder="09052585622">
+                                <div class="relative">
+                                    <textarea
+                                        id="wizard-message"
+                                        name="message"
+                                        rows="4"
+                                        required
+                                        minlength="10"
+                                        class="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm text-gray-900 focus:border-[#1e3a5f] focus:ring-1 focus:ring-[#1e3a5f] bg-[#f8fafc] placeholder-gray-400 transition-colors"
+                                        placeholder="e.g. We have 450 students and need automated fee reconciliations and report cards ahead of next term... or: We need an iOS and Android app with payment collection and live push alerts..."
+                                    >{{ old('message') }}</textarea>
+                                    <p id="wizard-message-error" class="hidden mt-1.5 text-xs font-semibold text-rose-600 flex items-center gap-1">
+                                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                        <span>Please describe your project requirements (at least 10 characters) before continuing.</span>
+                                    </p>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Wizard Controls -->
-                        <div class="flex items-center justify-between pt-4 border-t border-gray-200">
-                            <button type="button" class="wizard-prev-btn text-xs font-bold text-gray-500 hover:text-[#1e3a5f] opacity-0 pointer-events-none transition-all flex items-center gap-1">
-                                &larr; Back
-                            </button>
+                            <!-- Step 3: Contact Information -->
+                            <div class="wizard-step hidden space-y-4">
+                                <label class="block text-sm font-bold text-[#1e3a5f]">
+                                    3. Where should we send the walkthrough details?
+                                </label>
+                                <div class="space-y-3">
+                                    <div>
+                                        <label for="input-name" class="block text-xs font-bold text-gray-700 mb-1">Your Full Name <span class="text-rose-500">*</span></label>
+                                        <input type="text" id="input-name" name="name" value="{{ old('name') }}" required class="w-full rounded-xl border border-gray-300 px-4 py-2.5 text-sm text-gray-900 focus:border-[#1e3a5f] focus:ring-1 focus:ring-[#1e3a5f] bg-[#f8fafc]" placeholder="e.g. Dr. Adamu Johnson">
+                                    </div>
+                                    <div>
+                                        <label for="input-email" class="block text-xs font-bold text-gray-700 mb-1">Email Address <span class="text-rose-500">*</span></label>
+                                        <input type="email" id="input-email" name="email" value="{{ old('email') }}" required class="w-full rounded-xl border border-gray-300 px-4 py-2.5 text-sm text-gray-900 focus:border-[#1e3a5f] focus:ring-1 focus:ring-[#1e3a5f] bg-[#f8fafc]" placeholder="you@organization.com">
+                                    </div>
+                                    <div>
+                                        <label for="input-phone" class="block text-xs font-bold text-gray-700 mb-1">Phone / WhatsApp (Optional)</label>
+                                        <input type="tel" id="input-phone" name="phone" value="{{ old('phone') }}" class="w-full rounded-xl border border-gray-300 px-4 py-2.5 text-sm text-gray-900 focus:border-[#1e3a5f] focus:ring-1 focus:ring-[#1e3a5f] bg-[#f8fafc]" placeholder="09052585622">
+                                    </div>
+                                </div>
+                            </div>
 
-                            <div>
-                                <button type="button" class="wizard-next-btn rounded-full bg-[#1e3a5f] px-7 py-2.5 text-xs font-bold text-white hover:bg-[#0f2444] transition-all shadow">
-                                    Continue &rarr;
+                            <!-- Wizard Controls -->
+                            <div class="flex items-center justify-between pt-4 border-t border-gray-200">
+                                <button type="button" class="wizard-prev-btn text-xs font-bold text-gray-500 hover:text-[#1e3a5f] opacity-0 pointer-events-none transition-all flex items-center gap-1">
+                                    &larr; Back
                                 </button>
-                                <button type="submit" class="wizard-submit-btn hidden rounded-full bg-[#00ff88] px-8 py-2.5 text-xs font-extrabold text-[#1e3a5f] hover:bg-[#00cc6a] transition-all shadow-md">
-                                    Send Consultation Request
-                                </button>
+
+                                <div>
+                                    <button type="button" class="wizard-next-btn rounded-full bg-[#1e3a5f] px-7 py-2.5 text-xs font-bold text-white hover:bg-[#0f2444] transition-all shadow">
+                                        Continue &rarr;
+                                    </button>
+                                    <button type="submit" class="wizard-submit-btn hidden rounded-full bg-[#00ff88] px-8 py-2.5 text-xs font-extrabold text-[#1e3a5f] hover:bg-[#00cc6a] transition-all shadow-md">
+                                        Send Consultation Request
+                                    </button>
+                                </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    @endif
                 </div>
             </div>
         </div>

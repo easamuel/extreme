@@ -111,8 +111,19 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', 'support@support.extremesolutions.com.ng'),
+        'name' => env('MAIL_FROM_NAME', 'ExtremeSolutions'),
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Contact Form Notification Recipient
+    |--------------------------------------------------------------------------
+    |
+    | The email address where incoming contact form and consultation requests
+    | are routed. Configurable via CONTACT_NOTIFICATION_EMAIL in .env.
+    |
+    */
+    'contact_recipient' => env('CONTACT_NOTIFICATION_EMAIL', env('MAIL_TO_ADDRESS', 'ekunyansamuel@yahoo.com')),
 
 ];
