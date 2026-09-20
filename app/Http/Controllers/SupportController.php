@@ -10,16 +10,16 @@ use Illuminate\View\View;
 use Illuminate\Support\Str;
 
 /**
- * Class PartnerController
+ * Class SupportController
  * 
- * Manages the unlisted Commercial Secondary School Distribution Portal.
- * Delivers institutional partnership standards, tailored school deployment proposals,
- * fee recovery & broadsheet automation ROI, and field referral engines.
+ * Manages the unlisted Institutional Support & Backer Funnel.
+ * Delivers the corporate charter (Habakkuk 2:2), the frontline secondary education mission,
+ * the 48-hour assisted on-ground deployment model, and peer-to-peer viral amplification.
  */
-class PartnerController extends Controller
+class SupportController extends Controller
 {
     /**
-     * Display the Tailored Commercial Partnership & Deployment Proposal.
+     * Display the Institutional Vision & Active Secondary Education Mission.
      *
      * @param Request $request
      * @return View
@@ -28,18 +28,18 @@ class PartnerController extends Controller
     {
         $sanitized = $this->sanitizeParams($request);
 
-        return view('partner.index', [
-            'proprietor' => $sanitized['proprietor'],
-            'school' => $sanitized['school'],
+        return view('support.index', [
+            'name' => $sanitized['name'],
+            'referrer' => $sanitized['referrer'],
             'refCode' => $sanitized['refCode'],
             'dateStr' => $sanitized['dateStr'],
-            'exportPdfUrl' => route('partner.pdf', $sanitized['rawParams']),
+            'exportPdfUrl' => route('support.pdf', $sanitized['rawParams']),
             'calBookingUrl' => 'https://cal.com/samuel-ekunyan',
         ]);
     }
 
     /**
-     * Export the School Partnership Proposal as an A4 PDF.
+     * Export the Institutional Vision & Mission Memo as an A4 PDF.
      *
      * @param Request $request
      * @return Response|\Symfony\Component\HttpFoundation\Response
@@ -52,8 +52,8 @@ class PartnerController extends Controller
         $sigBase64 = $this->assetToBase64(public_path('images/signature.png'));
 
         $viewData = [
-            'proprietor' => $sanitized['proprietor'],
-            'school' => $sanitized['school'],
+            'name' => $sanitized['name'],
+            'referrer' => $sanitized['referrer'],
             'refCode' => $sanitized['refCode'],
             'dateStr' => $sanitized['dateStr'],
             'logoBase64' => $logoBase64,
@@ -61,13 +61,13 @@ class PartnerController extends Controller
             'isPrintFallback' => false,
         ];
 
-        $targetSlug = Str::slug($sanitized['school'] ?: $sanitized['proprietor']);
-        $filename = "ExtremeSolutions-School-Proposal-{$targetSlug}.pdf";
+        $targetSlug = Str::slug($sanitized['name']);
+        $filename = "ExtremeSolutions-Institutional-Memo-{$targetSlug}.pdf";
 
         // 1. Barryvdh DomPDF Facade Integration
         if (class_exists(\Barryvdh\DomPDF\Facade\Pdf::class)) {
             /** @var \Barryvdh\DomPDF\PDF $pdf */
-            $pdf = \Barryvdh\DomPDF\Facade\Pdf::loadView('pdf.partner-proposal', $viewData)
+            $pdf = \Barryvdh\DomPDF\Facade\Pdf::loadView('pdf.support-memo', $viewData)
                 ->setPaper('a4', 'portrait')
                 ->setOptions([
                     'isRemoteEnabled' => true,
@@ -88,7 +88,7 @@ class PartnerController extends Controller
             $options->setDpi(150);
 
             $dompdf = new \Dompdf\Dompdf($options);
-            $html = view('pdf.partner-proposal', $viewData)->render();
+            $html = view('pdf.support-memo', $viewData)->render();
             $dompdf->loadHtml($html);
             $dompdf->setPaper('A4', 'portrait');
             $dompdf->render();
@@ -102,38 +102,38 @@ class PartnerController extends Controller
 
         // 3. Resilient Print Fallback
         $viewData['isPrintFallback'] = true;
-        return response()->view('pdf.partner-proposal', $viewData);
+        return response()->view('pdf.support-memo', $viewData);
     }
 
     /**
-     * Sanitize query parameters with strict token-level filtering against reflected XSS.
+     * Sanitize query parameters against reflected XSS with strict whitelisting.
      *
      * @param Request $request
      * @return array<string, mixed>
      */
     private function sanitizeParams(Request $request): array
     {
-        $rawProprietor = $request->query('proprietor');
-        $rawSchool = $request->query('school');
+        $rawName = $request->query('name');
+        $rawReferrer = $request->query('referrer');
 
-        $cleanProprietor = $this->filterAlphanumeric($rawProprietor, 80);
-        $cleanSchool = $this->filterAlphanumeric($rawSchool, 100);
+        $cleanName = $this->filterAlphanumeric($rawName, 80);
+        $cleanReferrer = $this->filterAlphanumeric($rawReferrer, 80);
 
-        $proprietor = !empty($cleanProprietor) ? $cleanProprietor : 'Proprietor / Principal';
-        $school = !empty($cleanSchool) ? $cleanSchool : 'Your Institution';
+        $name = !empty($cleanName) ? $cleanName : 'Valued Partner / Supporter';
+        $referrer = !empty($cleanReferrer) ? $cleanReferrer : 'ExtremeSolutions';
 
-        $hashSeed = $proprietor . $school . date('Ymd');
-        $refCode = 'ES-PRT-' . date('Y') . '-' . strtoupper(substr(md5($hashSeed), 0, 6));
+        $hashSeed = $name . $referrer . date('Ymd');
+        $refCode = 'ES-SUP-' . date('Y') . '-' . strtoupper(substr(md5($hashSeed), 0, 6));
         $dateStr = date('F j, Y');
 
         $rawParams = array_filter([
-            'proprietor' => $rawProprietor ? $cleanProprietor : null,
-            'school' => $rawSchool ? $cleanSchool : null,
+            'name' => $rawName ? $cleanName : null,
+            'referrer' => $rawReferrer ? $cleanReferrer : null,
         ]);
 
         return [
-            'proprietor' => htmlspecialchars($proprietor, ENT_QUOTES | ENT_HTML5, 'UTF-8'),
-            'school' => htmlspecialchars($school, ENT_QUOTES | ENT_HTML5, 'UTF-8'),
+            'name' => htmlspecialchars($name, ENT_QUOTES | ENT_HTML5, 'UTF-8'),
+            'referrer' => htmlspecialchars($referrer, ENT_QUOTES | ENT_HTML5, 'UTF-8'),
             'refCode' => $refCode,
             'dateStr' => $dateStr,
             'rawParams' => $rawParams,

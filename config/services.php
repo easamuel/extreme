@@ -35,4 +35,8 @@ return [
         ],
     ],
 
+    'stealth' => [
+        'token' => env('STEALTH_BRIEF_TOKEN', 'alpha-es-stealth-7749'),
+    ],
+
 ];

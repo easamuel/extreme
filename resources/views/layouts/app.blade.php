@@ -47,8 +47,11 @@
 
     <title>{!! $seoTitle !!}</title>
     <meta name="description" content="{!! $seoDescription !!}">
-    <link rel="canonical" href="{{ $canonicalUrl }}">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    @hasSection('meta_robots')
+        @yield('meta_robots')
+    @else
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    @endif
     <meta name="theme-color" content="#0a192f">
 
     <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->

@@ -75,15 +75,6 @@
                             <a href="{{ route('about') }}" class="text-xs text-white/70 hover:text-white transition-colors">About ExtremeSolutions</a>
                         </li>
                         <li>
-                            <a href="{{ route('discoveries') }}" class="text-xs text-white/70 hover:text-white transition-colors">Field Discoveries</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('partner') }}" class="text-xs text-white/70 hover:text-white transition-colors">Executive Partner Memo</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('support') }}" class="text-xs text-white/70 hover:text-white transition-colors">Support &amp; Certification</a>
-                        </li>
-                        <li>
                             <a href="{{ route('home') }}#how-we-work" class="text-xs text-white/70 hover:text-white transition-colors">The 3-Step Process</a>
                         </li>
                         <li>

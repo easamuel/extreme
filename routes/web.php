@@ -5,7 +5,9 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\SupportController;
 use App\Http\Controllers\PartnerController;
+use App\Http\Controllers\DiscoveryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,11 +26,24 @@ Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/academy', [HomeController::class, 'academy'])->name('academy');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
-// Institutional Partnership, Discovery & Support
-Route::get('/partner', [PartnerController::class, 'partner'])->name('partner');
-Route::get('/partner/export-pdf', [PartnerController::class, 'exportPdf'])->name('partner.pdf');
-Route::get('/discoveries', [PartnerController::class, 'discoveries'])->name('discoveries');
-Route::get('/support', [PartnerController::class, 'support'])->name('support');
+// 1. INSTITUTIONAL SUPPORT & BACKER FUNNEL (Unlisted)
+Route::prefix('support')->name('support.')->group(function () {
+    Route::get('/', [SupportController::class, 'index'])->name('index'); // Company Vision + Active SMS Project
+    Route::get('/export-pdf', [SupportController::class, 'exportPdf'])->name('pdf');
+});
+
+// 2. COMMERCIAL SECONDARY SCHOOL DISTRIBUTION (Unlisted)
+Route::prefix('partner')->name('partner.')->group(function () {
+    Route::get('/', [PartnerController::class, 'index'])->name('index'); // Distribution Model + School Pitch
+    Route::get('/export-pdf', [PartnerController::class, 'exportPdf'])->name('pdf');
+});
+
+// 3. DISCOVERIES & R&D PIPELINE (Unlisted & Gated Stealth)
+Route::prefix('discoveries')->name('discoveries.')->group(function () {
+    Route::get('/', [DiscoveryController::class, 'systemsIndex'])->name('systems');
+    Route::get('/stealth/{token}', [DiscoveryController::class, 'stealthBrief'])->name('stealth');
+    Route::get('/stealth/{token}/export-pdf', [DiscoveryController::class, 'exportStealthPdf'])->name('stealth.pdf');
+});
 
 // Product Pages
 Route::get('/products/school', [ProductController::class, 'school'])->name('products.school');
