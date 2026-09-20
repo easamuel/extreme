@@ -177,3 +177,4 @@ class SupportController extends Controller
         return '';
     }
 }
+
