@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\PartnerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,12 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/academy', [HomeController::class, 'academy'])->name('academy');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+
+// Institutional Partnership, Discovery & Support
+Route::get('/partner', [PartnerController::class, 'partner'])->name('partner');
+Route::get('/partner/export-pdf', [PartnerController::class, 'exportPdf'])->name('partner.pdf');
+Route::get('/discoveries', [PartnerController::class, 'discoveries'])->name('discoveries');
+Route::get('/support', [PartnerController::class, 'support'])->name('support');
 
 // Product Pages
 Route::get('/products/school', [ProductController::class, 'school'])->name('products.school');

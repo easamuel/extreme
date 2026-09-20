@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="450" height="160" viewBox="0 0 450 160">
+  <defs>
+    <style>
+      .sig-path {
+        fill: none;
+        stroke: #1e3a5f;
+        stroke-width: 2.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .sig-flourish {
+        fill: none;
+        stroke: #00c853;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+      }
+    </style>
+  </defs>
+  <!-- S capital flourish -->
+  <path class="sig-path" d="M 45 65 C 40 45, 65 30, 85 35 C 105 40, 75 75, 55 90 C 40 100, 50 115, 75 110 C 95 105, 115 85, 125 70" />
+  <!-- a-m-u-e-l continuous cursive flow -->
+  <path class="sig-path" d="M 125 75 C 130 68, 138 72, 142 85 C 146 72, 155 70, 160 85 C 165 70, 172 72, 178 85 C 182 72, 188 72, 194 84 C 198 70, 204 70, 210 85 C 215 90, 222 75, 230 65" />
+  <!-- E-k-u-n-y-a-n capital E and rhythmic cursive -->
+  <path class="sig-path" d="M 245 42 C 235 55, 255 50, 265 45 C 255 60, 240 75, 255 85 C 265 92, 280 80, 288 65" />
+  <path class="sig-path" d="M 270 50 L 272 105 M 272 82 C 278 72, 286 75, 290 85 C 295 72, 305 72, 310 85 C 314 74, 322 72, 326 86 C 328 92, 328 108, 324 125 C 320 135, 312 138, 308 132" />
+  <path class="sig-path" d="M 330 84 C 336 72, 344 74, 348 85 C 352 72, 360 72, 368 85 C 375 88, 395 86, 410 82" />
+  <!-- Executive Underline Flourish -->
+  <path class="sig-flourish" d="M 50 120 C 130 112, 260 115, 395 102 C 415 100, 390 118, 320 125 C 250 132, 170 128, 110 135" />
+  <!-- Verification Dot -->
+  <circle cx="415" cy="100" r="2.5" fill="#00c853" />
+</svg>

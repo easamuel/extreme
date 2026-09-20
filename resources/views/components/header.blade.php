@@ -148,6 +148,12 @@
                 <a href="{{ route('home') }}#how-we-work" class="text-[13px] text-white/80 hover:text-white transition-colors">
                     The 3-Step Process
                 </a>
+                <a href="{{ route('discoveries') }}" class="text-[13px] text-white/80 hover:text-white transition-colors {{ request()->routeIs('discoveries') ? 'text-[#00ff88] font-semibold' : '' }}">
+                    Discoveries
+                </a>
+                <a href="{{ route('partner') }}" class="text-[13px] text-white/80 hover:text-white transition-colors {{ request()->routeIs('partner') ? 'text-[#00ff88] font-semibold' : '' }}">
+                    Partner Memo
+                </a>
                 <a href="{{ route('about') }}" class="text-[13px] text-white/80 hover:text-white transition-colors {{ request()->routeIs('about') ? 'text-[#00ff88] font-semibold' : '' }}">
                     About Us
                 </a>
@@ -203,6 +209,15 @@
             
             <a href="{{ route('home') }}#how-we-work" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-white/85 hover:text-white hover:bg-white/5 transition-colors">
                 The 3-Step Process
+            </a>
+            <a href="{{ route('discoveries') }}" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-white/85 hover:text-white hover:bg-white/5 transition-colors {{ request()->routeIs('discoveries') ? 'text-[#00ff88]' : '' }}">
+                Field Discoveries
+            </a>
+            <a href="{{ route('partner') }}" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-white/85 hover:text-white hover:bg-white/5 transition-colors {{ request()->routeIs('partner') ? 'text-[#00ff88]' : '' }}">
+                Executive Partner Memo
+            </a>
+            <a href="{{ route('support') }}" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-white/85 hover:text-white hover:bg-white/5 transition-colors {{ request()->routeIs('support') ? 'text-[#00ff88]' : '' }}">
+                Support &amp; Certification
             </a>
             <a href="{{ route('about') }}" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-white/85 hover:text-white hover:bg-white/5 transition-colors {{ request()->routeIs('about') ? 'text-[#00ff88]' : '' }}">
                 About Us
