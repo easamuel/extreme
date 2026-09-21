@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ExtremeSolutions Support &amp; Backer Brief</title>
+    <title>ExtremeSolutions Founding Partner Advance (Option B)</title>
     <style>
         @page {
             size: A4 portrait;
@@ -83,15 +83,6 @@
             color: #0f172a;
         }
 
-        .verse-quote {
-            font-style: italic;
-            color: #475569;
-            border-left: 1.5pt solid #cbd5e1;
-            padding-left: 6pt;
-            margin: 6pt 0;
-            font-size: 8pt;
-        }
-
         p {
             margin: 0 0 6pt 0;
             text-align: justify;
@@ -146,45 +137,9 @@
             text-align: center;
             font-family: monospace;
         }
-
-        @media screen {
-            .print-bar {
-                background: #0f172a;
-                color: #ffffff;
-                padding: 10px 16px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                font-family: sans-serif;
-                font-size: 13px;
-                margin-bottom: 16px;
-            }
-            .print-btn {
-                background: #10b981;
-                color: #ffffff;
-                font-weight: bold;
-                padding: 6px 14px;
-                border-radius: 4px;
-                border: none;
-                cursor: pointer;
-            }
-        }
-        @media print {
-            .print-bar { display: none !important; }
-        }
     </style>
 </head>
 <body>
-
-@if(!empty($isPrintFallback))
-<div class="print-bar">
-    <div><strong>ExtremeSolutions Operational Brief:</strong> Grassroots Secondary Education</div>
-    <button onclick="window.print()" class="print-btn">Print / Save as PDF</button>
-</div>
-<script>
-    window.addEventListener('load', function() { setTimeout(function() { window.print(); }, 400); });
-</script>
-@endif
 
 <!-- Letterhead -->
 <table class="header-table">
@@ -195,13 +150,13 @@
             @else
                 <div class="header-title">EXTREMESOLUTIONS</div>
             @endif
-            <div class="header-dept">Deployment &amp; Expansion Memorandum</div>
+            <div class="header-dept">Founding Partner Advance &bull; Option B</div>
             <div style="font-size: 7.5pt; color: #64748b; margin-top: 1pt;">Lagos, Nigeria &bull; extremesolutions.com.ng &bull; sms.extremesolutions.com.ng</div>
         </td>
         <td style="width: 40%;" class="header-meta">
             <strong>Document Ref:</strong> {{ $refCode }}<br>
             <strong>Date:</strong> {{ $dateStr }}<br>
-            <strong>Classification:</strong> Commercial Deployment Brief
+            <strong>Classification:</strong> Commercial Advance Memo
         </td>
     </tr>
 </table>
@@ -213,7 +168,7 @@
 
 <!-- Subject Line -->
 <div class="subject-box">
-    RE: Fueling Our Commercial Rollout &mdash; Deploying ExtremeSolutions Across Nigerian Secondary Schools
+    RE: Structured Founding Partner Advance &mdash; Commercial Deployment of ExtremeSolutions School OS
 </div>
 
 <p>
@@ -221,61 +176,45 @@
 </p>
 
 <p>
-    I am writing to share our frontline traction and invite you to support our current commercial deployment drive.
+    For commercial partners seeking a clearly defined financial return alongside institutional impact, we provide this structured <strong>Founding Partner Advance</strong>.
 </p>
 
-<div class="section-heading">The Operational Problem &amp; The Commercial Opportunity</div>
-<p>
-    Private secondary schools in Nigeria operate under two costly inefficiencies:
-</p>
-
+<div class="section-heading">The Commercial Mechanism: 1.3x Fixed Capped Repayment</div>
 <ul style="list-style-type: disc;">
-    <li>
-        <strong>Underutilized Technology &amp; Computer Test Anxiety:</strong> Many secondary schools possess computer labs or tablets, yet they sit idle or underused. Students receive weekly theory notes rather than applied, daily test experience. When they face computerized national entrance exams (JAMB CBT) and external assessment platforms, they falter due to lack of practical software navigation and timed test habits.
-    </li>
-    <li>
-        <strong>End-of-Term Administrative Paralysis:</strong> Schools lose 2 to 3 weeks every term compiling Continuous Assessments (CA) and broadsheets with physical paper and calculators. Grading errors spark parent complaints, and untracked fee balances quietly bleed school cash flow.
-    </li>
+    <li><strong>Deployment Advance Principal:</strong> Backers participate with a lean deployment advance of <strong>₦50,000</strong> or <strong>₦100,000</strong> per unit.</li>
+    <li><strong>1.3x Fixed Repayment Cap:</strong> Your advance is capped at a fixed <strong>1.3x return</strong> (₦50,000 advance returns <strong>₦65,000</strong>; ₦100,000 advance returns <strong>₦130,000</strong>).</li>
+    <li><strong>Priority Revenue Recoupment:</strong> Repayments are funded and disbursed directly from the termly software fees (₦500 to ₦1,000 per student) collected across our first 3 to 5 onboarded secondary schools.</li>
+    <li><strong>Self-Sustaining Milestone:</strong> Once fulfilled, your capital is fully returned with yield, while the onboarded institutions continue generating permanent, recurring software revenues that sustain our operations indefinitely without external capital.</li>
 </ul>
 
-<p style="background: #f1f5f9; padding: 4pt 6pt; border-left: 2pt solid #059669; font-size: 8pt; margin: 4pt 0;">
-    <strong>The Solution:</strong> ExtremeSolutions automates continuous assessment scoring, generates 1-click terminal broadsheets, tracks tuition payments, and integrates a routine computer-based testing (CBT) environment directly into the school's termly calendar.
-</p>
-
-<div class="section-heading">Our Commercial Revenue Model: Built for Self-Sufficiency</div>
+<div class="section-heading">Unit Economics &amp; Breakeven Threshold</div>
 <p>
-    ExtremeSolutions charges schools a recurring, per-student software fee of <strong>₦500 to ₦1,000 per term</strong>, seamlessly integrated into standard termly administrative dues.
+    ExtremeSolutions charges schools a recurring, per-student software fee of <strong>₦500 to ₦1,000 per term</strong>.
 </p>
 <ul style="list-style-type: disc;">
-    <li><strong>Average Secondary School Size:</strong> 200–350 students.</li>
+    <li><strong>Average School Size:</strong> 200–350 students.</li>
     <li><strong>Termly School Revenue:</strong> ₦150,000 – ₦300,000 per institution.</li>
-    <li><strong>The Breakeven Threshold:</strong> <strong>Onboarding just 3 secondary schools</strong> makes our core infrastructure and operations completely self-sustaining. Once 3 schools run on the portal, recurring termly fees fund our servers, deployment logistics, and ongoing expansion without external capital.</li>
+    <li><strong>The Breakeven Threshold:</strong> <strong>Onboarding just 3 secondary schools</strong> generates ₦450,000 – ₦900,000 per term in recurring revenue, ensuring seamless fulfillment of advance repayments and self-funded operations.</li>
 </ul>
 
-<div class="section-heading">Why We Are Raising an Upfront Deployment Fund</div>
+<div class="section-heading">Frontline Execution &amp; Customer Acquisition</div>
 <p>
-    In enterprise educational sales, schools only pay once their first terminal broadsheet is successfully delivered. Software alone cannot close contracts; physical execution closes contracts.
-</p>
-<p>
-    To onboard schools, our team physically enters the campus, digitizes their student records, configures their grading schemes, and trains their teachers on-site. We are actively conducting daily on-ground presentations to secondary school proprietors, principal networks, and exam coordinators across the district.
-</p>
-<p>
-    We are raising a lean <strong>Rollout Deployment Pool of ₦150,000 to ₦300,000</strong> to fund this exact customer-acquisition bridge:
+    In enterprise educational sales, schools only pay once their first terminal broadsheet is successfully delivered. Software alone cannot close contracts; physical execution closes contracts. Your deployment advance directly finances:
 </p>
 <ul style="list-style-type: disc;">
-    <li><strong>Field Transit &amp; Direct Outreach:</strong> Covering physical transport for direct school pitch meetings and product demonstrations.</li>
+    <li><strong>Field Transit &amp; Direct Outreach:</strong> Transport for direct school pitch meetings and demonstrations to proprietors.</li>
     <li><strong>48-Hour Onboarding &amp; Data Entry:</strong> Digitizing physical student registers and configuring class databases.</li>
-    <li><strong>Staff Induction Materials:</strong> Printing physical teacher operation handbooks and student CBT orientation guides.</li>
+    <li><strong>Staff Induction Materials:</strong> Printing physical teacher handbooks and student CBT orientation guides.</li>
 </ul>
 
-<div class="section-heading">How You Stand With Us</div>
+<div class="section-heading">Audit &amp; Formal Terms</div>
 <ul style="list-style-type: disc;">
-    <li><strong>Direct Monthly Progress Audits:</strong> Visual verification reports, school names, student counts, and confirmed onboarded institutions.</li>
-    <li><strong>Roll of Honor:</strong> Formal recognition as a Founding Technology Sponsor on the school portal and project ecosystem.</li>
-    <li><strong>The Multiplier Effect:</strong> Your support directly onboards paying institutions that create permanent, recurring revenue.</li>
+    <li><strong>Written Advance Confirmation:</strong> Formal signed term sheet acknowledging the exact advance amount and fixed 1.3x repayment schedule.</li>
+    <li><strong>Termly Progress Reports:</strong> Detailed visual updates confirming signed schools, student counts, and revenue distribution timelines.</li>
+    <li><strong>Roll of Honor:</strong> Formal recognition as a Founding Commercial Technology Sponsor.</li>
 </ul>
 
-<div class="section-heading">Deployment Support Account</div>
+<div class="section-heading">Dedicated Commercial Advance Account</div>
 <table style="width: 100%; border: 1pt solid #0f172a; background: #f8fafc; padding: 4pt 6pt; margin: 4pt 0; font-size: 8pt;">
     <tr>
         <td style="width: 50%;"><strong>Bank:</strong> Wema Bank Plc</td>
@@ -283,7 +222,7 @@
     </tr>
     <tr>
         <td style="width: 50%;"><strong>Account Number:</strong> <span style="font-family: monospace; font-weight: bold; font-size: 9pt;">0236642821</span></td>
-        <td style="width: 50%;"><strong>Narration:</strong> EXS Deployment Support / {{ $name != 'Sir/Madam' ? $name : '[Your Name]' }}</td>
+        <td style="width: 50%;"><strong>Narration:</strong> EXS Partner Advance / {{ $name != 'Sir/Madam' ? $name : '[Your Name]' }}</td>
     </tr>
 </table>
 
@@ -306,8 +245,8 @@
                 <div style="font-size: 7.5pt; color: #64748b;">Direct Line: +234 905 258 5622</div>
             </td>
             <td style="width: 40%; text-align: right; font-size: 7pt; color: #64748b; font-family: monospace;">
-                <div>MEMORANDUM ID: {{ $refCode }}</div>
-                <div>CLASSIFICATION: COMMERCIAL DEPLOYMENT</div>
+                <div>ADVANCE REF: {{ $refCode }}</div>
+                <div>CLASSIFICATION: FOUNDING PARTNER ADVANCE</div>
             </td>
         </tr>
     </table>
@@ -315,7 +254,7 @@
 
 <!-- Footer Note -->
 <div class="footer-note">
-    EXTREMESOLUTIONS &bull; BUILDING DIGITAL SYSTEMS THAT LAST
+    EXTREMESOLUTIONS &bull; FOUNDING PARTNER ADVANCE &bull; COMMERCIAL OPTION B
 </div>
 
 </body>

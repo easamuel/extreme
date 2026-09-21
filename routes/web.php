@@ -30,9 +30,13 @@ Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::prefix('support')->name('support.')->group(function () {
     Route::get('/', [SupportController::class, 'index'])->name('index'); // ExtremeSolutions Mission & Support
     Route::get('/campaign', [SupportController::class, 'campaign'])->name('campaign'); // Active Support Campaign Letter (Public / Recipient)
+    Route::get('/invest', [SupportController::class, 'invest'])->name('invest'); // Option B: Commercial Partner Advance Memo
     Route::get('/dispatch', [SupportController::class, 'dispatchMemo'])->name('dispatch'); // Secret Admin Dispatch Generator
     Route::get('/export-pdf', [SupportController::class, 'exportPdf'])->name('pdf');
 });
+
+// Top-level direct alias for Option B
+Route::get('/invest', [SupportController::class, 'invest'])->name('invest');
 
 // 2. STRATEGIC PARTNERSHIP & SCHOOL PROPOSAL
 Route::prefix('partner')->name('partner.')->group(function () {

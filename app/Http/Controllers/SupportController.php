@@ -57,6 +57,30 @@ class SupportController extends Controller
     }
 
     /**
+     * Display Option B: Structured Founding Partner Advance for commercial backers (/invest).
+     *
+     * @param Request $request
+     * @return View
+     */
+    public function invest(Request $request): View
+    {
+        $sanitized = $this->sanitizeParams($request);
+        $logoBase64 = $this->assetToBase64(public_path('images/es-mark.png'));
+        $sigBase64 = $this->assetToBase64(public_path('images/signature.png'));
+
+        return view('support.invest', [
+            'name' => $sanitized['name'],
+            'referrer' => $sanitized['referrer'],
+            'refCode' => 'EXS-ADV/' . strtoupper(substr(md5($sanitized['name'] ?: 'INVEST'), 0, 6)),
+            'dateStr' => $sanitized['dateStr'],
+            'isPersonalized' => $sanitized['isPersonalized'],
+            'exportPdfUrl' => route('support.pdf', array_merge($sanitized['rawParams'], ['type' => 'invest'])),
+            'logoBase64' => $logoBase64,
+            'sigBase64' => $sigBase64,
+        ]);
+    }
+
+    /**
      * Display the Secret Admin Dispatch Console for generating personalized Support Memos.
      *
      * @param Request $request
@@ -73,6 +97,7 @@ class SupportController extends Controller
             'refCode' => $sanitized['refCode'],
             'dateStr' => $sanitized['dateStr'],
             'campaignBaseUrl' => route('support.campaign'),
+            'investBaseUrl' => route('invest'),
             'pdfBaseUrl' => route('support.pdf'),
             'logoBase64' => $logoBase64,
             'sigBase64' => $sigBase64,
@@ -92,6 +117,9 @@ class SupportController extends Controller
         $logoBase64 = $this->assetToBase64(public_path('images/es-mark.png'));
         $sigBase64 = $this->assetToBase64(public_path('images/signature.png'));
 
+        $isInvest = $request->query('type') === 'invest';
+        $viewTemplate = $isInvest ? 'pdf.invest-memo' : 'pdf.support-memo';
+
         $viewData = [
             'name' => $sanitized['name'],
             'referrer' => $sanitized['referrer'],
@@ -103,12 +131,13 @@ class SupportController extends Controller
         ];
 
         $targetSlug = Str::slug($sanitized['name']);
-        $filename = "ExtremeSolutions-Institutional-Memo-{$targetSlug}.pdf";
+        $filePrefix = $isInvest ? 'ExtremeSolutions-Commercial-Advance-' : 'ExtremeSolutions-Deployment-Memo-';
+        $filename = "{$filePrefix}{$targetSlug}.pdf";
 
         // 1. Barryvdh DomPDF Facade Integration
         if (class_exists(\Barryvdh\DomPDF\Facade\Pdf::class)) {
             /** @var \Barryvdh\DomPDF\PDF $pdf */
-            $pdf = \Barryvdh\DomPDF\Facade\Pdf::loadView('pdf.support-memo', $viewData)
+            $pdf = \Barryvdh\DomPDF\Facade\Pdf::loadView($viewTemplate, $viewData)
                 ->setPaper('a4', 'portrait')
                 ->setOptions([
                     'isRemoteEnabled' => true,
@@ -129,7 +158,7 @@ class SupportController extends Controller
             $options->setDpi(150);
 
             $dompdf = new \Dompdf\Dompdf($options);
-            $html = view('pdf.support-memo', $viewData)->render();
+            $html = view($viewTemplate, $viewData)->render();
             $dompdf->loadHtml($html);
             $dompdf->setPaper('A4', 'portrait');
             $dompdf->render();
