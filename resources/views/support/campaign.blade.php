@@ -70,185 +70,118 @@
     <!-- The Authentic Executive Letter Paper Surface (Rendered for Screen, Print & Canvas Export) -->
     <div class="flex justify-center">
         <article id="letter-paper"
-                 class="print-paper w-full bg-white text-slate-900 border border-slate-200 shadow-2xl rounded-sm p-7 sm:p-14 lg:p-16 font-serif text-[15px] leading-relaxed relative">
+                 class="print-paper max-w-[794px] w-full mx-auto bg-white p-6 sm:p-10 md:p-12 text-slate-900 font-sans text-[13px] leading-relaxed shadow-2xl rounded-sm border border-slate-200 print:border-none print:shadow-none print:p-0 relative">
 
-            <!-- Official Institutional Letterhead -->
-            <header class="border-b-2 border-slate-950 pb-5 mb-8 font-sans">
-                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                    <div class="flex items-center space-x-4">
-                        <img src="{{ !empty($logoBase64) ? $logoBase64 : asset('images/es-mark.png') }}" alt="ExtremeSolutions" class="h-12 w-auto">
-                        <div>
-                            <div class="text-2xl font-black tracking-tight text-slate-950 font-mono">EXTREMESOLUTIONS</div>
-                            <div class="text-xs uppercase tracking-widest text-slate-700 font-bold">Deployment &amp; Expansion Memorandum</div>
-                            <div class="text-[11px] text-slate-500 font-mono">Lagos, Nigeria &bull; extremesolutions.com.ng &bull; <span class="text-emerald-700 font-semibold">sms.extremesolutions.com.ng</span></div>
-                        </div>
-                    </div>
-                    <div class="text-xs font-mono text-slate-600 sm:text-right">
-                        <div><span class="font-bold text-slate-800">Date:</span> {{ $dateStr }}</div>
-                        <div class="text-[11px] text-slate-400">Ref: {{ $refCode }}</div>
+            <!-- Top Header -->
+            <div class="flex justify-between items-start border-b border-slate-200 pb-3 mb-4">
+                <div class="flex items-center space-x-3.5">
+                    <img src="{{ !empty($logoBase64) ? $logoBase64 : asset('images/es-mark.png') }}" alt="ExtremeSolutions" class="h-10 w-auto">
+                    <div>
+                        <h1 class="text-lg font-bold tracking-tight text-slate-950 font-mono">EXTREMESOLUTIONS</h1>
+                        <p class="text-xs font-semibold text-emerald-700 tracking-wide uppercase">Deployment &amp; Expansion Memorandum</p>
+                        <p class="text-[11px] text-slate-500 mt-0.5">Lagos, Nigeria &bull; extremesolutions.com.ng &bull; <span class="text-emerald-700 font-medium">sms.extremesolutions.com.ng</span></p>
                     </div>
                 </div>
-            </header>
-
-            <!-- Recipient Salutation -->
-            <div class="mb-6 font-sans">
-                <p class="font-bold text-slate-950 text-base">
-                    Dear {{ $name }},
-                </p>
+                <div class="text-right text-[11px] text-slate-800 font-medium font-mono">
+                    <p>Date: {{ $dateStr }}</p>
+                    <p class="text-slate-600">Ref: {{ $refCode }}</p>
+                </div>
             </div>
 
-            <!-- Subject Line -->
-            <div class="mb-8 font-sans font-bold text-slate-950 text-sm sm:text-base border-l-4 border-slate-950 pl-4 py-2 bg-slate-50">
-                RE: Fueling Our Commercial Rollout &mdash; Deploying ExtremeSolutions Across Nigerian Secondary Schools
+            <!-- Recipient & Subject -->
+            <div class="mb-4">
+                <p class="font-semibold text-slate-900 text-sm">Dear {{ !empty($name) && $name !== 'Sir/Madam' ? $name : request('name', 'Valued Partner') }},</p>
+                <div class="border-l-2 border-slate-950 pl-3 py-1 mt-2 bg-slate-50">
+                    <p class="font-bold text-slate-950 text-[13px]">RE: Fueling Our Commercial Rollout &mdash; Deploying ExtremeSolutions Across Nigerian Secondary Schools</p>
+                </div>
             </div>
 
-            <!-- Letter Body Content -->
-            <div class="space-y-6 text-slate-800 text-[15px] leading-relaxed">
+            <!-- Body -->
+            <div class="space-y-3.5 text-slate-700">
                 <p>
-                    ExtremeSolutions is building a sustainable educational technology enterprise. We are not an NGO or a charity; we are a commercial systems venture deploying an all-in-one School Operating System (<a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-emerald-700 font-mono font-semibold underline">sms.extremesolutions.com.ng</a>) to solve deep operational bottlenecks in Nigerian secondary schools.
+                    ExtremeSolutions is building a sustainable educational technology enterprise. We are not an NGO or a charity; we are a commercial systems venture deploying an all-in-one School Operating System (<a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-emerald-700 font-medium underline">sms.extremesolutions.com.ng</a>) to eliminate manual operational friction in Nigerian secondary institutions.
                 </p>
 
-                <p>
-                    I am writing to share our frontline traction and invite you to support our current commercial deployment drive.
-                </p>
-
-                <!-- Section 1 -->
-                <div class="pt-2">
-                    <h2 class="font-sans font-bold text-slate-950 text-sm uppercase tracking-wider border-b border-slate-200 pb-1 mb-3">
-                        The Operational Problem &amp; The Commercial Opportunity
-                    </h2>
-                    <p class="mb-3">
-                        Private secondary schools in Nigeria operate under two costly inefficiencies:
-                    </p>
-                    <div class="space-y-3 pl-3 sm:pl-4 border-l-2 border-slate-200">
-                        <p>
-                            <strong class="text-slate-950">Underutilized Technology &amp; Computer Test Anxiety:</strong> Many secondary schools possess computer labs or tablets, yet they sit idle or underused. Students receive weekly theory notes rather than applied, daily test experience. When they face computerized national entrance exams (JAMB CBT) and external assessment platforms, they falter due to lack of practical software navigation and timed test habits.
-                        </p>
-                        <p>
-                            <strong class="text-slate-950">End-of-Term Administrative Paralysis:</strong> Schools lose 2 to 3 weeks every term compiling Continuous Assessments (CA) and broadsheets with physical paper and calculators. Grading errors spark parent complaints, and untracked fee balances quietly bleed school cash flow.
-                        </p>
+                <!-- Problem & Solution -->
+                <div>
+                    <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 mb-1">The Operational Problem &amp; Commercial Opportunity</h2>
+                    <p class="mb-1.5"><strong class="text-slate-900">Underutilized Technology &amp; CBT Anxiety:</strong> Secondary schools have computer labs that sit idle, offering weekly theory notes instead of practical screen habits. Students falter during national exams (JAMB CBT) due to lack of timed navigation and software familiarity.</p>
+                    <p class="mb-1.5"><strong class="text-slate-900">End-of-Term Broadsheet Delays:</strong> Schools spend 2 to 3 weeks compiling Continuous Assessments (CA) with calculators, causing calculation errors, delayed vacations, and uncollected tuition balances.</p>
+                    <div class="p-2 bg-emerald-50/70 border border-emerald-200 rounded text-emerald-900 text-xs">
+                        <strong>The Solution:</strong> ExtremeSolutions automates CA scoring, generates 1-click terminal broadsheets, reconciles tuition balances, and embeds routine CBT testing directly into the school's termly calendar.
                     </div>
-                    <p class="mt-4 bg-emerald-50 border border-emerald-200 rounded-sm p-3.5 text-emerald-950 text-sm font-sans">
-                        <strong class="font-semibold text-emerald-900">The Solution:</strong> ExtremeSolutions automates continuous assessment scoring, generates 1-click terminal broadsheets, tracks tuition payments, and integrates a routine computer-based testing (CBT) environment directly into the school&rsquo;s termly calendar.
+                </div>
+
+                <!-- Revenue Model -->
+                <div>
+                    <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 mb-1">Commercial Revenue Model: Built for Self-Sufficiency</h2>
+                    <p>
+                        We charge schools a recurring fee of <strong>₦500 to ₦1,000 per student/term</strong>, integrated into regular school fees (₦150,000 – ₦300,000 per term for an average 250-student school). 
+                        <span class="bg-slate-100 px-1 py-0.5 font-semibold text-slate-950">Onboarding just 3 secondary schools makes our core infrastructure completely self-sustaining.</span>
                     </p>
                 </div>
 
-                <!-- Section 2 -->
-                <div class="pt-2">
-                    <h2 class="font-sans font-bold text-slate-950 text-sm uppercase tracking-wider border-b border-slate-200 pb-1 mb-3">
-                        Our Commercial Revenue Model: Built for Self-Sufficiency
-                    </h2>
-                    <p>
-                        ExtremeSolutions charges schools a recurring, per-student software fee of <strong>₦500 to ₦1,000 per term</strong>, seamlessly integrated into standard termly administrative dues.
+                <!-- The Need -->
+                <div>
+                    <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 mb-1">Why We Are Raising an Upfront Deployment Fund</h2>
+                    <p class="mb-1.5">
+                        Schools pay after their first successful broadsheet run. Software alone cannot close contracts; physical execution does. Our team physically enters campuses, migrates physical registers, and trains staff on-site.
                     </p>
-                    <ul class="list-disc pl-6 space-y-1.5 my-3">
-                        <li><strong>Average Secondary School Size:</strong> 200–350 students.</li>
-                        <li><strong>Termly School Revenue:</strong> ₦150,000 – ₦300,000 per institution.</li>
-                        <li><strong>The Breakeven Threshold:</strong> <strong>Onboarding just 3 secondary schools</strong> makes our core infrastructure and operations completely self-sustaining. Once 3 schools run on the portal, recurring termly fees fund our servers, deployment logistics, and ongoing expansion without external capital.</li>
+                    <p class="mb-1">
+                        We are raising a lean <strong>Rollout Deployment Pool of ₦150,000 to ₦300,000</strong> to fund this direct acquisition bridge:
+                    </p>
+                    <ul class="list-disc pl-4 space-y-0.5 text-xs">
+                        <li><strong>Field Transit &amp; Outreach:</strong> Transport for direct school demos with proprietors and principals.</li>
+                        <li><strong>48-Hour Assisted Onboarding:</strong> Digitizing student registers and grading schemes.</li>
+                        <li><strong>Staff Induction Materials:</strong> Printing teacher operation handbooks and student CBT orientation guides.</li>
                     </ul>
                 </div>
 
-                <!-- Section 3 -->
-                <div class="pt-2">
-                    <h2 class="font-sans font-bold text-slate-950 text-sm uppercase tracking-wider border-b border-slate-200 pb-1 mb-3">
-                        Why We Are Raising an Upfront Deployment Fund
-                    </h2>
-                    <p>
-                        In enterprise educational sales, schools only pay once their first terminal broadsheet is successfully delivered. Software alone cannot close contracts; physical execution closes contracts.
-                    </p>
-                    <p>
-                        To onboard schools, our team physically enters the campus, digitizes their student records, configures their grading schemes, and trains their teachers on-site.
-                    </p>
-                    <p>
-                        We are actively strengthening our direct commercial outreach—conducting daily on-ground presentations to secondary school proprietors, principal networks, and exam coordinators across the district.
-                    </p>
-                    <p>
-                        We are raising a lean <strong>Rollout Deployment Pool of ₦150,000 to ₦300,000</strong> to fund this exact customer-acquisition bridge:
-                    </p>
-                    <ul class="list-disc pl-6 space-y-1.5 my-3">
-                        <li><strong>Field Transit &amp; Direct Outreach:</strong> Covering physical transport for direct school pitch meetings and product demonstrations.</li>
-                        <li><strong>48-Hour Onboarding &amp; Data Entry:</strong> Digitizing physical student registers and configuring class databases.</li>
-                        <li><strong>Staff Induction Materials:</strong> Printing physical teacher operation handbooks and student CBT orientation guides.</li>
-                    </ul>
-                </div>
-
-                <!-- Section 4 -->
-                <div class="pt-2">
-                    <h2 class="font-sans font-bold text-slate-950 text-sm uppercase tracking-wider border-b border-slate-200 pb-1 mb-3">
-                        How You Stand With Us
-                    </h2>
-                    <p>
-                        By backing this commercial deployment, you are fueling a high-margin enterprise engine that pays for its own future growth:
-                    </p>
-                    <ul class="list-disc pl-6 space-y-1.5 my-3">
-                        <li><strong>Direct Monthly Progress Audits:</strong> You will receive visual verification reports, school names, student numbers, and confirmation of onboarded institutions.</li>
-                        <li><strong>Roll of Honor:</strong> Formal recognition as a Founding Technology Sponsor on the school portal and project ecosystem.</li>
-                        <li><strong>The Multiplier Effect:</strong> Your support is not consumed as operational overhead; it directly onboards paying institutions that create permanent, recurring revenue.</li>
-                    </ul>
-                </div>
-
-                <!-- Section 5: Bank Details Box -->
-                <div class="pt-2">
-                    <h2 class="font-sans font-bold text-slate-950 text-sm uppercase tracking-wider border-b border-slate-200 pb-1 mb-3">
-                        Deployment Support Account
-                    </h2>
-                    <p class="mb-3">
-                        Contributions directly underwrite our physical marketing outreach and on-ground school onboarding:
-                    </p>
-                    <div class="bg-slate-50 border-2 border-slate-900 rounded-sm p-5 font-sans my-4">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
-                            <div>
-                                <span class="text-xs uppercase text-slate-500 font-bold tracking-wider block">Bank Name</span>
-                                <span class="font-bold text-slate-950 text-base">Wema Bank Plc</span>
-                            </div>
-                            <div>
-                                <span class="text-xs uppercase text-slate-500 font-bold tracking-wider block">Account Name</span>
-                                <span class="font-bold text-slate-950 text-base">Samuel Ekunyan</span>
-                            </div>
-                            <div>
-                                <span class="text-xs uppercase text-slate-500 font-bold tracking-wider block">Account Number</span>
-                                <div class="flex items-center space-x-2 mt-0.5">
-                                    <span class="font-mono font-black text-slate-950 text-lg sm:text-xl tracking-wider select-all" id="bank-acc-no">0236642821</span>
-                                    <button type="button" onclick="navigator.clipboard.writeText('0236642821'); this.innerText='Copied!'; setTimeout(() => this.innerText='Copy', 2000);" class="text-xs bg-slate-200 hover:bg-slate-300 text-slate-800 font-mono px-2 py-0.5 rounded transition">Copy</button>
-                                </div>
-                            </div>
-                            <div>
-                                <span class="text-xs uppercase text-slate-500 font-bold tracking-wider block">Transaction Narration</span>
-                                <span class="font-mono text-slate-800 text-xs sm:text-sm font-semibold">EXS Deployment Support / {{ $name != 'Sir/Madam' ? $name : '[Your Name]' }}</span>
-                            </div>
+                <!-- Bank Box -->
+                <div class="mt-3.5 p-3.5 bg-slate-50 border border-slate-200 rounded-md">
+                    <div class="flex items-center justify-between mb-2">
+                        <p class="text-[11px] font-bold uppercase tracking-wider text-slate-500">Deployment Support Account (Direct Execution)</p>
+                        <button type="button" onclick="navigator.clipboard.writeText('0236642821'); this.innerText='Copied!'; setTimeout(() => this.innerText='Copy No', 2000);" class="text-[11px] bg-slate-200 hover:bg-slate-300 text-slate-800 font-mono px-2 py-0.5 rounded transition cursor-pointer">Copy No</button>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3 text-xs">
+                        <div>
+                            <span class="text-slate-500 text-[11px] block">Bank Name</span>
+                            <strong class="text-slate-950 font-semibold">Wema Bank Plc</strong>
+                        </div>
+                        <div>
+                            <span class="text-slate-500 text-[11px] block">Account Name</span>
+                            <strong class="text-slate-950 font-semibold">Samuel Ekunyan</strong>
+                        </div>
+                        <div>
+                            <span class="text-slate-500 text-[11px] block">Account Number</span>
+                            <span class="font-mono font-bold text-sm text-slate-950">0236642821</span>
+                        </div>
+                        <div>
+                            <span class="text-slate-500 text-[11px] block">Transaction Narration</span>
+                            <span class="font-mono text-slate-700">EXS Support / {{ !empty($name) && $name !== 'Sir/Madam' ? $name : request('name', 'Partner') }}</span>
                         </div>
                     </div>
                 </div>
 
-                <p class="pt-2">
-                    We are moving quickly, school by school, to establish an institutional standard across Nigeria. Thank you for your partnership, your belief, and your shared conviction.
+                <p class="text-xs italic text-slate-600">
+                    Backers receive direct monthly photo/audit reports, partner recognition on the school portal, and the assurance that their capital builds a self-funding enterprise.
                 </p>
             </div>
 
-            <!-- Authentic Handwritten Signoff Block (Upside-Down Rotated Orientation) -->
-            <div class="mt-10 pt-6 border-t border-slate-200">
-                <p class="mb-2">Warm regards,</p>
-
-                <!-- Rotated Authentic Signature / Monogram -->
-                <div class="my-2">
-                    <img src="{{ !empty($sigBase64) ? $sigBase64 : asset('images/signature.png') }}"
-                         alt="Signature"
-                         class="h-16 w-auto opacity-95"
-                         style="filter: contrast(1.15); max-width: 220px;">
-                </div>
-
-                <div class="font-sans text-sm">
-                    <div class="font-bold text-slate-950 font-mono text-base">Samuel Ekunyan</div>
-                    <div class="text-slate-700 font-medium">Founder &amp; Principal Systems Architect, ExtremeSolutions</div>
-                    <div class="text-slate-600 font-mono text-xs mt-1 space-y-0.5">
-                        <div>
-                            <a href="mailto:samuel@ekunyansamuel.dev" class="text-emerald-700 underline font-semibold">samuel@ekunyansamuel.dev</a> &bull;
-                            <a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-emerald-700 underline font-semibold">sms.extremesolutions.com.ng</a>
-                        </div>
-                        <div class="text-slate-500">
-                            Direct Line: <a href="tel:+2349052585622" class="text-slate-700 hover:text-emerald-700 font-semibold">+234 905 258 5622</a>
-                        </div>
+            <!-- Sign-off -->
+            <div class="mt-4 pt-3 border-t border-slate-200 flex justify-between items-end">
+                <div>
+                    <p class="text-xs text-slate-500">Warm regards,</p>
+                    <div class="my-1">
+                        <img src="{{ !empty($sigBase64) ? $sigBase64 : asset('images/signature.png') }}"
+                             alt="Signature"
+                             class="h-10 w-auto opacity-95"
+                             style="filter: contrast(1.15); max-width: 170px;">
                     </div>
+                    <p class="font-bold text-slate-950 text-sm">Samuel Ekunyan</p>
+                    <p class="text-[11px] text-slate-600">Founder &amp; Principal Systems Architect, ExtremeSolutions</p>
+                    <p class="text-[11px] text-slate-600 font-mono"><a href="mailto:samuel@ekunyansamuel.dev" class="text-emerald-700 underline">samuel@ekunyansamuel.dev</a> &bull; <a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-emerald-700 underline">sms.extremesolutions.com.ng</a></p>
+                    <p class="text-[11px] font-medium text-slate-800 mt-0.5">Direct Line / WhatsApp: <a href="tel:+2349052585622" class="hover:text-emerald-700 font-semibold">+234 905 258 5622</a></p>
                 </div>
             </div>
 

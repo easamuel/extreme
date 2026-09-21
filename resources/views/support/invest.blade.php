@@ -78,182 +78,125 @@
     <!-- The Authentic Executive Letter Paper Surface -->
     <div class="flex justify-center">
         <article id="letter-paper"
-                 class="print-paper w-full bg-white text-slate-900 border border-slate-200 shadow-2xl rounded-sm p-7 sm:p-14 lg:p-16 font-serif text-[15px] leading-relaxed relative">
+                 class="print-paper max-w-[794px] w-full mx-auto bg-white p-6 sm:p-10 md:p-12 text-slate-900 font-sans text-[13px] leading-relaxed shadow-2xl rounded-sm border border-slate-200 print:border-none print:shadow-none print:p-0 relative">
 
-            <!-- Official Institutional Letterhead -->
-            <header class="border-b-2 border-slate-950 pb-5 mb-8 font-sans">
-                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                    <div class="flex items-center space-x-4">
-                        <img src="{{ !empty($logoBase64) ? $logoBase64 : asset('images/es-mark.png') }}" alt="ExtremeSolutions" class="h-12 w-auto">
-                        <div>
-                            <div class="text-2xl font-black tracking-tight text-slate-950 font-mono">EXTREMESOLUTIONS</div>
-                            <div class="text-xs uppercase tracking-widest text-slate-700 font-bold">Founding Partner Advance &bull; Commercial Option B</div>
-                            <div class="text-[11px] text-slate-500 font-mono">Lagos, Nigeria &bull; extremesolutions.com.ng &bull; <span class="text-emerald-700 font-semibold">sms.extremesolutions.com.ng</span></div>
-                        </div>
-                    </div>
-                    <div class="text-xs font-mono text-slate-600 sm:text-right">
-                        <div><span class="font-bold text-slate-800">Date:</span> {{ $dateStr }}</div>
-                        <div class="text-[11px] text-slate-400">Ref: {{ $refCode }}</div>
+            <!-- Top Header -->
+            <div class="flex justify-between items-start border-b border-slate-200 pb-3 mb-4">
+                <div class="flex items-center space-x-3.5">
+                    <img src="{{ !empty($logoBase64) ? $logoBase64 : asset('images/es-mark.png') }}" alt="ExtremeSolutions" class="h-10 w-auto">
+                    <div>
+                        <h1 class="text-lg font-bold tracking-tight text-slate-950 font-mono">EXTREMESOLUTIONS</h1>
+                        <p class="text-xs font-semibold text-emerald-700 tracking-wide uppercase">Founding Partner Advance &bull; Commercial Option B</p>
+                        <p class="text-[11px] text-slate-500 mt-0.5">Lagos, Nigeria &bull; extremesolutions.com.ng &bull; <span class="text-emerald-700 font-medium">sms.extremesolutions.com.ng</span></p>
                     </div>
                 </div>
-            </header>
-
-            <!-- Recipient Salutation -->
-            <div class="mb-6 font-sans">
-                <p class="font-bold text-slate-950 text-base">
-                    Dear {{ $name }},
-                </p>
+                <div class="text-right text-[11px] text-slate-800 font-medium font-mono">
+                    <p>Date: {{ $dateStr }}</p>
+                    <p class="text-slate-600">Ref: {{ $refCode }}</p>
+                </div>
             </div>
 
-            <!-- Subject Line -->
-            <div class="mb-8 font-sans font-bold text-slate-950 text-sm sm:text-base border-l-4 border-slate-950 pl-4 py-2 bg-slate-50">
-                RE: Structured Founding Partner Advance &mdash; Commercial Deployment of ExtremeSolutions School OS
+            <!-- Recipient & Subject -->
+            <div class="mb-4">
+                <p class="font-semibold text-slate-900 text-sm">Dear {{ !empty($name) && $name !== 'Sir/Madam' ? $name : request('name', 'Valued Partner') }},</p>
+                <div class="border-l-2 border-slate-950 pl-3 py-1 mt-2 bg-slate-50">
+                    <p class="font-bold text-slate-950 text-[13px]">RE: Structured Founding Partner Advance &mdash; Commercial Deployment of ExtremeSolutions School OS</p>
+                </div>
             </div>
 
             <!-- Letter Body Content -->
-            <div class="space-y-6 text-slate-800 text-[15px] leading-relaxed">
+            <div class="space-y-3.5 text-slate-700">
                 <p>
-                    ExtremeSolutions is building a sustainable, high-margin educational technology enterprise. We are not an NGO or a charity; we are a commercial systems venture deploying an all-in-one School Operating System (<a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-emerald-700 font-mono font-semibold underline">sms.extremesolutions.com.ng</a>) to solve deep operational bottlenecks in Nigerian secondary schools.
-                </p>
-
-                <p>
-                    For commercial partners and backers seeking a clearly defined financial return alongside foundational institutional impact, we provide this structured <strong>Founding Partner Advance</strong>.
+                    ExtremeSolutions is building a sustainable, high-margin educational technology enterprise. We are not an NGO or a charity; we are a commercial systems venture deploying an all-in-one School Operating System (<a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-emerald-700 font-medium underline">sms.extremesolutions.com.ng</a>) to solve deep operational bottlenecks in Nigerian secondary schools.
                 </p>
 
                 <!-- Section 1 -->
-                <div class="pt-2">
-                    <h2 class="font-sans font-bold text-slate-950 text-sm uppercase tracking-wider border-b border-slate-200 pb-1 mb-3">
+                <div>
+                    <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 mb-1">
                         The Commercial Mechanism: 1.3x Fixed Capped Repayment
                     </h2>
-                    <p class="mb-3">
+                    <p class="mb-1.5">
                         We have structured a clean, revenue-linked advance mechanism for private commercial backers:
                     </p>
-                    <div class="space-y-3 pl-3 sm:pl-4 border-l-2 border-slate-200">
-                        <p>
-                            <strong class="text-slate-950">Deployment Advance Principal:</strong> Backers participate with a lean deployment advance of <strong>₦50,000</strong> or <strong>₦100,000</strong> per unit.
-                        </p>
-                        <p>
-                            <strong class="text-slate-950">1.3x Fixed Repayment Cap:</strong> Your advance is capped at a fixed <strong>1.3x return</strong> (₦50,000 advance returns <strong>₦65,000</strong>; ₦100,000 advance returns <strong>₦130,000</strong>).
-                        </p>
-                        <p>
-                            <strong class="text-slate-950">Priority Revenue Recoupment:</strong> Repayments are funded and disbursed directly from the termly software fees (₦500 to ₦1,000 per student) collected across our first 3 to 5 onboarded secondary schools.
-                        </p>
-                        <p>
-                            <strong class="text-slate-950">Self-Sustaining Milestone:</strong> Once fulfilled, your capital is fully returned with yield, while the onboarded institutions continue generating permanent, recurring software revenues that sustain our operations indefinitely without external capital.
-                        </p>
-                    </div>
+                    <ul class="list-disc pl-4 space-y-0.5 text-xs">
+                        <li><strong class="text-slate-900">Deployment Advance Principal:</strong> Backers participate with a lean advance of <strong>₦50,000</strong> or <strong>₦100,000</strong> per unit.</li>
+                        <li><strong class="text-slate-900">1.3x Fixed Repayment Cap:</strong> Capped at a fixed <strong>1.3x return</strong> (₦50k advance returns <strong>₦65k</strong>; ₦100k returns <strong>₦130k</strong>).</li>
+                        <li><strong class="text-slate-900">Priority Revenue Recoupment:</strong> Repayments are funded and disbursed directly from termly software fees (₦500 – ₦1,000/student) across our first 3 to 5 onboarded secondary schools.</li>
+                        <li><strong class="text-slate-900">Self-Sustaining Milestone:</strong> Once fulfilled, capital is fully returned with yield, while the institutions generate permanent recurring software revenues that sustain our operations indefinitely.</li>
+                    </ul>
                 </div>
 
                 <!-- Section 2 -->
-                <div class="pt-2">
-                    <h2 class="font-sans font-bold text-slate-950 text-sm uppercase tracking-wider border-b border-slate-200 pb-1 mb-3">
+                <div>
+                    <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 mb-1">
                         Why the Unit Economics Support This Advance
                     </h2>
                     <p>
-                        ExtremeSolutions charges schools a recurring, per-student software fee of <strong>₦500 to ₦1,000 per term</strong>, seamlessly integrated into standard termly administrative dues.
+                        We charge schools an integrated termly fee of <strong>₦500 to ₦1,000 per student</strong> (generating ₦150,000 – ₦300,000 per term for an average 250-student school). 
+                        <span class="bg-slate-100 px-1 py-0.5 font-semibold text-slate-950">Onboarding just 3 secondary schools makes our core infrastructure completely self-sustaining</span>, generating ₦450,000 to ₦900,000/term to comfortably service repayments.
                     </p>
-                    <ul class="list-disc pl-6 space-y-1.5 my-3">
-                        <li><strong>Average Secondary School Size:</strong> 200–350 students.</li>
-                        <li><strong>Termly School Revenue:</strong> ₦150,000 – ₦300,000 per institution.</li>
-                        <li><strong>The Breakeven Threshold:</strong> <strong>Onboarding just 3 secondary schools</strong> generates between ₦450,000 and ₦900,000 per term in recurring revenue. This cash flow comfortably services the 1.3x advance fulfillment while covering all ongoing operational expenses.</li>
-                    </ul>
                 </div>
 
                 <!-- Section 3 -->
-                <div class="pt-2">
-                    <h2 class="font-sans font-bold text-slate-950 text-sm uppercase tracking-wider border-b border-slate-200 pb-1 mb-3">
+                <div>
+                    <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 mb-1">
                         Capital Allocation: Customer Acquisition &amp; On-Ground Deployment
                     </h2>
-                    <p>
-                        In enterprise educational sales, schools only pay once their first terminal broadsheet is successfully delivered. Software alone cannot close contracts; physical execution closes contracts.
+                    <p class="mb-1">
+                        Schools pay after their first successful broadsheet run. Software alone cannot close contracts; physical execution does. Your advance directly funds:
                     </p>
-                    <p>
-                        Your deployment advance is deployed directly into frontline execution:
-                    </p>
-                    <ul class="list-disc pl-6 space-y-1.5 my-3">
-                        <li><strong>Field Transit &amp; Direct Outreach:</strong> Covering physical transport for direct school pitch meetings and product demonstrations to proprietors.</li>
-                        <li><strong>48-Hour Onboarding &amp; Data Entry:</strong> Digitizing physical student registers and configuring school grading databases.</li>
-                        <li><strong>Staff Induction Materials:</strong> Printing physical teacher operation handbooks and student CBT orientation guides.</li>
+                    <ul class="list-disc pl-4 space-y-0.5 text-xs">
+                        <li><strong>Field Transit &amp; Direct Outreach:</strong> Transport for direct school demos with proprietors and principals.</li>
+                        <li><strong>48-Hour Onboarding &amp; Data Entry:</strong> Digitizing physical student registers and class databases.</li>
+                        <li><strong>Staff Induction Materials:</strong> Printing teacher operation handbooks and student CBT orientation guides.</li>
                     </ul>
                 </div>
 
-                <!-- Section 4 -->
-                <div class="pt-2">
-                    <h2 class="font-sans font-bold text-slate-950 text-sm uppercase tracking-wider border-b border-slate-200 pb-1 mb-3">
-                        Audit, Accountability &amp; Terms
-                    </h2>
-                    <p>
-                        We operate with absolute transparency and institutional rigor:
-                    </p>
-                    <ul class="list-disc pl-6 space-y-1.5 my-3">
-                        <li><strong>Written Advance Confirmation:</strong> Formal signed term sheet acknowledging the exact advance amount and fixed 1.3x repayment schedule.</li>
-                        <li><strong>Termly Progress Reports:</strong> Detailed visual updates confirming signed schools, student enrollment numbers, and revenue distribution timelines.</li>
-                        <li><strong>Roll of Honor:</strong> Recognition as a Founding Commercial Technology Sponsor.</li>
-                    </ul>
-                </div>
-
-                <!-- Section 5: Dedicated Commercial Account -->
-                <div class="pt-2">
-                    <h2 class="font-sans font-bold text-slate-950 text-sm uppercase tracking-wider border-b border-slate-200 pb-1 mb-3">
-                        Dedicated Commercial Advance Account
-                    </h2>
-                    <p class="mb-3">
-                        Advances are deposited directly into our verified operational deployment account:
-                    </p>
-                    <div class="bg-slate-50 border-2 border-slate-900 rounded-sm p-5 font-sans my-4">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
-                            <div>
-                                <span class="text-xs uppercase text-slate-500 font-bold tracking-wider block">Bank Name</span>
-                                <span class="font-bold text-slate-950 text-base">Wema Bank Plc</span>
-                            </div>
-                            <div>
-                                <span class="text-xs uppercase text-slate-500 font-bold tracking-wider block">Account Name</span>
-                                <span class="font-bold text-slate-950 text-base">Samuel Ekunyan</span>
-                            </div>
-                            <div>
-                                <span class="text-xs uppercase text-slate-500 font-bold tracking-wider block">Account Number</span>
-                                <div class="flex items-center space-x-2 mt-0.5">
-                                    <span class="font-mono font-black text-slate-950 text-lg sm:text-xl tracking-wider select-all" id="bank-acc-no">0236642821</span>
-                                    <button type="button" onclick="navigator.clipboard.writeText('0236642821'); this.innerText='Copied!'; setTimeout(() => this.innerText='Copy', 2000);" class="text-xs bg-slate-200 hover:bg-slate-300 text-slate-800 font-mono px-2 py-0.5 rounded transition">Copy</button>
-                                </div>
-                            </div>
-                            <div>
-                                <span class="text-xs uppercase text-slate-500 font-bold tracking-wider block">Transaction Narration</span>
-                                <span class="font-mono text-slate-800 text-xs sm:text-sm font-semibold">EXS Partner Advance / {{ $name != 'Sir/Madam' ? $name : '[Your Name]' }}</span>
-                            </div>
+                <!-- Section 4: Bank Details -->
+                <div class="mt-3.5 p-3.5 bg-slate-50 border border-slate-200 rounded-md">
+                    <div class="flex items-center justify-between mb-2">
+                        <p class="text-[11px] font-bold uppercase tracking-wider text-slate-500">Dedicated Commercial Advance Account</p>
+                        <button type="button" onclick="navigator.clipboard.writeText('0236642821'); this.innerText='Copied!'; setTimeout(() => this.innerText='Copy No', 2000);" class="text-[11px] bg-slate-200 hover:bg-slate-300 text-slate-800 font-mono px-2 py-0.5 rounded transition cursor-pointer">Copy No</button>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3 text-xs">
+                        <div>
+                            <span class="text-slate-500 text-[11px] block">Bank Name</span>
+                            <strong class="text-slate-950 font-semibold">Wema Bank Plc</strong>
+                        </div>
+                        <div>
+                            <span class="text-slate-500 text-[11px] block">Account Name</span>
+                            <strong class="text-slate-950 font-semibold">Samuel Ekunyan</strong>
+                        </div>
+                        <div>
+                            <span class="text-slate-500 text-[11px] block">Account Number</span>
+                            <span class="font-mono font-bold text-sm text-slate-950">0236642821</span>
+                        </div>
+                        <div>
+                            <span class="text-slate-500 text-[11px] block">Transaction Narration</span>
+                            <span class="font-mono text-slate-700">EXS Partner Advance / {{ !empty($name) && $name !== 'Sir/Madam' ? $name : request('name', 'Partner') }}</span>
                         </div>
                     </div>
                 </div>
 
-                <p class="pt-2">
-                    We are moving quickly, school by school, to establish an institutional standard across Nigeria. Thank you for your partnership, your belief, and your commercial conviction.
+                <p class="text-xs italic text-slate-600">
+                    Backers receive a formal signed term sheet, direct monthly photo/audit reports, and priority disbursement from onboarded school revenues.
                 </p>
             </div>
 
-            <!-- Authentic Handwritten Signoff Block -->
-            <div class="mt-10 pt-6 border-t border-slate-200">
-                <p class="mb-2">Warm regards,</p>
-
-                <!-- Rotated Authentic Signature / Monogram -->
-                <div class="my-2">
-                    <img src="{{ !empty($sigBase64) ? $sigBase64 : asset('images/signature.png') }}"
-                         alt="Signature"
-                         class="h-16 w-auto opacity-95"
-                         style="filter: contrast(1.15); max-width: 220px;">
-                </div>
-
-                <div class="font-sans text-sm">
-                    <div class="font-bold text-slate-950 font-mono text-base">Samuel Ekunyan</div>
-                    <div class="text-slate-700 font-medium">Founder &amp; Principal Systems Architect, ExtremeSolutions</div>
-                    <div class="text-slate-600 font-mono text-xs mt-1 space-y-0.5">
-                        <div>
-                            <a href="mailto:samuel@ekunyansamuel.dev" class="text-emerald-700 underline font-semibold">samuel@ekunyansamuel.dev</a> &bull;
-                            <a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-emerald-700 underline font-semibold">sms.extremesolutions.com.ng</a>
-                        </div>
-                        <div class="text-slate-500">
-                            Direct Line: <a href="tel:+2349052585622" class="text-slate-700 hover:text-emerald-700 font-semibold">+234 905 258 5622</a>
-                        </div>
+            <!-- Sign-off -->
+            <div class="mt-4 pt-3 border-t border-slate-200 flex justify-between items-end">
+                <div>
+                    <p class="text-xs text-slate-500">Warm regards,</p>
+                    <div class="my-1">
+                        <img src="{{ !empty($sigBase64) ? $sigBase64 : asset('images/signature.png') }}"
+                             alt="Signature"
+                             class="h-10 w-auto opacity-95"
+                             style="filter: contrast(1.15); max-width: 170px;">
                     </div>
+                    <p class="font-bold text-slate-950 text-sm">Samuel Ekunyan</p>
+                    <p class="text-[11px] text-slate-600">Founder &amp; Principal Systems Architect, ExtremeSolutions</p>
+                    <p class="text-[11px] text-slate-600 font-mono"><a href="mailto:samuel@ekunyansamuel.dev" class="text-emerald-700 underline">samuel@ekunyansamuel.dev</a> &bull; <a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-emerald-700 underline">sms.extremesolutions.com.ng</a></p>
+                    <p class="text-[11px] font-medium text-slate-800 mt-0.5">Direct Line / WhatsApp: <a href="tel:+2349052585622" class="hover:text-emerald-700 font-semibold">+234 905 258 5622</a></p>
                 </div>
             </div>
 
@@ -349,3 +292,4 @@
 })();
 </script>
 @endsection
+

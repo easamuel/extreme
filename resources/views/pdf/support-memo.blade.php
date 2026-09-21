@@ -6,7 +6,7 @@
     <style>
         @page {
             size: A4 portrait;
-            margin: 16mm 14mm 16mm 14mm;
+            margin: 10mm 12mm 10mm 12mm;
         }
 
         * {
@@ -17,9 +17,9 @@
 
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            color: #1e293b;
+            color: #0f172a;
             font-size: 8.5pt;
-            line-height: 1.45;
+            line-height: 1.38;
             margin: 0;
             padding: 0;
             background: #ffffff;
@@ -28,9 +28,9 @@
         table.header-table {
             width: 100%;
             border-collapse: collapse;
-            border-bottom: 2pt solid #0f172a;
-            padding-bottom: 8pt;
-            margin-bottom: 12pt;
+            border-bottom: 1.5pt solid #0f172a;
+            padding-bottom: 6pt;
+            margin-bottom: 8pt;
         }
 
         table.header-table td {
@@ -38,12 +38,12 @@
         }
 
         .logo-img {
-            height: 32pt;
+            height: 26pt;
             width: auto;
         }
 
         .header-title {
-            font-size: 14pt;
+            font-size: 13pt;
             font-weight: bold;
             color: #0f172a;
             letter-spacing: 0.5pt;
@@ -53,7 +53,7 @@
             font-size: 7.5pt;
             text-transform: uppercase;
             letter-spacing: 0.5pt;
-            color: #475569;
+            color: #047857;
             font-weight: bold;
             margin-top: 1pt;
         }
@@ -69,8 +69,8 @@
         .subject-box {
             background: #f8fafc;
             border-left: 2.5pt solid #0f172a;
-            padding: 6pt 8pt;
-            margin-bottom: 10pt;
+            padding: 4pt 6pt;
+            margin-bottom: 7pt;
             font-size: 8.5pt;
             font-weight: bold;
             color: #0f172a;
@@ -79,46 +79,39 @@
         .salutation {
             font-size: 9pt;
             font-weight: bold;
-            margin-bottom: 6pt;
+            margin-bottom: 5pt;
             color: #0f172a;
         }
 
-        .verse-quote {
-            font-style: italic;
-            color: #475569;
-            border-left: 1.5pt solid #cbd5e1;
-            padding-left: 6pt;
-            margin: 6pt 0;
-            font-size: 8pt;
-        }
-
         p {
-            margin: 0 0 6pt 0;
+            margin: 0 0 5pt 0;
             text-align: justify;
         }
 
         .section-heading {
-            font-size: 8pt;
+            font-size: 7.5pt;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 0.8pt;
             color: #0f172a;
-            margin: 8pt 0 3pt 0;
+            margin: 6pt 0 2pt 0;
             border-bottom: 0.5pt solid #e2e8f0;
             padding-bottom: 1pt;
         }
 
         ul {
-            margin: 3pt 0 6pt 14pt;
+            margin: 2pt 0 5pt 12pt;
             padding: 0;
         }
 
         li {
-            margin-bottom: 3pt;
+            margin-bottom: 2pt;
         }
 
         .signature-block {
-            margin-top: 12pt;
+            margin-top: 8pt;
+            padding-top: 5pt;
+            border-top: 0.5pt solid #e2e8f0;
             page-break-inside: avoid;
         }
 
@@ -132,59 +125,23 @@
         }
 
         .sig-img {
-            height: 28pt;
+            height: 22pt;
             width: auto;
             margin-bottom: 2pt;
         }
 
         .footer-note {
-            margin-top: 12pt;
-            padding-top: 4pt;
+            margin-top: 6pt;
+            padding-top: 3pt;
             border-top: 0.5pt solid #e2e8f0;
-            font-size: 6.5pt;
+            font-size: 6pt;
             color: #64748b;
             text-align: center;
             font-family: monospace;
         }
-
-        @media screen {
-            .print-bar {
-                background: #0f172a;
-                color: #ffffff;
-                padding: 10px 16px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                font-family: sans-serif;
-                font-size: 13px;
-                margin-bottom: 16px;
-            }
-            .print-btn {
-                background: #10b981;
-                color: #ffffff;
-                font-weight: bold;
-                padding: 6px 14px;
-                border-radius: 4px;
-                border: none;
-                cursor: pointer;
-            }
-        }
-        @media print {
-            .print-bar { display: none !important; }
-        }
     </style>
 </head>
 <body>
-
-@if(!empty($isPrintFallback))
-<div class="print-bar">
-    <div><strong>ExtremeSolutions Operational Brief:</strong> Grassroots Secondary Education</div>
-    <button onclick="window.print()" class="print-btn">Print / Save as PDF</button>
-</div>
-<script>
-    window.addEventListener('load', function() { setTimeout(function() { window.print(); }, 400); });
-</script>
-@endif
 
 <!-- Letterhead -->
 <table class="header-table">
@@ -196,19 +153,18 @@
                 <div class="header-title">EXTREMESOLUTIONS</div>
             @endif
             <div class="header-dept">Deployment &amp; Expansion Memorandum</div>
-            <div style="font-size: 7.5pt; color: #64748b; margin-top: 1pt;">Lagos, Nigeria &bull; extremesolutions.com.ng &bull; sms.extremesolutions.com.ng</div>
+            <div style="font-size: 7pt; color: #64748b; margin-top: 1pt;">Lagos, Nigeria &bull; extremesolutions.com.ng &bull; sms.extremesolutions.com.ng</div>
         </td>
         <td style="width: 40%;" class="header-meta">
-            <strong>Document Ref:</strong> {{ $refCode }}<br>
             <strong>Date:</strong> {{ $dateStr }}<br>
-            <strong>Classification:</strong> Commercial Deployment Brief
+            <strong>Ref:</strong> {{ $refCode }}
         </td>
     </tr>
 </table>
 
 <!-- Recipient Salutation -->
 <div class="salutation">
-    Dear {{ $name }},
+    Dear {{ !empty($name) && $name !== 'Sir/Madam' ? $name : request('name', 'Valued Partner') }},
 </div>
 
 <!-- Subject Line -->
@@ -217,78 +173,52 @@
 </div>
 
 <p>
-    ExtremeSolutions is building a sustainable educational technology enterprise. We are not an NGO or a charity; we are a commercial systems venture deploying an all-in-one School Operating System (sms.extremesolutions.com.ng) to solve deep operational bottlenecks in Nigerian secondary schools.
+    ExtremeSolutions is building a sustainable educational technology enterprise. We are not an NGO or a charity; we are a commercial systems venture deploying an all-in-one School Operating System (sms.extremesolutions.com.ng) to eliminate manual operational friction in Nigerian secondary institutions.
 </p>
 
+<div class="section-heading">The Operational Problem &amp; Commercial Opportunity</div>
 <p>
-    I am writing to share our frontline traction and invite you to support our current commercial deployment drive.
+    <strong>Underutilized Technology &amp; CBT Anxiety:</strong> Secondary schools have computer labs that sit idle, offering weekly theory notes instead of practical screen habits. Students falter during national exams (JAMB CBT) due to lack of timed navigation and software familiarity.
 </p>
-
-<div class="section-heading">The Operational Problem &amp; The Commercial Opportunity</div>
 <p>
-    Private secondary schools in Nigeria operate under two costly inefficiencies:
+    <strong>End-of-Term Broadsheet Delays:</strong> Schools spend 2 to 3 weeks compiling Continuous Assessments (CA) with calculators, causing calculation errors, delayed vacations, and uncollected tuition balances.
 </p>
+<div style="background: #f0fdf4; border: 0.5pt solid #86efac; padding: 3pt 5pt; font-size: 7.5pt; margin-bottom: 4pt; color: #065f46;">
+    <strong>The Solution:</strong> ExtremeSolutions automates CA scoring, generates 1-click terminal broadsheets, reconciles tuition balances, and embeds routine CBT testing directly into the school's termly calendar.
+</div>
 
-<ul style="list-style-type: disc;">
-    <li>
-        <strong>Underutilized Technology &amp; Computer Test Anxiety:</strong> Many secondary schools possess computer labs or tablets, yet they sit idle or underused. Students receive weekly theory notes rather than applied, daily test experience. When they face computerized national entrance exams (JAMB CBT) and external assessment platforms, they falter due to lack of practical software navigation and timed test habits.
-    </li>
-    <li>
-        <strong>End-of-Term Administrative Paralysis:</strong> Schools lose 2 to 3 weeks every term compiling Continuous Assessments (CA) and broadsheets with physical paper and calculators. Grading errors spark parent complaints, and untracked fee balances quietly bleed school cash flow.
-    </li>
-</ul>
-
-<p style="background: #f1f5f9; padding: 4pt 6pt; border-left: 2pt solid #059669; font-size: 8pt; margin: 4pt 0;">
-    <strong>The Solution:</strong> ExtremeSolutions automates continuous assessment scoring, generates 1-click terminal broadsheets, tracks tuition payments, and integrates a routine computer-based testing (CBT) environment directly into the school's termly calendar.
-</p>
-
-<div class="section-heading">Our Commercial Revenue Model: Built for Self-Sufficiency</div>
+<div class="section-heading">Commercial Revenue Model: Built for Self-Sufficiency</div>
 <p>
-    ExtremeSolutions charges schools a recurring, per-student software fee of <strong>₦500 to ₦1,000 per term</strong>, seamlessly integrated into standard termly administrative dues.
+    We charge schools a recurring fee of <strong>₦500 to ₦1,000 per student/term</strong>, integrated into regular school fees (₦150,000 – ₦300,000 per term for an average 250-student school). <strong>Onboarding just 3 secondary schools makes our core infrastructure completely self-sustaining.</strong>
 </p>
-<ul style="list-style-type: disc;">
-    <li><strong>Average Secondary School Size:</strong> 200–350 students.</li>
-    <li><strong>Termly School Revenue:</strong> ₦150,000 – ₦300,000 per institution.</li>
-    <li><strong>The Breakeven Threshold:</strong> <strong>Onboarding just 3 secondary schools</strong> makes our core infrastructure and operations completely self-sustaining. Once 3 schools run on the portal, recurring termly fees fund our servers, deployment logistics, and ongoing expansion without external capital.</li>
-</ul>
 
 <div class="section-heading">Why We Are Raising an Upfront Deployment Fund</div>
 <p>
-    In enterprise educational sales, schools only pay once their first terminal broadsheet is successfully delivered. Software alone cannot close contracts; physical execution closes contracts.
+    Schools pay after their first successful broadsheet run. Software alone cannot close contracts; physical execution does. Our team physically enters campuses, migrates physical registers, and trains staff on-site.
 </p>
 <p>
-    To onboard schools, our team physically enters the campus, digitizes their student records, configures their grading schemes, and trains their teachers on-site. We are actively conducting daily on-ground presentations to secondary school proprietors, principal networks, and exam coordinators across the district.
-</p>
-<p>
-    We are raising a lean <strong>Rollout Deployment Pool of ₦150,000 to ₦300,000</strong> to fund this exact customer-acquisition bridge:
+    We are raising a lean <strong>Rollout Deployment Pool of ₦150,000 to ₦300,000</strong> to fund this direct acquisition bridge:
 </p>
 <ul style="list-style-type: disc;">
-    <li><strong>Field Transit &amp; Direct Outreach:</strong> Covering physical transport for direct school pitch meetings and product demonstrations.</li>
-    <li><strong>48-Hour Onboarding &amp; Data Entry:</strong> Digitizing physical student registers and configuring class databases.</li>
-    <li><strong>Staff Induction Materials:</strong> Printing physical teacher operation handbooks and student CBT orientation guides.</li>
+    <li><strong>Field Transit &amp; Outreach:</strong> Transport for direct school demos with proprietors and principals.</li>
+    <li><strong>48-Hour Assisted Onboarding:</strong> Digitizing student registers and grading schemes.</li>
+    <li><strong>Staff Induction Materials:</strong> Printing teacher operation handbooks and student CBT orientation guides.</li>
 </ul>
 
-<div class="section-heading">How You Stand With Us</div>
-<ul style="list-style-type: disc;">
-    <li><strong>Direct Monthly Progress Audits:</strong> Visual verification reports, school names, student counts, and confirmed onboarded institutions.</li>
-    <li><strong>Roll of Honor:</strong> Formal recognition as a Founding Technology Sponsor on the school portal and project ecosystem.</li>
-    <li><strong>The Multiplier Effect:</strong> Your support directly onboards paying institutions that create permanent, recurring revenue.</li>
-</ul>
-
-<div class="section-heading">Deployment Support Account</div>
-<table style="width: 100%; border: 1pt solid #0f172a; background: #f8fafc; padding: 4pt 6pt; margin: 4pt 0; font-size: 8pt;">
+<div class="section-heading">Deployment Support Account (Direct Execution)</div>
+<table style="width: 100%; border: 0.75pt solid #cbd5e1; background: #f8fafc; padding: 4pt 6pt; margin: 3pt 0; font-size: 7.5pt;">
     <tr>
-        <td style="width: 50%;"><strong>Bank:</strong> Wema Bank Plc</td>
+        <td style="width: 50%;"><strong>Bank Name:</strong> Wema Bank Plc</td>
         <td style="width: 50%;"><strong>Account Name:</strong> Samuel Ekunyan</td>
     </tr>
     <tr>
-        <td style="width: 50%;"><strong>Account Number:</strong> <span style="font-family: monospace; font-weight: bold; font-size: 9pt;">0236642821</span></td>
-        <td style="width: 50%;"><strong>Narration:</strong> EXS Deployment Support / {{ $name != 'Sir/Madam' ? $name : '[Your Name]' }}</td>
+        <td style="width: 50%;"><strong>Account Number:</strong> <span style="font-family: monospace; font-weight: bold; font-size: 8.5pt;">0236642821</span></td>
+        <td style="width: 50%;"><strong>Narration:</strong> EXS Support / {{ !empty($name) && $name !== 'Sir/Madam' ? $name : request('name', 'Partner') }}</td>
     </tr>
 </table>
 
-<p style="margin-top: 6pt;">
-    We are moving quickly, school by school, to establish an institutional standard across Nigeria. Thank you for your partnership, your belief, and your shared conviction.
+<p style="font-size: 7pt; font-style: italic; color: #475569; margin-top: 3pt;">
+    Backers receive direct monthly photo/audit reports, partner recognition on the school portal, and the assurance that their capital builds a self-funding enterprise.
 </p>
 
 <!-- Signature Block -->
@@ -296,16 +226,16 @@
     <table class="sig-table">
         <tr>
             <td style="width: 60%;">
-                <p style="margin-bottom: 2pt;">Warm regards,</p>
+                <p style="margin-bottom: 2pt; font-size: 7.5pt; color: #64748b;">Warm regards,</p>
                 @if(!empty($sigBase64))
                     <img src="{{ $sigBase64 }}" class="sig-img" alt="Samuel Ekunyan">
                 @endif
-                <div style="font-weight: bold; font-size: 9pt; color: #0f172a;">Samuel Ekunyan</div>
-                <div style="font-size: 7.5pt; color: #475569;">Founder &amp; Principal Systems Architect, ExtremeSolutions</div>
-                <div style="font-size: 7.5pt; color: #64748b;">samuel@ekunyansamuel.dev &bull; sms.extremesolutions.com.ng</div>
-                <div style="font-size: 7.5pt; color: #64748b;">Direct Line: +234 905 258 5622</div>
+                <div style="font-weight: bold; font-size: 8.5pt; color: #0f172a;">Samuel Ekunyan</div>
+                <div style="font-size: 7pt; color: #475569;">Founder &amp; Principal Systems Architect, ExtremeSolutions</div>
+                <div style="font-size: 7pt; color: #64748b;">samuel@ekunyansamuel.dev &bull; sms.extremesolutions.com.ng</div>
+                <div style="font-size: 7pt; color: #0f172a; font-weight: bold; margin-top: 1pt;">Direct Line / WhatsApp: +234 905 258 5622</div>
             </td>
-            <td style="width: 40%; text-align: right; font-size: 7pt; color: #64748b; font-family: monospace;">
+            <td style="width: 40%; text-align: right; font-size: 6.5pt; color: #64748b; font-family: monospace;">
                 <div>MEMORANDUM ID: {{ $refCode }}</div>
                 <div>CLASSIFICATION: COMMERCIAL DEPLOYMENT</div>
             </td>

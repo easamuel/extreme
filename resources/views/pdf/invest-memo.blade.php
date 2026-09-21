@@ -6,7 +6,7 @@
     <style>
         @page {
             size: A4 portrait;
-            margin: 16mm 14mm 16mm 14mm;
+            margin: 10mm 12mm 10mm 12mm;
         }
 
         * {
@@ -17,9 +17,9 @@
 
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            color: #1e293b;
+            color: #0f172a;
             font-size: 8.5pt;
-            line-height: 1.45;
+            line-height: 1.38;
             margin: 0;
             padding: 0;
             background: #ffffff;
@@ -28,9 +28,9 @@
         table.header-table {
             width: 100%;
             border-collapse: collapse;
-            border-bottom: 2pt solid #0f172a;
-            padding-bottom: 8pt;
-            margin-bottom: 12pt;
+            border-bottom: 1.5pt solid #0f172a;
+            padding-bottom: 6pt;
+            margin-bottom: 8pt;
         }
 
         table.header-table td {
@@ -38,12 +38,12 @@
         }
 
         .logo-img {
-            height: 32pt;
+            height: 26pt;
             width: auto;
         }
 
         .header-title {
-            font-size: 14pt;
+            font-size: 13pt;
             font-weight: bold;
             color: #0f172a;
             letter-spacing: 0.5pt;
@@ -53,7 +53,7 @@
             font-size: 7.5pt;
             text-transform: uppercase;
             letter-spacing: 0.5pt;
-            color: #475569;
+            color: #047857;
             font-weight: bold;
             margin-top: 1pt;
         }
@@ -69,8 +69,8 @@
         .subject-box {
             background: #f8fafc;
             border-left: 2.5pt solid #0f172a;
-            padding: 6pt 8pt;
-            margin-bottom: 10pt;
+            padding: 4pt 6pt;
+            margin-bottom: 7pt;
             font-size: 8.5pt;
             font-weight: bold;
             color: #0f172a;
@@ -79,37 +79,39 @@
         .salutation {
             font-size: 9pt;
             font-weight: bold;
-            margin-bottom: 6pt;
+            margin-bottom: 5pt;
             color: #0f172a;
         }
 
         p {
-            margin: 0 0 6pt 0;
+            margin: 0 0 5pt 0;
             text-align: justify;
         }
 
         .section-heading {
-            font-size: 8pt;
+            font-size: 7.5pt;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 0.8pt;
             color: #0f172a;
-            margin: 8pt 0 3pt 0;
+            margin: 6pt 0 2pt 0;
             border-bottom: 0.5pt solid #e2e8f0;
             padding-bottom: 1pt;
         }
 
         ul {
-            margin: 3pt 0 6pt 14pt;
+            margin: 2pt 0 5pt 12pt;
             padding: 0;
         }
 
         li {
-            margin-bottom: 3pt;
+            margin-bottom: 2pt;
         }
 
         .signature-block {
-            margin-top: 12pt;
+            margin-top: 8pt;
+            padding-top: 5pt;
+            border-top: 0.5pt solid #e2e8f0;
             page-break-inside: avoid;
         }
 
@@ -123,16 +125,16 @@
         }
 
         .sig-img {
-            height: 28pt;
+            height: 22pt;
             width: auto;
             margin-bottom: 2pt;
         }
 
         .footer-note {
-            margin-top: 12pt;
-            padding-top: 4pt;
+            margin-top: 6pt;
+            padding-top: 3pt;
             border-top: 0.5pt solid #e2e8f0;
-            font-size: 6.5pt;
+            font-size: 6pt;
             color: #64748b;
             text-align: center;
             font-family: monospace;
@@ -259,3 +261,4 @@
 
 </body>
 </html>
+
