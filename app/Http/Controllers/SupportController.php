@@ -119,11 +119,10 @@ class SupportController extends Controller
         $cleanName = $this->filterAlphanumeric($rawName, 80);
         $cleanReferrer = $this->filterAlphanumeric($rawReferrer, 80);
 
-        $name = !empty($cleanName) ? $cleanName : 'Valued Partner / Supporter';
+        $name = !empty($cleanName) ? $cleanName : 'Engr. Tayo Balogun';
         $referrer = !empty($cleanReferrer) ? $cleanReferrer : 'ExtremeSolutions';
 
-        $hashSeed = $name . $referrer . date('Ymd');
-        $refCode = 'ES-SUP-' . date('Y') . '-' . strtoupper(substr(md5($hashSeed), 0, 6));
+        $refCode = 'EXS-MEMO/SEC-' . date('Y') . '/08';
         $dateStr = date('F j, Y');
 
         $rawParams = array_filter([

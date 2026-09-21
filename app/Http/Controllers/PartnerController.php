@@ -119,11 +119,10 @@ class PartnerController extends Controller
         $cleanProprietor = $this->filterAlphanumeric($rawProprietor, 80);
         $cleanSchool = $this->filterAlphanumeric($rawSchool, 100);
 
-        $proprietor = !empty($cleanProprietor) ? $cleanProprietor : 'Proprietor / Principal';
-        $school = !empty($cleanSchool) ? $cleanSchool : 'Your Institution';
+        $proprietor = !empty($cleanProprietor) ? $cleanProprietor : 'Mrs. Adeleke';
+        $school = !empty($cleanSchool) ? $cleanSchool : 'Royal Crown College';
 
-        $hashSeed = $proprietor . $school . date('Ymd');
-        $refCode = 'ES-PRT-' . date('Y') . '-' . strtoupper(substr(md5($hashSeed), 0, 6));
+        $refCode = 'PROP-SEC/RCC/' . date('Y');
         $dateStr = date('F j, Y');
 
         $rawParams = array_filter([
