@@ -10,36 +10,30 @@
 @section('content')
 <div class="bg-slate-100 min-h-screen py-8 sm:py-14"
      x-data="{
-        showModal: false,
-        proprietorInput: '{{ addslashes($proprietor) }}',
-        schoolInput: '{{ addslashes($school) }}',
-        currentProprietor: '{{ addslashes($proprietor) }}',
-        currentSchool: '{{ addslashes($school) }}',
+        inputProprietor: '{{ addslashes($proprietor) }}',
+        inputSchool: '{{ addslashes($school) }}',
         copied: false,
-        get shareUrl() {
+        get currentUrl() {
             let url = new URL(window.location.origin + '{{ route('partner.index') }}');
-            if (this.currentProprietor.trim()) url.searchParams.set('proprietor', this.currentProprietor.trim());
-            if (this.currentSchool.trim()) url.searchParams.set('school', this.currentSchool.trim());
+            if (this.inputProprietor.trim()) url.searchParams.set('proprietor', this.inputProprietor.trim());
+            if (this.inputSchool.trim()) url.searchParams.set('school', this.inputSchool.trim());
             return url.toString();
         },
         get whatsappUrl() {
             const text = 'Institutional Partnership Proposal // ExtremeSolutions\n\n' +
                 'RE: Institutional Partnership for Broadsheet Automation and Student CBT Readiness\n\n' +
-                'Prepared exclusively for ' + this.currentProprietor + ' (' + this.currentSchool + '):\n' +
-                this.shareUrl;
+                'Prepared exclusively for ' + (this.inputProprietor.trim() || '{{ addslashes($proprietor) }}') + ' (' + (this.inputSchool.trim() || '{{ addslashes($school) }}') + '):\n' +
+                this.currentUrl;
             return 'https://api.whatsapp.com/send?text=' + encodeURIComponent(text);
         },
-        applyNames() {
-            if (this.proprietorInput.trim()) this.currentProprietor = this.proprietorInput.trim();
-            if (this.schoolInput.trim()) this.currentSchool = this.schoolInput.trim();
+        updateProposal() {
             let url = new URL(window.location.href);
-            url.searchParams.set('proprietor', this.currentProprietor);
-            url.searchParams.set('school', this.currentSchool);
-            window.history.replaceState({}, '', url.toString());
-            this.showModal = false;
+            if (this.inputProprietor.trim()) url.searchParams.set('proprietor', this.inputProprietor.trim());
+            if (this.inputSchool.trim()) url.searchParams.set('school', this.inputSchool.trim());
+            window.location.href = url.toString();
         },
         copyLink() {
-            navigator.clipboard.writeText(this.shareUrl).then(() => {
+            navigator.clipboard.writeText(this.currentUrl).then(() => {
                 this.copied = true;
                 setTimeout(() => { this.copied = false; }, 2500);
             });
@@ -48,28 +42,22 @@
 
     <div class="max-w-4xl mx-auto px-4 sm:px-6">
 
-        <!-- Top Utility / Action Bar -->
+        <!-- Top Utility Bar (Clean, Zero Pop-ups) -->
         <div class="mb-6 flex flex-wrap items-center justify-between gap-3 bg-white border border-slate-200 p-3.5 rounded-lg shadow-xs text-xs font-sans">
             <div class="flex items-center space-x-2 text-slate-600">
                 <span class="inline-block w-2 h-2 rounded-full bg-emerald-500"></span>
-                <span>Proposal For: <strong class="text-slate-900 font-semibold" x-text="currentProprietor">{{ $proprietor }}</strong> &bull; <span class="text-slate-700" x-text="currentSchool">{{ $school }}</span></span>
+                <span>Proposal Code: <strong class="text-slate-900 font-mono">{{ $refCode }}</strong></span>
+                <span class="text-slate-300">|</span>
+                <span>{{ $dateStr }}</span>
             </div>
 
             <div class="flex items-center space-x-2">
-                <button @click="showModal = true"
-                        class="inline-flex items-center px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-medium rounded text-xs transition">
-                    <svg class="w-3.5 h-3.5 mr-1 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
-                    </svg>
-                    Personalize School &amp; Proprietor
-                </button>
-
                 <button @click="copyLink()"
                         class="inline-flex items-center px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-medium rounded text-xs transition">
                     <svg class="w-3.5 h-3.5 mr-1 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
                     </svg>
-                    <span x-text="copied ? 'Copied!' : 'Copy Share Link'"></span>
+                    <span x-text="copied ? 'Copied!' : 'Copy Link'"></span>
                 </button>
 
                 <a :href="whatsappUrl" target="_blank"
@@ -77,10 +65,10 @@
                     <svg class="w-3.5 h-3.5 mr-1 fill-current" viewBox="0 0 24 24">
                         <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.203c.043.071.043.419-.101.824z"/>
                     </svg>
-                    WhatsApp
+                    WhatsApp Share
                 </a>
 
-                <a :href="'{{ route('partner.pdf') }}?proprietor=' + encodeURIComponent(currentProprietor) + '&school=' + encodeURIComponent(currentSchool)" target="_blank"
+                <a href="{{ $exportPdfUrl }}" target="_blank"
                    class="inline-flex items-center px-3 py-1.5 bg-[#0c1f3a] hover:bg-[#1e3a5f] text-white font-medium rounded text-xs transition">
                     <svg class="w-3.5 h-3.5 mr-1 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
@@ -114,8 +102,8 @@
             <!-- Recipient Block -->
             <div class="mb-6 font-sans text-sm">
                 <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">PREPARED EXCLUSIVELY FOR:</div>
-                <div class="font-bold text-slate-950 text-base" x-text="currentProprietor + ', Proprietress / Principal'">{{ $proprietor }}, Proprietress / Principal</div>
-                <div class="text-slate-700 font-medium" x-text="currentSchool">{{ $school }}</div>
+                <div class="font-bold text-slate-950 text-base">{{ $proprietor }}, Proprietress / Principal</div>
+                <div class="text-slate-700 font-medium">{{ $school }}</div>
             </div>
 
             <!-- Subject Line -->
@@ -126,7 +114,7 @@
             <!-- Salutation -->
             <div class="mb-6">
                 <p class="font-bold text-slate-950 text-base">
-                    Dear <span class="text-slate-900 underline decoration-emerald-500 decoration-2 underline-offset-4" x-text="currentProprietor">{{ $proprietor }}</span>,
+                    Dear {{ $proprietor }},
                 </p>
             </div>
 
@@ -141,7 +129,7 @@
                 </p>
 
                 <p>
-                    ExtremeSolutions is extending an institutional partnership invitation to <strong class="text-slate-950" x-text="currentSchool">{{ $school }}</strong> to deploy our modern School Operating System (<a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-emerald-700 underline font-mono">sms.extremesolutions.com.ng</a>) starting this term.
+                    ExtremeSolutions is extending an institutional partnership invitation to <strong class="text-slate-950">{{ $school }}</strong> to deploy our modern School Operating System (<a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-emerald-700 underline font-mono">sms.extremesolutions.com.ng</a>) starting this term.
                 </p>
 
                 <h2 class="font-sans font-bold text-slate-950 text-base uppercase tracking-wider pt-3 border-b border-slate-200 pb-1">
@@ -205,7 +193,7 @@
                         <strong>Zero Data Burden:</strong> Provide us your student lists on paper or Excel&mdash;our technical team migrates the entire student body into your secure database within 48 hours.
                     </li>
                     <li>
-                        <strong>On-Site Staff Certification:</strong> We conduct a 1-hour hands-on training workshop at <span class="font-semibold text-slate-950" x-text="currentSchool">{{ $school }}</span> for your teachers and examination officers.
+                        <strong>On-Site Staff Certification:</strong> We conduct a 1-hour hands-on training workshop at <span class="font-semibold text-slate-950">{{ $school }}</span> for your teachers and examination officers.
                     </li>
                     <li>
                         <strong>Dedicated Support:</strong> We remain on call throughout your examination and result-generation periods to guarantee zero system downtime.
@@ -234,50 +222,30 @@
 
         </article>
 
-    </div>
-
-    <!-- Personalize Modal -->
-    <div x-show="showModal"
-         x-cloak
-         class="fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 font-sans"
-         @keydown.escape.window="showModal = false">
-        <div class="bg-white rounded-xl max-w-md w-full p-6 shadow-2xl border border-slate-200"
-             @click.away="showModal = false">
-            <h3 class="text-lg font-bold text-slate-900">Personalize School &amp; Proprietor</h3>
-            <p class="text-xs text-slate-500 mt-1">
-                Customize this proposal for a specific school proprietor. The letter and shareable link will update instantly.
-            </p>
-
-            <div class="mt-4 space-y-3">
+        <!-- Clean Personalize Form at Bottom (No Pop-ups) -->
+        <div class="mt-8 bg-white border border-slate-200 rounded-lg p-5 sm:p-6 shadow-xs font-sans">
+            <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
                 <div>
-                    <label class="block text-xs font-semibold text-slate-700 mb-1">Proprietor / Principal Name</label>
-                    <input type="text"
-                           x-model="proprietorInput"
-                           class="w-full px-3.5 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                           placeholder="e.g. Mrs. Adeleke">
+                    <h3 class="text-sm font-bold text-slate-900">Customize this Proposal for Another School</h3>
+                    <p class="text-xs text-slate-500 mt-0.5">Input the target proprietor and school name to generate a tailored direct link:</p>
                 </div>
-                <div>
-                    <label class="block text-xs font-semibold text-slate-700 mb-1">Secondary School Name</label>
+                <form @submit.prevent="updateProposal()" class="flex flex-wrap items-center gap-2">
                     <input type="text"
-                           x-model="schoolInput"
-                           @keydown.enter="applyNames()"
-                           class="w-full px-3.5 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                           placeholder="e.g. Royal Crown College">
-                </div>
-            </div>
-
-            <div class="mt-6 flex justify-end space-x-3">
-                <button type="button" @click="showModal = false"
-                        class="px-4 py-2 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-100">
-                    Cancel
-                </button>
-                <button type="button" @click="applyNames()"
-                        class="px-5 py-2 rounded-lg text-xs font-bold text-white bg-slate-900 hover:bg-slate-800">
-                    Update Proposal
-                </button>
+                           x-model="inputProprietor"
+                           placeholder="Proprietor Name (e.g. Mrs. Adeleke)"
+                           class="px-3 py-1.5 border border-slate-300 rounded text-xs text-slate-900 focus:outline-none focus:ring-1 focus:ring-emerald-500 w-44 sm:w-48">
+                    <input type="text"
+                           x-model="inputSchool"
+                           placeholder="School Name (e.g. Royal Crown College)"
+                           class="px-3 py-1.5 border border-slate-300 rounded text-xs text-slate-900 focus:outline-none focus:ring-1 focus:ring-emerald-500 w-44 sm:w-56">
+                    <button type="submit"
+                            class="px-4 py-1.5 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded text-xs transition">
+                        Update
+                    </button>
+                </form>
             </div>
         </div>
-    </div>
 
+    </div>
 </div>
 @endsection
