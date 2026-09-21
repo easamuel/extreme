@@ -12,14 +12,14 @@ use Illuminate\Support\Str;
 /**
  * Class PartnerController
  * 
- * Manages the unlisted Commercial Secondary School Distribution Portal.
- * Delivers institutional partnership standards, tailored school deployment proposals,
- * fee recovery & broadsheet automation ROI, and field referral engines.
+ * Manages the unlisted Enterprise & Institutional Partnership Portal.
+ * Delivers ExtremeSolutions collaboration frameworks ("Building Digital Systems that last"),
+ * technology co-creation, regional distribution tracks, and active sector deployments (ExtremeSMS).
  */
 class PartnerController extends Controller
 {
     /**
-     * Display the Tailored Commercial Partnership & Deployment Proposal.
+     * Display the Enterprise Partnership & Institutional Framework.
      *
      * @param Request $request
      * @return View

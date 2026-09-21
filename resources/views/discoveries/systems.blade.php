@@ -22,8 +22,8 @@
                     <h1 class="text-3xl sm:text-4xl font-black tracking-tight text-white font-mono">
                         EXTREMESOLUTIONS / LABS
                     </h1>
-                    <p class="mt-2 text-xs text-zinc-400 font-serif italic max-w-xl">
-                        &ldquo;Write the vision and make it plain on tablets, that he may run that readeth it.&rdquo; &mdash; Habakkuk 2:2
+                    <p class="mt-2 text-xs uppercase tracking-widest text-emerald-400 font-mono font-bold">
+                        Building Digital Systems that last.
                     </p>
                 </div>
                 <div class="text-left sm:text-right font-mono text-xs text-zinc-500 space-y-1">
@@ -212,9 +212,9 @@
 
                 <div class="border border-zinc-800 bg-zinc-900/40 p-5 rounded-lg">
                     <div class="font-mono text-xs font-bold text-zinc-400 mb-1">TENET 03</div>
-                    <h4 class="text-base font-bold text-white mb-2">Plain on Tablets (Habakkuk 2:2)</h4>
+                    <h4 class="text-base font-bold text-white mb-2">Systems That Last</h4>
                     <p class="text-xs text-zinc-400 leading-relaxed">
-                        &ldquo;Write the vision and make it plain on tablets, that he may run that readeth it.&rdquo; Software must provide unquestionable clarity so operators can execute without hesitation.
+                        We build for long-term operational durability. From database normalization to API contracts, our systems are engineered to scale predictably and run without constant fragility.
                     </p>
                 </div>
             </div>

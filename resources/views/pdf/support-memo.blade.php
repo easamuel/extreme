@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ExtremeSolutions Institutional Vision &amp; Mission Memorandum</title>
+    <title>ExtremeSolutions Institutional Engineering &amp; Support Memorandum</title>
     <style>
         @page {
             size: A4 portrait;
@@ -18,8 +18,8 @@
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             color: #18181b;
-            font-size: 9pt;
-            line-height: 1.5;
+            font-size: 8.5pt;
+            line-height: 1.45;
             margin: 0;
             padding: 0;
             background: #ffffff;
@@ -28,7 +28,7 @@
         table.header-table {
             width: 100%;
             border-collapse: collapse;
-            border-bottom: 2pt solid #18181b;
+            border-bottom: 2pt solid #0c1f3a;
             padding-bottom: 8pt;
             margin-bottom: 12pt;
         }
@@ -38,14 +38,16 @@
         }
 
         .logo-img {
-            height: 36pt;
+            height: 34pt;
             width: auto;
         }
 
         .motto-verse {
             font-size: 7.5pt;
-            font-style: italic;
-            color: #52525b;
+            font-weight: bold;
+            color: #059669;
+            text-transform: uppercase;
+            letter-spacing: 0.5pt;
             margin-top: 3pt;
         }
 
@@ -60,7 +62,7 @@
         .badge {
             display: inline-block;
             background: #f4f4f5;
-            color: #18181b;
+            color: #0c1f3a;
             border: 0.5pt solid #d4d4d8;
             font-weight: bold;
             padding: 2pt 5pt;
@@ -72,7 +74,7 @@
         .recipient-card {
             background: #fafafa;
             border: 0.75pt solid #e4e4e7;
-            border-left: 2.5pt solid #18181b;
+            border-left: 2.5pt solid #0c1f3a;
             padding: 6pt 8pt;
             margin-bottom: 10pt;
             font-size: 8pt;
@@ -81,7 +83,7 @@
         .memo-title {
             font-size: 11pt;
             font-weight: bold;
-            color: #18181b;
+            color: #0c1f3a;
             text-transform: uppercase;
             letter-spacing: 0.5pt;
             margin: 0 0 8pt 0;
@@ -90,9 +92,10 @@
         }
 
         .salutation {
-            font-size: 9.5pt;
+            font-size: 9pt;
             font-weight: bold;
             margin-bottom: 6pt;
+            color: #0c1f3a;
         }
 
         p {
@@ -105,7 +108,7 @@
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 0.8pt;
-            color: #18181b;
+            color: #0c1f3a;
             margin: 8pt 0 3pt 0;
             border-bottom: 0.5pt dotted #d4d4d8;
             padding-bottom: 1pt;
@@ -127,14 +130,14 @@
         }
 
         .stat-num {
-            font-size: 12pt;
+            font-size: 11pt;
             font-weight: bold;
             font-family: monospace;
-            color: #18181b;
+            color: #0c1f3a;
         }
 
         .stat-label {
-            font-size: 7pt;
+            font-size: 6.5pt;
             font-weight: bold;
             text-transform: uppercase;
             color: #52525b;
@@ -142,22 +145,14 @@
         }
 
         .stat-desc {
-            font-size: 7pt;
+            font-size: 6.5pt;
             color: #71717a;
             line-height: 1.3;
             margin-top: 2pt;
         }
 
-        .callout-box {
-            background: #f4f4f5;
-            border: 0.5pt solid #d4d4d8;
-            padding: 6pt 8pt;
-            margin: 6pt 0 8pt 0;
-            font-size: 8pt;
-        }
-
         .signature-block {
-            margin-top: 10pt;
+            margin-top: 12pt;
             page-break-inside: avoid;
         }
 
@@ -171,13 +166,13 @@
         }
 
         .sig-img {
-            height: 32pt;
+            height: 30pt;
             width: auto;
             margin-bottom: 2pt;
         }
 
         .footer-note {
-            margin-top: 10pt;
+            margin-top: 12pt;
             padding-top: 4pt;
             border-top: 0.5pt solid #e4e4e7;
             font-size: 6.5pt;
@@ -188,7 +183,7 @@
 
         @media screen {
             .print-bar {
-                background: #18181b;
+                background: #0c1f3a;
                 color: #ffffff;
                 padding: 10px 16px;
                 display: flex;
@@ -199,8 +194,8 @@
                 margin-bottom: 16px;
             }
             .print-btn {
-                background: #22c55e;
-                color: #000;
+                background: #00ff88;
+                color: #0c1f3a;
                 font-weight: bold;
                 padding: 6px 14px;
                 border-radius: 4px;
@@ -217,7 +212,7 @@
 
 @if(!empty($isPrintFallback))
 <div class="print-bar">
-    <div><strong>ExtremeSolutions Institutional Memo:</strong> Secondary Education Infrastructure</div>
+    <div><strong>ExtremeSolutions Technical SLA &amp; Support Memo</strong></div>
     <button onclick="window.print()" class="print-btn">Print / Save as PDF</button>
 </div>
 <script>
@@ -232,28 +227,28 @@
             @if(!empty($logoBase64))
                 <img src="{{ $logoBase64 }}" class="logo-img" alt="ExtremeSolutions">
             @else
-                <div style="font-size: 14pt; font-weight: bold; color: #18181b;">EXTREMESOLUTIONS</div>
+                <div style="font-size: 14pt; font-weight: bold; color: #0c1f3a;">EXTREMESOLUTIONS</div>
             @endif
-            <div class="motto-verse">"Write the vision and make it plain on tablets, that he may run that readeth it." &mdash; Habakkuk 2:2</div>
+            <div class="motto-verse">Building Digital Systems that last.</div>
         </td>
         <td style="width: 42%;" class="header-meta">
-            <span class="badge">INSTITUTIONAL MEMO &bull; UNLISTED</span><br>
+            <span class="badge">TECHNICAL SLA &bull; DIRECT MEMORANDUM</span><br>
             <strong>Ref:</strong> {{ $refCode }}<br>
             <strong>Date:</strong> {{ $dateStr }}<br>
-            <strong>Source:</strong> Office of the Founder &bull; Lagos, NG
+            <strong>Engineering Desk:</strong> Lagos, NG &bull; Global Remote
         </td>
     </tr>
 </table>
 
 <!-- Recipient Identification -->
 <div class="recipient-card">
-    <strong>DESIGNATED PARTNER / ALLY:</strong> {{ $name }} &nbsp;|&nbsp; 
-    <strong>ORIGINATING INITIATIVE:</strong> Secondary School Management &amp; CBT Infrastructure Initiative
+    <strong>ENTERPRISE CLIENT / PARTNER:</strong> {{ $name }} &nbsp;|&nbsp; 
+    <strong>SUBJECT:</strong> Systems Support Standards, SLA &amp; Active Deployments
 </div>
 
 <!-- Title -->
 <div class="memo-title">
-    The Grassroots Wedge: Why Secondary Education is Africa's Critical Talent Bottleneck
+    Software Engineering Architecture, Enterprise SLA &amp; Operational Standards
 </div>
 
 <!-- Salutation -->
@@ -261,82 +256,81 @@
     Dear {{ $name }},
 </div>
 
-<!-- Part 1: Charter -->
 <p>
-    ExtremeSolutions does not build software to sell subscriptions; we engineer sovereign operational infrastructure for institutions that cannot afford to fail. When you inspect Africa's human capital pipeline, the greatest point of structural leakage is not higher education or primary school literacy—it is the <strong>secondary school system</strong> (JSS1 through SS3).
+    ExtremeSolutions is a digital engineering and software building company dedicated to engineering dependable custom platforms, mobile applications, cloud automation workflows, and high-throughput transactional backends.
 </p>
 
-<!-- Part 2: The Structural Crisis -->
-<div class="section-tag">1. The Structural Failure in Secondary Education</div>
+<div class="section-tag">01 // Engineering Philosophy: Systems That Last</div>
 <p>
-    Over <strong>70% of secondary school graduates in Nigeria touch an active computer keyboard for the very first time on the morning of their JAMB CBT national entrance examinations</strong>. Despite months of textbook preparation, bright students suffer acute computer-interface anxiety, double-clicking radio buttons, losing cursor control, and watching exam timers expire without answering questions. This single technical barrier suppresses tertiary admission rates and stunts lifelong earning trajectories.
-</p>
-<p>
-    Concurrently, secondary school administrators and teachers bleed time and revenue: <strong>faculties waste 2 to 3 weeks every term</strong> manually computing continuous assessments and transcribing handwritten broadsheets, while bursaries lose up to 22% of tuition capital to untracked fee defaulters and unverified paper bank tellers.
+    Too much enterprise software is built for theoretical environments rather than how modern organizations actually operate. ExtremeSolutions rejects superficial web wrappers and unstable codebases. We build resilient, high-performance architectures capable of scaling smoothly across complex emerging market conditions, variable network latency, and intensive daily operations.
 </p>
 
-<!-- Metrics -->
+<div class="section-tag">02 // Enterprise Support SLA &amp; Infrastructure Governance</div>
+<p>
+    To ensure every platform we deliver remains dependable, ExtremeSolutions provides comprehensive technical stewardship:
+</p>
+
 <table class="stats-table">
     <tr>
         <td>
-            <div class="stat-num">70%+</div>
-            <div class="stat-label">CBT Interface Shock</div>
-            <div class="stat-desc">Candidates encountering timed computer examination interfaces for the first time during JAMB.</div>
+            <div class="stat-num">99.9%</div>
+            <div class="stat-label">Uptime Target</div>
+            <div class="stat-desc">Proactive automated server monitoring, daily database snapshots, and automated failover routing.</div>
         </td>
         <td>
-            <div class="stat-num">14–21 Days</div>
-            <div class="stat-label">Broadsheet Latency</div>
-            <div class="stat-desc">Teaching hours lost every term to manual arithmetic, remark copying, and error recalculation.</div>
+            <div class="stat-num">&lt; 60 Min</div>
+            <div class="stat-label">Critical Escalation</div>
+            <div class="stat-desc">Direct hotline to senior engineering leads for rapid resolution of production bottlenecks.</div>
         </td>
         <td>
-            <div class="stat-num">12 Seconds</div>
-            <div class="stat-label">ExtremeSolutions OS</div>
-            <div class="stat-desc">Full grade aggregation, ranking, and broadsheet compilation speed across an entire secondary school.</div>
+            <div class="stat-num">Regular</div>
+            <div class="stat-label">Security Patches</div>
+            <div class="stat-desc">Continuous dependency updates, SSL management, and database query optimization.</div>
         </td>
     </tr>
 </table>
 
-<!-- Part 3: The Active Solution & 48-Hour Model -->
-<div class="section-tag">2. The Solution: ExtremeSolutions Secondary OS &amp; 48-Hour Taskforce</div>
+<div class="section-tag">03 // Active Field Deployments &amp; Flagship Products</div>
 <p>
-    We have engineered <strong>sms.extremesolutions.com.ng</strong> to solve this crisis from the root. It automates report broadsheets and fee recovery today, while embedding <strong>daily, continuous computer-based testing (CBT)</strong> into secondary classrooms so students develop natural digital fluency years before external exit examinations.
+    To guarantee our software is battle-tested, we operate our own live platforms every day:
 </p>
-<div class="callout-box">
-    <strong>The On-Ground Deployment Taskforce:</strong> Educational software fails in Africa when it is sold over Zoom without local enablement. ExtremeSolutions deploys an on-site engineering crew that scans physical registers, digitizes student broadsheets within <strong>48 hours</strong>, and trains teachers directly on campus.
-</div>
+<ul style="margin: 4pt 0 8pt 16pt; padding: 0;">
+    <li style="margin-bottom: 4pt;">
+        <strong>ExtremeSMS (School Operating System &mdash; sms.extremesolutions.com.ng):</strong> Our active frontline deployment resolving core secondary education (JSS1&ndash;SS3) bottlenecks &mdash; automating continuous assessment broadsheets in 12 seconds, enforcing zero-leakage tuition gate passes, and conducting offline-resilient CBT exam drills with an on-ground 48-hour assisted taskforce.
+    </li>
+    <li style="margin-bottom: 4pt;">
+        <strong>ESPass (Event Ticketing &amp; Access Control &mdash; espass.extremesolutions.com.ng):</strong> High-concurrency ticketing engine featuring sub-150ms cryptographic QR gate validation and offline scanner resilience.
+    </li>
+</ul>
 
 <p>
-    We invite you to stand with us as an institutional partner, back this secondary school rollout in your home district, or connect our taskforce with secondary school proprietors in your network.
+    Whether you require mission-critical software engineering, custom mobile development, or long-term operational support, ExtremeSolutions delivers structural discipline and dependable code.
 </p>
 
-<!-- Signature & Authentication -->
+<!-- Signature Block -->
 <div class="signature-block">
     <table class="sig-table">
         <tr>
-            <td style="width: 65%;">
-                <div style="font-size: 7.5pt; color: #71717a; margin-bottom: 2pt;">Signed with structural conviction,</div>
+            <td style="width: 60%;">
                 @if(!empty($sigBase64))
-                    <img src="{{ $sigBase64 }}" class="sig-img" alt="Samuel Ekunyan Signature">
+                    <img src="{{ $sigBase64 }}" class="sig-img" alt="Samuel Ekunyan">
                 @endif
-                <div style="font-size: 9.5pt; font-weight: bold; color: #18181b;">Samuel Ekunyan</div>
-                <div style="font-size: 7.5pt; color: #52525b;">Founder &amp; Principal Systems Architect &bull; ExtremeSolutions</div>
+                <div style="font-weight: bold; font-size: 9pt; color: #0c1f3a;">SAMUEL EKUNYAN</div>
+                <div style="font-size: 7pt; color: #52525b;">Founder &amp; Principal Systems Architect</div>
+                <div style="font-size: 7pt; color: #71717a;">ExtremeSolutions &bull; extremesolutions.com.ng</div>
             </td>
-            <td style="width: 35%; text-align: right;">
-                <div style="border: 1pt solid #18181b; padding: 4pt 6pt; display: inline-block; text-align: left;">
-                    <div style="font-size: 6.5pt; font-family: monospace; font-weight: bold;">SECURITY AUTHENTICATION</div>
-                    <div style="font-size: 7pt; font-family: monospace;">{{ $refCode }}</div>
-                    <div style="font-size: 5.5pt; color: #71717a;">extremesolutions.com.ng/support</div>
-                </div>
+            <td style="width: 40%; text-align: right; font-size: 7pt; color: #52525b; font-family: monospace;">
+                <div>SUPPORT SLA CODE: {{ $refCode }}</div>
+                <div>STATUS: PRODUCTION ACTIVE</div>
             </td>
         </tr>
     </table>
 </div>
 
-<!-- Footer -->
+<!-- Footer Note -->
 <div class="footer-note">
-    ExtremeSolutions &bull; Systems &amp; Software Infrastructure &bull; sms.extremesolutions.com.ng &bull; +234 905 258 5622 &bull; info@extremesolutions.com.ng
+    EXTREMESOLUTIONS &bull; "BUILDING DIGITAL SYSTEMS THAT LAST." &bull; INFO@EXTREMESOLUTIONS.COM.NG &bull; +234 905 258 5622
 </div>
 
 </body>
 </html>
-

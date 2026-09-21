@@ -220,7 +220,7 @@
             @else
                 <div style="font-size: 14pt; font-weight: bold; color: #18181b;">EXTREMESOLUTIONS</div>
             @endif
-            <div class="motto-verse">"Write the vision and make it plain on tablets, that he may run that readeth it." &mdash; Habakkuk 2:2</div>
+            <div class="motto-verse">Building Digital Systems that last.</div>
         </td>
         <td style="width: 42%;" class="header-meta">
             <span class="badge-red">CONFIDENTIAL &bull; STEALTH EYES-ONLY</span><br>
@@ -322,7 +322,7 @@
 
 <!-- Footer Note -->
 <div class="footer-note">
-    HABAKKUK 2:2 &bull; "WRITE THE VISION AND MAKE IT PLAIN ON TABLETS" &bull; EXTREMESOLUTIONS STEALTH LAB
+    EXTREMESOLUTIONS &bull; "BUILDING DIGITAL SYSTEMS THAT LAST." &bull; EXTREMESOLUTIONS STEALTH LAB
 </div>
 
 </body>

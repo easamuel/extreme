@@ -12,14 +12,14 @@ use Illuminate\Support\Str;
 /**
  * Class SupportController
  * 
- * Manages the unlisted Institutional Support & Backer Funnel.
- * Delivers the corporate charter (Habakkuk 2:2), the frontline secondary education mission,
- * the 48-hour assisted on-ground deployment model, and peer-to-peer viral amplification.
+ * Manages the unlisted Enterprise Systems Support & SLA Portal.
+ * Delivers ExtremeSolutions technical stewardship standards ("Building Digital Systems that last"),
+ * enterprise SLA commitments, support channels, and links to active product deployments.
  */
 class SupportController extends Controller
 {
     /**
-     * Display the Institutional Vision & Active Secondary Education Mission.
+     * Display the Enterprise Support & Systems Architecture Standard.
      *
      * @param Request $request
      * @return View

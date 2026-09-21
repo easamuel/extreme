@@ -44,8 +44,8 @@
                                 <p class="text-[10px] uppercase tracking-widest text-zinc-500 font-semibold">Executive Strategy Laboratory</p>
                             </div>
                         </div>
-                        <p class="mt-3 text-xs italic text-zinc-400 font-serif">
-                            &ldquo;Write the vision and make it plain on tablets, that he may run that readeth it.&rdquo; &mdash; Habakkuk 2:2
+                        <p class="mt-2 text-xs uppercase tracking-widest text-emerald-400 font-mono font-bold">
+                            Building Digital Systems that last.
                         </p>
                     </div>
 
@@ -123,7 +123,7 @@
                     ExtremeSolutions is fundamentally a <strong>software building company</strong>. We build critical digital infrastructure. Secondary education is our grassroots distribution wedge &mdash; it provides deep institutional lock-in, cash-flow independence, and direct physical footholds in every community.
                 </p>
                 <p>
-                    In parallel, our engineering laboratory develops high-throughput commerce systems like <strong>Espass</strong> (high-concurrency event ticketing and gate validation) and bespoke enterprise workflow automation engines for forward-thinking organizations. We write the vision, make it plain on tablets, and execute with structural discipline.
+                    In parallel, our engineering laboratory develops high-throughput commerce systems like <strong>Espass</strong> (high-concurrency event ticketing and gate validation) and bespoke enterprise workflow automation engines for forward-thinking organizations. We build dependable software, partner with ambitious leaders, and execute with relentless structural discipline.
                 </p>
 
             </div>
