@@ -311,7 +311,7 @@
 </ul>
 
 <p>
-    We propose a brief 15-minute operational demonstration at your administrative office next week, where we will generate a live sample broadsheet for your review.
+    We propose a brief 15-minute technical briefing and live broadsheet walk-through at your administrative office next week, where we will generate a live sample broadsheet for your review.
 </p>
 
 <!-- Signature Block -->
