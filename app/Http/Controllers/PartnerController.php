@@ -47,7 +47,28 @@ class PartnerController extends Controller
             'school' => $sanitized['school'],
             'refCode' => $sanitized['refCode'],
             'dateStr' => $sanitized['dateStr'],
+            'isPersonalized' => $sanitized['isPersonalized'],
             'exportPdfUrl' => route('partner.pdf', $sanitized['rawParams']),
+        ]);
+    }
+
+    /**
+     * Display the Secret Admin Dispatch Console for generating personalized School Proposals.
+     *
+     * @param Request $request
+     * @return View
+     */
+    public function dispatchProposal(Request $request): View
+    {
+        $sanitized = $this->sanitizeParams($request);
+
+        return view('partner.dispatch', [
+            'initialProprietor' => $sanitized['isPersonalized'] ? $sanitized['proprietor'] : 'Mrs. Adeleke',
+            'initialSchool' => $sanitized['isPersonalized'] ? $sanitized['school'] : 'Royal Crown College',
+            'refCode' => $sanitized['refCode'],
+            'dateStr' => $sanitized['dateStr'],
+            'schoolBaseUrl' => route('partner.school'),
+            'pdfBaseUrl' => route('partner.pdf'),
         ]);
     }
 
@@ -132,8 +153,8 @@ class PartnerController extends Controller
         $cleanProprietor = $this->filterAlphanumeric($rawProprietor, 80);
         $cleanSchool = $this->filterAlphanumeric($rawSchool, 100);
 
-        $proprietor = !empty($cleanProprietor) ? $cleanProprietor : 'Mrs. Adeleke';
-        $school = !empty($cleanSchool) ? $cleanSchool : 'Royal Crown College';
+        $proprietor = !empty($cleanProprietor) ? $cleanProprietor : 'School Proprietor / Principal';
+        $school = !empty($cleanSchool) ? $cleanSchool : 'Your Secondary Institution';
 
         $refCode = 'PROP-SEC/RCC/' . date('Y');
         $dateStr = date('F j, Y');
@@ -149,6 +170,7 @@ class PartnerController extends Controller
             'refCode' => $refCode,
             'dateStr' => $dateStr,
             'rawParams' => $rawParams,
+            'isPersonalized' => !empty($cleanProprietor) || !empty($cleanSchool),
         ];
     }
 

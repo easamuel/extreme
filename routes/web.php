@@ -29,14 +29,16 @@ Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 // 1. INSTITUTIONAL SUPPORT & ACTIVE BACKER FUNNEL
 Route::prefix('support')->name('support.')->group(function () {
     Route::get('/', [SupportController::class, 'index'])->name('index'); // ExtremeSolutions Mission & Support
-    Route::get('/campaign', [SupportController::class, 'campaign'])->name('campaign'); // Active Support Campaign Letter
+    Route::get('/campaign', [SupportController::class, 'campaign'])->name('campaign'); // Active Support Campaign Letter (Public / Recipient)
+    Route::get('/dispatch', [SupportController::class, 'dispatchMemo'])->name('dispatch'); // Secret Admin Dispatch Generator
     Route::get('/export-pdf', [SupportController::class, 'exportPdf'])->name('pdf');
 });
 
 // 2. STRATEGIC PARTNERSHIP & SCHOOL PROPOSAL
 Route::prefix('partner')->name('partner.')->group(function () {
     Route::get('/', [PartnerController::class, 'index'])->name('index'); // ExtremeSolutions Partner Ecosystem
-    Route::get('/school', [PartnerController::class, 'schoolProposal'])->name('school'); // Commercial School Proposal Letter
+    Route::get('/school', [PartnerController::class, 'schoolProposal'])->name('school'); // Commercial School Proposal Letter (Public / Recipient)
+    Route::get('/dispatch', [PartnerController::class, 'dispatchProposal'])->name('dispatch'); // Secret Admin Dispatch Generator
     Route::get('/export-pdf', [PartnerController::class, 'exportPdf'])->name('pdf');
 });
 

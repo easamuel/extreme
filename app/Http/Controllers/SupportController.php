@@ -47,7 +47,27 @@ class SupportController extends Controller
             'referrer' => $sanitized['referrer'],
             'refCode' => $sanitized['refCode'],
             'dateStr' => $sanitized['dateStr'],
+            'isPersonalized' => $sanitized['isPersonalized'],
             'exportPdfUrl' => route('support.pdf', $sanitized['rawParams']),
+        ]);
+    }
+
+    /**
+     * Display the Secret Admin Dispatch Console for generating personalized Support Memos.
+     *
+     * @param Request $request
+     * @return View
+     */
+    public function dispatchMemo(Request $request): View
+    {
+        $sanitized = $this->sanitizeParams($request);
+
+        return view('support.dispatch', [
+            'initialName' => $sanitized['isPersonalized'] ? $sanitized['name'] : 'Engr. Tayo Balogun',
+            'refCode' => $sanitized['refCode'],
+            'dateStr' => $sanitized['dateStr'],
+            'campaignBaseUrl' => route('support.campaign'),
+            'pdfBaseUrl' => route('support.pdf'),
         ]);
     }
 
@@ -132,7 +152,7 @@ class SupportController extends Controller
         $cleanName = $this->filterAlphanumeric($rawName, 80);
         $cleanReferrer = $this->filterAlphanumeric($rawReferrer, 80);
 
-        $name = !empty($cleanName) ? $cleanName : 'Engr. Tayo Balogun';
+        $name = !empty($cleanName) ? $cleanName : 'Sir/Madam';
         $referrer = !empty($cleanReferrer) ? $cleanReferrer : 'ExtremeSolutions';
 
         $refCode = 'EXS-MEMO/SEC-' . date('Y') . '/08';
@@ -149,6 +169,7 @@ class SupportController extends Controller
             'refCode' => $refCode,
             'dateStr' => $dateStr,
             'rawParams' => $rawParams,
+            'isPersonalized' => !empty($cleanName),
         ];
     }
 

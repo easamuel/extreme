@@ -6,9 +6,8 @@
 @section('content')
 <div class="max-w-4xl mx-auto">
 
-    <!-- Unified Top Action & Personalization Console (Single Clean Form, 100% Functional) -->
-    <div class="no-print mb-6 space-y-3">
-        <!-- Action Row -->
+    <!-- Top Action Console (Clean Document Actions Only - No Forms) -->
+    <div class="no-print mb-6">
         <div class="flex flex-wrap items-center justify-between gap-3 bg-[#0c1f3a] border border-white/15 p-3.5 sm:p-4 rounded-xl shadow-xl text-xs font-mono text-white">
             <div class="flex items-center space-x-2.5">
                 <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -22,7 +21,7 @@
                 <button type="button"
                         id="btn-save-image"
                         onclick="window.downloadProposalImage()"
-                        class="inline-flex items-center px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white font-medium rounded-lg text-xs transition border border-white/15 cursor-pointer"
+                        class="inline-flex items-center px-3.5 py-2 bg-white/10 hover:bg-white/20 text-white font-medium rounded-lg text-xs transition border border-white/15 cursor-pointer"
                         title="Download this proposal as a high-resolution PNG image">
                     <svg class="w-3.5 h-3.5 mr-1.5 text-[#00ff88]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
@@ -34,7 +33,7 @@
                 <a id="btn-download-pdf"
                    href="{{ $exportPdfUrl }}"
                    target="_blank"
-                   class="inline-flex items-center px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white font-medium rounded-lg text-xs transition border border-white/15"
+                   class="inline-flex items-center px-3.5 py-2 bg-white/10 hover:bg-white/20 text-white font-medium rounded-lg text-xs transition border border-white/15"
                    title="Download formatted A4 PDF">
                     <svg class="w-3.5 h-3.5 mr-1.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
@@ -44,10 +43,10 @@
 
                 <!-- WhatsApp Share Button -->
                 <a id="btn-whatsapp-share"
-                   href="https://api.whatsapp.com/send?text={{ urlencode('I have a message for you from ExtremeSolutions:\n\nRE: Institutional Partnership for Broadsheet Automation and Student CBT Readiness\n\nPrepared for ' . $proprietor . ' (' . $school . '):\n' . url()->full()) }}"
+                   href="https://api.whatsapp.com/send?text={{ urlencode('I have a message for you from ExtremeSolutions:\n\nRE: Institutional Partnership for Broadsheet Automation and Student CBT Readiness\n\n' . ($isPersonalized ? 'Prepared for ' . $proprietor . ' (' . $school . '):\n' : '') . url()->full()) }}"
                    target="_blank"
-                   class="inline-flex items-center px-3.5 py-1.5 bg-[#25D366] hover:bg-[#20bd5a] text-slate-950 font-bold rounded-lg text-xs transition shadow-sm"
-                   title="Share on WhatsApp with recipient custom message">
+                   class="inline-flex items-center px-4 py-2 bg-[#25D366] hover:bg-[#20bd5a] text-slate-950 font-bold rounded-lg text-xs transition shadow-sm"
+                   title="Share on WhatsApp">
                     <svg class="w-3.5 h-3.5 mr-1.5 fill-current" viewBox="0 0 24 24">
                         <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.203c.043.071.043.419-.101.824z"/>
                     </svg>
@@ -58,32 +57,11 @@
                 <button type="button"
                         id="btn-copy-link"
                         onclick="window.copyProposalLink()"
-                        class="inline-flex items-center px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-lg text-xs transition border border-slate-700 cursor-pointer">
+                        class="inline-flex items-center px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-lg text-xs transition border border-slate-700 cursor-pointer">
                     <svg class="w-3.5 h-3.5 mr-1.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
                     </svg>
                     <span id="copy-link-text">Copy Link</span>
-                </button>
-            </div>
-        </div>
-
-        <!-- Single Clean Personalization Bar (No Description, No Duplicates) -->
-        <div class="bg-white/5 border border-white/10 rounded-xl p-3 sm:p-4 text-xs font-sans text-white flex flex-wrap items-center justify-between gap-3">
-            <div class="flex flex-wrap items-center gap-2 w-full sm:w-auto">
-                <input type="text"
-                       id="input-proprietor"
-                       value="{{ $proprietor }}"
-                       placeholder="Proprietor Name (e.g. Mrs. Adeleke)"
-                       class="px-3 py-2 bg-slate-800 border border-white/20 rounded-lg text-xs text-white placeholder-white/40 focus:outline-none focus:ring-1 focus:ring-emerald-400 w-full sm:w-52">
-                <input type="text"
-                       id="input-school"
-                       value="{{ $school }}"
-                       placeholder="School Name (e.g. Royal Crown College)"
-                       class="px-3 py-2 bg-slate-800 border border-white/20 rounded-lg text-xs text-white placeholder-white/40 focus:outline-none focus:ring-1 focus:ring-emerald-400 w-full sm:w-60">
-                <button type="button"
-                        onclick="window.applyProposalUpdates()"
-                        class="px-4 py-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold rounded-lg text-xs transition cursor-pointer">
-                    Apply
                 </button>
             </div>
         </div>
@@ -108,12 +86,14 @@
 
             <!-- Recipient Block -->
             <div class="mb-6 font-sans text-sm">
-                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">PREPARED EXCLUSIVELY FOR:</div>
+                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">
+                    {{ $isPersonalized ? 'PREPARED EXCLUSIVELY FOR:' : 'PREPARED FOR:' }}
+                </div>
                 <div class="font-bold text-slate-950 text-base">
-                    <span class="js-proprietor-target">{{ $proprietor }}</span>, Proprietress / Principal
+                    {{ $proprietor }}{{ $isPersonalized ? ', Proprietress / Principal' : '' }}
                 </div>
                 <div class="text-slate-700 font-medium text-sm">
-                    <span class="js-school-target">{{ $school }}</span>
+                    {{ $school }}
                 </div>
             </div>
 
@@ -125,7 +105,7 @@
             <!-- Salutation -->
             <div class="mb-6">
                 <p class="font-bold text-slate-950 text-base">
-                    Dear <span class="js-proprietor-target">{{ $proprietor }}</span>,
+                    Dear {{ $isPersonalized ? $proprietor : 'School Proprietor / Principal' }},
                 </p>
             </div>
 
@@ -140,7 +120,7 @@
                 </p>
 
                 <p>
-                    ExtremeSolutions is extending an institutional partnership invitation to <strong class="js-school-target text-slate-950">{{ $school }}</strong> to deploy our modern School Operating System (<a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-emerald-700 underline font-mono font-semibold">sms.extremesolutions.com.ng</a>) starting this term.
+                    ExtremeSolutions is extending an institutional partnership invitation to <strong class="text-slate-950">{{ $school }}</strong> to deploy our modern School Operating System (<a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-emerald-700 underline font-mono font-semibold">sms.extremesolutions.com.ng</a>) starting this term.
                 </p>
 
                 <h2 class="font-sans font-bold text-slate-950 text-sm uppercase tracking-wider pt-3 border-b border-slate-200 pb-1">
@@ -204,7 +184,7 @@
                         <strong>Zero Data Burden:</strong> Provide us your student lists on paper or Excel&mdash;our technical team migrates the entire student body into your secure database within 48 hours.
                     </li>
                     <li>
-                        <strong>On-Site Staff Certification:</strong> We conduct a 1-hour hands-on training workshop at <span class="js-school-target font-semibold text-slate-950">{{ $school }}</span> for your teachers and examination officers.
+                        <strong>On-Site Staff Certification:</strong> We conduct a 1-hour hands-on training workshop at <span class="font-semibold text-slate-950">{{ $school }}</span> for your teachers and examination officers.
                     </li>
                     <li>
                         <strong>Dedicated Support:</strong> We remain on call throughout your examination and result-generation periods to guarantee zero system downtime.
@@ -216,11 +196,11 @@
                 </p>
             </div>
 
-            <!-- Authentic Handwritten Signoff Block (Horizontal, Facing Right) -->
+            <!-- Authentic Handwritten Signoff Block (Upside-Down Rotated Orientation) -->
             <div class="mt-10 pt-6 border-t border-slate-200">
                 <p class="mb-2">Respectfully yours,</p>
 
-                <!-- Rotated Right-Facing Authentic Signature -->
+                <!-- Rotated Authentic Signature / Monogram -->
                 <div class="my-2">
                     <img src="{{ asset('images/signature.png') }}"
                          alt="Signature"
@@ -242,85 +222,9 @@
 
 </div>
 
-<!-- Zero-Dependency Native Vanilla JavaScript for Real-Time Instant DOM Updates & Export -->
+<!-- Native JavaScript for Copy Link and Image Export -->
 <script>
 (function() {
-    function getProprietor() {
-        const el = document.getElementById('input-proprietor');
-        return (el && el.value ? el.value : '{{ addslashes($proprietor) }}').trim();
-    }
-
-    function getSchool() {
-        const el = document.getElementById('input-school');
-        return (el && el.value ? el.value : '{{ addslashes($school) }}').trim();
-    }
-
-    function updateDOM() {
-        const prop = getProprietor();
-        const sch = getSchool();
-
-        // 1. Immediately replace all proprietor text targets
-        document.querySelectorAll('.js-proprietor-target').forEach(function(el) {
-            el.textContent = prop;
-        });
-
-        // 2. Immediately replace all school text targets
-        document.querySelectorAll('.js-school-target').forEach(function(el) {
-            el.textContent = sch;
-        });
-
-        // 3. Update browser history state & current URL
-        try {
-            const url = new URL(window.location.origin + '{{ route('partner.school') }}');
-            if (prop) url.searchParams.set('proprietor', prop);
-            if (sch) url.searchParams.set('school', sch);
-            const currentUrlStr = url.toString();
-
-            if (window.history && window.history.replaceState) {
-                window.history.replaceState({}, '', currentUrlStr);
-            }
-
-            // 4. Update Download PDF link
-            const pdfBtn = document.getElementById('btn-download-pdf');
-            if (pdfBtn) {
-                const pdfUrl = new URL(window.location.origin + '{{ route('partner.pdf') }}');
-                if (prop) pdfUrl.searchParams.set('proprietor', prop);
-                if (sch) pdfUrl.searchParams.set('school', sch);
-                pdfBtn.href = pdfUrl.toString();
-            }
-
-            // 5. Update WhatsApp link
-            const waBtn = document.getElementById('btn-whatsapp-share');
-            if (waBtn) {
-                const text = 'I have a message for you from ExtremeSolutions:\n\n' +
-                    'RE: Institutional Partnership for Broadsheet Automation and Student CBT Readiness\n\n' +
-                    'Prepared for ' + prop + ' (' + sch + '):\n' +
-                    currentUrlStr;
-                waBtn.href = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(text);
-            }
-        } catch (e) {
-            console.warn('URL update error:', e);
-        }
-    }
-
-    window.applyProposalUpdates = updateDOM;
-
-    const propInput = document.getElementById('input-proprietor');
-    const schInput = document.getElementById('input-school');
-
-    if (propInput) {
-        propInput.addEventListener('input', updateDOM);
-        propInput.addEventListener('keyup', updateDOM);
-        propInput.addEventListener('change', updateDOM);
-    }
-
-    if (schInput) {
-        schInput.addEventListener('input', updateDOM);
-        schInput.addEventListener('keyup', updateDOM);
-        schInput.addEventListener('change', updateDOM);
-    }
-
-    // Copy Link function
     window.copyProposalLink = function() {
         const copyText = document.getElementById('copy-link-text');
         const url = window.location.href;
@@ -335,7 +239,6 @@
         });
     };
 
-    // Download Proposal as Image function
     window.downloadProposalImage = function() {
         const btnText = document.getElementById('save-image-text');
         if (btnText) btnText.textContent = 'Generating...';
@@ -354,8 +257,7 @@
                 backgroundColor: '#ffffff',
                 logging: false
             }).then(function(canvas) {
-                const sch = getSchool();
-                const safeName = sch.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+                const safeName = '{{ addslashes(Str::slug($school)) }}' || 'school-proposal';
                 const link = document.createElement('a');
                 link.download = 'ExtremeSolutions-School-Proposal-' + safeName + '.png';
                 link.href = canvas.toDataURL('image/png');
@@ -383,9 +285,6 @@
             runExport();
         }
     };
-
-    // Initial run
-    updateDOM();
 })();
 </script>
 @endsection
