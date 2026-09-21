@@ -41,6 +41,8 @@ class PartnerController extends Controller
     public function schoolProposal(Request $request): View
     {
         $sanitized = $this->sanitizeParams($request);
+        $logoBase64 = $this->assetToBase64(public_path('images/es-mark.png'));
+        $sigBase64 = $this->assetToBase64(public_path('images/signature.png'));
 
         return view('partner.school', [
             'proprietor' => $sanitized['proprietor'],
@@ -49,6 +51,8 @@ class PartnerController extends Controller
             'dateStr' => $sanitized['dateStr'],
             'isPersonalized' => $sanitized['isPersonalized'],
             'exportPdfUrl' => route('partner.pdf', $sanitized['rawParams']),
+            'logoBase64' => $logoBase64,
+            'sigBase64' => $sigBase64,
         ]);
     }
 
@@ -61,6 +65,8 @@ class PartnerController extends Controller
     public function dispatchProposal(Request $request): View
     {
         $sanitized = $this->sanitizeParams($request);
+        $logoBase64 = $this->assetToBase64(public_path('images/es-mark.png'));
+        $sigBase64 = $this->assetToBase64(public_path('images/signature.png'));
 
         return view('partner.dispatch', [
             'initialProprietor' => $sanitized['isPersonalized'] ? $sanitized['proprietor'] : 'Mrs. Adeleke',
@@ -69,6 +75,8 @@ class PartnerController extends Controller
             'dateStr' => $sanitized['dateStr'],
             'schoolBaseUrl' => route('partner.school'),
             'pdfBaseUrl' => route('partner.pdf'),
+            'logoBase64' => $logoBase64,
+            'sigBase64' => $sigBase64,
         ]);
     }
 

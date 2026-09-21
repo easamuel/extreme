@@ -107,7 +107,7 @@
             <!-- Official Institutional Letterhead -->
             <header class="border-b-2 border-slate-950 pb-5 mb-8 font-sans">
                 <div class="flex items-center space-x-4">
-                    <img src="{{ asset('images/es-mark.png') }}" alt="ExtremeSolutions" class="h-12 w-auto">
+                    <img src="{{ !empty($logoBase64) ? $logoBase64 : asset('images/es-mark.png') }}" alt="ExtremeSolutions" class="h-12 w-auto">
                     <div>
                         <div class="text-2xl font-black tracking-tight text-slate-950 font-mono">EXTREMESOLUTIONS</div>
                         <div class="text-xs uppercase tracking-widest text-slate-600 font-bold">Office of the Principal Systems Architect</div>
@@ -207,7 +207,7 @@
                 <p class="mb-2">Yours in conviction and service,</p>
 
                 <div class="my-2">
-                    <img src="{{ asset('images/signature.png') }}"
+                    <img src="{{ !empty($sigBase64) ? $sigBase64 : asset('images/signature.png') }}"
                          alt="Signature"
                          class="h-16 w-auto opacity-95"
                          style="filter: contrast(1.15); max-width: 220px;">
@@ -309,41 +309,61 @@
             return;
         }
 
-        const runExport = function() {
-            window.html2canvas(target, {
-                scale: 2,
-                useCORS: true,
-                allowTaint: true,
-                backgroundColor: '#ffffff',
-                logging: false
-            }).then(function(canvas) {
-                const name = getName();
-                const safeName = (name || 'memo').toLowerCase().replace(/[^a-z0-9]+/g, '-');
-                const link = document.createElement('a');
-                link.download = 'ExtremeSolutions-Executive-Memo-' + safeName + '.png';
-                link.href = canvas.toDataURL('image/png');
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                if (btnText) btnText.textContent = 'Save as Image';
-            }).catch(function(err) {
-                console.error('html2canvas error:', err);
-                if (btnText) btnText.textContent = 'Save as Image';
-                alert('Could not generate image. Please use Download PDF.');
-            });
+        const name = getName();
+        const safeName = (name || 'memo').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+        const filename = 'ExtremeSolutions-Executive-Memo-' + safeName + '.png';
+
+        const triggerDownload = function(dataUrl) {
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = dataUrl;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            if (btnText) btnText.textContent = 'Save as Image';
         };
 
-        if (typeof window.html2canvas === 'undefined') {
-            const s = document.createElement('script');
-            s.src = 'https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js';
-            s.onload = runExport;
-            s.onerror = function() {
-                if (btnText) btnText.textContent = 'Save as Image';
-                alert('Could not load image generation tool. Please use Download PDF.');
-            };
-            document.head.appendChild(s);
+        // 1. Primary Engine: htmlToImage (native browser rendering, no CSS parser crashes)
+        if (window.htmlToImage && typeof window.htmlToImage.toPng === 'function') {
+            window.htmlToImage.toPng(target, {
+                quality: 0.98,
+                backgroundColor: '#ffffff',
+                pixelRatio: 2,
+                cacheBust: false
+            }).then(function(dataUrl) {
+                triggerDownload(dataUrl);
+            }).catch(function(err) {
+                console.warn('htmlToImage engine had an issue, falling back to html2canvas:', err);
+                fallbackHtml2Canvas();
+            });
         } else {
-            runExport();
+            fallbackHtml2Canvas();
+        }
+
+        function fallbackHtml2Canvas() {
+            if (typeof window.html2canvas !== 'undefined') {
+                window.html2canvas(target, {
+                    scale: 2,
+                    useCORS: true,
+                    allowTaint: true,
+                    backgroundColor: '#ffffff',
+                    logging: false
+                }).then(function(canvas) {
+                    triggerDownload(canvas.toDataURL('image/png'));
+                }).catch(function(err2) {
+                    console.error('html2canvas error:', err2);
+                    if (btnText) btnText.textContent = 'Save as Image';
+                    const pdfBtn = document.getElementById('btn-admin-pdf');
+                    if (pdfBtn && pdfBtn.href) {
+                        window.open(pdfBtn.href, '_blank');
+                    } else {
+                        window.print();
+                    }
+                });
+            } else {
+                if (btnText) btnText.textContent = 'Save as Image';
+                window.print();
+            }
         }
     };
 
@@ -352,3 +372,4 @@
 })();
 </script>
 @endsection
+

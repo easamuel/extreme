@@ -41,6 +41,8 @@ class SupportController extends Controller
     public function campaign(Request $request): View
     {
         $sanitized = $this->sanitizeParams($request);
+        $logoBase64 = $this->assetToBase64(public_path('images/es-mark.png'));
+        $sigBase64 = $this->assetToBase64(public_path('images/signature.png'));
 
         return view('support.campaign', [
             'name' => $sanitized['name'],
@@ -49,6 +51,8 @@ class SupportController extends Controller
             'dateStr' => $sanitized['dateStr'],
             'isPersonalized' => $sanitized['isPersonalized'],
             'exportPdfUrl' => route('support.pdf', $sanitized['rawParams']),
+            'logoBase64' => $logoBase64,
+            'sigBase64' => $sigBase64,
         ]);
     }
 
@@ -61,6 +65,8 @@ class SupportController extends Controller
     public function dispatchMemo(Request $request): View
     {
         $sanitized = $this->sanitizeParams($request);
+        $logoBase64 = $this->assetToBase64(public_path('images/es-mark.png'));
+        $sigBase64 = $this->assetToBase64(public_path('images/signature.png'));
 
         return view('support.dispatch', [
             'initialName' => $sanitized['isPersonalized'] ? $sanitized['name'] : 'Engr. Tayo Balogun',
@@ -68,6 +74,8 @@ class SupportController extends Controller
             'dateStr' => $sanitized['dateStr'],
             'campaignBaseUrl' => route('support.campaign'),
             'pdfBaseUrl' => route('support.pdf'),
+            'logoBase64' => $logoBase64,
+            'sigBase64' => $sigBase64,
         ]);
     }
 
