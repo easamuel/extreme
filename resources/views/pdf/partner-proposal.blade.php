@@ -217,7 +217,7 @@
                 <div class="header-title">EXTREMESOLUTIONS</div>
             @endif
             <div class="header-dept">Educational Infrastructure &amp; Deployment Taskforce</div>
-            <div style="font-size: 7.5pt; color: #64748b; margin-top: 1pt;">Lagos, Nigeria &bull; extremesolutions.com.ng &bull; sms.extremesolutions.com.ng</div>
+            <div style="font-size: 7.5pt; color: #64748b; margin-top: 1pt;">extremesolutions.com.ng &bull; sms.extremesolutions.com.ng</div>
         </td>
         <td style="width: 40%;" class="header-meta">
             <strong>Proposal Code:</strong> {{ $refCode }}<br>
@@ -325,7 +325,7 @@
                 @endif
                 <div style="font-weight: bold; font-size: 9pt; color: #0f172a;">Samuel Ekunyan</div>
                 <div style="font-size: 7.5pt; color: #475569;">Lead Systems Architect, ExtremeSolutions</div>
-                <div style="font-size: 7.5pt; color: #64748b;">sms.extremesolutions.com.ng &bull; Direct Line: +234 905 258 5622</div>
+                <div style="font-size: 7.5pt; color: #64748b;">sms.extremesolutions.com.ng</div>
             </td>
             <td style="width: 40%; text-align: right; font-size: 7pt; color: #64748b; font-family: monospace;">
                 <div>PROPOSAL REF: {{ $refCode }}</div>
@@ -337,7 +337,7 @@
 
 <!-- Footer Note -->
 <div class="footer-note">
-    EXTREMESOLUTIONS &bull; EDUCATIONAL INFRASTRUCTURE &bull; LAGOS, NIGERIA &bull; +234 905 258 5622
+    EXTREMESOLUTIONS &bull; EDUCATIONAL INFRASTRUCTURE &bull; BUILDING DIGITAL SYSTEMS THAT LAST
 </div>
 
 </body>

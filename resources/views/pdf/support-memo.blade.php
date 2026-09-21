@@ -196,7 +196,7 @@
                 <div class="header-title">EXTREMESOLUTIONS</div>
             @endif
             <div class="header-dept">Office of the Principal Systems Architect</div>
-            <div style="font-size: 7.5pt; color: #64748b; margin-top: 1pt;">Lagos, Nigeria &bull; extremesolutions.com.ng</div>
+            <div style="font-size: 7.5pt; color: #64748b; margin-top: 1pt;">extremesolutions.com.ng</div>
         </td>
         <td style="width: 40%;" class="header-meta">
             <strong>Document Ref:</strong> {{ $refCode }}<br>
@@ -299,7 +299,7 @@
 
 <!-- Footer Note -->
 <div class="footer-note">
-    EXTREMESOLUTIONS &bull; "WRITE THE VISION AND MAKE IT PLAIN ON TABLETS" &bull; LAGOS, NIGERIA
+    EXTREMESOLUTIONS &bull; BUILDING DIGITAL SYSTEMS THAT LAST
 </div>
 
 </body>

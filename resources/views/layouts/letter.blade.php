@@ -49,6 +49,9 @@
     <!-- html2canvas for High-Res Image Export -->
     <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+
     <!-- Vite Styles & JS -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -114,13 +117,11 @@
         <div class="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div class="text-center sm:text-left">
                 <div class="font-mono text-slate-200 font-bold uppercase tracking-wider text-[11px]">ExtremeSolutions &bull; Office of the Principal Systems Architect</div>
-                <div class="text-slate-400 mt-0.5 text-[11px]">Lagos, Nigeria &bull; Building Digital Systems that last.</div>
+                <div class="text-slate-400 mt-0.5 text-[11px]">Building Digital Systems that last.</div>
             </div>
             <div class="text-center sm:text-right font-mono text-[10px] text-slate-400">
-                <span>Direct Contact: </span>
+                <span>Inquiries: </span>
                 <a href="mailto:samuel@ekunyansamuel.dev" class="text-emerald-400 hover:underline">samuel@ekunyansamuel.dev</a>
-                <span class="mx-1">&bull;</span>
-                <a href="https://wa.me/2349052585622" target="_blank" class="text-emerald-400 hover:underline">+234 905 258 5622</a>
             </div>
         </div>
     </footer>
@@ -128,3 +129,4 @@
     @stack('scripts')
 </body>
 </html>
+

@@ -4,88 +4,9 @@
 @section('description', 'An urgent executive briefing on the grassroots infrastructure of Nigerian secondary education by Samuel Ekunyan, Principal Systems Architect.')
 
 @section('content')
-<div class="max-w-4xl mx-auto"
-     x-data="{
-        currentName: '{{ addslashes($name) }}',
-        inputName: '{{ addslashes($name) }}',
-        copied: false,
-        isExportingImg: false,
-        get currentUrl() {
-            let url = new URL(window.location.origin + '{{ route('support.campaign') }}');
-            if (this.currentName && this.currentName.trim()) {
-                url.searchParams.set('name', this.currentName.trim());
-            }
-            return url.toString();
-        },
-        get dynamicPdfUrl() {
-            let url = new URL(window.location.origin + '{{ route('support.pdf') }}');
-            if (this.currentName && this.currentName.trim()) {
-                url.searchParams.set('name', this.currentName.trim());
-            }
-            return url.toString();
-        },
-        get whatsappUrl() {
-            const text = 'I have a message for you from ExtremeSolutions:\n\n' +
-                'RE: An Urgent Operational Brief on the Grassroots Infrastructure of Nigerian Secondary Education\n\n' +
-                (this.currentName && this.currentName.trim() ? 'Prepared for ' + this.currentName.trim() + ':\n' : '') +
-                this.currentUrl;
-            return 'https://api.whatsapp.com/send?text=' + encodeURIComponent(text);
-        },
-        updateName() {
-            if (this.inputName && this.inputName.trim()) {
-                this.currentName = this.inputName.trim();
-                if (window.history && window.history.replaceState) {
-                    window.history.replaceState({}, '', this.currentUrl);
-                }
-            }
-        },
-        copyLink() {
-            navigator.clipboard.writeText(this.currentUrl).then(() => {
-                this.copied = true;
-                setTimeout(() => { this.copied = false; }, 2500);
-            });
-        },
-        saveAsImage() {
-            this.isExportingImg = true;
-            const target = document.getElementById('letter-paper');
-            if (!target) {
-                this.isExportingImg = false;
-                return;
-            }
+<div class="max-w-4xl mx-auto">
 
-            const runCanvas = () => {
-                window.html2canvas(target, {
-                    scale: 2,
-                    useCORS: true,
-                    allowTaint: true,
-                    backgroundColor: '#ffffff',
-                    logging: false
-                }).then(canvas => {
-                    const safe = (this.currentName || 'Leader').toLowerCase().replace(/[^a-z0-9]+/g, '-');
-                    const link = document.createElement('a');
-                    link.download = 'ExtremeSolutions-Executive-Memo-' + safe + '.png';
-                    link.href = canvas.toDataURL('image/png');
-                    link.click();
-                    this.isExportingImg = false;
-                }).catch(err => {
-                    console.error('Image export failed:', err);
-                    this.isExportingImg = false;
-                    alert('Image export failed in this browser session. You may use Download PDF.');
-                });
-            };
-
-            if (typeof window.html2canvas === 'undefined') {
-                const script = document.createElement('script');
-                script.src = 'https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js';
-                script.onload = runCanvas;
-                document.head.appendChild(script);
-            } else {
-                runCanvas();
-            }
-        }
-     }">
-
-    <!-- Top Action Console & Personalization (Zero Pop-ups, 100% Functional) -->
+    <!-- Unified Top Action & Personalization Console (Single Clean Form, 100% Functional) -->
     <div class="no-print mb-6 space-y-3">
         <!-- Action Row -->
         <div class="flex flex-wrap items-center justify-between gap-3 bg-[#0c1f3a] border border-white/15 p-3.5 sm:p-4 rounded-xl shadow-xl text-xs font-mono text-white">
@@ -98,18 +19,21 @@
 
             <div class="flex flex-wrap items-center gap-2">
                 <!-- Save As Image Button -->
-                <button @click="saveAsImage()"
-                        :disabled="isExportingImg"
-                        class="inline-flex items-center px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white font-medium rounded-lg text-xs transition border border-white/15 disabled:opacity-50"
-                        title="Download this letter as high-resolution PNG image">
+                <button type="button"
+                        id="btn-save-image"
+                        onclick="window.downloadMemoImage()"
+                        class="inline-flex items-center px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white font-medium rounded-lg text-xs transition border border-white/15 cursor-pointer"
+                        title="Download this memo as a high-resolution PNG image">
                     <svg class="w-3.5 h-3.5 mr-1.5 text-[#00ff88]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                     </svg>
-                    <span x-text="isExportingImg ? 'Generating...' : 'Save as Image'"></span>
+                    <span id="save-image-text">Save as Image</span>
                 </button>
 
                 <!-- Download PDF Button -->
-                <a :href="dynamicPdfUrl" target="_blank"
+                <a id="btn-download-pdf"
+                   href="{{ $exportPdfUrl }}"
+                   target="_blank"
                    class="inline-flex items-center px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white font-medium rounded-lg text-xs transition border border-white/15"
                    title="Download formatted A4 PDF">
                     <svg class="w-3.5 h-3.5 mr-1.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -119,7 +43,9 @@
                 </a>
 
                 <!-- WhatsApp Share Button -->
-                <a :href="whatsappUrl" target="_blank"
+                <a id="btn-whatsapp-share"
+                   href="https://api.whatsapp.com/send?text={{ urlencode('I have a message for you from ExtremeSolutions:\n\nRE: An Urgent Operational Brief on the Grassroots Infrastructure of Nigerian Secondary Education\n\nPrepared for ' . $name . ':\n' . url()->full()) }}"
+                   target="_blank"
                    class="inline-flex items-center px-3.5 py-1.5 bg-[#25D366] hover:bg-[#20bd5a] text-slate-950 font-bold rounded-lg text-xs transition shadow-sm"
                    title="Share on WhatsApp with recipient custom message">
                     <svg class="w-3.5 h-3.5 mr-1.5 fill-current" viewBox="0 0 24 24">
@@ -129,84 +55,71 @@
                 </a>
 
                 <!-- Copy Link Button -->
-                <button @click="copyLink()"
-                        class="inline-flex items-center px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-lg text-xs transition border border-slate-700">
+                <button type="button"
+                        id="btn-copy-link"
+                        onclick="window.copyMemoLink()"
+                        class="inline-flex items-center px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-lg text-xs transition border border-slate-700 cursor-pointer">
                     <svg class="w-3.5 h-3.5 mr-1.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
                     </svg>
-                    <span x-text="copied ? 'Copied Link!' : 'Copy Link'"></span>
+                    <span id="copy-link-text">Copy Link</span>
                 </button>
             </div>
         </div>
 
-        <!-- Live Personalization Bar: Instant Real-Time Letter Update -->
-        <div class="bg-white/5 border border-white/10 rounded-xl p-3 sm:p-4 text-xs font-sans text-white flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-            <div class="flex items-center space-x-2">
-                <span class="text-emerald-400 font-bold uppercase tracking-wider text-[11px]">Personalize Recipient:</span>
-                <span class="text-white/60 text-[11px]">(Live preview updates instantly on the letter)</span>
-            </div>
-            <form @submit.prevent="updateName()" class="flex items-center gap-2">
+        <!-- Single Clean Personalization Bar (No Description, No Duplicates) -->
+        <div class="bg-white/5 border border-white/10 rounded-xl p-3 sm:p-4 text-xs font-sans text-white flex flex-wrap items-center justify-between gap-3">
+            <div class="flex items-center gap-2 w-full sm:w-auto">
                 <input type="text"
-                       x-model="inputName"
-                       @input="currentName = inputName || '{{ addslashes($name) }}'; if (window.history.replaceState) window.history.replaceState({}, '', currentUrl);"
-                       placeholder="e.g. Engr. Tayo Balogun"
-                       class="px-3 py-1.5 bg-slate-800 border border-white/20 rounded-lg text-xs text-white placeholder-white/40 focus:outline-none focus:ring-1 focus:ring-emerald-400 w-52 sm:w-64">
-                <button type="submit"
-                        class="px-3.5 py-1.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold rounded-lg text-xs transition">
+                       id="input-name"
+                       value="{{ $name }}"
+                       placeholder="Recipient Name (e.g. Engr. Tayo Balogun)"
+                       class="px-3 py-2 bg-slate-800 border border-white/20 rounded-lg text-xs text-white placeholder-white/40 focus:outline-none focus:ring-1 focus:ring-emerald-400 w-full sm:w-72">
+                <button type="button"
+                        onclick="window.applyMemoUpdates()"
+                        class="px-4 py-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold rounded-lg text-xs transition cursor-pointer">
                     Apply
                 </button>
-            </form>
+            </div>
         </div>
     </div>
 
     <!-- The Authentic Executive Letter Paper Surface (Rendered for Screen, Print & Canvas Export) -->
     <div class="flex justify-center">
         <article id="letter-paper"
-                 class="print-paper w-full bg-white text-slate-900 border border-slate-200 shadow-2xl rounded-sm p-7 sm:p-14 lg:p-16 font-serif text-[15px] leading-relaxed relative overflow-hidden">
-
-            <!-- Security Watermark Pattern (Discrete, High-Trust) -->
-            <div class="absolute inset-0 pointer-events-none opacity-[0.018] flex items-center justify-center select-none" aria-hidden="true">
-                <img src="{{ asset('images/es-mark.png') }}" alt="" class="w-[500px] h-[500px]">
-            </div>
+                 class="print-paper w-full bg-white text-slate-900 border border-slate-200 shadow-2xl rounded-sm p-7 sm:p-14 lg:p-16 font-serif text-[15px] leading-relaxed relative">
 
             <!-- Official Institutional Letterhead -->
-            <header class="border-b-2 border-slate-950 pb-5 mb-8 font-sans relative z-10">
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                    <div class="flex items-center space-x-4">
-                        <img src="{{ asset('images/es-mark.png') }}" alt="ExtremeSolutions" class="h-12 w-auto">
-                        <div>
-                            <div class="text-2xl font-black tracking-tight text-slate-950 font-mono">EXTREMESOLUTIONS</div>
-                            <div class="text-xs uppercase tracking-widest text-slate-600 font-bold">Office of the Principal Systems Architect</div>
-                            <div class="text-[11px] text-slate-500">Lagos, Nigeria &bull; extremesolutions.com.ng</div>
-                        </div>
-                    </div>
-                    <div class="text-left sm:text-right font-mono text-xs text-slate-600 space-y-1">
-                        <div>DOCUMENT REF: <strong class="text-slate-950">{{ $refCode }}</strong></div>
-                        <div>DATE: <span class="text-slate-900">{{ $dateStr }}</span></div>
-                        <div class="text-[10px] text-emerald-700 font-semibold uppercase tracking-wider">&bull; CLASSIFICATION: STRATEGIC MEMO</div>
+            <header class="border-b-2 border-slate-950 pb-5 mb-8 font-sans">
+                <div class="flex items-center space-x-4">
+                    <img src="{{ asset('images/es-mark.png') }}" alt="ExtremeSolutions" class="h-12 w-auto">
+                    <div>
+                        <div class="text-2xl font-black tracking-tight text-slate-950 font-mono">EXTREMESOLUTIONS</div>
+                        <div class="text-xs uppercase tracking-widest text-slate-600 font-bold">Office of the Principal Systems Architect</div>
+                        <div class="text-[11px] text-slate-500">extremesolutions.com.ng</div>
                     </div>
                 </div>
             </header>
 
-            <!-- Recipient Salutation (Dynamically Bound to Alpine) -->
-            <div class="mb-6 relative z-10">
+            <!-- Recipient Salutation -->
+            <div class="mb-6">
                 <p class="font-bold text-slate-950 text-base">
-                    Dear <span x-text="currentName">{{ $name }}</span>,
+                    Dear <span class="js-recipient-target">{{ $name }}</span>,
                 </p>
             </div>
 
             <!-- Subject Line -->
-            <div class="mb-8 font-sans font-bold text-slate-950 text-sm sm:text-base border-l-4 border-slate-950 pl-4 py-1.5 bg-slate-50 relative z-10">
+            <div class="mb-8 font-sans font-bold text-slate-950 text-sm sm:text-base border-l-4 border-slate-950 pl-4 py-1.5 bg-slate-50">
                 RE: An Urgent Operational Brief on the Grassroots Infrastructure of Nigerian Secondary Education
             </div>
 
             <!-- Habakkuk Charter Quote -->
-            <blockquote class="my-6 pl-4 border-l-2 border-slate-300 italic text-slate-600 text-sm relative z-10">
+            <blockquote class="my-6 pl-4 border-l-2 border-slate-300 italic text-slate-600 text-sm">
                 &ldquo;Write the vision and make it plain on tablets, that he may run that readeth it.&rdquo; &mdash; Habakkuk 2:2
             </blockquote>
 
             <!-- Letter Body Content -->
-            <div class="space-y-5 text-justify relative z-10">
+            <div class="space-y-5 text-justify">
                 <p>
                     ExtremeSolutions was established on a single principle: build resilient software and operational systems that permanently remove manual failure from African institutions.
                 </p>
@@ -274,16 +187,16 @@
                 </p>
             </div>
 
-            <!-- Authentic Handwritten Signoff Block -->
-            <div class="mt-10 pt-6 border-t border-slate-200 relative z-10">
+            <!-- Authentic Handwritten Signoff Block (Horizontal, Facing Right) -->
+            <div class="mt-10 pt-6 border-t border-slate-200">
                 <p class="mb-2">Yours in conviction and service,</p>
 
-                <!-- Authentic Samuel Ekunyan Pen Signature -->
-                <div class="my-1">
+                <!-- Rotated Right-Facing Authentic Signature -->
+                <div class="my-2">
                     <img src="{{ asset('images/signature.png') }}"
-                         alt="Samuel Ekunyan Signature"
-                         class="h-20 w-auto opacity-95"
-                         style="filter: contrast(1.15);">
+                         alt="Signature"
+                         class="h-16 w-auto opacity-95"
+                         style="filter: contrast(1.15); max-width: 220px;">
                 </div>
 
                 <div class="font-sans text-sm">
@@ -294,37 +207,136 @@
                         <a href="https://extremesolutions.com.ng" target="_blank" class="underline">extremesolutions.com.ng</a>
                     </div>
                 </div>
-
-                <!-- Verification Stamp -->
-                <div class="mt-6 inline-flex items-center gap-2 px-3 py-1.5 rounded bg-slate-50 border border-slate-200 font-mono text-[11px] text-slate-600">
-                    <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
-                    <span>AUTHENTICATED BY EXTREMESOLUTIONS ARCHITECTURAL OFFICE &bull; LAGOS, NG</span>
-                </div>
             </div>
 
         </article>
     </div>
 
-    <!-- Bottom Forward Card (Zero Popups) -->
-    <div class="no-print mt-8 bg-[#0c1f3a] border border-white/15 rounded-xl p-5 sm:p-6 shadow-xl font-sans text-white">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            <div>
-                <h3 class="text-sm font-bold text-white">Forward this Briefing to Another Leader</h3>
-                <p class="text-xs text-white/70 mt-0.5">Enter their name to generate a personalized link instantly:</p>
-            </div>
-            <form @submit.prevent="updateName()" class="flex items-center gap-2">
-                <input type="text"
-                       x-model="inputName"
-                       @input="currentName = inputName || '{{ addslashes($name) }}'; if (window.history.replaceState) window.history.replaceState({}, '', currentUrl);"
-                       placeholder="e.g. Engr. Tayo Balogun"
-                       class="px-3 py-1.5 bg-slate-800 border border-white/20 rounded-lg text-xs text-white placeholder-white/40 focus:outline-none focus:ring-1 focus:ring-emerald-400 w-48 sm:w-60">
-                <button type="submit"
-                        class="px-4 py-1.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold rounded-lg text-xs transition">
-                    Update Link
-                </button>
-            </form>
-        </div>
-    </div>
-
 </div>
+
+<!-- Zero-Dependency Native Vanilla JavaScript for Real-Time Instant DOM Updates & Export -->
+<script>
+(function() {
+    function getName() {
+        const el = document.getElementById('input-name');
+        return (el && el.value ? el.value : '{{ addslashes($name) }}').trim();
+    }
+
+    function updateDOM() {
+        const name = getName();
+
+        // 1. Immediately replace all recipient text targets
+        document.querySelectorAll('.js-recipient-target').forEach(function(el) {
+            el.textContent = name;
+        });
+
+        // 2. Update browser history state & current URL
+        try {
+            const url = new URL(window.location.origin + '{{ route('support.campaign') }}');
+            if (name) url.searchParams.set('name', name);
+            const currentUrlStr = url.toString();
+
+            if (window.history && window.history.replaceState) {
+                window.history.replaceState({}, '', currentUrlStr);
+            }
+
+            // 3. Update Download PDF link
+            const pdfBtn = document.getElementById('btn-download-pdf');
+            if (pdfBtn) {
+                const pdfUrl = new URL(window.location.origin + '{{ route('support.pdf') }}');
+                if (name) pdfUrl.searchParams.set('name', name);
+                pdfBtn.href = pdfUrl.toString();
+            }
+
+            // 4. Update WhatsApp link
+            const waBtn = document.getElementById('btn-whatsapp-share');
+            if (waBtn) {
+                const text = 'I have a message for you from ExtremeSolutions:\n\n' +
+                    'RE: An Urgent Operational Brief on the Grassroots Infrastructure of Nigerian Secondary Education\n\n' +
+                    'Prepared for ' + name + ':\n' +
+                    currentUrlStr;
+                waBtn.href = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(text);
+            }
+        } catch (e) {
+            console.warn('URL update error:', e);
+        }
+    }
+
+    window.applyMemoUpdates = updateDOM;
+
+    const nameInput = document.getElementById('input-name');
+    if (nameInput) {
+        nameInput.addEventListener('input', updateDOM);
+        nameInput.addEventListener('keyup', updateDOM);
+        nameInput.addEventListener('change', updateDOM);
+    }
+
+    // Copy Link function
+    window.copyMemoLink = function() {
+        const copyText = document.getElementById('copy-link-text');
+        const url = window.location.href;
+        navigator.clipboard.writeText(url).then(function() {
+            if (copyText) {
+                const orig = copyText.textContent;
+                copyText.textContent = 'Copied!';
+                setTimeout(function() { copyText.textContent = orig; }, 2500);
+            }
+        }).catch(function() {
+            alert('Copied URL: ' + url);
+        });
+    };
+
+    // Download Memo as Image function
+    window.downloadMemoImage = function() {
+        const btnText = document.getElementById('save-image-text');
+        if (btnText) btnText.textContent = 'Generating...';
+
+        const target = document.getElementById('letter-paper');
+        if (!target) {
+            if (btnText) btnText.textContent = 'Save as Image';
+            return;
+        }
+
+        const runExport = function() {
+            window.html2canvas(target, {
+                scale: 2,
+                useCORS: true,
+                allowTaint: true,
+                backgroundColor: '#ffffff',
+                logging: false
+            }).then(function(canvas) {
+                const name = getName();
+                const safeName = name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+                const link = document.createElement('a');
+                link.download = 'ExtremeSolutions-Executive-Memo-' + safeName + '.png';
+                link.href = canvas.toDataURL('image/png');
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                if (btnText) btnText.textContent = 'Save as Image';
+            }).catch(function(err) {
+                console.error('html2canvas error:', err);
+                if (btnText) btnText.textContent = 'Save as Image';
+                alert('Could not generate image. Please use Download PDF.');
+            });
+        };
+
+        if (typeof window.html2canvas === 'undefined') {
+            const s = document.createElement('script');
+            s.src = 'https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js';
+            s.onload = runExport;
+            s.onerror = function() {
+                if (btnText) btnText.textContent = 'Save as Image';
+                alert('Could not load image generation tool. Please use Download PDF.');
+            };
+            document.head.appendChild(s);
+        } else {
+            runExport();
+        }
+    };
+
+    // Initial run
+    updateDOM();
+})();
+</script>
 @endsection
