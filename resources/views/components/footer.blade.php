@@ -78,6 +78,12 @@
                             <a href="{{ route('home') }}#how-we-work" class="text-xs text-white/70 hover:text-white transition-colors">The 3-Step Process</a>
                         </li>
                         <li>
+                            <a href="{{ route('partner.index') }}" class="text-xs text-white/70 hover:text-white transition-colors">Partner With Us</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('support.index') }}" class="text-xs text-white/70 hover:text-white transition-colors">Support &amp; Mission</a>
+                        </li>
+                        <li>
                             <a href="{{ route('home') }}#featured-projects" class="text-xs text-white/70 hover:text-white transition-colors">Live Platforms</a>
                         </li>
                         <li>
@@ -104,6 +110,16 @@
                                 <svg class="h-3 w-3 text-[#00ff88] transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                 </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('partner.school') }}" class="text-xs text-white/70 hover:text-white transition-colors flex items-center gap-1.5">
+                                <span>School Partnership Proposal</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('support.campaign') }}" class="text-xs text-white/70 hover:text-white transition-colors flex items-center gap-1.5">
+                                <span>Support Needed Project</span>
                             </a>
                         </li>
                         <li class="pt-2">

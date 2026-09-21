@@ -26,15 +26,28 @@ class SupportController extends Controller
      */
     public function index(Request $request): View
     {
+        return view('support.index', [
+            'campaignUrl' => route('support.campaign'),
+            'calBookingUrl' => 'https://cal.com/samuel-ekunyan',
+        ]);
+    }
+
+    /**
+     * Display the Active Support & Backer Letter (Secondary Education Campaign).
+     *
+     * @param Request $request
+     * @return View
+     */
+    public function campaign(Request $request): View
+    {
         $sanitized = $this->sanitizeParams($request);
 
-        return view('support.index', [
+        return view('support.campaign', [
             'name' => $sanitized['name'],
             'referrer' => $sanitized['referrer'],
             'refCode' => $sanitized['refCode'],
             'dateStr' => $sanitized['dateStr'],
             'exportPdfUrl' => route('support.pdf', $sanitized['rawParams']),
-            'calBookingUrl' => 'https://cal.com/samuel-ekunyan',
         ]);
     }
 

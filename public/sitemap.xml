@@ -37,6 +37,18 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://extremesolutions.com.ng/support</loc>
+        <lastmod>2026-09-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://extremesolutions.com.ng/partner</loc>
+        <lastmod>2026-09-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://extremesolutions.com.ng/products/hr</loc>
         <lastmod>2026-09-20</lastmod>
         <changefreq>monthly</changefreq>

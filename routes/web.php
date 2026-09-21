@@ -26,15 +26,17 @@ Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/academy', [HomeController::class, 'academy'])->name('academy');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
-// 1. INSTITUTIONAL SUPPORT & BACKER FUNNEL (Unlisted)
+// 1. INSTITUTIONAL SUPPORT & ACTIVE BACKER FUNNEL
 Route::prefix('support')->name('support.')->group(function () {
-    Route::get('/', [SupportController::class, 'index'])->name('index'); // Company Vision + Active SMS Project
+    Route::get('/', [SupportController::class, 'index'])->name('index'); // ExtremeSolutions Mission & Support
+    Route::get('/campaign', [SupportController::class, 'campaign'])->name('campaign'); // Active Support Campaign Letter
     Route::get('/export-pdf', [SupportController::class, 'exportPdf'])->name('pdf');
 });
 
-// 2. COMMERCIAL SECONDARY SCHOOL DISTRIBUTION (Unlisted)
+// 2. STRATEGIC PARTNERSHIP & SCHOOL PROPOSAL
 Route::prefix('partner')->name('partner.')->group(function () {
-    Route::get('/', [PartnerController::class, 'index'])->name('index'); // Distribution Model + School Pitch
+    Route::get('/', [PartnerController::class, 'index'])->name('index'); // ExtremeSolutions Partner Ecosystem
+    Route::get('/school', [PartnerController::class, 'schoolProposal'])->name('school'); // Commercial School Proposal Letter
     Route::get('/export-pdf', [PartnerController::class, 'exportPdf'])->name('pdf');
 });
 

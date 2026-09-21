@@ -26,15 +26,28 @@ class PartnerController extends Controller
      */
     public function index(Request $request): View
     {
+        return view('partner.index', [
+            'schoolProposalUrl' => route('partner.school'),
+            'calBookingUrl' => 'https://cal.com/samuel-ekunyan',
+        ]);
+    }
+
+    /**
+     * Display the Commercial School Partnership Proposal Letter.
+     *
+     * @param Request $request
+     * @return View
+     */
+    public function schoolProposal(Request $request): View
+    {
         $sanitized = $this->sanitizeParams($request);
 
-        return view('partner.index', [
+        return view('partner.school', [
             'proprietor' => $sanitized['proprietor'],
             'school' => $sanitized['school'],
             'refCode' => $sanitized['refCode'],
             'dateStr' => $sanitized['dateStr'],
             'exportPdfUrl' => route('partner.pdf', $sanitized['rawParams']),
-            'calBookingUrl' => 'https://cal.com/samuel-ekunyan',
         ]);
     }
 
