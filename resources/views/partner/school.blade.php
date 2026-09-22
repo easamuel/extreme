@@ -81,7 +81,7 @@
                         <p class="text-xs text-slate-600"><a href="https://extremesolutions.com.ng" target="_blank" class="hover:underline">extremesolutions.com.ng</a> &bull; <a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-slate-800 hover:underline font-medium">sms.extremesolutions.com.ng</a></p>
                     </div>
                 </div>
-                <div class="text-right text-xs text-slate-700 font-sans">
+                <div class="text-right text-xs text-slate-700 font-sans whitespace-nowrap pl-4">
                     <p class="font-medium text-slate-950">{{ $dateStr }}</p>
                 </div>
             </div>
@@ -242,68 +242,14 @@
 
     window.downloadProposalImage = function() {
         const btnText = document.getElementById('save-image-text');
-        if (btnText) btnText.textContent = 'Generating...';
-
         const target = document.getElementById('letter-paper');
-        if (!target) {
-            if (btnText) btnText.textContent = 'Save as Image';
-            return;
-        }
+        if (!target) return;
 
         const safeName = '{{ addslashes(Str::slug($school)) }}' || 'school-proposal';
         const filename = 'ExtremeSolutions-School-Proposal-' + safeName + '.png';
 
-        const triggerDownload = function(dataUrl) {
-            const link = document.createElement('a');
-            link.download = filename;
-            link.href = dataUrl;
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            if (btnText) btnText.textContent = 'Save as Image';
-        };
-
-        // 1. Primary Engine: htmlToImage (native browser rendering, no CSS parser crashes)
-        if (window.htmlToImage && typeof window.htmlToImage.toPng === 'function') {
-            window.htmlToImage.toPng(target, {
-                quality: 0.98,
-                backgroundColor: '#ffffff',
-                pixelRatio: 2,
-                cacheBust: false
-            }).then(function(dataUrl) {
-                triggerDownload(dataUrl);
-            }).catch(function(err) {
-                console.warn('htmlToImage engine had an issue, falling back to html2canvas:', err);
-                fallbackHtml2Canvas();
-            });
-        } else {
-            fallbackHtml2Canvas();
-        }
-
-        function fallbackHtml2Canvas() {
-            if (typeof window.html2canvas !== 'undefined') {
-                window.html2canvas(target, {
-                    scale: 2,
-                    useCORS: true,
-                    allowTaint: true,
-                    backgroundColor: '#ffffff',
-                    logging: false
-                }).then(function(canvas) {
-                    triggerDownload(canvas.toDataURL('image/png'));
-                }).catch(function(err2) {
-                    console.error('Canvas export error:', err2);
-                    if (btnText) btnText.textContent = 'Save as Image';
-                    const pdfBtn = document.getElementById('btn-download-pdf');
-                    if (pdfBtn && pdfBtn.href) {
-                        window.open(pdfBtn.href, '_blank');
-                    } else {
-                        window.print();
-                    }
-                });
-            } else {
-                if (btnText) btnText.textContent = 'Save as Image';
-                window.print();
-            }
+        if (window.exportLetterAsImage) {
+            window.exportLetterAsImage(target, filename, btnText, 'Save as Image');
         }
     };
 })();

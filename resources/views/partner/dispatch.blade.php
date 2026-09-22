@@ -114,19 +114,22 @@
     <!-- Live Proposal Preview Section -->
     <div class="flex justify-center">
         <article id="letter-paper"
-                 class="print-paper w-full bg-white text-slate-900 border border-slate-200 shadow-2xl rounded-sm p-7 sm:p-14 lg:p-16 font-serif text-[15px] leading-relaxed relative">
+                 class="print-paper max-w-[794px] w-full mx-auto bg-white text-slate-900 border border-slate-200 shadow-xl rounded-sm p-7 sm:p-12 md:p-14 font-sans text-[13.5px] leading-relaxed relative">
 
             <!-- Official Institutional Letterhead -->
-            <header class="border-b-2 border-slate-950 pb-5 mb-8 font-sans">
-                <div class="flex items-center space-x-4">
-                    <img src="{{ !empty($logoBase64) ? $logoBase64 : asset('images/es-mark.png') }}" alt="ExtremeSolutions" class="h-12 w-auto">
+            <div class="flex justify-between items-start border-b border-slate-300 pb-4 mb-5 font-sans">
+                <div class="flex items-center space-x-3.5">
+                    <img src="{{ !empty($logoBase64) ? $logoBase64 : asset('images/es-mark.png') }}" alt="ExtremeSolutions" class="h-10 w-auto">
                     <div>
-                        <div class="text-2xl font-black tracking-tight text-slate-950 font-mono">EXTREMESOLUTIONS</div>
-                        <div class="text-xs uppercase tracking-widest text-slate-600 font-bold">Educational Infrastructure &amp; Deployment Taskforce</div>
-                        <div class="text-[11px] text-slate-500">extremesolutions.com.ng &bull; <span class="font-mono text-emerald-700 font-semibold">sms.extremesolutions.com.ng</span></div>
+                        <h1 class="text-lg font-bold tracking-tight text-slate-950 font-sans">EXTREMESOLUTIONS</h1>
+                        <p class="text-[11px] font-semibold text-emerald-700 tracking-wider uppercase">Enterprise Systems Architecture &bull; Software Engineering</p>
+                        <p class="text-xs text-slate-600"><a href="https://extremesolutions.com.ng" target="_blank" class="hover:underline">extremesolutions.com.ng</a> &bull; <a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-slate-800 hover:underline font-medium">sms.extremesolutions.com.ng</a></p>
                     </div>
                 </div>
-            </header>
+                <div class="text-right text-xs text-slate-700 font-sans whitespace-nowrap pl-4">
+                    <p class="font-medium text-slate-950">{{ $dateStr }}</p>
+                </div>
+            </div>
 
             <!-- Recipient Block -->
             <div class="mb-6 font-sans text-sm">
@@ -238,24 +241,24 @@
                 </p>
             </div>
 
-            <!-- Authentic Handwritten Signoff Block -->
-            <div class="mt-10 pt-6 border-t border-slate-200">
-                <p class="mb-2">Respectfully yours,</p>
-
-                <div class="my-2">
+            <!-- Sign-off Block (Exact Format) -->
+            <div class="mt-8 pt-4 border-t border-slate-200 font-sans">
+                <p class="text-xs text-slate-600 mb-1">Yours sincerely,</p>
+                <div class="my-1.5">
                     <img src="{{ !empty($sigBase64) ? $sigBase64 : asset('images/signature.png') }}"
                          alt="Signature"
-                         class="h-16 w-auto opacity-95"
-                         style="filter: contrast(1.15); max-width: 220px;">
+                         class="h-10 w-auto opacity-95"
+                         style="filter: contrast(1.15); max-width: 170px;">
                 </div>
-
-                <div class="font-sans text-sm">
-                    <div class="font-bold text-slate-950 font-mono text-base">Samuel Ekunyan</div>
-                    <div class="text-slate-700 font-medium">Lead Systems Architect, ExtremeSolutions</div>
-                    <div class="text-slate-500 font-mono text-xs mt-1">
-                        <a href="https://sms.extremesolutions.com.ng" class="text-emerald-700 underline font-semibold">sms.extremesolutions.com.ng</a>
-                    </div>
-                </div>
+                <p class="font-bold text-slate-950 text-sm">Samuel Ekunyan</p>
+                <p class="text-xs text-slate-700 font-medium">Lead Developer &amp; Founder, ExtremeSolutions</p>
+                <p class="text-xs text-slate-600 mt-0.5">
+                    <a href="mailto:samuel@ekunyansamuel.dev" class="text-slate-900 underline font-medium">samuel@ekunyansamuel.dev</a> &bull; 
+                    <a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-slate-900 underline font-medium">sms.extremesolutions.com.ng</a>
+                </p>
+                <p class="text-xs text-slate-800 font-medium mt-1">
+                    WhatsApp: <a href="https://wa.me/2348036375292" target="_blank" class="text-slate-950 font-bold hover:underline">+2348036375292</a>
+                </p>
             </div>
 
         </article>
@@ -352,69 +355,15 @@
 
     window.downloadProposalImage = function() {
         const btnText = document.getElementById('save-image-text');
-        if (btnText) btnText.textContent = 'Generating...';
-
         const target = document.getElementById('letter-paper');
-        if (!target) {
-            if (btnText) btnText.textContent = 'Save as Image';
-            return;
-        }
+        if (!target) return;
 
         const sch = getSchool();
         const safeName = (sch || 'school-proposal').toLowerCase().replace(/[^a-z0-9]+/g, '-');
         const filename = 'ExtremeSolutions-School-Proposal-' + safeName + '.png';
 
-        const triggerDownload = function(dataUrl) {
-            const link = document.createElement('a');
-            link.download = filename;
-            link.href = dataUrl;
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            if (btnText) btnText.textContent = 'Save as Image';
-        };
-
-        // 1. Primary Engine: htmlToImage (native browser rendering, no CSS parser crashes)
-        if (window.htmlToImage && typeof window.htmlToImage.toPng === 'function') {
-            window.htmlToImage.toPng(target, {
-                quality: 0.98,
-                backgroundColor: '#ffffff',
-                pixelRatio: 2,
-                cacheBust: false
-            }).then(function(dataUrl) {
-                triggerDownload(dataUrl);
-            }).catch(function(err) {
-                console.warn('htmlToImage engine had an issue, falling back to html2canvas:', err);
-                fallbackHtml2Canvas();
-            });
-        } else {
-            fallbackHtml2Canvas();
-        }
-
-        function fallbackHtml2Canvas() {
-            if (typeof window.html2canvas !== 'undefined') {
-                window.html2canvas(target, {
-                    scale: 2,
-                    useCORS: true,
-                    allowTaint: true,
-                    backgroundColor: '#ffffff',
-                    logging: false
-                }).then(function(canvas) {
-                    triggerDownload(canvas.toDataURL('image/png'));
-                }).catch(function(err2) {
-                    console.error('html2canvas error:', err2);
-                    if (btnText) btnText.textContent = 'Save as Image';
-                    const pdfBtn = document.getElementById('btn-admin-pdf');
-                    if (pdfBtn && pdfBtn.href) {
-                        window.open(pdfBtn.href, '_blank');
-                    } else {
-                        window.print();
-                    }
-                });
-            } else {
-                if (btnText) btnText.textContent = 'Save as Image';
-                window.print();
-            }
+        if (window.exportLetterAsImage) {
+            window.exportLetterAsImage(target, filename, btnText, 'Save as Image');
         }
     };
 

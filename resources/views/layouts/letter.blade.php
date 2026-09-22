@@ -133,6 +133,154 @@
         </div>
     </footer>
 
+    <!-- Universal High-Fidelity A4 Image Export Utility -->
+    <script>
+    (function() {
+        window.exportLetterAsImage = function(targetElement, filename, buttonTextElement, defaultButtonText) {
+            if (!targetElement) {
+                if (buttonTextElement) buttonTextElement.textContent = defaultButtonText || 'Save as Image';
+                return;
+            }
+            if (buttonTextElement) buttonTextElement.textContent = 'Generating...';
+
+            const A4_WIDTH_PX = 794; // Strict standard A4 width at 96 DPI
+
+            // 1. Create an off-screen sandbox clone to decouple completely from live viewport dimensions
+            const clone = targetElement.cloneNode(true);
+
+            // 2. Strip interactive action controls (like 'Copy No' button, forms, no-print elements)
+            clone.querySelectorAll('button, input, select, textarea, .no-print, [data-export-ignore]').forEach(function(el) {
+                el.remove();
+            });
+
+            // 3. Strip element IDs to avoid duplicate DOM collision
+            clone.removeAttribute('id');
+            clone.querySelectorAll('[id]').forEach(function(el) {
+                el.removeAttribute('id');
+            });
+
+            // 4. Enforce strict, pixel-perfect A4 geometry with balanced symmetrical 44px margins
+            clone.style.width = A4_WIDTH_PX + 'px';
+            clone.style.minWidth = A4_WIDTH_PX + 'px';
+            clone.style.maxWidth = A4_WIDTH_PX + 'px';
+            clone.style.boxSizing = 'border-box';
+            clone.style.margin = '0px';
+            clone.style.marginLeft = '0px';
+            clone.style.marginRight = '0px';
+            clone.style.marginTop = '0px';
+            clone.style.marginBottom = '0px';
+            clone.style.padding = '44px 44px';
+            clone.style.backgroundColor = '#ffffff';
+            clone.style.color = '#0f172a';
+            clone.style.position = 'relative';
+            clone.style.left = '0px';
+            clone.style.top = '0px';
+            clone.style.boxShadow = 'none';
+            clone.style.border = 'none';
+            clone.style.borderRadius = '0px';
+            clone.style.transform = 'none';
+            clone.style.display = 'block';
+
+            // 5. Ensure header flex row retains full width and does not wrap or squeeze
+            const headerRow = clone.querySelector('.flex.justify-between') || clone.querySelector('header');
+            if (headerRow) {
+                headerRow.style.display = 'flex';
+                headerRow.style.flexDirection = 'row';
+                headerRow.style.justifyContent = 'space-between';
+                headerRow.style.alignItems = 'flex-start';
+                headerRow.style.width = '100%';
+                headerRow.style.boxSizing = 'border-box';
+            }
+
+            // 6. Append to isolated staging wrapper positioned at (0, 0) behind viewport
+            const staging = document.createElement('div');
+            staging.style.cssText = 'position: fixed; left: 0px; top: 0px; width: 794px; z-index: -99999; overflow: hidden; pointer-events: none; background: #ffffff;';
+            staging.appendChild(clone);
+            document.body.appendChild(staging);
+
+            // 7. Measure exact natural height of the formatted document
+            const exportHeight = Math.ceil(clone.scrollHeight || clone.offsetHeight || 1123);
+
+            let isDone = false;
+            const cleanup = function() {
+                if (isDone) return;
+                isDone = true;
+                if (staging && staging.parentNode) {
+                    staging.parentNode.removeChild(staging);
+                }
+                if (buttonTextElement) buttonTextElement.textContent = defaultButtonText || 'Save as Image';
+            };
+
+            const triggerDownload = function(dataUrl) {
+                const link = document.createElement('a');
+                link.download = filename;
+                link.href = dataUrl;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                cleanup();
+            };
+
+            // 8. Primary Engine: htmlToImage (native SVG foreignObject)
+            if (window.htmlToImage && typeof window.htmlToImage.toPng === 'function') {
+                window.htmlToImage.toPng(clone, {
+                    width: A4_WIDTH_PX,
+                    height: exportHeight,
+                    pixelRatio: 2,
+                    backgroundColor: '#ffffff',
+                    cacheBust: false,
+                    style: {
+                        margin: '0px',
+                        padding: '44px 44px',
+                        transform: 'none',
+                        left: '0px',
+                        top: '0px'
+                    }
+                }).then(function(dataUrl) {
+                    triggerDownload(dataUrl);
+                }).catch(function(err) {
+                    console.warn('htmlToImage notice, attempting html2canvas fallback:', err);
+                    fallbackHtml2Canvas();
+                });
+            } else {
+                fallbackHtml2Canvas();
+            }
+
+            function fallbackHtml2Canvas() {
+                if (typeof window.html2canvas !== 'undefined') {
+                    window.html2canvas(clone, {
+                        width: A4_WIDTH_PX,
+                        height: exportHeight,
+                        scale: 2,
+                        useCORS: true,
+                        allowTaint: true,
+                        backgroundColor: '#ffffff',
+                        x: 0,
+                        y: 0,
+                        scrollX: 0,
+                        scrollY: 0,
+                        logging: false
+                    }).then(function(canvas) {
+                        triggerDownload(canvas.toDataURL('image/png'));
+                    }).catch(function(err2) {
+                        console.error('html2canvas error:', err2);
+                        cleanup();
+                        const pdfBtn = document.getElementById('btn-download-pdf') || document.getElementById('btn-admin-pdf');
+                        if (pdfBtn && pdfBtn.href) {
+                            window.open(pdfBtn.href, '_blank');
+                        } else {
+                            window.print();
+                        }
+                    });
+                } else {
+                    cleanup();
+                    window.print();
+                }
+            }
+        };
+    })();
+    </script>
+
     @stack('scripts')
 </body>
 </html>

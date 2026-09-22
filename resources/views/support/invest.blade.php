@@ -84,7 +84,7 @@
                         <p class="text-xs text-slate-600"><a href="https://extremesolutions.com.ng" target="_blank" class="hover:underline">extremesolutions.com.ng</a> &bull; <a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-slate-800 hover:underline font-medium">sms.extremesolutions.com.ng</a></p>
                     </div>
                 </div>
-                <div class="text-right text-xs text-slate-700 font-sans">
+                <div class="text-right text-xs text-slate-700 font-sans whitespace-nowrap pl-4">
                     <p class="font-medium text-slate-950">{{ $dateStr }}</p>
                 </div>
             </div>
@@ -119,7 +119,7 @@
                 <div class="mt-4 p-3.5 bg-slate-50 border border-slate-300 rounded">
                     <div class="flex items-center justify-between mb-2">
                         <span class="text-[11px] font-bold uppercase tracking-wider text-slate-700">Commercial Advance Settlement Details</span>
-                        <button type="button" onclick="navigator.clipboard.writeText('0236642821'); this.innerText='Copied!'; setTimeout(() => this.innerText='Copy No', 2000);" class="text-[11px] bg-slate-200 hover:bg-slate-300 text-slate-800 font-mono px-2 py-0.5 rounded transition cursor-pointer">Copy No</button>
+                        <button type="button" onclick="navigator.clipboard.writeText('0236642821'); this.innerText='Copied!'; setTimeout(() => this.innerText='Copy No', 2000);" class="text-[11px] bg-slate-200 hover:bg-slate-300 text-slate-800 font-mono px-2 py-0.5 rounded transition cursor-pointer no-print" data-export-ignore="true">Copy No</button>
                     </div>
                     <div class="grid grid-cols-2 gap-3 text-xs">
                         <div>
@@ -190,69 +190,15 @@
 
     window.downloadInvestImage = function() {
         const btnText = document.getElementById('save-image-text');
-        if (btnText) btnText.textContent = 'Generating...';
-
         const target = document.getElementById('letter-paper');
-        if (!target) {
-            if (btnText) btnText.textContent = 'Save as Image';
-            return;
-        }
+        if (!target) return;
 
         const name = '{{ addslashes($name) }}';
         const safeName = (name || 'partner-advance').toLowerCase().replace(/[^a-z0-9]+/g, '-');
         const filename = 'ExtremeSolutions-Partner-Advance-' + safeName + '.png';
 
-        const triggerDownload = function(dataUrl) {
-            const link = document.createElement('a');
-            link.download = filename;
-            link.href = dataUrl;
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            if (btnText) btnText.textContent = 'Save as Image';
-        };
-
-        // 1. Primary Engine: htmlToImage (native browser rendering, no CSS parser crashes)
-        if (window.htmlToImage && typeof window.htmlToImage.toPng === 'function') {
-            window.htmlToImage.toPng(target, {
-                quality: 0.98,
-                backgroundColor: '#ffffff',
-                pixelRatio: 2,
-                cacheBust: false
-            }).then(function(dataUrl) {
-                triggerDownload(dataUrl);
-            }).catch(function(err) {
-                console.warn('htmlToImage engine had an issue, falling back to html2canvas:', err);
-                fallbackHtml2Canvas();
-            });
-        } else {
-            fallbackHtml2Canvas();
-        }
-
-        function fallbackHtml2Canvas() {
-            if (typeof window.html2canvas !== 'undefined') {
-                window.html2canvas(target, {
-                    scale: 2,
-                    useCORS: true,
-                    allowTaint: true,
-                    backgroundColor: '#ffffff',
-                    logging: false
-                }).then(function(canvas) {
-                    triggerDownload(canvas.toDataURL('image/png'));
-                }).catch(function(err2) {
-                    console.error('Canvas export error:', err2);
-                    if (btnText) btnText.textContent = 'Save as Image';
-                    const pdfBtn = document.getElementById('btn-download-pdf');
-                    if (pdfBtn && pdfBtn.href) {
-                        window.open(pdfBtn.href, '_blank');
-                    } else {
-                        window.print();
-                    }
-                });
-            } else {
-                if (btnText) btnText.textContent = 'Save as Image';
-                window.print();
-            }
+        if (window.exportLetterAsImage) {
+            window.exportLetterAsImage(target, filename, btnText, 'Save as Image');
         }
     };
 })();
