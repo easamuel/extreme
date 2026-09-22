@@ -130,20 +130,29 @@
     <!-- Live Document Preview Section -->
     <div class="flex justify-center">
         <article id="letter-paper"
-                 class="print-paper max-w-[794px] w-full mx-auto bg-white p-6 sm:p-10 md:p-12 text-slate-900 font-sans text-[13px] leading-relaxed shadow-2xl rounded-sm border border-slate-200 print:border-none print:shadow-none print:p-0 relative">
+                 class="print-paper max-w-[794px] w-full mx-auto bg-white p-4 sm:p-10 md:p-12 text-slate-900 font-sans text-[13px] leading-relaxed shadow-2xl rounded-sm border border-slate-200 print:border-none print:shadow-none print:p-0 relative">
 
             <!-- Elegant Letterhead -->
-            <div class="flex justify-between items-start border-b border-slate-300 pb-4 mb-5">
-                <div class="flex items-center space-x-3.5">
-                    <img src="{{ !empty($logoBase64) ? $logoBase64 : asset('images/es-mark.png') }}" alt="ExtremeSolutions" class="h-10 w-auto">
-                    <div>
-                        <h1 class="text-lg font-bold tracking-tight text-slate-950 font-sans">EXTREMESOLUTIONS</h1>
-                        <p class="text-[11px] font-semibold text-emerald-700 tracking-wider uppercase">Enterprise Systems Architecture &bull; Software Engineering</p>
-                        <p class="text-xs text-slate-600"><a href="https://extremesolutions.com.ng" target="_blank" class="hover:underline">extremesolutions.com.ng</a> &bull; <a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-slate-800 hover:underline font-medium">sms.extremesolutions.com.ng</a></p>
+            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3 sm:gap-4 border-b border-slate-300 pb-4 mb-5">
+                <div class="flex items-start sm:items-center space-x-3 sm:space-x-3.5">
+                    <img src="{{ !empty($logoBase64) ? $logoBase64 : asset('images/es-mark.png') }}" alt="ExtremeSolutions" class="h-9 sm:h-10 w-auto shrink-0 mt-0.5 sm:mt-0">
+                    <div class="min-w-0">
+                        <h1 class="text-base sm:text-lg font-bold tracking-tight text-slate-950 font-sans">EXTREMESOLUTIONS</h1>
+                        <p class="text-[10.5px] sm:text-[11px] font-semibold text-emerald-700 tracking-wider uppercase leading-snug">Enterprise Systems Architecture &bull; Software Engineering</p>
+                        <div class="text-[11px] sm:text-xs text-slate-600 flex flex-wrap items-center gap-x-2.5 gap-y-1 mt-1">
+                            <a href="https://extremesolutions.com.ng" target="_blank" class="hover:underline text-slate-700 font-medium inline-flex items-center gap-0.5">
+                                extremesolutions.com.ng <span class="text-slate-400">&nearr;</span>
+                            </a>
+                            <span class="text-slate-300 hidden xs:inline">&bull;</span>
+                            <a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-emerald-800 hover:underline font-semibold inline-flex items-center gap-0.5">
+                                sms.extremesolutions.com.ng <span class="text-emerald-600">&nearr;</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="text-right text-xs text-slate-700 font-sans whitespace-nowrap pl-4">
-                    <p class="font-medium text-slate-950">{{ $dateStr }}</p>
+                <div class="sm:text-right text-xs text-slate-700 font-sans whitespace-nowrap pt-2 sm:pt-0 sm:pl-4 border-t border-slate-100 sm:border-none w-full sm:w-auto flex items-center justify-between sm:block">
+                    <span class="text-slate-400 sm:hidden text-[11px] font-mono uppercase tracking-wider">Date</span>
+                    <p class="font-semibold text-slate-950">{{ $dateStr }}</p>
                 </div>
             </div>
 

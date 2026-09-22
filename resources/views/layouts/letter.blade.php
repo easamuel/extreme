@@ -88,26 +88,29 @@
 
     <!-- Executive Document Top Masthead (Official, Clean, No Consumer Sales Menus) -->
     <header class="no-print border-b border-white/10 bg-[#071324] text-white sticky top-0 z-40 backdrop-blur-md bg-opacity-95">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
-            <div class="flex items-center space-x-3">
-                <a href="{{ route('home') }}" class="flex items-center space-x-2.5 group" title="Return to ExtremeSolutions Portal">
-                    <img src="{{ asset('images/es-mark.png') }}" alt="ExtremeSolutions Mark" class="h-7 w-auto transition-transform group-hover:scale-105">
+        <div class="max-w-5xl mx-auto px-3 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between gap-2.5 sm:gap-4">
+            <div class="flex items-center space-x-2 sm:space-x-2.5 min-w-0">
+                <a href="{{ route('home') }}" class="flex items-center space-x-2 sm:space-x-2.5 group shrink-0" title="Return to ExtremeSolutions Portal">
+                    <img src="{{ asset('images/es-mark.png') }}" alt="ExtremeSolutions Mark" class="h-6 sm:h-7 w-auto transition-transform group-hover:scale-105">
                     <div class="leading-none">
-                        <div class="text-xs font-bold tracking-wider text-white font-mono uppercase">EXTREMESOLUTIONS</div>
-                        <div class="text-[10px] text-slate-400 font-mono tracking-wider">ENTERPRISE SYSTEMS ARCHITECTURE</div>
+                        <div class="text-[11px] sm:text-xs font-bold tracking-wider text-white font-mono uppercase">EXTREMESOLUTIONS</div>
+                        <div class="text-[9px] sm:text-[10px] text-slate-400 font-mono tracking-wider truncate hidden md:block">ENTERPRISE SYSTEMS ARCHITECTURE</div>
                     </div>
                 </a>
             </div>
 
-            <div class="flex items-center space-x-4 text-xs font-mono">
-                <div class="flex items-center space-x-3 text-slate-300">
-                    <a href="https://extremesolutions.com.ng" target="_blank" class="hover:text-emerald-400 transition-colors hidden sm:inline">
-                        extremesolutions.com.ng &nearr;
-                    </a>
-                    <a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-emerald-400 hover:text-emerald-300 transition-colors font-semibold">
-                        sms.extremesolutions.com.ng &nearr;
-                    </a>
-                </div>
+            <div class="flex items-center gap-2 sm:gap-3 text-[10.5px] sm:text-xs font-mono shrink-0">
+                <a href="https://extremesolutions.com.ng" target="_blank" class="hover:text-emerald-400 text-slate-300 transition-colors inline-flex items-center gap-0.5">
+                    <span class="hidden sm:inline">extremesolutions.com.ng</span>
+                    <span class="sm:hidden">extremesolutions</span>
+                    <span class="text-slate-500">&nearr;</span>
+                </a>
+                <span class="text-slate-600">&bull;</span>
+                <a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-emerald-400 hover:text-emerald-300 transition-colors font-semibold inline-flex items-center gap-0.5">
+                    <span class="hidden sm:inline">sms.extremesolutions.com.ng</span>
+                    <span class="sm:hidden">sms.extremesolutions</span>
+                    <span>&nearr;</span>
+                </a>
             </div>
         </div>
     </header>
