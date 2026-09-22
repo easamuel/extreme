@@ -42,7 +42,7 @@
 
                 <!-- WhatsApp Share Button -->
                 <a id="btn-whatsapp-share"
-                   href="https://api.whatsapp.com/send?text={{ urlencode('I have a message for you from ExtremeSolutions:\n\nSubject: Commercial Software Deployment Across Nigerian Secondary Schools\n\n' . ($name !== 'Sir/Madam' ? 'Prepared for ' . $name . ':\n' : '') . url()->full()) }}"
+                   href="https://api.whatsapp.com/send?text={{ urlencode('I have a message for you from ExtremeSolutions:\n\nSubject: Strategic Software Deployment — Commercial Infrastructure Rollout\n\n' . ($name !== 'Sir/Madam' ? 'Prepared for ' . $name . ':\n' : '') . url()->full()) }}"
                    target="_blank"
                    class="inline-flex items-center px-4 py-2 bg-[#25D366] hover:bg-[#20bd5a] text-slate-950 font-bold rounded-lg text-xs transition shadow-sm"
                    title="Share on WhatsApp">

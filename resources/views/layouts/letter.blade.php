@@ -94,7 +94,7 @@
                     <img src="{{ asset('images/es-mark.png') }}" alt="ExtremeSolutions Mark" class="h-7 w-auto transition-transform group-hover:scale-105">
                     <div class="leading-none">
                         <div class="text-xs font-bold tracking-wider text-white font-mono uppercase">EXTREMESOLUTIONS</div>
-                        <div class="text-[10px] text-slate-400 font-mono tracking-wider">COMMERCIAL SYSTEMS &bull; LAGOS, NG</div>
+                        <div class="text-[10px] text-slate-400 font-mono tracking-wider">ENTERPRISE SYSTEMS ARCHITECTURE</div>
                     </div>
                 </a>
             </div>

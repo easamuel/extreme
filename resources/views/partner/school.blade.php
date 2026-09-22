@@ -77,7 +77,8 @@
                     <img src="{{ !empty($logoBase64) ? $logoBase64 : asset('images/es-mark.png') }}" alt="ExtremeSolutions" class="h-10 w-auto">
                     <div>
                         <h1 class="text-lg font-bold tracking-tight text-slate-950 font-sans">EXTREMESOLUTIONS</h1>
-                        <p class="text-xs text-slate-600">Lagos, Nigeria &bull; extremesolutions.com.ng &bull; <a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-slate-800 hover:underline font-medium">sms.extremesolutions.com.ng</a></p>
+                        <p class="text-[11px] font-semibold text-emerald-700 tracking-wider uppercase">Enterprise Systems Architecture &bull; Software Engineering</p>
+                        <p class="text-xs text-slate-600"><a href="https://extremesolutions.com.ng" target="_blank" class="hover:underline">extremesolutions.com.ng</a> &bull; <a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-slate-800 hover:underline font-medium">sms.extremesolutions.com.ng</a></p>
                     </div>
                 </div>
                 <div class="text-right text-xs text-slate-700 font-sans">

@@ -318,7 +318,7 @@
             if (hint) hint.textContent = 'Commercial deployment letter: Highlights 3-school self-sustaining threshold and lean ₦150k–₦300k deployment pool.';
             if (contB) contB.classList.add('hidden');
             if (contA) contA.classList.remove('hidden');
-            if (subjectLine) subjectLine.innerHTML = 'Subject: Commercial Software Deployment Across Nigerian Secondary Schools';
+            if (subjectLine) subjectLine.innerHTML = 'Subject: Strategic Software Deployment &mdash; Commercial Infrastructure Rollout';
         }
 
         updateAdminDispatch();
