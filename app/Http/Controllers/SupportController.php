@@ -172,7 +172,7 @@ class SupportController extends Controller
 
         // 3. Resilient Print Fallback
         $viewData['isPrintFallback'] = true;
-        return response()->view('pdf.support-memo', $viewData);
+        return response()->view($viewTemplate, $viewData);
     }
 
     /**

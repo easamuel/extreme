@@ -6,23 +6,24 @@
     <style>
         @page {
             size: A4 portrait;
-            margin: 15mm 15mm 15mm 15mm; /* Explicit print boundary */
+            margin: 15mm 15mm 15mm 15mm; /* Strict print boundary: 210mm x 297mm */
         }
 
         * {
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
+            font-family: 'DejaVu Sans', sans-serif;
+            box-sizing: border-box;
         }
 
         html, body {
             margin: 0;
             padding: 0;
             background: #ffffff;
-            width: 100%;
+            font-family: 'DejaVu Sans', sans-serif;
         }
 
         body {
-            font-family: 'DejaVu Sans', Helvetica, Arial, sans-serif;
             font-size: 9.5pt;
             line-height: 1.42;
             color: #1e293b;
@@ -30,7 +31,8 @@
         }
 
         .page-container {
-            width: 100%;
+            margin: 0;
+            padding: 0;
             page-break-inside: avoid;
         }
 
@@ -42,17 +44,17 @@
 
         .header-table td {
             vertical-align: top;
-            padding-bottom: 10px;
+            padding-bottom: 8pt;
             border-bottom: 1.5pt solid #0f172a;
         }
 
         .meta-table td {
-            padding-top: 6px;
-            padding-bottom: 6px;
+            padding-top: 6pt;
+            padding-bottom: 6pt;
         }
 
         p {
-            margin: 0 0 7px 0;
+            margin: 0 0 6.5pt 0;
             text-align: justify;
             text-justify: inter-word;
             word-wrap: break-word;
@@ -60,20 +62,20 @@
 
         .bank-card-cell {
             background-color: #f8fafc;
-            border: 1px solid #cbd5e1;
-            padding: 7px 10px;
-            border-radius: 4px;
+            border: 0.75pt solid #cbd5e1;
+            padding: 6pt 8pt;
+            border-radius: 3pt;
         }
 
         .bank-table td {
             font-size: 8.5pt;
-            padding: 3px 5px;
+            padding: 2.5pt 4pt;
             vertical-align: top;
         }
 
         .signature-table td {
             vertical-align: top;
-            padding-top: 6px;
+            padding-top: 5pt;
             border-top: 0.5pt solid #e2e8f0;
         }
     </style>
@@ -81,18 +83,18 @@
 <body>
 <div class="page-container">
 
-    <!-- Letterhead Header Table (Strict CSS 2.1, No Nested Tables) -->
+    <!-- Letterhead Header Table (Strict CSS 2.1 Table Layout) -->
     <table class="header-table">
         <tr>
-            <td style="text-align: left; vertical-align: top;">
+            <td style="width: 72%; text-align: left; vertical-align: top;">
                 @if(!empty($logoBase64))
-                    <img src="{{ $logoBase64 }}" style="height: 24pt; width: auto; vertical-align: middle; margin-right: 6px;" alt="ExtremeSolutions">
+                    <img src="{{ $logoBase64 }}" style="height: 24pt; width: auto; vertical-align: middle; margin-right: 6pt;" alt="ExtremeSolutions">
                 @endif
-                <strong style="font-size: 14pt; color: #0f172a; letter-spacing: 0.5px; vertical-align: middle;">EXTREMESOLUTIONS</strong><br>
+                <strong style="font-size: 14pt; color: #0f172a; letter-spacing: 0.5pt; vertical-align: middle;">EXTREMESOLUTIONS</strong><br>
                 <span style="font-size: 8.5pt; color: #047857; text-transform: uppercase; font-weight: bold;">Educational Technology &amp; Systems Deployment</span><br>
                 <span style="font-size: 8pt; color: #64748b;">Lagos, Nigeria &bull; extremesolutions.com.ng &bull; sms.extremesolutions.com.ng</span>
             </td>
-            <td style="text-align: right; width: 140px; vertical-align: top;">
+            <td style="width: 28%; text-align: right; vertical-align: top;">
                 <span style="font-size: 9pt; color: #0f172a; font-weight: bold;">{{ $dateStr }}</span><br>
                 <span style="font-size: 8pt; color: #64748b;">Ref: {{ $refCode }}</span>
             </td>
@@ -102,11 +104,11 @@
     <!-- Recipient & Subject Meta -->
     <table class="meta-table">
         <tr>
-            <td style="vertical-align: top;">
+            <td style="width: 100%; vertical-align: top;">
                 <div style="font-size: 9.5pt; font-weight: bold; color: #0f172a;">
                     Dear {{ !empty($name) && $name !== 'Sir/Madam' ? $name : request('name', 'Valued Partner') }},
                 </div>
-                <div style="font-size: 9.2pt; font-weight: bold; color: #0f172a; margin-top: 3px; padding-bottom: 3px; border-bottom: 0.5pt solid #cbd5e1;">
+                <div style="font-size: 9.2pt; font-weight: bold; color: #0f172a; margin-top: 3pt; padding-bottom: 3pt; border-bottom: 0.5pt solid #cbd5e1;">
                     Subject: Structured Commercial Partner Advance &mdash; ExtremeSolutions School OS
                 </div>
             </td>
@@ -131,9 +133,9 @@
     </p>
 
     <!-- Dedicated Account Box (Strict Table-Safe Container to Prevent Right-Margin Blowout) -->
-    <table style="margin-top: 4px; margin-bottom: 6px;">
+    <table style="margin-top: 4pt; margin-bottom: 6pt;">
         <tr>
-            <td class="bank-card-cell">
+            <td class="bank-card-cell" style="width: 100%;">
                 <table class="bank-table">
                     <tr>
                         <td style="width: 50%;"><strong>Bank Name:</strong> Wema Bank Plc</td>
@@ -148,22 +150,22 @@
         </tr>
     </table>
 
-    <p style="font-size: 7.5pt; font-style: italic; color: #475569; margin: 1px 0 5px 0;">
+    <p style="font-size: 7.5pt; font-style: italic; color: #475569; margin: 1pt 0 5pt 0;">
         Backers receive a formal signed term sheet, direct monthly audit reports, and priority disbursement from onboarded school revenues.
     </p>
 
     <!-- Sign-off Block (Exact Requested Format, Strictly Contained) -->
-    <table class="signature-table" style="margin-top: 4px; page-break-inside: avoid;">
+    <table class="signature-table" style="margin-top: 4pt; page-break-inside: avoid;">
         <tr>
-            <td>
-                <div style="font-size: 8.5pt; color: #334155; margin-bottom: 1px;">Yours sincerely,</div>
+            <td style="width: 100%;">
+                <div style="font-size: 8.5pt; color: #334155; margin-bottom: 1pt;">Yours sincerely,</div>
                 @if(!empty($sigBase64))
-                    <img src="{{ $sigBase64 }}" style="height: 24pt; width: auto; margin: 2px 0 1px 0;" alt="Samuel Ekunyan Signature">
+                    <img src="{{ $sigBase64 }}" style="height: 24pt; width: auto; margin: 2pt 0 1pt 0;" alt="Samuel Ekunyan Signature">
                 @endif
                 <div style="font-weight: bold; font-size: 9.5pt; color: #0f172a;">Samuel Ekunyan</div>
                 <div style="font-size: 8.5pt; color: #334155;">Lead Developer &amp; Founder, ExtremeSolutions</div>
                 <div style="font-size: 7.8pt; color: #64748b;">samuel@ekunyansamuel.dev &bull; sms.extremesolutions.com.ng</div>
-                <div style="font-size: 8.5pt; color: #0f172a; font-weight: bold; margin-top: 1px;">WhatsApp: +2348036375292</div>
+                <div style="font-size: 8.5pt; color: #0f172a; font-weight: bold; margin-top: 1pt;">WhatsApp: +2348036375292</div>
             </td>
         </tr>
     </table>
@@ -171,4 +173,3 @@
 </div>
 </body>
 </html>
-

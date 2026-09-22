@@ -6,23 +6,24 @@
     <style>
         @page {
             size: A4 portrait;
-            margin: 15mm 15mm 15mm 15mm; /* Explicit print boundary */
+            margin: 15mm 15mm 15mm 15mm; /* Strict print boundary: 210mm x 297mm */
         }
 
         * {
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
+            font-family: 'DejaVu Sans', sans-serif;
+            box-sizing: border-box;
         }
 
         html, body {
             margin: 0;
             padding: 0;
             background: #ffffff;
-            width: 100%;
+            font-family: 'DejaVu Sans', sans-serif;
         }
 
         body {
-            font-family: 'DejaVu Sans', Helvetica, Arial, sans-serif;
             color: #1e293b;
             font-size: 8.5pt;
             line-height: 1.36;
@@ -30,7 +31,8 @@
         }
 
         .page-container {
-            width: 100%;
+            margin: 0;
+            padding: 0;
             page-break-inside: avoid;
         }
 
@@ -42,17 +44,17 @@
 
         .header-table td {
             vertical-align: top;
-            padding-bottom: 8px;
+            padding-bottom: 7pt;
             border-bottom: 1.5pt solid #0f172a;
         }
 
         .meta-table td {
-            padding-top: 5px;
-            padding-bottom: 5px;
+            padding-top: 5pt;
+            padding-bottom: 5pt;
         }
 
         p {
-            margin: 0 0 5.5pt 0;
+            margin: 0 0 5pt 0;
             text-align: justify;
             text-justify: inter-word;
             word-wrap: break-word;
@@ -62,7 +64,7 @@
             font-size: 8.5pt;
             font-weight: bold;
             color: #0f172a;
-            margin: 5pt 0 3pt 0;
+            margin: 4pt 0 2.5pt 0;
             border-bottom: 0.5pt solid #e2e8f0;
             padding-bottom: 1.5pt;
         }
@@ -71,7 +73,7 @@
             width: 100%;
             border-collapse: collapse;
             table-layout: fixed;
-            margin: 4pt 0 6pt 0;
+            margin: 3pt 0 5pt 0;
             font-size: 7.8pt;
         }
 
@@ -80,12 +82,12 @@
             color: #0f172a;
             font-weight: bold;
             text-align: left;
-            padding: 3.5pt 5.5pt;
+            padding: 3pt 5pt;
             border: 0.5pt solid #cbd5e1;
         }
 
         table.comparison-table td {
-            padding: 3.5pt 5.5pt;
+            padding: 3pt 5pt;
             border: 0.5pt solid #cbd5e1;
             vertical-align: top;
         }
@@ -146,18 +148,18 @@
 </script>
 @endif
 
-<!-- Letterhead Header Table (Strict CSS 2.1, No Nested Tables) -->
+<!-- Letterhead Header Table (Strict CSS 2.1 Table Layout) -->
 <table class="header-table">
     <tr>
-        <td style="text-align: left; vertical-align: top;">
+        <td style="width: 72%; text-align: left; vertical-align: top;">
             @if(!empty($logoBase64))
-                <img src="{{ $logoBase64 }}" style="height: 24pt; width: auto; vertical-align: middle; margin-right: 6px;" alt="ExtremeSolutions">
+                <img src="{{ $logoBase64 }}" style="height: 24pt; width: auto; vertical-align: middle; margin-right: 6pt;" alt="ExtremeSolutions">
             @endif
-            <strong style="font-size: 13.5pt; color: #0f172a; letter-spacing: 0.5px; vertical-align: middle;">EXTREMESOLUTIONS</strong><br>
+            <strong style="font-size: 13.5pt; color: #0f172a; letter-spacing: 0.5pt; vertical-align: middle;">EXTREMESOLUTIONS</strong><br>
             <span style="font-size: 8pt; color: #047857; text-transform: uppercase; font-weight: bold;">Educational Technology &amp; Systems Deployment</span><br>
             <span style="font-size: 7.5pt; color: #64748b;">Lagos, Nigeria &bull; extremesolutions.com.ng &bull; sms.extremesolutions.com.ng</span>
         </td>
-        <td style="text-align: right; width: 140px; vertical-align: top;">
+        <td style="width: 28%; text-align: right; vertical-align: top;">
             <span style="font-size: 8.5pt; color: #0f172a; font-weight: bold;">{{ $dateStr }}</span><br>
             <span style="font-size: 7.5pt; color: #64748b;">Ref: {{ $refCode }}</span>
         </td>
@@ -167,11 +169,11 @@
 <!-- Recipient & Subject Meta -->
 <table class="meta-table">
     <tr>
-        <td style="vertical-align: top;">
+        <td style="width: 100%; vertical-align: top;">
             <div style="font-size: 9.2pt; font-weight: bold; color: #0f172a;">
                 Dear {{ $proprietor }},
             </div>
-            <div style="font-size: 8.8pt; font-weight: bold; color: #0f172a; margin-top: 3px; padding-bottom: 3px; border-bottom: 0.5pt solid #cbd5e1;">
+            <div style="font-size: 8.8pt; font-weight: bold; color: #0f172a; margin-top: 3pt; padding-bottom: 3pt; border-bottom: 0.5pt solid #cbd5e1;">
                 Subject: Institutional Partnership for Broadsheet Automation and Student CBT Readiness &mdash; {{ $school }}
             </div>
         </td>
@@ -245,12 +247,12 @@
 </p>
 
 <!-- Sign-off Block (Exact Requested Format, Strictly Contained) -->
-<table class="signature-table" style="margin-top: 4px; page-break-inside: avoid;">
+<table class="signature-table" style="margin-top: 4pt; page-break-inside: avoid;">
     <tr>
-        <td>
+        <td style="width: 100%;">
             <div style="font-size: 8pt; color: #334155; margin-bottom: 1pt;">Yours sincerely,</div>
             @if(!empty($sigBase64))
-                <img src="{{ $sigBase64 }}" style="height: 24pt; width: auto; margin: 2px 0 1px 0;" alt="Samuel Ekunyan Signature">
+                <img src="{{ $sigBase64 }}" style="height: 24pt; width: auto; margin: 2pt 0 1pt 0;" alt="Samuel Ekunyan Signature">
             @endif
             <div style="font-weight: bold; font-size: 9pt; color: #0f172a;">Samuel Ekunyan</div>
             <div style="font-size: 8pt; color: #334155;">Lead Developer &amp; Founder, ExtremeSolutions</div>
