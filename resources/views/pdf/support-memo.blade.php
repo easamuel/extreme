@@ -6,14 +6,13 @@
     <style>
         @page {
             size: A4 portrait;
-            margin: 15mm 15mm 15mm 15mm; /* Explicit print boundary: 210mm x 297mm */
+            margin: 18mm 18mm 18mm 18mm; /* Symmetric, luxurious executive margins */
         }
 
         * {
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
             font-family: 'DejaVu Sans', sans-serif;
-            box-sizing: border-box;
         }
 
         html, body {
@@ -24,16 +23,14 @@
         }
 
         body {
-            font-size: 9.5pt;
-            line-height: 1.42;
+            font-size: 9.8pt;
+            line-height: 1.48;
             color: #1e293b;
-            page-break-inside: avoid;
         }
 
         .page-container {
             margin: 0;
             padding: 0;
-            page-break-inside: avoid;
         }
 
         table {
@@ -49,77 +46,96 @@
         }
 
         .meta-table td {
-            padding-top: 6pt;
-            padding-bottom: 6pt;
+            padding-top: 8pt;
+            padding-bottom: 8pt;
+            border-bottom: 0.75pt solid #cbd5e1;
         }
 
         p {
-            margin: 0 0 6.5pt 0;
+            margin: 0 0 9pt 0;
             text-align: justify;
             text-justify: inter-word;
             word-wrap: break-word;
         }
 
         ul {
-            margin: 3pt 0 6.5pt 16pt;
+            margin: 3pt 0 9pt 14pt;
             padding: 0;
         }
 
         li {
-            margin-bottom: 2pt;
-            font-size: 9pt;
-            line-height: 1.38;
+            margin-bottom: 3pt;
+            font-size: 9.2pt;
+            line-height: 1.42;
         }
 
-        .bank-card-cell {
+        .card-table {
+            width: 100%;
+            margin: 6pt 0 8pt 0;
+            border: 1pt solid #cbd5e1;
             background-color: #f8fafc;
-            border: 0.75pt solid #cbd5e1;
-            padding: 6pt 8pt;
-            border-radius: 3pt;
+            border-collapse: collapse;
+            table-layout: fixed;
         }
 
-        .bank-table td {
-            font-size: 8.5pt;
-            padding: 2.5pt 4pt;
+        .card-header-cell {
+            background-color: #f1f5f9;
+            padding: 4pt 8pt;
+            border-bottom: 1pt solid #cbd5e1;
+            font-size: 7.5pt;
+            font-weight: bold;
+            color: #475569;
+            text-transform: uppercase;
+            letter-spacing: 0.5pt;
+        }
+
+        .card-cell {
+            padding: 5pt 8pt;
+            font-size: 8.8pt;
+            color: #1e293b;
             vertical-align: top;
+        }
+
+        .card-cell-bordered {
+            border-bottom: 0.5pt solid #e2e8f0;
         }
 
         .signature-table td {
             vertical-align: top;
-            padding-top: 5pt;
-            border-top: 0.5pt solid #e2e8f0;
+            padding-top: 6pt;
+            border-top: 0.75pt solid #cbd5e1;
         }
     </style>
 </head>
 <body>
 <div class="page-container">
 
-    <!-- Letterhead Header Table (Strict CSS 2.1 Table Layout) -->
+    <!-- Letterhead Header Table -->
     <table class="header-table">
         <tr>
             <td style="width: 72%; text-align: left; vertical-align: top;">
                 @if(!empty($logoBase64))
-                    <img src="{{ $logoBase64 }}" style="height: 24pt; width: auto; vertical-align: middle; margin-right: 6pt;" alt="ExtremeSolutions">
+                    <img src="{{ $logoBase64 }}" style="height: 26pt; width: auto; vertical-align: middle; margin-right: 6pt;" alt="ExtremeSolutions">
                 @endif
-                <strong style="font-size: 14pt; color: #0f172a; letter-spacing: 0.5pt; vertical-align: middle;">EXTREMESOLUTIONS</strong><br>
-                <span style="font-size: 8.5pt; color: #047857; text-transform: uppercase; font-weight: bold;">Educational Technology &amp; Systems Deployment</span><br>
-                <span style="font-size: 8pt; color: #64748b;">Lagos, Nigeria &bull; extremesolutions.com.ng &bull; sms.extremesolutions.com.ng</span>
+                <strong style="font-size: 14.5pt; color: #0f172a; letter-spacing: 0.5pt; vertical-align: middle;">EXTREMESOLUTIONS</strong><br>
+                <span style="font-size: 8pt; color: #059669; text-transform: uppercase; font-weight: bold; letter-spacing: 0.5pt;">Educational Technology &amp; Systems Deployment</span><br>
+                <span style="font-size: 7.8pt; color: #64748b;">Lagos, Nigeria &bull; extremesolutions.com.ng &bull; sms.extremesolutions.com.ng</span>
             </td>
             <td style="width: 28%; text-align: right; vertical-align: top;">
-                <span style="font-size: 9pt; color: #0f172a; font-weight: bold;">{{ $dateStr }}</span><br>
+                <span style="font-size: 9.5pt; color: #0f172a; font-weight: bold;">{{ $dateStr }}</span><br>
                 <span style="font-size: 8pt; color: #64748b;">Ref: {{ $refCode }}</span>
             </td>
         </tr>
     </table>
 
     <!-- Recipient & Subject Meta -->
-    <table class="meta-table">
+    <table class="meta-table" style="margin-bottom: 9pt;">
         <tr>
             <td style="width: 100%; vertical-align: top;">
-                <div style="font-size: 9.5pt; font-weight: bold; color: #0f172a;">
+                <div style="font-size: 10pt; font-weight: bold; color: #0f172a; margin-bottom: 3pt;">
                     Dear {{ !empty($name) && $name !== 'Sir/Madam' ? $name : request('name', 'Valued Partner') }},
                 </div>
-                <div style="font-size: 9.2pt; font-weight: bold; color: #0f172a; margin-top: 3pt; padding-bottom: 3pt; border-bottom: 0.5pt solid #cbd5e1;">
+                <div style="font-size: 9.5pt; font-weight: bold; color: #0f172a;">
                     Subject: Commercial Software Deployment Across Nigerian Secondary Schools
                 </div>
             </td>
@@ -149,40 +165,51 @@
         <li><strong>Teacher &amp; Student Induction:</strong> Hands-on staff training and student CBT orientation sessions.</li>
     </ul>
 
-    <!-- Dedicated Account Box (Strict Table-Safe Container to Prevent Right-Margin Blowout) -->
-    <table style="margin-top: 4pt; margin-bottom: 6pt;">
+    <!-- Executive Settlement Card -->
+    <table class="card-table">
         <tr>
-            <td class="bank-card-cell" style="width: 100%;">
-                <table class="bank-table">
-                    <tr>
-                        <td style="width: 50%;"><strong>Bank Name:</strong> Wema Bank Plc</td>
-                        <td style="width: 50%;"><strong>Account Name:</strong> Samuel Ekunyan</td>
-                    </tr>
-                    <tr>
-                        <td style="width: 50%;"><strong>Account Number:</strong> 0236642821</td>
-                        <td style="width: 50%;"><strong>Narration:</strong> EXS Support / {{ !empty($name) && $name !== 'Sir/Madam' ? $name : request('name', 'Valued Partner') }}</td>
-                    </tr>
-                </table>
+            <td colspan="2" class="card-header-cell">
+                Deployment Support Settlement Details
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 50%;" class="card-cell card-cell-bordered">
+                <span style="font-size: 7.5pt; color: #64748b; display: block;">Bank Name</span>
+                <strong style="color: #0f172a; font-size: 9pt;">Wema Bank Plc</strong>
+            </td>
+            <td style="width: 50%;" class="card-cell card-cell-bordered">
+                <span style="font-size: 7.5pt; color: #64748b; display: block;">Account Name</span>
+                <strong style="color: #0f172a; font-size: 9pt;">Samuel Ekunyan</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 50%;" class="card-cell">
+                <span style="font-size: 7.5pt; color: #64748b; display: block;">Account Number</span>
+                <strong style="font-size: 10pt; color: #0f172a; letter-spacing: 0.5pt;">0236642821</strong>
+            </td>
+            <td style="width: 50%;" class="card-cell">
+                <span style="font-size: 7.5pt; color: #64748b; display: block;">Payment Narration</span>
+                <span style="color: #334155; font-size: 8.5pt;">EXS Support / {{ !empty($name) && $name !== 'Sir/Madam' ? $name : request('name', 'Valued Partner') }}</span>
             </td>
         </tr>
     </table>
 
-    <p style="font-size: 7.5pt; font-style: italic; color: #475569; margin: 1pt 0 5pt 0;">
+    <p style="font-size: 8pt; font-style: italic; color: #475569; margin: 0 0 8pt 0; line-height: 1.35;">
         Backers receive direct monthly deployment and audit updates, partner recognition on the deployment portal, and the assurance that their support funds a permanent, self-funding commercial system.
     </p>
 
-    <!-- Sign-off Block (Exact Requested Format, Strictly Contained) -->
-    <table class="signature-table" style="margin-top: 4pt; page-break-inside: avoid;">
+    <!-- Sign-off Block (Exact Format) -->
+    <table class="signature-table" style="page-break-inside: avoid;">
         <tr>
             <td style="width: 100%;">
-                <div style="font-size: 8.5pt; color: #334155; margin-bottom: 1pt;">Yours sincerely,</div>
+                <div style="font-size: 9pt; color: #334155; margin-bottom: 2pt;">Yours sincerely,</div>
                 @if(!empty($sigBase64))
-                    <img src="{{ $sigBase64 }}" style="height: 24pt; width: auto; margin: 2pt 0 1pt 0;" alt="Samuel Ekunyan Signature">
+                    <img src="{{ $sigBase64 }}" style="height: 28pt; width: auto; margin: 3pt 0;" alt="Samuel Ekunyan Signature">
                 @endif
-                <div style="font-weight: bold; font-size: 9.5pt; color: #0f172a;">Samuel Ekunyan</div>
-                <div style="font-size: 8.5pt; color: #334155;">Lead Developer &amp; Founder, ExtremeSolutions</div>
-                <div style="font-size: 7.8pt; color: #64748b;">samuel@ekunyansamuel.dev &bull; sms.extremesolutions.com.ng</div>
-                <div style="font-size: 8.5pt; color: #0f172a; font-weight: bold; margin-top: 1pt;">WhatsApp: +2348036375292</div>
+                <div style="font-weight: bold; font-size: 10pt; color: #0f172a;">Samuel Ekunyan</div>
+                <div style="font-size: 9pt; color: #334155;">Lead Developer &amp; Founder, ExtremeSolutions</div>
+                <div style="font-size: 8.5pt; color: #64748b; margin-top: 1pt;">samuel@ekunyansamuel.dev &bull; sms.extremesolutions.com.ng</div>
+                <div style="font-size: 9pt; color: #0f172a; font-weight: bold; margin-top: 2pt;">WhatsApp: +2348036375292</div>
             </td>
         </tr>
     </table>

@@ -13,7 +13,6 @@
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
             font-family: 'DejaVu Sans', sans-serif;
-            box-sizing: border-box;
         }
 
         html, body {
