@@ -142,7 +142,7 @@ class SupportController extends Controller
                 ->setOptions([
                     'isRemoteEnabled' => true,
                     'isHtml5ParserEnabled' => true,
-                    'defaultFont' => 'Helvetica',
+                    'defaultFont' => 'DejaVu Sans',
                     'dpi' => 150,
                 ]);
 
@@ -154,7 +154,7 @@ class SupportController extends Controller
             $options = new \Dompdf\Options();
             $options->set('isRemoteEnabled', true);
             $options->set('isHtml5ParserEnabled', true);
-            $options->setDefaultFont('Helvetica');
+            $options->setDefaultFont('DejaVu Sans');
             $options->setDpi(150);
 
             $dompdf = new \Dompdf\Dompdf($options);

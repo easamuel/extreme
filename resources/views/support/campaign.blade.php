@@ -8,12 +8,11 @@
 
     <!-- Top Action Console (Clean Document Actions Only - No Forms) -->
     <div class="no-print mb-6">
-        <div class="flex flex-wrap items-center justify-between gap-3 bg-[#0c1f3a] border border-white/15 p-3.5 sm:p-4 rounded-xl shadow-xl text-xs font-mono text-white">
-            <div class="flex items-center space-x-2.5">
-                <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span>DOC REF: <strong class="text-white">{{ $refCode }}</strong></span>
-                <span class="text-white/30 hidden sm:inline">|</span>
-                <span class="text-white/70 hidden sm:inline">{{ $dateStr }}</span>
+        <div class="flex flex-wrap items-center justify-between gap-3 bg-slate-900/90 border border-slate-800 p-3.5 sm:p-4 rounded-xl shadow-lg text-xs font-sans text-white">
+            <div class="flex items-center space-x-2 text-slate-300">
+                <span class="font-medium text-white">ExtremeSolutions Executive Letter</span>
+                <span class="text-slate-500 hidden sm:inline">&bull;</span>
+                <span class="text-slate-400 hidden sm:inline">{{ $dateStr }}</span>
             </div>
 
             <div class="flex flex-wrap items-center gap-2">
@@ -22,7 +21,7 @@
                         id="btn-save-image"
                         onclick="window.downloadMemoImage()"
                         class="inline-flex items-center px-3.5 py-2 bg-white/10 hover:bg-white/20 text-white font-medium rounded-lg text-xs transition border border-white/15 cursor-pointer"
-                        title="Download this memo as a high-resolution PNG image">
+                        title="Download this letter as a high-resolution PNG image">
                     <svg class="w-3.5 h-3.5 mr-1.5 text-[#00ff88]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                     </svg>
@@ -43,7 +42,7 @@
 
                 <!-- WhatsApp Share Button -->
                 <a id="btn-whatsapp-share"
-                   href="https://api.whatsapp.com/send?text={{ urlencode('I have a message for you from ExtremeSolutions:\n\nRE: An Urgent Operational Brief on the Grassroots Infrastructure of Nigerian Secondary Education\n\n' . ($name !== 'Sir/Madam' ? 'Prepared for ' . $name . ':\n' : '') . url()->full()) }}"
+                   href="https://api.whatsapp.com/send?text={{ urlencode('I have a message for you from ExtremeSolutions:\n\nSubject: Commercial Software Deployment Across Nigerian Secondary Schools\n\n' . ($name !== 'Sir/Madam' ? 'Prepared for ' . $name . ':\n' : '') . url()->full()) }}"
                    target="_blank"
                    class="inline-flex items-center px-4 py-2 bg-[#25D366] hover:bg-[#20bd5a] text-slate-950 font-bold rounded-lg text-xs transition shadow-sm"
                    title="Share on WhatsApp">
@@ -70,77 +69,62 @@
     <!-- The Authentic Executive Letter Paper Surface (Rendered for Screen, Print & Canvas Export) -->
     <div class="flex justify-center">
         <article id="letter-paper"
-                 class="print-paper max-w-[794px] w-full mx-auto bg-white p-6 sm:p-10 md:p-12 text-slate-900 font-sans text-[13px] leading-relaxed shadow-2xl rounded-sm border border-slate-200 print:border-none print:shadow-none print:p-0 relative">
+                 class="print-paper max-w-[794px] w-full mx-auto bg-white p-7 sm:p-11 md:p-12 text-slate-900 font-sans text-[13px] leading-relaxed shadow-xl rounded-sm border border-slate-200 print:border-none print:shadow-none print:p-0 relative">
 
-            <!-- Top Header -->
-            <div class="flex justify-between items-start border-b border-slate-200 pb-3 mb-4">
+            <!-- Elegant Letterhead -->
+            <div class="flex justify-between items-start border-b border-slate-300 pb-4 mb-5">
                 <div class="flex items-center space-x-3.5">
                     <img src="{{ !empty($logoBase64) ? $logoBase64 : asset('images/es-mark.png') }}" alt="ExtremeSolutions" class="h-10 w-auto">
                     <div>
-                        <h1 class="text-lg font-bold tracking-tight text-slate-950 font-mono">EXTREMESOLUTIONS</h1>
-                        <p class="text-xs font-semibold text-emerald-700 tracking-wide uppercase">Deployment &amp; Expansion Memorandum</p>
-                        <p class="text-[11px] text-slate-500 mt-0.5">Lagos, Nigeria &bull; extremesolutions.com.ng &bull; <span class="text-emerald-700 font-medium">sms.extremesolutions.com.ng</span></p>
+                        <h1 class="text-lg font-bold tracking-tight text-slate-950 font-sans">EXTREMESOLUTIONS</h1>
+                        <p class="text-xs text-slate-600">Lagos, Nigeria &bull; extremesolutions.com.ng &bull; <a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-slate-800 hover:underline font-medium">sms.extremesolutions.com.ng</a></p>
                     </div>
                 </div>
-                <div class="text-right text-[11px] text-slate-800 font-medium font-mono">
-                    <p>Date: {{ $dateStr }}</p>
-                    <p class="text-slate-600">Ref: {{ $refCode }}</p>
+                <div class="text-right text-xs text-slate-700 font-sans">
+                    <p class="font-medium text-slate-950">{{ $dateStr }}</p>
                 </div>
             </div>
 
             <!-- Recipient & Subject -->
             <div class="mb-4">
                 <p class="font-semibold text-slate-900 text-sm">Dear {{ !empty($name) && $name !== 'Sir/Madam' ? $name : request('name', 'Valued Partner') }},</p>
-                <div class="border-l-2 border-slate-950 pl-3 py-1 mt-2 bg-slate-50">
-                    <p class="font-bold text-slate-950 text-[13px]">RE: Fueling Our Commercial Rollout &mdash; Deploying ExtremeSolutions Across Nigerian Secondary Schools</p>
-                </div>
+                <p class="font-bold text-slate-950 text-[13px] mt-2 pb-1 border-b border-slate-200">
+                    Subject: Commercial Software Deployment Across Nigerian Secondary Schools
+                </p>
             </div>
 
-            <!-- Body -->
-            <div class="space-y-3.5 text-slate-700">
+            <!-- Letter Body: High-conviction narrative, Amazon customer focus, Google transparency, Meta builder ethos -->
+            <div class="space-y-3.5 text-slate-800 text-[13px]">
                 <p>
-                    ExtremeSolutions is building a sustainable educational technology enterprise. We are not an NGO or a charity; we are a commercial systems venture deploying an all-in-one School Operating System (<a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-emerald-700 font-medium underline">sms.extremesolutions.com.ng</a>) to eliminate manual operational friction in Nigerian secondary institutions.
+                    ExtremeSolutions was founded on a simple conviction: the most critical institutions in Africa should not be held back by manual, error-prone paperwork. We are not an NGO or a charity; we are a disciplined commercial software venture deploying an all-in-one School Operating System (<a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-slate-950 font-semibold underline">sms.extremesolutions.com.ng</a>) specifically engineered to solve the operational bottlenecks in Nigerian secondary education.
                 </p>
 
-                <!-- Problem & Solution -->
-                <div>
-                    <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 mb-1">The Operational Problem &amp; Commercial Opportunity</h2>
-                    <p class="mb-1.5"><strong class="text-slate-900">Underutilized Technology &amp; CBT Anxiety:</strong> Secondary schools have computer labs that sit idle, offering weekly theory notes instead of practical screen habits. Students falter during national exams (JAMB CBT) due to lack of timed navigation and software familiarity.</p>
-                    <p class="mb-1.5"><strong class="text-slate-900">End-of-Term Broadsheet Delays:</strong> Schools spend 2 to 3 weeks compiling Continuous Assessments (CA) with calculators, causing calculation errors, delayed vacations, and uncollected tuition balances.</p>
-                    <div class="p-2 bg-emerald-50/70 border border-emerald-200 rounded text-emerald-900 text-xs">
-                        <strong>The Solution:</strong> ExtremeSolutions automates CA scoring, generates 1-click terminal broadsheets, reconciles tuition balances, and embeds routine CBT testing directly into the school's termly calendar.
-                    </div>
-                </div>
+                <p>
+                    <strong>The Reality on the Ground:</strong> Across the country, hundreds of secondary schools have computer laboratories that sit dark or are restricted to weekly theory notes. When national examinations like JAMB CBT arrive, students struggle not from lack of intelligence, but because they have never interacted with timed examination software. Simultaneously, school administrations spend three exhausting weeks at the end of every term compiling Continuous Assessments (CA) and terminal broadsheets manually with calculators—introducing computation errors, delaying vacations, and stalling tuition reconciliation.
+                </p>
 
-                <!-- Revenue Model -->
-                <div>
-                    <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 mb-1">Commercial Revenue Model: Built for Self-Sufficiency</h2>
-                    <p>
-                        We charge schools a recurring fee of <strong>₦500 to ₦1,000 per student/term</strong>, integrated into regular school fees (₦150,000 – ₦300,000 per term for an average 250-student school). 
-                        <span class="bg-slate-100 px-1 py-0.5 font-semibold text-slate-950">Onboarding just 3 secondary schools makes our core infrastructure completely self-sustaining.</span>
-                    </p>
-                </div>
+                <p>
+                    <strong>The Operational Engine:</strong> We did not build another slide deck. ExtremeSolutions School OS is live and running right now. The platform completely automates Continuous Assessment scoring, generates 1-click terminal broadsheets, reconciles school fee payments, and integrates routine computer-based testing directly into the school's weekly academic schedule.
+                </p>
 
-                <!-- The Need -->
-                <div>
-                    <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 mb-1">Why We Are Raising an Upfront Deployment Fund</h2>
-                    <p class="mb-1.5">
-                        Schools pay after their first successful broadsheet run. Software alone cannot close contracts; physical execution does. Our team physically enters campuses, migrates physical registers, and trains staff on-site.
-                    </p>
-                    <p class="mb-1">
-                        We are raising a lean <strong>Rollout Deployment Pool of ₦150,000 to ₦300,000</strong> to fund this direct acquisition bridge:
-                    </p>
-                    <ul class="list-disc pl-4 space-y-0.5 text-xs">
-                        <li><strong>Field Transit &amp; Outreach:</strong> Transport for direct school demos with proprietors and principals.</li>
-                        <li><strong>48-Hour Assisted Onboarding:</strong> Digitizing student registers and grading schemes.</li>
-                        <li><strong>Staff Induction Materials:</strong> Printing teacher operation handbooks and student CBT orientation guides.</li>
-                    </ul>
-                </div>
+                <p>
+                    <strong>Commercial Revenue Model &amp; Self-Sufficiency:</strong> We charge schools a recurring subscription of <strong>&#8358;500 to &#8358;1,000 per student per term</strong>, built directly into standard school fees (generating &#8358;150,000 to &#8358;300,000 per term for an average 250-student school). Because software infrastructure scales with near-zero marginal cost, <strong>onboarding just 3 secondary schools makes our core infrastructure, cloud servers, and field operations completely self-sustaining</strong> without requiring subsequent outside capital.
+                </p>
 
-                <!-- Bank Box -->
-                <div class="mt-3.5 p-3.5 bg-slate-50 border border-slate-200 rounded-md">
+                <p>
+                    <strong>Execution &amp; The Upfront Deployment Fund:</strong> In basic education, software alone cannot close contracts; physical execution does. Schools pay after their first successful broadsheet run, meaning our team must physically enter campuses, digitize paper registers into the system within 48 hours, and train staff on-site. Once an institution completes its first terminal broadsheet on our system, retention is near 100%. We are raising a focused upfront Rollout Deployment Pool of <strong>&#8358;150,000 to &#8358;300,000</strong> to execute this direct cluster rollout:
+                </p>
+
+                <ul class="list-disc pl-5 space-y-1 text-slate-800 text-[12.5px]">
+                    <li><strong>Field Transit &amp; Campus Demos:</strong> In-person presentations with school proprietors and principals.</li>
+                    <li><strong>48-Hour Assisted Onboarding:</strong> Rapid digitizing and verification of physical class registers.</li>
+                    <li><strong>Teacher &amp; Student Induction:</strong> Hands-on staff training and student CBT orientation sessions.</li>
+                </ul>
+
+                <!-- Dignified Settlement / Wire Details -->
+                <div class="mt-4 p-3.5 bg-slate-50 border border-slate-300 rounded">
                     <div class="flex items-center justify-between mb-2">
-                        <p class="text-[11px] font-bold uppercase tracking-wider text-slate-500">Deployment Support Account (Direct Execution)</p>
+                        <span class="text-[11px] font-bold uppercase tracking-wider text-slate-700">Deployment Support Account Details</span>
                         <button type="button" onclick="navigator.clipboard.writeText('0236642821'); this.innerText='Copied!'; setTimeout(() => this.innerText='Copy No', 2000);" class="text-[11px] bg-slate-200 hover:bg-slate-300 text-slate-800 font-mono px-2 py-0.5 rounded transition cursor-pointer">Copy No</button>
                     </div>
                     <div class="grid grid-cols-2 gap-3 text-xs">
@@ -158,31 +142,34 @@
                         </div>
                         <div>
                             <span class="text-slate-500 text-[11px] block">Transaction Narration</span>
-                            <span class="font-mono text-slate-700">EXS Support / {{ !empty($name) && $name !== 'Sir/Madam' ? $name : request('name', 'Partner') }}</span>
+                            <span class="font-mono text-slate-700">EXS Support / {{ !empty($name) && $name !== 'Sir/Madam' ? $name : request('name', 'Valued Partner') }}</span>
                         </div>
                     </div>
                 </div>
 
-                <p class="text-xs italic text-slate-600">
-                    Backers receive direct monthly photo/audit reports, partner recognition on the school portal, and the assurance that their capital builds a self-funding enterprise.
+                <p class="text-xs text-slate-600 italic">
+                    Backers receive direct monthly deployment and audit updates, partner recognition on the deployment portal, and the assurance that their support funds a permanent, self-funding commercial system.
                 </p>
             </div>
 
-            <!-- Sign-off -->
-            <div class="mt-4 pt-3 border-t border-slate-200 flex justify-between items-end">
-                <div>
-                    <p class="text-xs text-slate-500">Warm regards,</p>
-                    <div class="my-1">
-                        <img src="{{ !empty($sigBase64) ? $sigBase64 : asset('images/signature.png') }}"
-                             alt="Signature"
-                             class="h-10 w-auto opacity-95"
-                             style="filter: contrast(1.15); max-width: 170px;">
-                    </div>
-                    <p class="font-bold text-slate-950 text-sm">Samuel Ekunyan</p>
-                    <p class="text-[11px] text-slate-600">Founder &amp; Principal Systems Architect, ExtremeSolutions</p>
-                    <p class="text-[11px] text-slate-600 font-mono"><a href="mailto:samuel@ekunyansamuel.dev" class="text-emerald-700 underline">samuel@ekunyansamuel.dev</a> &bull; <a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-emerald-700 underline">sms.extremesolutions.com.ng</a></p>
-                    <p class="text-[11px] font-medium text-slate-800 mt-0.5">Direct Line / WhatsApp: <a href="tel:+2349052585622" class="hover:text-emerald-700 font-semibold">+234 905 258 5622</a></p>
+            <!-- Sign-off Block (Exact Format) -->
+            <div class="mt-5 pt-3 border-t border-slate-200">
+                <p class="text-xs text-slate-600 mb-1">Yours sincerely,</p>
+                <div class="my-1.5">
+                    <img src="{{ !empty($sigBase64) ? $sigBase64 : asset('images/signature.png') }}"
+                         alt="Signature"
+                         class="h-10 w-auto opacity-95"
+                         style="filter: contrast(1.15); max-width: 170px;">
                 </div>
+                <p class="font-bold text-slate-950 text-sm">Samuel Ekunyan</p>
+                <p class="text-xs text-slate-700 font-medium">Lead Developer &amp; Founder, ExtremeSolutions</p>
+                <p class="text-xs text-slate-600 mt-0.5">
+                    <a href="mailto:samuel@ekunyansamuel.dev" class="text-slate-900 underline font-medium">samuel@ekunyansamuel.dev</a> &bull; 
+                    <a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-slate-900 underline font-medium">sms.extremesolutions.com.ng</a>
+                </p>
+                <p class="text-xs text-slate-800 font-medium mt-1">
+                    WhatsApp: <a href="https://wa.me/2348036375292" target="_blank" class="text-slate-950 font-bold hover:underline">+2348036375292</a>
+                </p>
             </div>
 
         </article>

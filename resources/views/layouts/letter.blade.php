@@ -85,17 +85,13 @@
                 <a href="{{ route('home') }}" class="flex items-center space-x-2.5 group" title="Return to ExtremeSolutions Portal">
                     <img src="{{ asset('images/es-mark.png') }}" alt="ExtremeSolutions Mark" class="h-7 w-auto transition-transform group-hover:scale-105">
                     <div class="leading-none">
-                        <div class="text-xs font-black tracking-wider text-white font-mono uppercase">EXTREMESOLUTIONS</div>
-                        <div class="text-[10px] text-emerald-400 font-mono tracking-wider">OFFICIAL EXECUTIVE DISPATCH</div>
+                        <div class="text-xs font-bold tracking-wider text-white font-mono uppercase">EXTREMESOLUTIONS</div>
+                        <div class="text-[10px] text-slate-400 font-mono tracking-wider">COMMERCIAL SYSTEMS &bull; LAGOS, NG</div>
                     </div>
                 </a>
             </div>
 
             <div class="flex items-center space-x-4 text-xs font-mono">
-                <div class="hidden md:flex items-center space-x-2 text-slate-400">
-                    <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                    <span>AUTHENTICATED MEMO</span>
-                </div>
                 <div class="flex items-center space-x-3 text-slate-300">
                     <a href="https://extremesolutions.com.ng" target="_blank" class="hover:text-emerald-400 transition-colors hidden sm:inline">
                         extremesolutions.com.ng &nearr;
@@ -117,12 +113,14 @@
     <footer class="no-print border-t border-white/10 bg-[#071324] text-slate-400 py-8 text-xs font-sans">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div class="text-center sm:text-left">
-                <div class="font-mono text-slate-200 font-bold uppercase tracking-wider text-[11px]">ExtremeSolutions &bull; Office of the Principal Systems Architect</div>
-                <div class="text-slate-400 mt-0.5 text-[11px]">Building Digital Systems that last.</div>
+                <div class="font-mono text-slate-200 font-bold uppercase tracking-wider text-[11px]">ExtremeSolutions &bull; Executive Office</div>
+                <div class="text-slate-400 mt-0.5 text-[11px]">Samuel Ekunyan, Lead Developer &amp; Founder</div>
             </div>
             <div class="text-center sm:text-right font-mono text-[10px] text-slate-400">
-                <span>Inquiries: </span>
-                <a href="mailto:samuel@ekunyansamuel.dev" class="text-emerald-400 hover:underline">samuel@ekunyansamuel.dev</a>
+                <span>Direct / WhatsApp: </span>
+                <a href="https://wa.me/2348036375292" target="_blank" class="text-emerald-400 hover:underline font-semibold">+234 803 637 5292</a>
+                <span class="mx-1.5 text-slate-600">|</span>
+                <a href="mailto:samuel@ekunyansamuel.dev" class="text-slate-300 hover:underline">samuel@ekunyansamuel.dev</a>
             </div>
         </div>
     </footer>

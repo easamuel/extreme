@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>ExtremeSolutions Commercial Partnership Proposal</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>ExtremeSolutions &mdash; Institutional Partnership Proposal</title>
     <style>
         @page {
             size: A4 portrait;
-            margin: 16mm 14mm 16mm 14mm;
+            margin: 12mm 15mm 12mm 15mm;
         }
 
         * {
@@ -16,10 +16,10 @@
         }
 
         body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-family: 'DejaVu Sans', sans-serif;
             color: #1e293b;
             font-size: 8.5pt;
-            line-height: 1.45;
+            line-height: 1.42;
             margin: 0;
             padding: 0;
             background: #ffffff;
@@ -315,29 +315,15 @@
 </p>
 
 <!-- Signature Block -->
-<div class="signature-block">
-    <table class="sig-table">
-        <tr>
-            <td style="width: 60%;">
-                <p style="margin-bottom: 2pt;">Respectfully yours,</p>
-                @if(!empty($sigBase64))
-                    <img src="{{ $sigBase64 }}" class="sig-img" alt="Samuel Ekunyan">
-                @endif
-                <div style="font-weight: bold; font-size: 9pt; color: #0f172a;">Samuel Ekunyan</div>
-                <div style="font-size: 7.5pt; color: #475569;">Lead Systems Architect, ExtremeSolutions</div>
-                <div style="font-size: 7.5pt; color: #64748b;">sms.extremesolutions.com.ng</div>
-            </td>
-            <td style="width: 40%; text-align: right; font-size: 7pt; color: #64748b; font-family: monospace;">
-                <div>PROPOSAL REF: {{ $refCode }}</div>
-                <div>STATUS: OFFICIAL PROPOSAL</div>
-            </td>
-        </tr>
-    </table>
-</div>
-
-<!-- Footer Note -->
-<div class="footer-note">
-    EXTREMESOLUTIONS &bull; EDUCATIONAL INFRASTRUCTURE &bull; BUILDING DIGITAL SYSTEMS THAT LAST
+<div class="signature-block" style="margin-top: 8pt; padding-top: 5pt; border-top: 0.5pt solid #e2e8f0; page-break-inside: avoid;">
+    <div style="font-size: 8pt; color: #475569; margin-bottom: 2pt;">Yours sincerely,</div>
+    @if(!empty($sigBase64))
+        <img src="{{ $sigBase64 }}" class="sig-img" alt="Samuel Ekunyan Signature" style="height: 24pt; width: auto; margin: 2pt 0;">
+    @endif
+    <div style="font-weight: bold; font-size: 9pt; color: #0f172a;">Samuel Ekunyan</div>
+    <div style="font-size: 8pt; color: #334155;">Lead Developer &amp; Founder, ExtremeSolutions</div>
+    <div style="font-size: 7.5pt; color: #475569;">samuel@ekunyansamuel.dev &bull; sms.extremesolutions.com.ng</div>
+    <div style="font-size: 8pt; color: #0f172a; font-weight: bold; margin-top: 1pt;">WhatsApp: +2348036375292</div>
 </div>
 
 </body>

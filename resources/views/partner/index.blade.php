@@ -191,8 +191,8 @@
                     </div>
                     <h3 class="text-lg font-bold text-[#0c1f3a]">WhatsApp Partner Desk</h3>
                     <p class="text-xs text-gray-500 mt-1">Instant communication with leadership</p>
-                    <div class="mt-4 text-sm font-bold text-gray-900">+234 905 258 5622</div>
-                    <a href="https://wa.me/2349052585622?text={{ urlencode('Hello ExtremeSolutions Leadership, I am reaching out regarding a strategic partnership.') }}"
+                    <div class="mt-4 text-sm font-bold text-gray-900">+234 803 637 5292</div>
+                    <a href="https://wa.me/2348036375292?text={{ urlencode('Hello ExtremeSolutions Leadership, I am reaching out regarding a strategic partnership.') }}"
                        target="_blank" class="mt-4 inline-block text-xs font-bold text-emerald-600 hover:underline">
                         Open Executive Chat &rarr;
                     </a>

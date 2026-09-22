@@ -8,12 +8,11 @@
 
     <!-- Top Action Console (Clean Document Actions Only - No Forms) -->
     <div class="no-print mb-6">
-        <div class="flex flex-wrap items-center justify-between gap-3 bg-[#0c1f3a] border border-white/15 p-3.5 sm:p-4 rounded-xl shadow-xl text-xs font-mono text-white">
-            <div class="flex items-center space-x-2.5">
-                <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span>PROPOSAL CODE: <strong class="text-white">{{ $refCode }}</strong></span>
-                <span class="text-white/30 hidden sm:inline">|</span>
-                <span class="text-white/70 hidden sm:inline">{{ $dateStr }}</span>
+        <div class="flex flex-wrap items-center justify-between gap-3 bg-slate-900/90 border border-slate-800 p-3.5 sm:p-4 rounded-xl shadow-lg text-xs font-sans text-white">
+            <div class="flex items-center space-x-2 text-slate-300">
+                <span class="font-medium text-white">ExtremeSolutions Institutional Proposal</span>
+                <span class="text-slate-500 hidden sm:inline">&bull;</span>
+                <span class="text-slate-400 hidden sm:inline">{{ $dateStr }}</span>
             </div>
 
             <div class="flex flex-wrap items-center gap-2">
@@ -43,7 +42,7 @@
 
                 <!-- WhatsApp Share Button -->
                 <a id="btn-whatsapp-share"
-                   href="https://api.whatsapp.com/send?text={{ urlencode('I have a message for you from ExtremeSolutions:\n\nRE: Institutional Partnership for Broadsheet Automation and Student CBT Readiness\n\n' . ($isPersonalized ? 'Prepared for ' . $proprietor . ' (' . $school . '):\n' : '') . url()->full()) }}"
+                   href="https://api.whatsapp.com/send?text={{ urlencode('I have a message for you from ExtremeSolutions:\n\nSubject: Institutional Partnership for Broadsheet Automation and Student CBT Readiness\n\n' . ($isPersonalized ? 'Prepared for ' . $proprietor . ' (' . $school . '):\n' : '') . url()->full()) }}"
                    target="_blank"
                    class="inline-flex items-center px-4 py-2 bg-[#25D366] hover:bg-[#20bd5a] text-slate-950 font-bold rounded-lg text-xs transition shadow-sm"
                    title="Share on WhatsApp">
@@ -70,23 +69,25 @@
     <!-- The Authentic Proposal Letter Paper Surface (Rendered for Screen, Print & Canvas Export) -->
     <div class="flex justify-center">
         <article id="letter-paper"
-                 class="print-paper w-full bg-white text-slate-900 border border-slate-200 shadow-2xl rounded-sm p-7 sm:p-14 lg:p-16 font-serif text-[15px] leading-relaxed relative">
+                 class="print-paper w-full bg-white text-slate-900 border border-slate-200 shadow-xl rounded-sm p-7 sm:p-12 md:p-14 font-sans text-[13.5px] leading-relaxed relative max-w-[794px]">
 
             <!-- Official Institutional Letterhead -->
-            <header class="border-b-2 border-slate-950 pb-5 mb-8 font-sans">
-                <div class="flex items-center space-x-4">
-                    <img src="{{ !empty($logoBase64) ? $logoBase64 : asset('images/es-mark.png') }}" alt="ExtremeSolutions" class="h-12 w-auto">
+            <div class="flex justify-between items-start border-b border-slate-300 pb-4 mb-5 font-sans">
+                <div class="flex items-center space-x-3.5">
+                    <img src="{{ !empty($logoBase64) ? $logoBase64 : asset('images/es-mark.png') }}" alt="ExtremeSolutions" class="h-10 w-auto">
                     <div>
-                        <div class="text-2xl font-black tracking-tight text-slate-950 font-mono">EXTREMESOLUTIONS</div>
-                        <div class="text-xs uppercase tracking-widest text-slate-600 font-bold">Educational Infrastructure &amp; Deployment Taskforce</div>
-                        <div class="text-[11px] text-slate-500">extremesolutions.com.ng &bull; <span class="font-mono text-emerald-700 font-semibold">sms.extremesolutions.com.ng</span></div>
+                        <h1 class="text-lg font-bold tracking-tight text-slate-950 font-sans">EXTREMESOLUTIONS</h1>
+                        <p class="text-xs text-slate-600">Lagos, Nigeria &bull; extremesolutions.com.ng &bull; <a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-slate-800 hover:underline font-medium">sms.extremesolutions.com.ng</a></p>
                     </div>
                 </div>
-            </header>
+                <div class="text-right text-xs text-slate-700 font-sans">
+                    <p class="font-medium text-slate-950">{{ $dateStr }}</p>
+                </div>
+            </div>
 
             <!-- Recipient Block -->
-            <div class="mb-6 font-sans text-sm">
-                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">
+            <div class="mb-4 font-sans text-sm">
+                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-0.5">
                     {{ $isPersonalized ? 'PREPARED EXCLUSIVELY FOR:' : 'PREPARED FOR:' }}
                 </div>
                 <div class="font-bold text-slate-950 text-base">
@@ -98,13 +99,13 @@
             </div>
 
             <!-- Subject Line -->
-            <div class="mb-8 font-sans font-bold text-slate-950 text-sm sm:text-base border-l-4 border-slate-950 pl-4 py-1.5 bg-slate-50">
-                RE: Institutional Partnership for Broadsheet Automation and Student CBT Readiness
+            <div class="mb-5 font-sans font-bold text-slate-950 text-sm pb-1 border-b border-slate-200">
+                Subject: Institutional Partnership for Broadsheet Automation and Student CBT Readiness
             </div>
 
             <!-- Salutation -->
-            <div class="mb-6">
-                <p class="font-bold text-slate-950 text-base">
+            <div class="mb-4">
+                <p class="font-semibold text-slate-900 text-sm">
                     Dear {{ $isPersonalized ? $proprietor : 'School Proprietor / Principal' }},
                 </p>
             </div>
@@ -196,25 +197,24 @@
                 </p>
             </div>
 
-            <!-- Authentic Handwritten Signoff Block (Upside-Down Rotated Orientation) -->
-            <div class="mt-10 pt-6 border-t border-slate-200">
-                <p class="mb-2">Respectfully yours,</p>
-
-                <!-- Rotated Authentic Signature / Monogram -->
-                <div class="my-2">
+            <!-- Sign-off Block (Exact Format) -->
+            <div class="mt-8 pt-4 border-t border-slate-200">
+                <p class="text-xs text-slate-600 mb-1">Yours sincerely,</p>
+                <div class="my-1.5">
                     <img src="{{ !empty($sigBase64) ? $sigBase64 : asset('images/signature.png') }}"
                          alt="Signature"
-                         class="h-16 w-auto opacity-95"
-                         style="filter: contrast(1.15); max-width: 220px;">
+                         class="h-10 w-auto opacity-95"
+                         style="filter: contrast(1.15); max-width: 170px;">
                 </div>
-
-                <div class="font-sans text-sm">
-                    <div class="font-bold text-slate-950 font-mono text-base">Samuel Ekunyan</div>
-                    <div class="text-slate-700 font-medium">Lead Systems Architect, ExtremeSolutions</div>
-                    <div class="text-slate-500 font-mono text-xs mt-1">
-                        <a href="https://sms.extremesolutions.com.ng" class="text-emerald-700 underline font-semibold">sms.extremesolutions.com.ng</a>
-                    </div>
-                </div>
+                <p class="font-bold text-slate-950 text-sm">Samuel Ekunyan</p>
+                <p class="text-xs text-slate-700 font-medium">Lead Developer &amp; Founder, ExtremeSolutions</p>
+                <p class="text-xs text-slate-600 mt-0.5">
+                    <a href="mailto:samuel@ekunyansamuel.dev" class="text-slate-900 underline font-medium">samuel@ekunyansamuel.dev</a> &bull; 
+                    <a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-slate-900 underline font-medium">sms.extremesolutions.com.ng</a>
+                </p>
+                <p class="text-xs text-slate-800 font-medium mt-1">
+                    WhatsApp: <a href="https://wa.me/2348036375292" target="_blank" class="text-slate-950 font-bold hover:underline">+2348036375292</a>
+                </p>
             </div>
 
         </article>

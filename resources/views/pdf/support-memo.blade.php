@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>ExtremeSolutions Support &amp; Backer Brief</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>ExtremeSolutions &mdash; Executive Letter</title>
     <style>
         @page {
             size: A4 portrait;
-            margin: 10mm 12mm 10mm 12mm;
+            margin: 12mm 15mm 12mm 15mm;
         }
 
         * {
@@ -15,20 +15,23 @@
             print-color-adjust: exact;
         }
 
-        body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            color: #0f172a;
-            font-size: 8.5pt;
-            line-height: 1.38;
+        html, body {
             margin: 0;
             padding: 0;
             background: #ffffff;
         }
 
+        body {
+            font-family: 'DejaVu Sans', sans-serif;
+            color: #0f172a;
+            font-size: 9pt;
+            line-height: 1.42;
+        }
+
         table.header-table {
             width: 100%;
             border-collapse: collapse;
-            border-bottom: 1.5pt solid #0f172a;
+            border-bottom: 1.2pt solid #0f172a;
             padding-bottom: 6pt;
             margin-bottom: 8pt;
         }
@@ -38,7 +41,7 @@
         }
 
         .logo-img {
-            height: 26pt;
+            height: 24pt;
             width: auto;
         }
 
@@ -46,98 +49,78 @@
             font-size: 13pt;
             font-weight: bold;
             color: #0f172a;
-            letter-spacing: 0.5pt;
+            letter-spacing: 0.3pt;
         }
 
-        .header-dept {
+        .header-sub {
             font-size: 7.5pt;
-            text-transform: uppercase;
-            letter-spacing: 0.5pt;
-            color: #047857;
-            font-weight: bold;
+            color: #475569;
             margin-top: 1pt;
         }
 
-        .header-meta {
+        .header-date {
             text-align: right;
-            font-size: 7.5pt;
-            color: #475569;
-            line-height: 1.35;
-            font-family: monospace;
-        }
-
-        .subject-box {
-            background: #f8fafc;
-            border-left: 2.5pt solid #0f172a;
-            padding: 4pt 6pt;
-            margin-bottom: 7pt;
-            font-size: 8.5pt;
-            font-weight: bold;
+            font-size: 8pt;
             color: #0f172a;
+            font-weight: 500;
         }
 
         .salutation {
+            font-size: 9.5pt;
+            font-weight: bold;
+            color: #0f172a;
+            margin-bottom: 3pt;
+        }
+
+        .subject-line {
             font-size: 9pt;
             font-weight: bold;
-            margin-bottom: 5pt;
             color: #0f172a;
+            border-bottom: 0.5pt solid #cbd5e1;
+            padding-bottom: 3pt;
+            margin-bottom: 7pt;
         }
 
         p {
-            margin: 0 0 5pt 0;
+            margin: 0 0 6pt 0;
             text-align: justify;
         }
 
-        .section-heading {
-            font-size: 7.5pt;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 0.8pt;
-            color: #0f172a;
-            margin: 6pt 0 2pt 0;
-            border-bottom: 0.5pt solid #e2e8f0;
-            padding-bottom: 1pt;
-        }
-
         ul {
-            margin: 2pt 0 5pt 12pt;
+            margin: 2pt 0 6pt 12pt;
             padding: 0;
         }
 
         li {
             margin-bottom: 2pt;
+            font-size: 8.5pt;
+        }
+
+        .table-bank {
+            width: 100%;
+            border-collapse: collapse;
+            border: 0.75pt solid #cbd5e1;
+            background: #f8fafc;
+            margin: 5pt 0;
+            font-size: 8pt;
+        }
+
+        .table-bank td {
+            padding: 4pt 7pt;
+            vertical-align: top;
         }
 
         .signature-block {
-            margin-top: 8pt;
+            margin-top: 7pt;
             padding-top: 5pt;
             border-top: 0.5pt solid #e2e8f0;
             page-break-inside: avoid;
         }
 
-        table.sig-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        table.sig-table td {
-            vertical-align: bottom;
-        }
-
         .sig-img {
-            height: 22pt;
+            height: 24pt;
             width: auto;
-            margin-bottom: 2pt;
-        }
-
-        .footer-note {
-            margin-top: 6pt;
-            padding-top: 3pt;
-            border-top: 0.5pt solid #e2e8f0;
-            font-size: 6pt;
-            color: #64748b;
-            text-align: center;
-            font-family: monospace;
+            margin: 2pt 0;
         }
     </style>
 </head>
@@ -146,18 +129,23 @@
 <!-- Letterhead -->
 <table class="header-table">
     <tr>
-        <td style="width: 60%;">
-            @if(!empty($logoBase64))
-                <img src="{{ $logoBase64 }}" class="logo-img" alt="ExtremeSolutions">
-            @else
-                <div class="header-title">EXTREMESOLUTIONS</div>
-            @endif
-            <div class="header-dept">Deployment &amp; Expansion Memorandum</div>
-            <div style="font-size: 7pt; color: #64748b; margin-top: 1pt;">Lagos, Nigeria &bull; extremesolutions.com.ng &bull; sms.extremesolutions.com.ng</div>
+        <td style="width: 70%;">
+            <table style="border-collapse: collapse;">
+                <tr>
+                    @if(!empty($logoBase64))
+                        <td style="padding-right: 8pt; vertical-align: middle;">
+                            <img src="{{ $logoBase64 }}" class="logo-img" alt="ExtremeSolutions">
+                        </td>
+                    @endif
+                    <td style="vertical-align: middle;">
+                        <div class="header-title">EXTREMESOLUTIONS</div>
+                        <div class="header-sub">Lagos, Nigeria &bull; extremesolutions.com.ng &bull; sms.extremesolutions.com.ng</div>
+                    </td>
+                </tr>
+            </table>
         </td>
-        <td style="width: 40%;" class="header-meta">
-            <strong>Date:</strong> {{ $dateStr }}<br>
-            <strong>Ref:</strong> {{ $refCode }}
+        <td style="width: 30%;" class="header-date">
+            {{ $dateStr }}
         </td>
     </tr>
 </table>
@@ -168,84 +156,62 @@
 </div>
 
 <!-- Subject Line -->
-<div class="subject-box">
-    RE: Fueling Our Commercial Rollout &mdash; Deploying ExtremeSolutions Across Nigerian Secondary Schools
+<div class="subject-line">
+    Subject: Commercial Software Deployment Across Nigerian Secondary Schools
 </div>
 
 <p>
-    ExtremeSolutions is building a sustainable educational technology enterprise. We are not an NGO or a charity; we are a commercial systems venture deploying an all-in-one School Operating System (sms.extremesolutions.com.ng) to eliminate manual operational friction in Nigerian secondary institutions.
+    ExtremeSolutions was founded on a simple conviction: the most critical institutions in Africa should not be held back by manual, error-prone paperwork. We are not an NGO or a charity; we are a disciplined commercial software venture deploying an all-in-one School Operating System (sms.extremesolutions.com.ng) specifically engineered to solve the operational bottlenecks in Nigerian secondary education.
 </p>
 
-<div class="section-heading">The Operational Problem &amp; Commercial Opportunity</div>
 <p>
-    <strong>Underutilized Technology &amp; CBT Anxiety:</strong> Secondary schools have computer labs that sit idle, offering weekly theory notes instead of practical screen habits. Students falter during national exams (JAMB CBT) due to lack of timed navigation and software familiarity.
-</p>
-<p>
-    <strong>End-of-Term Broadsheet Delays:</strong> Schools spend 2 to 3 weeks compiling Continuous Assessments (CA) with calculators, causing calculation errors, delayed vacations, and uncollected tuition balances.
-</p>
-<div style="background: #f0fdf4; border: 0.5pt solid #86efac; padding: 3pt 5pt; font-size: 7.5pt; margin-bottom: 4pt; color: #065f46;">
-    <strong>The Solution:</strong> ExtremeSolutions automates CA scoring, generates 1-click terminal broadsheets, reconciles tuition balances, and embeds routine CBT testing directly into the school's termly calendar.
-</div>
-
-<div class="section-heading">Commercial Revenue Model: Built for Self-Sufficiency</div>
-<p>
-    We charge schools a recurring fee of <strong>₦500 to ₦1,000 per student/term</strong>, integrated into regular school fees (₦150,000 – ₦300,000 per term for an average 250-student school). <strong>Onboarding just 3 secondary schools makes our core infrastructure completely self-sustaining.</strong>
+    <strong>The Reality on the Ground:</strong> Across the country, hundreds of secondary schools have computer laboratories that sit dark or are restricted to weekly theory notes. When national examinations like JAMB CBT arrive, students struggle not from lack of intelligence, but because they have never interacted with timed examination software. Simultaneously, school administrations spend three exhausting weeks at the end of every term compiling Continuous Assessments (CA) and terminal broadsheets manually with calculators—introducing computation errors, delaying vacations, and stalling tuition reconciliation.
 </p>
 
-<div class="section-heading">Why We Are Raising an Upfront Deployment Fund</div>
 <p>
-    Schools pay after their first successful broadsheet run. Software alone cannot close contracts; physical execution does. Our team physically enters campuses, migrates physical registers, and trains staff on-site.
+    <strong>The Operational Engine:</strong> We did not build another slide deck. ExtremeSolutions School OS is live and running right now. The platform completely automates Continuous Assessment scoring, generates 1-click terminal broadsheets, reconciles school fee payments, and integrates routine computer-based testing directly into the school's weekly academic schedule.
 </p>
+
 <p>
-    We are raising a lean <strong>Rollout Deployment Pool of ₦150,000 to ₦300,000</strong> to fund this direct acquisition bridge:
+    <strong>Commercial Revenue Model &amp; Self-Sufficiency:</strong> We charge schools a recurring subscription of <strong>&#8358;500 to &#8358;1,000 per student per term</strong>, built directly into standard school fees (generating &#8358;150,000 to &#8358;300,000 per term for an average 250-student school). Because software infrastructure scales with near-zero marginal cost, <strong>onboarding just 3 secondary schools makes our core infrastructure, cloud servers, and field operations completely self-sustaining</strong> without requiring subsequent outside capital.
 </p>
+
+<p>
+    <strong>Execution &amp; The Upfront Deployment Fund:</strong> In basic education, software alone cannot close contracts; physical execution does. Schools pay after their first successful broadsheet run, meaning our team must physically enter campuses, digitize paper registers into the system within 48 hours, and train staff on-site. Once an institution completes its first terminal broadsheet on our system, retention is near 100%. We are raising a focused upfront Rollout Deployment Pool of <strong>&#8358;150,000 to &#8358;300,000</strong> to execute this direct cluster rollout:
+</p>
+
 <ul style="list-style-type: disc;">
-    <li><strong>Field Transit &amp; Outreach:</strong> Transport for direct school demos with proprietors and principals.</li>
-    <li><strong>48-Hour Assisted Onboarding:</strong> Digitizing student registers and grading schemes.</li>
-    <li><strong>Staff Induction Materials:</strong> Printing teacher operation handbooks and student CBT orientation guides.</li>
+    <li><strong>Field Transit &amp; Campus Demos:</strong> In-person presentations with school proprietors and principals.</li>
+    <li><strong>48-Hour Assisted Onboarding:</strong> Rapid digitizing and verification of physical class registers.</li>
+    <li><strong>Teacher &amp; Student Induction:</strong> Hands-on staff training and student CBT orientation sessions.</li>
 </ul>
 
-<div class="section-heading">Deployment Support Account (Direct Execution)</div>
-<table style="width: 100%; border: 0.75pt solid #cbd5e1; background: #f8fafc; padding: 4pt 6pt; margin: 3pt 0; font-size: 7.5pt;">
+<!-- Settlement Account Details -->
+<table class="table-bank">
     <tr>
         <td style="width: 50%;"><strong>Bank Name:</strong> Wema Bank Plc</td>
         <td style="width: 50%;"><strong>Account Name:</strong> Samuel Ekunyan</td>
     </tr>
     <tr>
-        <td style="width: 50%;"><strong>Account Number:</strong> <span style="font-family: monospace; font-weight: bold; font-size: 8.5pt;">0236642821</span></td>
-        <td style="width: 50%;"><strong>Narration:</strong> EXS Support / {{ !empty($name) && $name !== 'Sir/Madam' ? $name : request('name', 'Partner') }}</td>
+        <td style="width: 50%;"><strong>Account Number:</strong> 0236642821</td>
+        <td style="width: 50%;"><strong>Narration:</strong> EXS Support / {{ !empty($name) && $name !== 'Sir/Madam' ? $name : request('name', 'Valued Partner') }}</td>
     </tr>
 </table>
 
-<p style="font-size: 7pt; font-style: italic; color: #475569; margin-top: 3pt;">
-    Backers receive direct monthly photo/audit reports, partner recognition on the school portal, and the assurance that their capital builds a self-funding enterprise.
+<p style="font-size: 7.5pt; font-style: italic; color: #475569; margin: 3pt 0 5pt 0;">
+    Backers receive direct monthly deployment and audit updates, partner recognition on the deployment portal, and the assurance that their support funds a permanent, self-funding commercial system.
 </p>
 
-<!-- Signature Block -->
+<!-- Sign-off Block (Exact Format) -->
 <div class="signature-block">
-    <table class="sig-table">
-        <tr>
-            <td style="width: 60%;">
-                <p style="margin-bottom: 2pt; font-size: 7.5pt; color: #64748b;">Warm regards,</p>
-                @if(!empty($sigBase64))
-                    <img src="{{ $sigBase64 }}" class="sig-img" alt="Samuel Ekunyan">
-                @endif
-                <div style="font-weight: bold; font-size: 8.5pt; color: #0f172a;">Samuel Ekunyan</div>
-                <div style="font-size: 7pt; color: #475569;">Founder &amp; Principal Systems Architect, ExtremeSolutions</div>
-                <div style="font-size: 7pt; color: #64748b;">samuel@ekunyansamuel.dev &bull; sms.extremesolutions.com.ng</div>
-                <div style="font-size: 7pt; color: #0f172a; font-weight: bold; margin-top: 1pt;">Direct Line / WhatsApp: +234 905 258 5622</div>
-            </td>
-            <td style="width: 40%; text-align: right; font-size: 6.5pt; color: #64748b; font-family: monospace;">
-                <div>MEMORANDUM ID: {{ $refCode }}</div>
-                <div>CLASSIFICATION: COMMERCIAL DEPLOYMENT</div>
-            </td>
-        </tr>
-    </table>
-</div>
-
-<!-- Footer Note -->
-<div class="footer-note">
-    EXTREMESOLUTIONS &bull; BUILDING DIGITAL SYSTEMS THAT LAST
+    <div style="font-size: 8pt; color: #475569; margin-bottom: 2pt;">Yours sincerely,</div>
+    @if(!empty($sigBase64))
+        <img src="{{ $sigBase64 }}" class="sig-img" alt="Samuel Ekunyan Signature">
+    @endif
+    <div style="font-weight: bold; font-size: 9pt; color: #0f172a;">Samuel Ekunyan</div>
+    <div style="font-size: 8pt; color: #334155;">Lead Developer &amp; Founder, ExtremeSolutions</div>
+    <div style="font-size: 7.5pt; color: #475569;">samuel@ekunyansamuel.dev &bull; sms.extremesolutions.com.ng</div>
+    <div style="font-size: 8pt; color: #0f172a; font-weight: bold; margin-top: 1pt;">WhatsApp: +2348036375292</div>
 </div>
 
 </body>

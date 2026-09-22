@@ -132,75 +132,60 @@
         <article id="letter-paper"
                  class="print-paper max-w-[794px] w-full mx-auto bg-white p-6 sm:p-10 md:p-12 text-slate-900 font-sans text-[13px] leading-relaxed shadow-2xl rounded-sm border border-slate-200 print:border-none print:shadow-none print:p-0 relative">
 
-            <!-- Top Header -->
-            <div class="flex justify-between items-start border-b border-slate-200 pb-3 mb-4">
+            <!-- Elegant Letterhead -->
+            <div class="flex justify-between items-start border-b border-slate-300 pb-4 mb-5">
                 <div class="flex items-center space-x-3.5">
                     <img src="{{ !empty($logoBase64) ? $logoBase64 : asset('images/es-mark.png') }}" alt="ExtremeSolutions" class="h-10 w-auto">
                     <div>
-                        <h1 class="text-lg font-bold tracking-tight text-slate-950 font-mono">EXTREMESOLUTIONS</h1>
-                        <p id="preview-letterhead-title" class="text-xs font-semibold text-emerald-700 tracking-wide uppercase">Deployment &amp; Expansion Memorandum</p>
-                        <p class="text-[11px] text-slate-500 mt-0.5">Lagos, Nigeria &bull; extremesolutions.com.ng &bull; <span class="text-emerald-700 font-medium">sms.extremesolutions.com.ng</span></p>
+                        <h1 class="text-lg font-bold tracking-tight text-slate-950 font-sans">EXTREMESOLUTIONS</h1>
+                        <p class="text-xs text-slate-600">Lagos, Nigeria &bull; extremesolutions.com.ng &bull; <a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-slate-800 hover:underline font-medium">sms.extremesolutions.com.ng</a></p>
                     </div>
                 </div>
-                <div class="text-right text-[11px] text-slate-800 font-medium font-mono">
-                    <p>Date: {{ $dateStr }}</p>
-                    <p class="text-slate-600">Ref: {{ $refCode }}</p>
+                <div class="text-right text-xs text-slate-700 font-sans">
+                    <p class="font-medium text-slate-950">{{ $dateStr }}</p>
                 </div>
             </div>
 
             <!-- Recipient & Subject -->
             <div class="mb-4">
                 <p class="font-semibold text-slate-900 text-sm">Dear <span class="js-recipient-target">{{ $initialName }}</span>,</p>
-                <div id="preview-subject-line" class="border-l-2 border-slate-950 pl-3 py-1 mt-2 bg-slate-50">
-                    <p class="font-bold text-slate-950 text-[13px]">RE: Fueling Our Commercial Rollout &mdash; Deploying ExtremeSolutions Across Nigerian Secondary Schools</p>
-                </div>
+                <p id="preview-subject-line" class="font-bold text-slate-950 text-[13px] mt-2 pb-1 border-b border-slate-200">
+                    Subject: Commercial Software Deployment Across Nigerian Secondary Schools
+                </p>
             </div>
 
             <!-- Option A Content Container -->
-            <div id="container-option-a" class="space-y-3.5 text-slate-700">
+            <div id="container-option-a" class="space-y-3.5 text-slate-800 text-[13px]">
                 <p>
-                    ExtremeSolutions is building a sustainable educational technology enterprise. We are not an NGO or a charity; we are a commercial systems venture deploying an all-in-one School Operating System (<a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-emerald-700 font-medium underline">sms.extremesolutions.com.ng</a>) to eliminate manual operational friction in Nigerian secondary institutions.
+                    ExtremeSolutions was founded on a simple conviction: the most critical institutions in Africa should not be held back by manual, error-prone paperwork. We are not an NGO or a charity; we are a disciplined commercial software venture deploying an all-in-one School Operating System (<a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-slate-950 font-semibold underline">sms.extremesolutions.com.ng</a>) specifically engineered to solve the operational bottlenecks in Nigerian secondary education.
                 </p>
 
-                <!-- Problem & Solution -->
-                <div>
-                    <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 mb-1">The Operational Problem &amp; Commercial Opportunity</h2>
-                    <p class="mb-1.5"><strong class="text-slate-900">Underutilized Technology &amp; CBT Anxiety:</strong> Secondary schools have computer labs that sit idle, offering weekly theory notes instead of practical screen habits. Students falter during national exams (JAMB CBT) due to lack of timed navigation and software familiarity.</p>
-                    <p class="mb-1.5"><strong class="text-slate-900">End-of-Term Broadsheet Delays:</strong> Schools spend 2 to 3 weeks compiling Continuous Assessments (CA) with calculators, causing calculation errors, delayed vacations, and uncollected tuition balances.</p>
-                    <div class="p-2 bg-emerald-50/70 border border-emerald-200 rounded text-emerald-900 text-xs">
-                        <strong>The Solution:</strong> ExtremeSolutions automates CA scoring, generates 1-click terminal broadsheets, reconciles tuition balances, and embeds routine CBT testing directly into the school's termly calendar.
-                    </div>
-                </div>
+                <p>
+                    <strong>The Reality on the Ground:</strong> Across the country, hundreds of secondary schools have computer laboratories that sit dark or are restricted to weekly theory notes. When national examinations like JAMB CBT arrive, students struggle not from lack of intelligence, but because they have never interacted with timed examination software. Simultaneously, school administrations spend three exhausting weeks at the end of every term compiling Continuous Assessments (CA) and terminal broadsheets manually with calculators—introducing computation errors, delaying vacations, and stalling tuition reconciliation.
+                </p>
 
-                <!-- Revenue Model -->
-                <div>
-                    <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 mb-1">Commercial Revenue Model: Built for Self-Sufficiency</h2>
-                    <p>
-                        We charge schools a recurring fee of <strong>₦500 to ₦1,000 per student/term</strong>, integrated into regular school fees (₦150,000 – ₦300,000 per term for an average 250-student school). 
-                        <span class="bg-slate-100 px-1 py-0.5 font-semibold text-slate-950">Onboarding just 3 secondary schools makes our core infrastructure completely self-sustaining.</span>
-                    </p>
-                </div>
+                <p>
+                    <strong>The Operational Engine:</strong> We did not build another slide deck. ExtremeSolutions School OS is live and running right now. The platform completely automates Continuous Assessment scoring, generates 1-click terminal broadsheets, reconciles school fee payments, and integrates routine computer-based testing directly into the school's weekly academic schedule.
+                </p>
 
-                <!-- The Need -->
-                <div>
-                    <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 mb-1">Why We Are Raising an Upfront Deployment Fund</h2>
-                    <p class="mb-1.5">
-                        Schools pay after their first successful broadsheet run. Software alone cannot close contracts; physical execution does. Our team physically enters campuses, migrates physical registers, and trains staff on-site.
-                    </p>
-                    <p class="mb-1">
-                        We are raising a lean <strong>Rollout Deployment Pool of ₦150,000 to ₦300,000</strong> to fund this direct acquisition bridge:
-                    </p>
-                    <ul class="list-disc pl-4 space-y-0.5 text-xs">
-                        <li><strong>Field Transit &amp; Outreach:</strong> Transport for direct school demos with proprietors and principals.</li>
-                        <li><strong>48-Hour Assisted Onboarding:</strong> Digitizing student registers and grading schemes.</li>
-                        <li><strong>Staff Induction Materials:</strong> Printing teacher operation handbooks and student CBT orientation guides.</li>
-                    </ul>
-                </div>
+                <p>
+                    <strong>Commercial Revenue Model &amp; Self-Sufficiency:</strong> We charge schools a recurring subscription of <strong>&#8358;500 to &#8358;1,000 per student per term</strong>, built directly into standard school fees (generating &#8358;150,000 to &#8358;300,000 per term for an average 250-student school). Because software infrastructure scales with near-zero marginal cost, <strong>onboarding just 3 secondary schools makes our core infrastructure, cloud servers, and field operations completely self-sustaining</strong> without requiring subsequent outside capital.
+                </p>
 
-                <!-- Bank Box -->
-                <div class="mt-3.5 p-3.5 bg-slate-50 border border-slate-200 rounded-md">
+                <p>
+                    <strong>Execution &amp; The Upfront Deployment Fund:</strong> In basic education, software alone cannot close contracts; physical execution does. Schools pay after their first successful broadsheet run, meaning our team must physically enter campuses, digitize paper registers into the system within 48 hours, and train staff on-site. Once an institution completes its first terminal broadsheet on our system, retention is near 100%. We are raising a focused upfront Rollout Deployment Pool of <strong>&#8358;150,000 to &#8358;300,000</strong> to execute this direct cluster rollout:
+                </p>
+
+                <ul class="list-disc pl-5 space-y-1 text-slate-800 text-[12.5px]">
+                    <li><strong>Field Transit &amp; Campus Demos:</strong> In-person presentations with school proprietors and principals.</li>
+                    <li><strong>48-Hour Assisted Onboarding:</strong> Rapid digitizing and verification of physical class registers.</li>
+                    <li><strong>Teacher &amp; Student Induction:</strong> Hands-on staff training and student CBT orientation sessions.</li>
+                </ul>
+
+                <!-- Dignified Settlement / Wire Details -->
+                <div class="mt-4 p-3.5 bg-slate-50 border border-slate-300 rounded">
                     <div class="flex items-center justify-between mb-2">
-                        <p class="text-[11px] font-bold uppercase tracking-wider text-slate-500">Deployment Support Account (Direct Execution)</p>
+                        <span class="text-[11px] font-bold uppercase tracking-wider text-slate-700">Deployment Support Account Details</span>
                         <button type="button" onclick="navigator.clipboard.writeText('0236642821'); this.innerText='Copied!'; setTimeout(() => this.innerText='Copy No', 2000);" class="text-[11px] bg-slate-200 hover:bg-slate-300 text-slate-800 font-mono px-2 py-0.5 rounded transition cursor-pointer">Copy No</button>
                     </div>
                     <div class="grid grid-cols-2 gap-3 text-xs">
@@ -223,124 +208,78 @@
                     </div>
                 </div>
 
-                <p class="text-xs italic text-slate-600">
-                    Backers receive direct monthly photo/audit reports, partner recognition on the school portal, and the assurance that their capital builds a self-funding enterprise.
+                <p class="text-xs text-slate-600 italic">
+                    Backers receive direct monthly deployment and audit updates, partner recognition on the deployment portal, and the assurance that their support funds a permanent, self-funding commercial system.
                 </p>
             </div>
 
             <!-- Option B Content Container (Invest / Capped Return) -->
-            <div id="container-option-b" class="space-y-6 text-slate-800 text-[15px] leading-relaxed hidden">
+            <div id="container-option-b" class="space-y-3.5 text-slate-800 text-[13px] hidden">
                 <p>
-                    ExtremeSolutions is building a sustainable, high-margin educational technology enterprise. We are not an NGO or a charity; we are a commercial systems venture deploying an all-in-one School Operating System (<a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-emerald-700 font-mono font-semibold underline">sms.extremesolutions.com.ng</a>) to solve deep operational bottlenecks in Nigerian secondary schools.
+                    ExtremeSolutions is building a sustainable, high-margin educational technology enterprise. We are not an NGO or a charity; we are a commercial systems venture deploying an all-in-one School Operating System (<a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-slate-950 font-semibold underline">sms.extremesolutions.com.ng</a>) to solve deep operational bottlenecks in Nigerian secondary schools.
                 </p>
 
                 <p>
-                    For commercial partners and backers seeking a clearly defined financial return alongside foundational institutional impact, we provide this structured <strong>Founding Partner Advance</strong>.
+                    <strong>The Commercial Mechanism: 1.3x Fixed Capped Repayment:</strong> We have structured a clean, revenue-linked advance mechanism for private commercial backers. Backers participate with a lean advance of <strong>&#8358;50,000</strong> or <strong>&#8358;100,000</strong> per unit, capped at a fixed <strong>1.3x return</strong> (&#8358;50,000 returns &#8358;65,000; &#8358;100,000 returns &#8358;130,000). Repayments are funded and disbursed directly from termly software fees (&#8358;500 – &#8358;1,000/student) across our first 3 to 5 onboarded secondary schools. Once fulfilled, capital is fully returned with yield, while the institutions generate permanent recurring software revenues that sustain our operations indefinitely.
                 </p>
 
-                <div class="pt-2">
-                    <h2 class="font-sans font-bold text-slate-950 text-sm uppercase tracking-wider border-b border-slate-200 pb-1 mb-3">
-                        The Commercial Mechanism: 1.3x Fixed Capped Repayment
-                    </h2>
-                    <p class="mb-3">
-                        We have structured a clean, revenue-linked advance mechanism for private commercial backers:
-                    </p>
-                    <div class="space-y-3 pl-3 sm:pl-4 border-l-2 border-slate-200">
-                        <p>
-                            <strong class="text-slate-950">Deployment Advance Principal:</strong> Backers participate with a lean deployment advance of <strong>₦50,000</strong> or <strong>₦100,000</strong> per unit.
-                        </p>
-                        <p>
-                            <strong class="text-slate-950">1.3x Fixed Repayment Cap:</strong> Your advance is capped at a fixed <strong>1.3x return</strong> (₦50,000 advance returns <strong>₦65,000</strong>; ₦100,000 advance returns <strong>₦130,000</strong>).
-                        </p>
-                        <p>
-                            <strong class="text-slate-950">Priority Revenue Recoupment:</strong> Repayments are funded and disbursed directly from the termly software fees (₦500 to ₦1,000 per student) collected across our first 3 to 5 onboarded secondary schools.
-                        </p>
-                        <p>
-                            <strong class="text-slate-950">Self-Sustaining Milestone:</strong> Once fulfilled, your capital is fully returned with yield, while the onboarded institutions continue generating permanent, recurring software revenues that sustain our operations indefinitely without external capital.
-                        </p>
+                <p>
+                    <strong>Why the Unit Economics Support This Advance:</strong> We charge schools an integrated termly fee of <strong>&#8358;500 to &#8358;1,000 per student</strong> (generating &#8358;150,000 to &#8358;300,000 per term for an average 250-student school). <strong>Onboarding just 3 secondary schools makes our core infrastructure completely self-sustaining</strong>, generating &#8358;450,000 to &#8358;900,000 per term to comfortably service and prioritize repayments.
+                </p>
+
+                <p>
+                    <strong>Capital Allocation: Customer Acquisition &amp; On-Ground Deployment:</strong> Schools pay after their first successful broadsheet run. Software alone cannot close contracts; physical execution does. Your advance directly funds field transit for direct proprietor demos, 48-hour assisted student register onboarding, and teacher handbook induction materials.
+                </p>
+
+                <!-- Dedicated Commercial Advance Account Details -->
+                <div class="mt-4 p-3.5 bg-slate-50 border border-slate-300 rounded">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-[11px] font-bold uppercase tracking-wider text-slate-700">Dedicated Commercial Advance Account</span>
+                        <button type="button" onclick="navigator.clipboard.writeText('0236642821'); this.innerText='Copied!'; setTimeout(() => this.innerText='Copy No', 2000);" class="text-[11px] bg-slate-200 hover:bg-slate-300 text-slate-800 font-mono px-2 py-0.5 rounded transition cursor-pointer">Copy No</button>
                     </div>
-                </div>
-
-                <div class="pt-2">
-                    <h2 class="font-sans font-bold text-slate-950 text-sm uppercase tracking-wider border-b border-slate-200 pb-1 mb-3">
-                        Why the Unit Economics Support This Advance
-                    </h2>
-                    <p>
-                        ExtremeSolutions charges schools a recurring, per-student software fee of <strong>₦500 to ₦1,000 per term</strong>, seamlessly integrated into standard termly administrative dues.
-                    </p>
-                    <ul class="list-disc pl-6 space-y-1.5 my-3">
-                        <li><strong>Average Secondary School Size:</strong> 200–350 students.</li>
-                        <li><strong>Termly School Revenue:</strong> ₦150,000 – ₦300,000 per institution.</li>
-                        <li><strong>The Breakeven Threshold:</strong> <strong>Onboarding just 3 secondary schools</strong> generates between ₦450,000 and ₦900,000 per term in recurring revenue. This cash flow comfortably services the 1.3x advance fulfillment while covering all ongoing operational expenses.</li>
-                    </ul>
-                </div>
-
-                <div class="pt-2">
-                    <h2 class="font-sans font-bold text-slate-950 text-sm uppercase tracking-wider border-b border-slate-200 pb-1 mb-3">
-                        Capital Allocation: Customer Acquisition &amp; On-Ground Deployment
-                    </h2>
-                    <p>
-                        In enterprise educational sales, schools only pay once their first terminal broadsheet is successfully delivered. Software alone cannot close contracts; physical execution closes contracts. Your deployment advance directly funds:
-                    </p>
-                    <ul class="list-disc pl-6 space-y-1.5 my-3">
-                        <li><strong>Field Transit &amp; Direct Outreach:</strong> Covering physical transport for direct school pitch meetings and product demonstrations to proprietors.</li>
-                        <li><strong>48-Hour Onboarding &amp; Data Entry:</strong> Digitizing physical student registers and configuring school grading databases.</li>
-                        <li><strong>Staff Induction Materials:</strong> Printing physical teacher operation handbooks and student CBT orientation guides.</li>
-                    </ul>
-                </div>
-
-                <div class="pt-2">
-                    <h2 class="font-sans font-bold text-slate-950 text-sm uppercase tracking-wider border-b border-slate-200 pb-1 mb-3">
-                        Dedicated Commercial Advance Account
-                    </h2>
-                    <p class="mb-3">
-                        Advances are deposited directly into our verified operational deployment account:
-                    </p>
-                    <div class="bg-slate-50 border-2 border-slate-900 rounded-sm p-5 font-sans my-4">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
-                            <div>
-                                <span class="text-xs uppercase text-slate-500 font-bold tracking-wider block">Bank Name</span>
-                                <span class="font-bold text-slate-950 text-base">Wema Bank Plc</span>
-                            </div>
-                            <div>
-                                <span class="text-xs uppercase text-slate-500 font-bold tracking-wider block">Account Name</span>
-                                <span class="font-bold text-slate-950 text-base">Samuel Ekunyan</span>
-                            </div>
-                            <div>
-                                <span class="text-xs uppercase text-slate-500 font-bold tracking-wider block">Account Number</span>
-                                <div class="flex items-center space-x-2 mt-0.5">
-                                    <span class="font-mono font-black text-slate-950 text-lg sm:text-xl tracking-wider select-all">0236642821</span>
-                                    <button type="button" onclick="navigator.clipboard.writeText('0236642821'); this.innerText='Copied!'; setTimeout(() => this.innerText='Copy', 2000);" class="text-xs bg-slate-200 hover:bg-slate-300 text-slate-800 font-mono px-2 py-0.5 rounded transition">Copy</button>
-                                </div>
-                            </div>
-                            <div>
-                                <span class="text-xs uppercase text-slate-500 font-bold tracking-wider block">Transaction Narration</span>
-                                <span class="font-mono text-slate-800 text-xs sm:text-sm font-semibold">EXS Partner Advance / <span class="js-recipient-target">{{ $initialName }}</span></span>
-                            </div>
+                    <div class="grid grid-cols-2 gap-3 text-xs">
+                        <div>
+                            <span class="text-slate-500 text-[11px] block">Bank Name</span>
+                            <strong class="text-slate-950 font-semibold">Wema Bank Plc</strong>
+                        </div>
+                        <div>
+                            <span class="text-slate-500 text-[11px] block">Account Name</span>
+                            <strong class="text-slate-950 font-semibold">Samuel Ekunyan</strong>
+                        </div>
+                        <div>
+                            <span class="text-slate-500 text-[11px] block">Account Number</span>
+                            <span class="font-mono font-bold text-sm text-slate-950">0236642821</span>
+                        </div>
+                        <div>
+                            <span class="text-slate-500 text-[11px] block">Transaction Narration</span>
+                            <span class="font-mono text-slate-700">EXS Partner Advance / <span class="js-recipient-target">{{ $initialName }}</span></span>
                         </div>
                     </div>
                 </div>
 
-                <p class="pt-2">
-                    We are moving quickly, school by school, to establish an institutional standard across Nigeria. Thank you for your partnership, your belief, and your commercial conviction.
+                <p class="text-xs text-slate-600 italic">
+                    Backers receive a formal signed term sheet, direct monthly audit reports, and priority disbursement from onboarded school revenues.
                 </p>
             </div>
 
-            <!-- Sign-off -->
-            <div class="mt-4 pt-3 border-t border-slate-200 flex justify-between items-end">
-                <div>
-                    <p class="text-xs text-slate-500">Warm regards,</p>
-                    <div class="my-1">
-                        <img src="{{ !empty($sigBase64) ? $sigBase64 : asset('images/signature.png') }}"
-                             alt="Signature"
-                             class="h-10 w-auto opacity-95"
-                             style="filter: contrast(1.15); max-width: 170px;">
-                    </div>
-                    <p class="font-bold text-slate-950 text-sm">Samuel Ekunyan</p>
-                    <p class="text-[11px] text-slate-600">Founder &amp; Principal Systems Architect, ExtremeSolutions</p>
-                    <p class="text-[11px] text-slate-600 font-mono"><a href="mailto:samuel@ekunyansamuel.dev" class="text-emerald-700 underline">samuel@ekunyansamuel.dev</a> &bull; <a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-emerald-700 underline">sms.extremesolutions.com.ng</a></p>
-                    <p class="text-[11px] font-medium text-slate-800 mt-0.5">Direct Line / WhatsApp: <a href="tel:+2349052585622" class="hover:text-emerald-700 font-semibold">+234 905 258 5622</a></p>
+            <!-- Sign-off Block (Exact Format) -->
+            <div class="mt-5 pt-3 border-t border-slate-200">
+                <p class="text-xs text-slate-600 mb-1">Yours sincerely,</p>
+                <div class="my-1.5">
+                    <img src="{{ !empty($sigBase64) ? $sigBase64 : asset('images/signature.png') }}"
+                         alt="Signature"
+                         class="h-10 w-auto opacity-95"
+                         style="filter: contrast(1.15); max-width: 170px;">
                 </div>
+                <p class="font-bold text-slate-950 text-sm">Samuel Ekunyan</p>
+                <p class="text-xs text-slate-700 font-medium">Lead Developer &amp; Founder, ExtremeSolutions</p>
+                <p class="text-xs text-slate-600 mt-0.5">
+                    <a href="mailto:samuel@ekunyansamuel.dev" class="text-slate-900 underline font-medium">samuel@ekunyansamuel.dev</a> &bull; 
+                    <a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-slate-900 underline font-medium">sms.extremesolutions.com.ng</a>
+                </p>
+                <p class="text-xs text-slate-800 font-medium mt-1">
+                    WhatsApp: <a href="https://wa.me/2348036375292" target="_blank" class="text-slate-950 font-bold hover:underline">+2348036375292</a>
+                </p>
             </div>
 
         </article>
@@ -372,19 +311,17 @@
         if (opt === 'b') {
             tabB.className = 'px-4 py-2 rounded-lg text-xs font-bold transition cursor-pointer bg-emerald-500 text-slate-950 shadow';
             tabA.className = 'px-4 py-2 rounded-lg text-xs font-medium transition cursor-pointer text-slate-300 hover:text-white hover:bg-slate-800';
-            if (hint) hint.textContent = 'Commercial Advance memo: Capped 1.3x repayment (₦50k/₦100k advance returning ₦65k/₦130k) from the first 3-5 schools.';
+            if (hint) hint.textContent = 'Commercial Advance: Capped 1.3x repayment (₦50k/₦100k advance returning ₦65k/₦130k) funded from the first 3-5 schools.';
             if (contA) contA.classList.add('hidden');
             if (contB) contB.classList.remove('hidden');
-            if (headTitle) headTitle.textContent = 'Founding Partner Advance • Commercial Option B';
-            if (subjectLine) subjectLine.innerHTML = 'RE: Structured Founding Partner Advance &mdash; Commercial Deployment of ExtremeSolutions School OS';
+            if (subjectLine) subjectLine.innerHTML = 'Subject: Structured Commercial Partner Advance &mdash; ExtremeSolutions School OS';
         } else {
             tabA.className = 'px-4 py-2 rounded-lg text-xs font-bold transition cursor-pointer bg-emerald-500 text-slate-950 shadow';
             tabB.className = 'px-4 py-2 rounded-lg text-xs font-medium transition cursor-pointer text-slate-300 hover:text-white hover:bg-slate-800';
-            if (hint) hint.textContent = 'Standard distribution memo: Highlights for-profit commercial venture, 3-school self-sustaining threshold, and lean ₦150k–₦300k deployment pool.';
+            if (hint) hint.textContent = 'Commercial deployment letter: Highlights 3-school self-sustaining threshold and lean ₦150k–₦300k deployment pool.';
             if (contB) contB.classList.add('hidden');
             if (contA) contA.classList.remove('hidden');
-            if (headTitle) headTitle.textContent = 'Deployment & Expansion Memorandum';
-            if (subjectLine) subjectLine.innerHTML = 'RE: Fueling Our Commercial Rollout &mdash; Deploying ExtremeSolutions Across Nigerian Secondary Schools';
+            if (subjectLine) subjectLine.innerHTML = 'Subject: Commercial Software Deployment Across Nigerian Secondary Schools';
         }
 
         updateAdminDispatch();
@@ -418,8 +355,8 @@
         const waBtn = document.getElementById('btn-admin-whatsapp');
         if (waBtn) {
             const subject = currentOption === 'b'
-                ? 'RE: Structured Founding Partner Advance — Commercial Deployment of ExtremeSolutions School OS'
-                : 'RE: Fueling Our Commercial Rollout — Deploying ExtremeSolutions Across Nigerian Secondary Schools';
+                ? 'Subject: Structured Commercial Partner Advance — Deployment of ExtremeSolutions School OS'
+                : 'Subject: Commercial Software Deployment Across Nigerian Secondary Schools';
 
             const text = 'I have a message for you from ExtremeSolutions:\n\n' +
                 subject + '\n\n' +

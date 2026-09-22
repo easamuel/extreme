@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ExtremeSolutions Executive Memorandum - {{ $org ?? $name }}</title>
     <style>
@@ -21,7 +21,7 @@
         }
 
         body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-family: 'DejaVu Sans', sans-serif;
             color: #1a202c;
             font-size: 9.5pt;
             line-height: 1.55;
@@ -449,7 +449,7 @@
 
 <!-- Official Footer -->
 <div class="footer-note">
-    ExtremeSolutions &bull; Enterprise Software, Mobile Systems &amp; Cloud Automation &bull; Lagos, Nigeria &bull; +234 905 258 5622<br>
+    ExtremeSolutions &bull; Enterprise Software, Mobile Systems &amp; Cloud Automation &bull; Lagos, Nigeria &bull; +234 803 637 5292<br>
     Official School Operating System: <strong>https://sms.extremesolutions.com.ng</strong> &bull; Institutional Desk: <strong>info@extremesolutions.com.ng</strong>
 </div>
 

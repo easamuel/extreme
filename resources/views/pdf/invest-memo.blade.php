@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>ExtremeSolutions Founding Partner Advance (Option B)</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>ExtremeSolutions &mdash; Commercial Advance Memorandum</title>
     <style>
         @page {
             size: A4 portrait;
-            margin: 10mm 12mm 10mm 12mm;
+            margin: 12mm 15mm 12mm 15mm;
         }
 
         * {
@@ -15,20 +15,23 @@
             print-color-adjust: exact;
         }
 
-        body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            color: #0f172a;
-            font-size: 8.5pt;
-            line-height: 1.38;
+        html, body {
             margin: 0;
             padding: 0;
             background: #ffffff;
         }
 
+        body {
+            font-family: 'DejaVu Sans', sans-serif;
+            color: #0f172a;
+            font-size: 9pt;
+            line-height: 1.42;
+        }
+
         table.header-table {
             width: 100%;
             border-collapse: collapse;
-            border-bottom: 1.5pt solid #0f172a;
+            border-bottom: 1.2pt solid #0f172a;
             padding-bottom: 6pt;
             margin-bottom: 8pt;
         }
@@ -38,7 +41,7 @@
         }
 
         .logo-img {
-            height: 26pt;
+            height: 24pt;
             width: auto;
         }
 
@@ -46,98 +49,78 @@
             font-size: 13pt;
             font-weight: bold;
             color: #0f172a;
-            letter-spacing: 0.5pt;
+            letter-spacing: 0.3pt;
         }
 
-        .header-dept {
+        .header-sub {
             font-size: 7.5pt;
-            text-transform: uppercase;
-            letter-spacing: 0.5pt;
-            color: #047857;
-            font-weight: bold;
+            color: #475569;
             margin-top: 1pt;
         }
 
-        .header-meta {
+        .header-date {
             text-align: right;
-            font-size: 7.5pt;
-            color: #475569;
-            line-height: 1.35;
-            font-family: monospace;
-        }
-
-        .subject-box {
-            background: #f8fafc;
-            border-left: 2.5pt solid #0f172a;
-            padding: 4pt 6pt;
-            margin-bottom: 7pt;
-            font-size: 8.5pt;
-            font-weight: bold;
+            font-size: 8pt;
             color: #0f172a;
+            font-weight: 500;
         }
 
         .salutation {
+            font-size: 9.5pt;
+            font-weight: bold;
+            color: #0f172a;
+            margin-bottom: 3pt;
+        }
+
+        .subject-line {
             font-size: 9pt;
             font-weight: bold;
-            margin-bottom: 5pt;
             color: #0f172a;
+            border-bottom: 0.5pt solid #cbd5e1;
+            padding-bottom: 3pt;
+            margin-bottom: 7pt;
         }
 
         p {
-            margin: 0 0 5pt 0;
+            margin: 0 0 6pt 0;
             text-align: justify;
         }
 
-        .section-heading {
-            font-size: 7.5pt;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 0.8pt;
-            color: #0f172a;
-            margin: 6pt 0 2pt 0;
-            border-bottom: 0.5pt solid #e2e8f0;
-            padding-bottom: 1pt;
-        }
-
         ul {
-            margin: 2pt 0 5pt 12pt;
+            margin: 2pt 0 6pt 12pt;
             padding: 0;
         }
 
         li {
             margin-bottom: 2pt;
+            font-size: 8.5pt;
+        }
+
+        .table-bank {
+            width: 100%;
+            border-collapse: collapse;
+            border: 0.75pt solid #cbd5e1;
+            background: #f8fafc;
+            margin: 5pt 0;
+            font-size: 8pt;
+        }
+
+        .table-bank td {
+            padding: 4pt 7pt;
+            vertical-align: top;
         }
 
         .signature-block {
-            margin-top: 8pt;
+            margin-top: 7pt;
             padding-top: 5pt;
             border-top: 0.5pt solid #e2e8f0;
             page-break-inside: avoid;
         }
 
-        table.sig-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        table.sig-table td {
-            vertical-align: bottom;
-        }
-
         .sig-img {
-            height: 22pt;
+            height: 24pt;
             width: auto;
-            margin-bottom: 2pt;
-        }
-
-        .footer-note {
-            margin-top: 6pt;
-            padding-top: 3pt;
-            border-top: 0.5pt solid #e2e8f0;
-            font-size: 6pt;
-            color: #64748b;
-            text-align: center;
-            font-family: monospace;
+            margin: 2pt 0;
         }
     </style>
 </head>
@@ -146,117 +129,79 @@
 <!-- Letterhead -->
 <table class="header-table">
     <tr>
-        <td style="width: 60%;">
-            @if(!empty($logoBase64))
-                <img src="{{ $logoBase64 }}" class="logo-img" alt="ExtremeSolutions">
-            @else
-                <div class="header-title">EXTREMESOLUTIONS</div>
-            @endif
-            <div class="header-dept">Founding Partner Advance &bull; Option B</div>
-            <div style="font-size: 7.5pt; color: #64748b; margin-top: 1pt;">Lagos, Nigeria &bull; extremesolutions.com.ng &bull; sms.extremesolutions.com.ng</div>
+        <td style="width: 70%;">
+            <table style="border-collapse: collapse;">
+                <tr>
+                    @if(!empty($logoBase64))
+                        <td style="padding-right: 8pt; vertical-align: middle;">
+                            <img src="{{ $logoBase64 }}" class="logo-img" alt="ExtremeSolutions">
+                        </td>
+                    @endif
+                    <td style="vertical-align: middle;">
+                        <div class="header-title">EXTREMESOLUTIONS</div>
+                        <div class="header-sub">Lagos, Nigeria &bull; extremesolutions.com.ng &bull; sms.extremesolutions.com.ng</div>
+                    </td>
+                </tr>
+            </table>
         </td>
-        <td style="width: 40%;" class="header-meta">
-            <strong>Document Ref:</strong> {{ $refCode }}<br>
-            <strong>Date:</strong> {{ $dateStr }}<br>
-            <strong>Classification:</strong> Commercial Advance Memo
+        <td style="width: 30%;" class="header-date">
+            {{ $dateStr }}
         </td>
     </tr>
 </table>
 
 <!-- Recipient Salutation -->
 <div class="salutation">
-    Dear {{ $name }},
+    Dear {{ !empty($name) && $name !== 'Sir/Madam' ? $name : request('name', 'Valued Partner') }},
 </div>
 
 <!-- Subject Line -->
-<div class="subject-box">
-    RE: Structured Founding Partner Advance &mdash; Commercial Deployment of ExtremeSolutions School OS
+<div class="subject-line">
+    Subject: Structured Commercial Partner Advance &mdash; ExtremeSolutions School OS
 </div>
 
 <p>
-    ExtremeSolutions is building a sustainable educational technology enterprise. We are not an NGO or a charity; we are a commercial systems venture deploying an all-in-one School Operating System (sms.extremesolutions.com.ng) to solve deep operational bottlenecks in Nigerian secondary schools.
+    ExtremeSolutions is building a sustainable, high-margin educational technology enterprise. We are not an NGO or a charity; we are a commercial systems venture deploying an all-in-one School Operating System (sms.extremesolutions.com.ng) to solve deep operational bottlenecks in Nigerian secondary schools.
 </p>
 
 <p>
-    For commercial partners seeking a clearly defined financial return alongside institutional impact, we provide this structured <strong>Founding Partner Advance</strong>.
+    <strong>The Commercial Mechanism: 1.3x Fixed Capped Repayment:</strong> We have structured a clean, revenue-linked advance mechanism for private commercial backers. Backers participate with a lean advance of <strong>&#8358;50,000</strong> or <strong>&#8358;100,000</strong> per unit, capped at a fixed <strong>1.3x return</strong> (&#8358;50,000 returns &#8358;65,000; &#8358;100,000 returns &#8358;130,000). Repayments are funded and disbursed directly from termly software fees (&#8358;500 – &#8358;1,000/student) across our first 3 to 5 onboarded secondary schools. Once fulfilled, capital is fully returned with yield, while the institutions generate permanent recurring software revenues that sustain our operations indefinitely.
 </p>
 
-<div class="section-heading">The Commercial Mechanism: 1.3x Fixed Capped Repayment</div>
-<ul style="list-style-type: disc;">
-    <li><strong>Deployment Advance Principal:</strong> Backers participate with a lean deployment advance of <strong>₦50,000</strong> or <strong>₦100,000</strong> per unit.</li>
-    <li><strong>1.3x Fixed Repayment Cap:</strong> Your advance is capped at a fixed <strong>1.3x return</strong> (₦50,000 advance returns <strong>₦65,000</strong>; ₦100,000 advance returns <strong>₦130,000</strong>).</li>
-    <li><strong>Priority Revenue Recoupment:</strong> Repayments are funded and disbursed directly from the termly software fees (₦500 to ₦1,000 per student) collected across our first 3 to 5 onboarded secondary schools.</li>
-    <li><strong>Self-Sustaining Milestone:</strong> Once fulfilled, your capital is fully returned with yield, while the onboarded institutions continue generating permanent, recurring software revenues that sustain our operations indefinitely without external capital.</li>
-</ul>
-
-<div class="section-heading">Unit Economics &amp; Breakeven Threshold</div>
 <p>
-    ExtremeSolutions charges schools a recurring, per-student software fee of <strong>₦500 to ₦1,000 per term</strong>.
+    <strong>Why the Unit Economics Support This Advance:</strong> We charge schools an integrated termly fee of <strong>&#8358;500 to &#8358;1,000 per student</strong> (generating &#8358;150,000 to &#8358;300,000 per term for an average 250-student school). <strong>Onboarding just 3 secondary schools makes our core infrastructure completely self-sustaining</strong>, generating &#8358;450,000 to &#8358;900,000 per term to comfortably service and prioritize repayments.
 </p>
-<ul style="list-style-type: disc;">
-    <li><strong>Average School Size:</strong> 200–350 students.</li>
-    <li><strong>Termly School Revenue:</strong> ₦150,000 – ₦300,000 per institution.</li>
-    <li><strong>The Breakeven Threshold:</strong> <strong>Onboarding just 3 secondary schools</strong> generates ₦450,000 – ₦900,000 per term in recurring revenue, ensuring seamless fulfillment of advance repayments and self-funded operations.</li>
-</ul>
 
-<div class="section-heading">Frontline Execution &amp; Customer Acquisition</div>
 <p>
-    In enterprise educational sales, schools only pay once their first terminal broadsheet is successfully delivered. Software alone cannot close contracts; physical execution closes contracts. Your deployment advance directly finances:
+    <strong>Capital Allocation: Customer Acquisition &amp; On-Ground Deployment:</strong> Schools pay after their first successful broadsheet run. Software alone cannot close contracts; physical execution does. Your advance directly funds field transit for direct proprietor demos, 48-hour assisted student register onboarding, and teacher handbook induction materials.
 </p>
-<ul style="list-style-type: disc;">
-    <li><strong>Field Transit &amp; Direct Outreach:</strong> Transport for direct school pitch meetings and demonstrations to proprietors.</li>
-    <li><strong>48-Hour Onboarding &amp; Data Entry:</strong> Digitizing physical student registers and configuring class databases.</li>
-    <li><strong>Staff Induction Materials:</strong> Printing physical teacher handbooks and student CBT orientation guides.</li>
-</ul>
 
-<div class="section-heading">Audit &amp; Formal Terms</div>
-<ul style="list-style-type: disc;">
-    <li><strong>Written Advance Confirmation:</strong> Formal signed term sheet acknowledging the exact advance amount and fixed 1.3x repayment schedule.</li>
-    <li><strong>Termly Progress Reports:</strong> Detailed visual updates confirming signed schools, student counts, and revenue distribution timelines.</li>
-    <li><strong>Roll of Honor:</strong> Formal recognition as a Founding Commercial Technology Sponsor.</li>
-</ul>
-
-<div class="section-heading">Dedicated Commercial Advance Account</div>
-<table style="width: 100%; border: 1pt solid #0f172a; background: #f8fafc; padding: 4pt 6pt; margin: 4pt 0; font-size: 8pt;">
+<!-- Dedicated Commercial Advance Account Details -->
+<table class="table-bank">
     <tr>
-        <td style="width: 50%;"><strong>Bank:</strong> Wema Bank Plc</td>
+        <td style="width: 50%;"><strong>Bank Name:</strong> Wema Bank Plc</td>
         <td style="width: 50%;"><strong>Account Name:</strong> Samuel Ekunyan</td>
     </tr>
     <tr>
-        <td style="width: 50%;"><strong>Account Number:</strong> <span style="font-family: monospace; font-weight: bold; font-size: 9pt;">0236642821</span></td>
-        <td style="width: 50%;"><strong>Narration:</strong> EXS Partner Advance / {{ $name != 'Sir/Madam' ? $name : '[Your Name]' }}</td>
+        <td style="width: 50%;"><strong>Account Number:</strong> 0236642821</td>
+        <td style="width: 50%;"><strong>Narration:</strong> EXS Partner Advance / {{ !empty($name) && $name !== 'Sir/Madam' ? $name : request('name', 'Partner') }}</td>
     </tr>
 </table>
 
-<p style="margin-top: 6pt;">
-    We are moving quickly, school by school, to establish an institutional standard across Nigeria. Thank you for your partnership, your belief, and your shared conviction.
+<p style="font-size: 7.5pt; font-style: italic; color: #475569; margin: 3pt 0 5pt 0;">
+    Backers receive a formal signed term sheet, direct monthly audit reports, and priority disbursement from onboarded school revenues.
 </p>
 
-<!-- Signature Block -->
+<!-- Sign-off Block (Exact Format) -->
 <div class="signature-block">
-    <table class="sig-table">
-        <tr>
-            <td style="width: 60%;">
-                <p style="margin-bottom: 2pt;">Warm regards,</p>
-                @if(!empty($sigBase64))
-                    <img src="{{ $sigBase64 }}" class="sig-img" alt="Samuel Ekunyan">
-                @endif
-                <div style="font-weight: bold; font-size: 9pt; color: #0f172a;">Samuel Ekunyan</div>
-                <div style="font-size: 7.5pt; color: #475569;">Founder &amp; Principal Systems Architect, ExtremeSolutions</div>
-                <div style="font-size: 7.5pt; color: #64748b;">samuel@ekunyansamuel.dev &bull; sms.extremesolutions.com.ng</div>
-                <div style="font-size: 7.5pt; color: #64748b;">Direct Line: +234 905 258 5622</div>
-            </td>
-            <td style="width: 40%; text-align: right; font-size: 7pt; color: #64748b; font-family: monospace;">
-                <div>ADVANCE REF: {{ $refCode }}</div>
-                <div>CLASSIFICATION: FOUNDING PARTNER ADVANCE</div>
-            </td>
-        </tr>
-    </table>
-</div>
-
-<!-- Footer Note -->
-<div class="footer-note">
-    EXTREMESOLUTIONS &bull; FOUNDING PARTNER ADVANCE &bull; COMMERCIAL OPTION B
+    <div style="font-size: 8pt; color: #475569; margin-bottom: 2pt;">Yours sincerely,</div>
+    @if(!empty($sigBase64))
+        <img src="{{ $sigBase64 }}" class="sig-img" alt="Samuel Ekunyan Signature">
+    @endif
+    <div style="font-weight: bold; font-size: 9pt; color: #0f172a;">Samuel Ekunyan</div>
+    <div style="font-size: 8pt; color: #334155;">Lead Developer &amp; Founder, ExtremeSolutions</div>
+    <div style="font-size: 7.5pt; color: #475569;">samuel@ekunyansamuel.dev &bull; sms.extremesolutions.com.ng</div>
+    <div style="font-size: 8pt; color: #0f172a; font-weight: bold; margin-top: 1pt;">WhatsApp: +2348036375292</div>
 </div>
 
 </body>
