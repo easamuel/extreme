@@ -1,7 +1,7 @@
 @extends('layouts.letter')
 
 @section('title', 'I have a message for you from ExtremeSolutions')
-@section('description', 'ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for African institutions and businesses. We engineer end-to-end software designed to replace fragile manual processes with fast, resilient technology.')
+@section('description', 'ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for institutions and businesses. We engineer end-to-end software, spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows designed to replace fragile manual processes with fast, resilient technology.')
 
 @section('content')
 <div class="max-w-4xl mx-auto">
@@ -93,11 +93,11 @@
             <!-- Letter Body: High-conviction enterprise narrative -->
             <div class="space-y-3.5 text-slate-800 text-[13px]">
                 <p>
-                    ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for African institutions and businesses. We engineer end-to-end software&mdash;spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows&mdash;designed to replace fragile manual processes with fast, resilient technology.
+                    ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for institutions and businesses. We engineer end-to-end software, spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows designed to replace fragile manual processes with fast, resilient technology.
                 </p>
 
                 <p>
-                    Our immediate commercial focus is secondary institutions&mdash;not because we are an education company, but because it is an enterprise market burdened by severe operational friction and immediate paying demand. Across the country, schools operate under three weeks of administrative paralysis at the end of every term compiling continuous assessments and broadsheets by hand. We built and shipped the antidote: <strong>ExtremeSolutions School OS</strong> (<a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-slate-950 font-semibold underline">sms.extremesolutions.com.ng</a>) is live in production today, completely automating Continuous Assessment scoring, delivering 1-click terminal broadsheets, reconciling tuition fee ledgers, and embedding routine Computer-Based Testing directly into weekly schedules.
+                    Our primary commercial rollout targets secondary institutions&mdash;a market with immediate operational need and strong recurring demand. Most secondary schools lose up to three weeks at the end of every term compiling continuous assessments and report sheets by hand. To solve this, we launched <strong>ExtremeSolutions School OS</strong> (<a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-slate-950 font-semibold underline">sms.extremesolutions.com.ng</a>). The platform automates continuous assessment scoring, generates terminal broadsheets in one click, tracks tuition payments, and integrates routine computer-based testing directly into the school calendar.
                 </p>
 
                 <p>

@@ -7,7 +7,7 @@
 
     @php
         $seoTitle = trim($__env->yieldContent('title', 'ExtremeSolutions | Executive Strategic Memorandum'));
-        $seoDescription = trim($__env->yieldContent('description', 'ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for African institutions and businesses. We engineer end-to-end software—spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows—designed to replace fragile manual processes with fast, resilient technology.'));
+        $seoDescription = trim($__env->yieldContent('description', 'ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for institutions and businesses. We engineer end-to-end software, spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows designed to replace fragile manual processes with fast, resilient technology.'));
         $canonicalUrl = url()->current();
         $ogImageUrl = 'https://extremesolutions.com.ng/images/og-image.png';
     @endphp

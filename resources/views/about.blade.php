@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'About ExtremeSolutions | Modern Digital Infrastructure, Enterprise Platforms & Applied AI')
-@section('description', 'ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for African institutions and businesses. We engineer end-to-end software—spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows—designed to replace fragile manual processes with fast, resilient technology.')
+@section('description', 'ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for institutions and businesses. We engineer end-to-end software, spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows designed to replace fragile manual processes with fast, resilient technology.')
 
 @php
     $aboutSchema = json_encode([
@@ -9,7 +9,7 @@
         '@type' => 'AboutPage',
         'name' => 'About ExtremeSolutions',
         'url' => route('about'),
-        'description' => 'ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for African institutions and businesses. We engineer end-to-end software—spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows—designed to replace fragile manual processes with fast, resilient technology.',
+        'description' => 'ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for institutions and businesses. We engineer end-to-end software, spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows designed to replace fragile manual processes with fast, resilient technology.',
         'publisher' => [
             '@id' => url('/') . '#organization',
         ],
@@ -33,7 +33,7 @@
             </h1>
 
             <p class="mx-auto mt-6 max-w-3xl text-sm sm:text-base leading-relaxed text-white/80 reveal">
-                ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for African institutions and businesses. We engineer end-to-end software—spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows—designed to replace fragile manual processes with fast, resilient technology.
+                ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for institutions and businesses. We engineer end-to-end software, spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows designed to replace fragile manual processes with fast, resilient technology.
             </p>
         </div>
     </section>
@@ -74,7 +74,7 @@
                     </div>
                     <h3 class="text-2xl font-bold text-[#0c1f3a]">Our Mission</h3>
                     <p class="mt-4 text-sm sm:text-base leading-relaxed text-gray-600">
-                        To build modern digital infrastructure, custom enterprise platforms, and applied AI systems for African institutions and businesses—engineering end-to-end software designed to replace fragile manual processes with fast, resilient technology.
+                        To build modern digital infrastructure, custom enterprise platforms, and applied AI systems for institutions and businesses—engineering end-to-end software designed to replace fragile manual processes with fast, resilient technology.
                     </p>
                 </div>
 

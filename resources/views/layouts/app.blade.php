@@ -7,7 +7,7 @@
 
     @php
         $seoTitle = trim($__env->yieldContent('title', 'ExtremeSolutions | Modern Digital Infrastructure, Enterprise Platforms & Applied AI'));
-        $seoDescription = trim($__env->yieldContent('description', 'ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for African institutions and businesses. We engineer end-to-end software—spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows—designed to replace fragile manual processes with fast, resilient technology.'));
+        $seoDescription = trim($__env->yieldContent('description', 'ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for institutions and businesses. We engineer end-to-end software, spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows designed to replace fragile manual processes with fast, resilient technology.'));
         $canonicalUrl = url()->current();
         
         // Ensure absolute HTTPS production URLs for social scrapers (never localhost)
@@ -23,7 +23,7 @@
             'url' => url('/'),
             'logo' => $logoUrl,
             'image' => $ogImageUrl,
-            'description' => 'ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for African institutions and businesses. We engineer end-to-end software—spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows—designed to replace fragile manual processes with fast, resilient technology.',
+            'description' => 'ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for institutions and businesses. We engineer end-to-end software, spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows designed to replace fragile manual processes with fast, resilient technology.',
             'telephone' => '+2348036375292',
             'email' => 'samuel@ekunyansamuel.dev',
             'areaServed' => ['Nigeria', 'Africa', 'Worldwide'],

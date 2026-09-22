@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'ExtremeSolutions | Modern Digital Infrastructure, Enterprise Platforms & Applied AI')
-@section('description', 'ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for African institutions and businesses. We engineer end-to-end software—spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows—designed to replace fragile manual processes with fast, resilient technology.')
+@section('description', 'ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for institutions and businesses. We engineer end-to-end software, spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows designed to replace fragile manual processes with fast, resilient technology.')
 
 @php
     $faqSchema = json_encode([
@@ -71,7 +71,7 @@
 
             <!-- Problem & Mission Positioning Subline -->
             <p class="mx-auto mt-6 max-w-3xl text-sm sm:text-base leading-relaxed text-white/85 reveal">
-                ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for African institutions and businesses. We engineer end-to-end software—spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows—designed to replace fragile manual processes with fast, resilient technology.
+                ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for institutions and businesses. We engineer end-to-end software, spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows designed to replace fragile manual processes with fast, resilient technology.
             </p>
 
             <!-- Dual Direct & Transitional CTAs -->

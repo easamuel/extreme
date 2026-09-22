@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Partner With ExtremeSolutions | Enterprise Alliances')
-@section('description', 'Partner with ExtremeSolutions: Building modern digital infrastructure, custom enterprise platforms, and applied AI systems for African institutions and businesses.')
+@section('description', 'Partner with ExtremeSolutions: Building modern digital infrastructure, custom enterprise platforms, and applied AI systems for institutions and businesses.')
 
 @section('content')
     <!-- 1. Hero Surface (Deep Obsidian with Ambient Grid & Accents) -->
@@ -23,7 +23,7 @@
             </h1>
 
             <p class="mx-auto mt-6 max-w-3xl text-base sm:text-lg leading-relaxed text-slate-300">
-                ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for African institutions and businesses. We partner with forward-thinking leaders, systems integrators, and enterprises to engineer and deploy resilient technology that replaces fragile manual processes.
+                ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for institutions and businesses. We partner with forward-thinking leaders, systems integrators, and enterprises to engineer and deploy resilient technology that replaces fragile manual processes.
             </p>
 
             <div class="mt-10 flex flex-wrap items-center justify-center gap-4">

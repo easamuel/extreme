@@ -9,7 +9,7 @@
                     @include('components.logo-full', ['theme' => 'dark'])
                 </a>
                 <p class="mt-5 max-w-sm text-sm leading-relaxed text-white/70">
-                    ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for African institutions and businesses.
+                    ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for institutions and businesses.
                 </p>
 
                 <div class="mt-6 flex flex-col sm:flex-row sm:items-center gap-3">
