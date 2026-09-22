@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'About ExtremeSolutions | Dependable Software & Cloud')
-@section('description', 'We design, build, and operate custom software, mobile apps, and enterprise cloud automation for modern organizations worldwide.')
+@section('title', 'About ExtremeSolutions | Modern Digital Infrastructure, Enterprise Platforms & Applied AI')
+@section('description', 'ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for African institutions and businesses. We engineer end-to-end software—spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows—designed to replace fragile manual processes with fast, resilient technology.')
 
 @php
     $aboutSchema = json_encode([
@@ -9,7 +9,7 @@
         '@type' => 'AboutPage',
         'name' => 'About ExtremeSolutions',
         'url' => route('about'),
-        'description' => 'ExtremeSolutions is a digital solutions and software engineering company committed to building dependable, tailored systems for institutions and businesses.',
+        'description' => 'ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for African institutions and businesses. We engineer end-to-end software—spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows—designed to replace fragile manual processes with fast, resilient technology.',
         'publisher' => [
             '@id' => url('/') . '#organization',
         ],
@@ -32,8 +32,8 @@
                 <span class="font-bold text-white">We Build, Train &amp; Ship</span>
             </h1>
 
-            <p class="mx-auto mt-6 max-w-2xl text-sm sm:text-base leading-relaxed text-white/75 reveal">
-                ExtremeSolutions is a software engineering company dedicated to closing the gap between off-the-shelf software limitations and how modern organizations actually operate.
+            <p class="mx-auto mt-6 max-w-3xl text-sm sm:text-base leading-relaxed text-white/80 reveal">
+                ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for African institutions and businesses. We engineer end-to-end software—spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows—designed to replace fragile manual processes with fast, resilient technology.
             </p>
         </div>
     </section>
@@ -74,7 +74,7 @@
                     </div>
                     <h3 class="text-2xl font-bold text-[#0c1f3a]">Our Mission</h3>
                     <p class="mt-4 text-sm sm:text-base leading-relaxed text-gray-600">
-                        To build transformative digital software solutions that redefine how things are done and bring effortless ease to every organization, institution, and enterprise we partner with, while cultivating and mentoring the next generation of Nigerian software talent.
+                        To build modern digital infrastructure, custom enterprise platforms, and applied AI systems for African institutions and businesses—engineering end-to-end software designed to replace fragile manual processes with fast, resilient technology.
                     </p>
                 </div>
 

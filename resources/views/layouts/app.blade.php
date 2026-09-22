@@ -6,8 +6,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     @php
-        $seoTitle = trim($__env->yieldContent('title', 'ExtremeSolutions | Custom Software, Apps & Automation'));
-        $seoDescription = trim($__env->yieldContent('description', 'ExtremeSolutions engineers dependable custom software, mobile apps, and cloud automation for modern organizations worldwide.'));
+        $seoTitle = trim($__env->yieldContent('title', 'ExtremeSolutions | Modern Digital Infrastructure, Enterprise Platforms & Applied AI'));
+        $seoDescription = trim($__env->yieldContent('description', 'ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for African institutions and businesses. We engineer end-to-end software—spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows—designed to replace fragile manual processes with fast, resilient technology.'));
         $canonicalUrl = url()->current();
         
         // Ensure absolute HTTPS production URLs for social scrapers (never localhost)
@@ -23,24 +23,26 @@
             'url' => url('/'),
             'logo' => $logoUrl,
             'image' => $ogImageUrl,
-            'description' => 'ExtremeSolutions engineers dependable custom software, mobile apps, and cloud automation for modern organizations worldwide.',
-            'telephone' => '+2349052585622',
-            'email' => 'info@extremesolutions.com.ng',
-            'areaServed' => 'Worldwide',
+            'description' => 'ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for African institutions and businesses. We engineer end-to-end software—spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows—designed to replace fragile manual processes with fast, resilient technology.',
+            'telephone' => '+2348036375292',
+            'email' => 'samuel@ekunyansamuel.dev',
+            'areaServed' => ['Nigeria', 'Africa', 'Worldwide'],
             'priceRange' => '$$',
             'knowsAbout' => [
-                'Custom Software Development',
-                'Mobile App Development (iOS & Android)',
-                'Enterprise Workflow Automation & APIs',
-                'School Management Systems (SMS)',
-                'ESPass Event Ticketing & Gate Access',
-                'Cloud Architecture & Microservices',
-                'Tech Mentorship & Training'
+                'Modern Digital Infrastructure',
+                'Custom Enterprise Platforms',
+                'Applied AI Systems & Intelligent Workflows',
+                'High-Concurrency Commercial Software',
+                'Operational Operating Systems (School OS)',
+                'ESPass Event Ticketing & Resilient Gate Control',
+                'Edge-Resilient Software Engineering',
+                'Cloud Architecture & Microservices'
             ],
             'sameAs' => [
-                'https://wa.me/2349052585622',
-                'https://linkedin.com',
-                'https://x.com'
+                'https://wa.me/2348036375292',
+                'https://sms.extremesolutions.com.ng',
+                'https://espass.extremesolutions.com.ng',
+                'https://github.com/easamuel'
             ]
         ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
     @endphp
@@ -65,7 +67,7 @@
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="ExtremeSolutions - Custom Software, Mobile Apps & Cloud Automation">
+    <meta property="og:image:alt" content="ExtremeSolutions - Modern Digital Infrastructure, Enterprise Platforms & Applied AI">
     <meta property="og:locale" content="en_US">
 
     <!-- Twitter / X -->
@@ -74,7 +76,7 @@
     <meta name="twitter:title" content="{!! $seoTitle !!}">
     <meta name="twitter:description" content="{!! $seoDescription !!}">
     <meta name="twitter:image" content="{{ $ogImageUrl }}">
-    <meta name="twitter:image:alt" content="ExtremeSolutions - Custom Software, Mobile Apps & Cloud Automation">
+    <meta name="twitter:image:alt" content="ExtremeSolutions - Modern Digital Infrastructure, Enterprise Platforms & Applied AI">
 
     <!-- Favicon / Site Icons (Multi-Resolution & Google Search Standard) -->
     <link rel="icon" href="{{ asset('favicon.ico') }}?v=2" sizes="any">

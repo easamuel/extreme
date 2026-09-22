@@ -100,7 +100,7 @@
             <!-- Letter Body Content -->
             <div class="space-y-3.5 text-slate-800 text-[13px]">
                 <p>
-                    ExtremeSolutions was founded on an unapologetic premise: the institutions powering our society should not be run on manual paperwork, fragile spreadsheets, and administrative guesswork. We are not an NGO, a charity, or a consultancy selling billable hours. We are a proprietary software engineering company that builds, deploys, and operates end-to-end organizational operating systems designed to systematically displace legacy manual processes with unbreakable digital machinery.
+                    ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for African institutions and businesses. We engineer end-to-end software&mdash;spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows&mdash;designed to replace fragile manual processes with fast, resilient technology. We are not an NGO, a charity, or a consultancy selling billable hours; we build, deploy, and operate proprietary digital machinery that systematically eliminates administrative guesswork and manual friction.
                 </p>
 
                 <p>

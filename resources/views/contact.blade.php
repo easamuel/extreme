@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Contact ExtremeSolutions | Book a Discovery Consultation')
-@section('description', 'Talk directly with senior software engineers about your custom software, mobile apps, or cloud systems. Free consultation, zero obligation.')
+@section('title', 'Contact ExtremeSolutions | Book an Engineering Consultation')
+@section('description', 'Talk directly with software engineers building modern digital infrastructure, custom enterprise platforms, and applied AI systems for African institutions and businesses.')
 
 @php
     $contactSchema = json_encode([
@@ -9,7 +9,7 @@
         '@type' => 'ContactPage',
         'name' => 'Contact ExtremeSolutions',
         'url' => route('contact'),
-        'description' => 'Book a free discovery consultation or request a live school system demo from ExtremeSolutions.',
+        'description' => 'Book an engineering discovery consultation or request an enterprise platform demo from ExtremeSolutions.',
         'mainEntity' => [
             '@type' => 'ProfessionalService',
             '@id' => url('/') . '#organization',

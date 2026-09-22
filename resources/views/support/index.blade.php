@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Support & Mission | ExtremeSolutions')
-@section('description', 'How ExtremeSolutions is determined to change digital software in Africa: building dependable systems that last, enterprise SLA stewardship, and active frontline initiatives.')
+@section('description', 'ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for African institutions and businesses. We engineer end-to-end software designed to replace fragile manual processes with fast, resilient technology.')
 
 @section('content')
     <!-- 1. Hero Surface -->
@@ -20,8 +20,8 @@
                 <span class="font-bold text-white">By Building Systems That Last</span>
             </h1>
 
-            <p class="mx-auto mt-6 max-w-2xl text-sm sm:text-base leading-relaxed text-white/75">
-                Across Africa, too many institutions struggle with fragile web wrappers, abandoned software, and vendors who disappear after payment. ExtremeSolutions engineers dependable, production-tested software backed by continuous proactive support and guaranteed SLAs.
+            <p class="mx-auto mt-6 max-w-3xl text-sm sm:text-base leading-relaxed text-white/80">
+                ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for African institutions and businesses. We engineer end-to-end software—spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows—designed to replace fragile manual processes with fast, resilient technology.
             </p>
 
             <div class="mt-10 flex flex-wrap items-center justify-center gap-4">

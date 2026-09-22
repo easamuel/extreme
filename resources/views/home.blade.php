@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'ExtremeSolutions | Custom Software, Apps & Automation')
-@section('description', 'ExtremeSolutions engineers dependable custom software, mobile apps, and cloud automation for modern organizations worldwide.')
+@section('title', 'ExtremeSolutions | Modern Digital Infrastructure, Enterprise Platforms & Applied AI')
+@section('description', 'ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for African institutions and businesses. We engineer end-to-end software—spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows—designed to replace fragile manual processes with fast, resilient technology.')
 
 @php
     $faqSchema = json_encode([
@@ -69,10 +69,9 @@
                 <span class="font-bold text-white">How Modern Organizations Run</span>
             </h1>
 
-            <!-- SB7 Problem & Empathy Subline -->
-            <p class="mx-auto mt-6 max-w-2xl text-sm sm:text-base leading-relaxed text-white/80 reveal">
-                Your operations shouldn't have to contort around rigid, generic software that breaks under pressure. 
-                We engineer reliable school management platforms, event ticketing infrastructure, and bespoke enterprise software, replacing fragmented tools and manual errors with digital ease.
+            <!-- Problem & Mission Positioning Subline -->
+            <p class="mx-auto mt-6 max-w-3xl text-sm sm:text-base leading-relaxed text-white/85 reveal">
+                ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for African institutions and businesses. We engineer end-to-end software—spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows—designed to replace fragile manual processes with fast, resilient technology.
             </p>
 
             <!-- Dual Direct & Transitional CTAs -->
@@ -259,20 +258,20 @@
                     </div>
                 </div>
 
-                <!-- 4: Enterprise Systems & Automation -->
+                <!-- 4: Enterprise Systems & Applied AI -->
                 <div class="group flex flex-col rounded-2xl bg-white p-5 pb-8 border border-gray-200/80 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg reveal">
                     <div class="h-44 overflow-hidden rounded-xl bg-slate-950 relative border border-gray-100 flex items-center justify-center">
-                        <img src="{{ asset('images/automation-preview.jpg') }}" alt="Workflow Automation & APIs Preview" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                        <img src="{{ asset('images/automation-preview.jpg') }}" alt="Applied AI & Intelligent Workflows Preview" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" loading="lazy" />
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
-                        <span class="absolute bottom-3 left-3 text-[10px] font-mono text-[#00ff88] bg-slate-900/80 px-2 py-0.5 rounded border border-white/10 backdrop-blur-sm">paystack-flutterwave.sync</span>
+                        <span class="absolute bottom-3 left-3 text-[10px] font-mono text-[#00ff88] bg-slate-900/80 px-2 py-0.5 rounded border border-white/10 backdrop-blur-sm">applied-ai.workflows.sync</span>
                     </div>
                     <div class="mt-6 px-2">
-                        <h3 class="text-lg font-bold text-[#1e3a5f]">Workflow Automation &amp; APIs</h3>
+                        <h3 class="text-lg font-bold text-[#1e3a5f]">Applied AI &amp; Intelligent Workflows</h3>
                         <p class="mt-2.5 text-xs sm:text-sm text-gray-600 leading-relaxed">
-                            Connecting payment gateways (Paystack, Flutterwave), external databases, and internal ledgers into an automatic, error-free sync pipeline.
+                            Applied AI systems, automated operational pipelines, payment reconciliation (Paystack, Flutterwave), and intelligent workflows designed to replace manual paperwork with fast, resilient technology.
                         </p>
                         <a href="#request-quote" class="mt-4 inline-flex items-center gap-1.5 text-xs font-bold text-[#1e3a5f] hover:text-[#00994d] transition-colors">
-                            <span>Automate Manual Steps</span>
+                            <span>Deploy Intelligent Systems</span>
                             <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                             </svg>

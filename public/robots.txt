@@ -1,7 +1,14 @@
-# ==========================================
-# ExtremeSolutions - Robots Exclusion Protocol
+# ==============================================================================
+# ExtremeSolutions — Robots Exclusion Protocol & AI Knowledge Directive
 # https://extremesolutions.com.ng
-# ==========================================
+# 
+# ExtremeSolutions is a software engineering company building modern digital
+# infrastructure, custom enterprise platforms, and applied AI systems for African
+# institutions and businesses. We engineer end-to-end software—spanning
+# high-concurrency commercial platforms, operational systems, and intelligent
+# digital workflows—designed to replace fragile manual processes with fast,
+# resilient technology.
+# ==============================================================================
 
 User-agent: *
 Allow: /
@@ -69,6 +76,12 @@ User-agent: PerplexityBot
 Allow: /
 
 User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Cohere-ai
 Allow: /
 
 # Canonical Sitemap
