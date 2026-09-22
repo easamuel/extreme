@@ -59,9 +59,16 @@
     <style>
         /* Printable Letter Styling */
         @media print {
-            body {
+            @page {
+                size: A4 portrait;
+                margin: 15mm 15mm 15mm 15mm;
+            }
+            html, body {
                 background: #ffffff !important;
                 color: #000000 !important;
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
             }
             .no-print {
                 display: none !important;
@@ -72,6 +79,7 @@
                 margin: 0 !important;
                 padding: 0 !important;
                 max-width: 100% !important;
+                width: 100% !important;
             }
         }
     </style>
