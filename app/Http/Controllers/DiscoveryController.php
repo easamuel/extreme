@@ -78,7 +78,7 @@ class DiscoveryController extends Controller
                     'isRemoteEnabled' => true,
                     'isHtml5ParserEnabled' => true,
                     'defaultFont' => 'DejaVu Sans',
-                    'dpi' => 150,
+                    'dpi' => 96,
                 ]);
 
             return $pdf->download($filename);
@@ -90,7 +90,7 @@ class DiscoveryController extends Controller
             $options->set('isRemoteEnabled', true);
             $options->set('isHtml5ParserEnabled', true);
             $options->setDefaultFont('DejaVu Sans');
-            $options->setDpi(150);
+            $options->setDpi(96);
 
             $dompdf = new \Dompdf\Dompdf($options);
             $html = view('pdf.stealth-memo', $viewData)->render();

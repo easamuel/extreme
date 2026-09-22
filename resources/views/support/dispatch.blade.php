@@ -157,23 +157,23 @@
             <!-- Option A Content Container -->
             <div id="container-option-a" class="space-y-3.5 text-slate-800 text-[13px]">
                 <p>
-                    ExtremeSolutions was founded on a simple conviction: the most critical institutions in Africa should not be held back by manual, error-prone paperwork. We are not an NGO or a charity; we are a disciplined commercial software venture deploying an all-in-one School Operating System (<a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-slate-950 font-semibold underline">sms.extremesolutions.com.ng</a>) specifically engineered to solve the operational bottlenecks in Nigerian secondary education.
+                    ExtremeSolutions was founded on a singular conviction: the most critical institutions in Africa should not be held back by manual, error-prone paperwork. We are not an NGO or a charity; we are a disciplined commercial software venture deploying an all-in-one School Operating System (<a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-slate-950 font-semibold underline">sms.extremesolutions.com.ng</a>) specifically engineered to solve the operational bottlenecks in Nigerian secondary education.
                 </p>
 
                 <p>
-                    <strong>The Reality on the Ground:</strong> Across the country, hundreds of secondary schools have computer laboratories that sit dark or are restricted to weekly theory notes. When national examinations like JAMB CBT arrive, students struggle not from lack of intelligence, but because they have never interacted with timed examination software. Simultaneously, school administrations spend three exhausting weeks at the end of every term compiling Continuous Assessments (CA) and terminal broadsheets manually with calculators—introducing computation errors, delaying vacations, and stalling tuition reconciliation.
+                    Across the country, hundreds of secondary schools have computer laboratories that sit idle or are restricted to weekly theory notes. When national examinations like JAMB CBT arrive, students struggle not from lack of intelligence, but because they have never interacted with timed examination software. Simultaneously, school administrations spend three exhausting weeks at the end of every term compiling Continuous Assessments and terminal broadsheets manually with calculators—introducing computation errors, delaying vacations, and stalling tuition reconciliation.
                 </p>
 
                 <p>
-                    <strong>The Operational Engine:</strong> We did not build another slide deck. ExtremeSolutions School OS is live and running right now. The platform completely automates Continuous Assessment scoring, generates 1-click terminal broadsheets, reconciles school fee payments, and integrates routine computer-based testing directly into the school's weekly academic schedule.
+                    We built and shipped the solution. ExtremeSolutions School OS is live and fully operational today. The platform completely automates Continuous Assessment scoring, generates 1-click terminal broadsheets, reconciles school fee payments, and integrates routine computer-based testing directly into the school's weekly academic schedule.
                 </p>
 
                 <p>
-                    <strong>Commercial Revenue Model &amp; Self-Sufficiency:</strong> We charge schools a recurring subscription of <strong>&#8358;500 to &#8358;1,000 per student per term</strong>, built directly into standard school fees (generating &#8358;150,000 to &#8358;300,000 per term for an average 250-student school). Because software infrastructure scales with near-zero marginal cost, <strong>onboarding just 3 secondary schools makes our core infrastructure, cloud servers, and field operations completely self-sustaining</strong> without requiring subsequent outside capital.
+                    Our model is built for immediate commercial sustainability. We charge schools a recurring subscription of <strong>&#8358;500 to &#8358;1,000 per student per term</strong>, built directly into standard school fees (generating &#8358;150,000 to &#8358;300,000 per term for an average 250-student school). Because software infrastructure scales with near-zero marginal cost, <strong>onboarding just 3 secondary schools makes our core infrastructure, cloud servers, and field operations completely self-sustaining</strong> without requiring subsequent outside capital.
                 </p>
 
                 <p>
-                    <strong>Execution &amp; The Upfront Deployment Fund:</strong> In basic education, software alone cannot close contracts; physical execution does. Schools pay after their first successful broadsheet run, meaning our team must physically enter campuses, digitize paper registers into the system within 48 hours, and train staff on-site. Once an institution completes its first terminal broadsheet on our system, retention is near 100%. We are raising a focused upfront Rollout Deployment Pool of <strong>&#8358;150,000 to &#8358;300,000</strong> to execute this direct cluster rollout:
+                    In basic education, software alone cannot close contracts; physical execution does. Schools pay after their first successful broadsheet run, meaning our team must physically enter campuses, digitize paper registers into the system within 48 hours, and train staff on-site. Once an institution completes its first terminal broadsheet on our system, retention is near 100%. We are raising a focused upfront Rollout Deployment Pool of <strong>&#8358;150,000 to &#8358;300,000</strong> to execute this direct cluster rollout:
                 </p>
 
                 <ul class="list-disc pl-5 space-y-1 text-slate-800 text-[12.5px]">
@@ -216,19 +216,19 @@
             <!-- Option B Content Container (Invest / Capped Return) -->
             <div id="container-option-b" class="space-y-3.5 text-slate-800 text-[13px] hidden">
                 <p>
-                    ExtremeSolutions is building a sustainable, high-margin educational technology enterprise. We are not an NGO or a charity; we are a commercial systems venture deploying an all-in-one School Operating System (<a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-slate-950 font-semibold underline">sms.extremesolutions.com.ng</a>) to solve deep operational bottlenecks in Nigerian secondary schools.
+                    ExtremeSolutions was founded on a singular conviction: the most critical institutions in Africa should not be held back by manual, error-prone paperwork. We are not an NGO or a charity; we are a disciplined commercial systems venture deploying an all-in-one School Operating System (<a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-slate-950 font-semibold underline">sms.extremesolutions.com.ng</a>) specifically engineered to solve operational bottlenecks in Nigerian secondary education.
                 </p>
 
                 <p>
-                    <strong>The Commercial Mechanism: 1.3x Fixed Capped Repayment:</strong> We have structured a clean, revenue-linked advance mechanism for private commercial backers. Backers participate with a lean advance of <strong>&#8358;50,000</strong> or <strong>&#8358;100,000</strong> per unit, capped at a fixed <strong>1.3x return</strong> (&#8358;50,000 returns &#8358;65,000; &#8358;100,000 returns &#8358;130,000). Repayments are funded and disbursed directly from termly software fees (&#8358;500 – &#8358;1,000/student) across our first 3 to 5 onboarded secondary schools. Once fulfilled, capital is fully returned with yield, while the institutions generate permanent recurring software revenues that sustain our operations indefinitely.
+                    To accelerate our commercial school expansion, we have structured a clean, revenue-linked partner advance for private commercial backers. Backers participate with an upfront advance of <strong>&#8358;50,000</strong> or <strong>&#8358;100,000</strong> per unit, capped at a fixed <strong>1.3x return</strong> (&#8358;50,000 returns &#8358;65,000; &#8358;100,000 returns &#8358;130,000). Repayments are funded directly and prioritized from termly software fees (&#8358;500 to &#8358;1,000 per student) across our initial cluster of onboarded secondary schools. Once fulfilled, your capital is fully retired with yield, while the institutions remain permanently on our recurring subscription.
                 </p>
 
                 <p>
-                    <strong>Why the Unit Economics Support This Advance:</strong> We charge schools an integrated termly fee of <strong>&#8358;500 to &#8358;1,000 per student</strong> (generating &#8358;150,000 to &#8358;300,000 per term for an average 250-student school). <strong>Onboarding just 3 secondary schools makes our core infrastructure completely self-sustaining</strong>, generating &#8358;450,000 to &#8358;900,000 per term to comfortably service and prioritize repayments.
+                    The unit economics directly support this advance. We charge schools an integrated termly fee of <strong>&#8358;500 to &#8358;1,000 per student</strong>, generating &#8358;150,000 to &#8358;300,000 per term for an average 250-student school. <strong>Onboarding just 3 secondary schools makes our core infrastructure completely self-sustaining</strong>, yielding &#8358;450,000 to &#8358;900,000 every single term to service and extinguish partner advances safely.
                 </p>
 
                 <p>
-                    <strong>Capital Allocation: Customer Acquisition &amp; On-Ground Deployment:</strong> Schools pay after their first successful broadsheet run. Software alone cannot close contracts; physical execution does. Your advance directly funds field transit for direct proprietor demos, 48-hour assisted student register onboarding, and teacher handbook induction materials.
+                    In basic education, software alone cannot close contracts; physical execution does. Schools pay after their first successful broadsheet run, requiring our team to physically enter campuses, digitize student registers within 48 hours, and train staff on-site. Your advance directly finances field transit for direct proprietor demos, assisted class register onboarding, and teacher handbook induction materials.
                 </p>
 
                 <!-- Dedicated Commercial Advance Account Details -->

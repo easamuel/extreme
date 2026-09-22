@@ -6,7 +6,7 @@
     <style>
         @page {
             size: A4 portrait;
-            margin: 12mm 15mm 12mm 15mm;
+            margin: 14mm 18mm 14mm 18mm;
         }
 
         * {
@@ -28,9 +28,9 @@
         table.header-table {
             width: 100%;
             border-collapse: collapse;
-            border-bottom: 2pt solid #0f172a;
-            padding-bottom: 8pt;
-            margin-bottom: 12pt;
+            border-bottom: 1.5pt solid #0f172a;
+            padding-bottom: 7pt;
+            margin-bottom: 10pt;
         }
 
         table.header-table td {
@@ -38,80 +38,65 @@
         }
 
         .logo-img {
-            height: 32pt;
+            height: 26pt;
             width: auto;
         }
 
         .header-title {
-            font-size: 14pt;
+            font-size: 13pt;
             font-weight: bold;
             color: #0f172a;
             letter-spacing: 0.5pt;
         }
 
-        .header-dept {
+        .header-sub {
             font-size: 7.5pt;
-            text-transform: uppercase;
-            letter-spacing: 0.5pt;
             color: #475569;
-            font-weight: bold;
-            margin-top: 1pt;
+            margin-top: 1.5pt;
         }
 
-        .header-meta {
+        .header-date {
             text-align: right;
-            font-size: 7.5pt;
-            color: #475569;
-            line-height: 1.35;
-            font-family: monospace;
-        }
-
-        .recipient-card {
-            background: #f8fafc;
-            border-left: 2.5pt solid #0f172a;
-            padding: 6pt 8pt;
-            margin-bottom: 10pt;
-            font-size: 8pt;
-        }
-
-        .subject-box {
-            background: #f8fafc;
-            border-left: 2.5pt solid #059669;
-            padding: 6pt 8pt;
-            margin-bottom: 10pt;
             font-size: 8.5pt;
-            font-weight: bold;
             color: #0f172a;
+            font-weight: bold;
         }
 
         .salutation {
-            font-size: 9pt;
+            font-size: 9.5pt;
             font-weight: bold;
-            margin-bottom: 6pt;
+            margin-bottom: 4pt;
             color: #0f172a;
         }
 
+        .subject-line {
+            font-size: 9pt;
+            font-weight: bold;
+            color: #0f172a;
+            border-bottom: 0.5pt solid #cbd5e1;
+            padding-bottom: 3pt;
+            margin-bottom: 8pt;
+        }
+
         p {
-            margin: 0 0 6pt 0;
+            margin: 0 0 5.5pt 0;
             text-align: justify;
         }
 
         .section-heading {
-            font-size: 8pt;
+            font-size: 8.5pt;
             font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 0.8pt;
             color: #0f172a;
-            margin: 8pt 0 4pt 0;
+            margin: 7pt 0 4pt 0;
             border-bottom: 0.5pt solid #e2e8f0;
-            padding-bottom: 1pt;
+            padding-bottom: 1.5pt;
         }
 
         table.comparison-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 6pt 0 8pt 0;
-            font-size: 7.5pt;
+            margin: 5pt 0 7pt 0;
+            font-size: 8pt;
         }
 
         table.comparison-table th {
@@ -130,42 +115,26 @@
         }
 
         ul {
-            margin: 3pt 0 6pt 14pt;
+            margin: 2pt 0 5.5pt 13pt;
             padding: 0;
         }
 
         li {
-            margin-bottom: 3pt;
+            margin-bottom: 2pt;
+            font-size: 8.5pt;
         }
 
         .signature-block {
-            margin-top: 12pt;
+            margin-top: 8pt;
+            padding-top: 4pt;
+            border-top: 0.5pt solid #e2e8f0;
             page-break-inside: avoid;
         }
 
-        table.sig-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        table.sig-table td {
-            vertical-align: bottom;
-        }
-
         .sig-img {
-            height: 28pt;
+            height: 24pt;
             width: auto;
-            margin-bottom: 2pt;
-        }
-
-        .footer-note {
-            margin-top: 12pt;
-            padding-top: 4pt;
-            border-top: 0.5pt solid #e2e8f0;
-            font-size: 6.5pt;
-            color: #64748b;
-            text-align: center;
-            font-family: monospace;
+            margin: 2pt 0;
         }
 
         @media screen {
@@ -210,50 +179,43 @@
 <!-- Letterhead -->
 <table class="header-table">
     <tr>
-        <td style="width: 60%;">
-            @if(!empty($logoBase64))
-                <img src="{{ $logoBase64 }}" class="logo-img" alt="ExtremeSolutions">
-            @else
-                <div class="header-title">EXTREMESOLUTIONS</div>
-            @endif
-            <div class="header-dept">Educational Infrastructure &amp; Deployment Taskforce</div>
-            <div style="font-size: 7.5pt; color: #64748b; margin-top: 1pt;">extremesolutions.com.ng &bull; sms.extremesolutions.com.ng</div>
+        <td style="width: 72%;">
+            <table style="border-collapse: collapse;">
+                <tr>
+                    @if(!empty($logoBase64))
+                        <td style="padding-right: 9pt; vertical-align: middle;">
+                            <img src="{{ $logoBase64 }}" class="logo-img" alt="ExtremeSolutions">
+                        </td>
+                    @endif
+                    <td style="vertical-align: middle;">
+                        <div class="header-title">EXTREMESOLUTIONS</div>
+                        <div class="header-sub">Lagos, Nigeria &bull; extremesolutions.com.ng &bull; sms.extremesolutions.com.ng</div>
+                    </td>
+                </tr>
+            </table>
         </td>
-        <td style="width: 40%;" class="header-meta">
-            <strong>Proposal Code:</strong> {{ $refCode }}<br>
-            <strong>Date:</strong> {{ $dateStr }}<br>
-            <strong>Sector:</strong> Secondary Education Infrastructure
+        <td style="width: 28%;" class="header-date">
+            {{ $dateStr }}
         </td>
     </tr>
 </table>
 
-<!-- Recipient Identification -->
-<div class="recipient-card">
-    <strong style="text-transform: uppercase; font-size: 7pt; color: #64748b;">PREPARED EXCLUSIVELY FOR:</strong><br>
-    <strong style="color: #0f172a; font-size: 9pt;">{{ $proprietor }}, Proprietress / Principal</strong><br>
-    <span style="color: #334155;">{{ $school }}</span>
-</div>
-
-<!-- Subject Line -->
-<div class="subject-box">
-    RE: Institutional Partnership for Broadsheet Automation and Student CBT Readiness
-</div>
-
-<!-- Salutation -->
+<!-- Recipient Salutation -->
 <div class="salutation">
     Dear {{ $proprietor }},
 </div>
 
+<!-- Subject Line -->
+<div class="subject-line">
+    Subject: Institutional Partnership for Broadsheet Automation and Student CBT Readiness &mdash; {{ $school }}
+</div>
+
 <p>
-    Every academic term, Nigerian private secondary schools lose dozens of administrative hours to manual calculation delays, broadsheet errors, and the friction of tracking outstanding tuition payments.
+    Every academic term, Nigerian private secondary schools lose dozens of administrative hours to manual calculation delays, broadsheet errors, and the friction of tracking outstanding tuition payments. At the same time, parents increasingly expect secondary schools to prepare their children for a digital world&mdash;specifically ensuring they are fully confident in Computer-Based Testing (CBT) before sitting for national examinations.
 </p>
 
 <p>
-    At the same time, parents increasingly expect secondary schools to prepare their children for a digital world&mdash;specifically ensuring they are fully confident in Computer-Based Testing (CBT) before sitting for national examinations.
-</p>
-
-<p>
-    ExtremeSolutions is extending an institutional partnership invitation to <strong>{{ $school }}</strong> to deploy our modern School Operating System (sms.extremesolutions.com.ng) starting this term.
+    ExtremeSolutions is extending an institutional partnership invitation to <strong>{{ $school }}</strong> to deploy our modern School Operating System (sms.extremesolutions.com.ng) starting this academic term.
 </p>
 
 <div class="section-heading">The Three Operational Challenges We Solve for Your School</div>
@@ -262,8 +224,8 @@
 <table class="comparison-table">
     <thead>
         <tr>
-            <th style="width: 50%;">Operational Bottleneck</th>
-            <th style="width: 50%; background: #ecfdf5; color: #065f46;">The ExtremeSolutions Transformation</th>
+            <th style="width: 48%;">Operational Bottleneck</th>
+            <th style="width: 52%; background: #ecfdf5; color: #065f46;">The ExtremeSolutions Transformation</th>
         </tr>
     </thead>
     <tbody>
@@ -272,7 +234,7 @@
                 <strong>Manual Broadsheet Delays:</strong> Teachers spend 2&ndash;3 weeks using calculators, leading to calculation discrepancies and delayed vacation releases.
             </td>
             <td style="background: #f0fdf4;">
-                <strong>1-Click Automated Report Dossiers:</strong> Teachers input raw scores. The system automatically computes continuous assessments (CA), percentages, positions, and prints branded PDF report cards instantly.
+                <strong>1-Click Automated Report Dossiers:</strong> Teachers input raw scores. The system automatically computes continuous assessments, percentages, positions, and prints branded report cards instantly.
             </td>
         </tr>
         <tr>
@@ -314,16 +276,16 @@
     We propose a brief 15-minute technical briefing and live broadsheet walk-through at your administrative office next week, where we will generate a live sample broadsheet for your review.
 </p>
 
-<!-- Signature Block -->
-<div class="signature-block" style="margin-top: 8pt; padding-top: 5pt; border-top: 0.5pt solid #e2e8f0; page-break-inside: avoid;">
-    <div style="font-size: 8pt; color: #475569; margin-bottom: 2pt;">Yours sincerely,</div>
+<!-- Signature Block (Exact Format) -->
+<div class="signature-block">
+    <div style="font-size: 8.5pt; color: #334155; margin-bottom: 2pt;">Yours sincerely,</div>
     @if(!empty($sigBase64))
-        <img src="{{ $sigBase64 }}" class="sig-img" alt="Samuel Ekunyan Signature" style="height: 24pt; width: auto; margin: 2pt 0;">
+        <img src="{{ $sigBase64 }}" class="sig-img" alt="Samuel Ekunyan Signature">
     @endif
-    <div style="font-weight: bold; font-size: 9pt; color: #0f172a;">Samuel Ekunyan</div>
-    <div style="font-size: 8pt; color: #334155;">Lead Developer &amp; Founder, ExtremeSolutions</div>
-    <div style="font-size: 7.5pt; color: #475569;">samuel@ekunyansamuel.dev &bull; sms.extremesolutions.com.ng</div>
-    <div style="font-size: 8pt; color: #0f172a; font-weight: bold; margin-top: 1pt;">WhatsApp: +2348036375292</div>
+    <div style="font-weight: bold; font-size: 9.5pt; color: #0f172a;">Samuel Ekunyan</div>
+    <div style="font-size: 8.5pt; color: #334155;">Lead Developer &amp; Founder, ExtremeSolutions</div>
+    <div style="font-size: 8pt; color: #475569;">samuel@ekunyansamuel.dev &bull; sms.extremesolutions.com.ng</div>
+    <div style="font-size: 8.5pt; color: #0f172a; font-weight: bold; margin-top: 1.5pt;">WhatsApp: +2348036375292</div>
 </div>
 
 </body>
