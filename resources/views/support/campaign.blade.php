@@ -77,7 +77,8 @@
                     <img src="{{ !empty($logoBase64) ? $logoBase64 : asset('images/es-mark.png') }}" alt="ExtremeSolutions" class="h-10 w-auto">
                     <div>
                         <h1 class="text-lg font-bold tracking-tight text-slate-950 font-sans">EXTREMESOLUTIONS</h1>
-                        <p class="text-xs text-slate-600">Lagos, Nigeria &bull; extremesolutions.com.ng &bull; <a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-slate-800 hover:underline font-medium">sms.extremesolutions.com.ng</a></p>
+                        <p class="text-[11px] font-semibold text-emerald-700 tracking-wider uppercase">Enterprise Systems Architecture &bull; Software Engineering</p>
+                        <p class="text-xs text-slate-600"><a href="https://extremesolutions.com.ng" target="_blank" class="hover:underline">extremesolutions.com.ng</a> &bull; <a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-slate-800 hover:underline font-medium">sms.extremesolutions.com.ng</a></p>
                     </div>
                 </div>
                 <div class="text-right text-xs text-slate-700 font-sans">
@@ -89,38 +90,38 @@
             <div class="mb-4">
                 <p class="font-semibold text-slate-900 text-sm">Dear {{ !empty($name) && $name !== 'Sir/Madam' ? $name : request('name', 'Valued Partner') }},</p>
                 <p class="font-bold text-slate-950 text-[13px] mt-2 pb-1 border-b border-slate-200">
-                    Subject: Commercial Software Deployment Across Nigerian Secondary Schools
+                    Subject: Strategic Software Deployment &mdash; Commercial Infrastructure Rollout
                 </p>
             </div>
 
-            <!-- Letter Body: High-conviction narrative, Amazon customer focus, Google transparency, Meta builder ethos -->
+            <!-- Letter Body: High-conviction enterprise narrative -->
             <div class="space-y-3.5 text-slate-800 text-[13px]">
                 <p>
-                    ExtremeSolutions was founded on a singular conviction: the most critical institutions in Africa should not be held back by manual, error-prone paperwork. We are not an NGO or a charity; we are a disciplined commercial software venture deploying an all-in-one School Operating System (<a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-slate-950 font-semibold underline">sms.extremesolutions.com.ng</a>) specifically engineered to solve the operational bottlenecks in Nigerian secondary education.
+                    ExtremeSolutions was founded on an unapologetic premise: the institutions powering our society should not be run on manual paperwork, fragile spreadsheets, and administrative guesswork. We are not an NGO, a charity, or a consultancy selling billable hours. We are a proprietary software engineering company that builds, deploys, and operates end-to-end organizational operating systems designed to systematically displace legacy manual processes with unbreakable digital machinery.
                 </p>
 
                 <p>
-                    Across the country, hundreds of secondary schools have computer laboratories that sit idle while administrations spend three exhausting weeks compiling Continuous Assessments and terminal broadsheets manually with calculators. We built and shipped the operational engine: ExtremeSolutions School OS is live today (<a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-slate-950 font-semibold underline">sms.extremesolutions.com.ng</a>)—completely automating Continuous Assessment scoring, generating 1-click terminal broadsheets, reconciling school fee payments, and embedding routine computer-based testing directly into the school's weekly academic schedule.
+                    Our immediate commercial focus is secondary institutions&mdash;not because we are an education company, but because it is an enterprise market burdened by severe operational friction and immediate paying demand. Across the country, schools operate under three weeks of administrative paralysis at the end of every term compiling continuous assessments and broadsheets by hand. We built and shipped the antidote: <strong>ExtremeSolutions School OS</strong> (<a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-slate-950 font-semibold underline">sms.extremesolutions.com.ng</a>) is live in production today, completely automating Continuous Assessment scoring, delivering 1-click terminal broadsheets, reconciling tuition fee ledgers, and embedding routine Computer-Based Testing directly into weekly schedules.
                 </p>
 
                 <p>
-                    Our commercial model is built for immediate self-sufficiency. We charge schools an integrated termly subscription of <strong>&#8358;500 to &#8358;1,000 per student</strong>, built directly into standard school fees (generating &#8358;150,000 to &#8358;300,000 per term for an average 250-student school). Because software infrastructure scales with near-zero marginal cost, <strong>onboarding just 3 secondary schools makes our core infrastructure, cloud servers, and field operations completely self-sustaining</strong> without requiring subsequent outside capital.
+                    Our commercial revenue architecture is built for rapid, aggressive self-sufficiency. We charge schools an integrated termly subscription of <strong>&#8358;500 to &#8358;1,000 per student</strong>, collected seamlessly through standard institutional billings (generating &#8358;150,000 to &#8358;300,000 every single term from an average 250-student campus). Because proprietary software operates with near-zero marginal replication cost, <strong>onboarding just 3 secondary schools makes our core cloud infrastructure, server capacity, and frontline field operations permanently self-funding</strong> without requiring subsequent outside capital.
                 </p>
 
                 <p>
-                    In basic education, software alone cannot close contracts; physical execution does. Schools pay after their first successful broadsheet run, requiring our team to physically enter campuses, digitize student registers within 48 hours, and train staff on-site. Once an institution completes its first broadsheet run on our platform, retention is near 100%. We are raising a focused upfront Rollout Deployment Pool of <strong>&#8358;150,000 to &#8358;300,000</strong> to execute this direct cluster rollout:
+                    In basic institutions, software alone cannot close contracts; physical execution does. Institutions pay immediately upon experiencing their first automated terminal broadsheet run. To scale this transition, our technical deployment team physically enters campus clusters, migrates physical paper registers into our secure database within 48 hours, and certifies faculty on-site. Once an institution completes its first broadsheet cycle on our platform, operational switching costs make retention near 100%. We are opening a focused Upfront Deployment Pool of <strong>&#8358;150,000 to &#8358;300,000</strong> to execute this direct cluster rollout:
                 </p>
 
                 <ul class="list-disc pl-5 space-y-1 text-slate-800 text-[12.5px]">
-                    <li><strong>Field Transit &amp; Campus Demos:</strong> In-person presentations with school proprietors and principals.</li>
-                    <li><strong>48-Hour Assisted Onboarding:</strong> Rapid digitizing and verification of physical class registers.</li>
-                    <li><strong>Teacher &amp; Student Induction:</strong> Hands-on staff training and student CBT orientation sessions.</li>
+                    <li><strong>On-Site Campus Penetration:</strong> Direct technical presentations with school proprietors and governing boards.</li>
+                    <li><strong>48-Hour Rapid Data Migration:</strong> Complete digitization and verification of paper class records.</li>
+                    <li><strong>Faculty Certification &amp; CBT Induction:</strong> Hands-on staff training and student digital testing activation.</li>
                 </ul>
 
-                <!-- Dignified Settlement / Wire Details -->
+                <!-- Dignified Settlement Details Card -->
                 <div class="mt-4 p-3.5 bg-slate-50 border border-slate-300 rounded">
                     <div class="flex items-center justify-between mb-2">
-                        <span class="text-[11px] font-bold uppercase tracking-wider text-slate-700">Deployment Support Account Details</span>
+                        <span class="text-[11px] font-bold uppercase tracking-wider text-slate-700">Deployment Capital Settlement Details</span>
                         <button type="button" onclick="navigator.clipboard.writeText('0236642821'); this.innerText='Copied!'; setTimeout(() => this.innerText='Copy No', 2000);" class="text-[11px] bg-slate-200 hover:bg-slate-300 text-slate-800 font-mono px-2 py-0.5 rounded transition cursor-pointer">Copy No</button>
                     </div>
                     <div class="grid grid-cols-2 gap-3 text-xs">
@@ -137,14 +138,14 @@
                             <span class="font-mono font-bold text-sm text-slate-950">0236642821</span>
                         </div>
                         <div>
-                            <span class="text-slate-500 text-[11px] block">Transaction Narration</span>
-                            <span class="font-mono text-slate-700">EXS Support / {{ !empty($name) && $name !== 'Sir/Madam' ? $name : request('name', 'Valued Partner') }}</span>
+                            <span class="text-slate-500 text-[11px] block">Payment Purpose</span>
+                            <span class="font-mono text-slate-700">EXS Deployment / {{ !empty($name) && $name !== 'Sir/Madam' ? $name : request('name', 'Valued Partner') }}</span>
                         </div>
                     </div>
                 </div>
 
-                <p class="text-xs text-slate-600 italic">
-                    Backers receive direct monthly deployment and audit updates, partner recognition on the deployment portal, and the assurance that their support funds a permanent, self-funding commercial system.
+                <p class="text-xs text-slate-700 italic">
+                    Your capital directly mobilizes a frontline technical deployment force that transforms broken institutional workflows into automated, recurring-revenue digital infrastructure. We are building the operational backbone of modern African institutions&mdash;starting on the ground, school by school.
                 </p>
             </div>
 

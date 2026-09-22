@@ -5,8 +5,7 @@
     <title>ExtremeSolutions &mdash; Institutional Partnership Proposal</title>
     <style>
         @page {
-            size: A4 portrait;
-            margin: 15mm 15mm 15mm 15mm; /* Strict print boundary: 210mm x 297mm */
+            margin: 0px;
         }
 
         * {
@@ -23,10 +22,10 @@
         }
 
         body {
+            padding: 38pt 42pt 32pt 42pt;
             color: #1e293b;
             font-size: 8.5pt;
             line-height: 1.36;
-            page-break-inside: avoid;
         }
 
         .page-container {
@@ -155,8 +154,8 @@
                 <img src="{{ $logoBase64 }}" style="height: 24pt; width: auto; vertical-align: middle; margin-right: 6pt;" alt="ExtremeSolutions">
             @endif
             <strong style="font-size: 13.5pt; color: #0f172a; letter-spacing: 0.5pt; vertical-align: middle;">EXTREMESOLUTIONS</strong><br>
-            <span style="font-size: 8pt; color: #047857; text-transform: uppercase; font-weight: bold;">Educational Technology &amp; Systems Deployment</span><br>
-            <span style="font-size: 7.5pt; color: #64748b;">Lagos, Nigeria &bull; extremesolutions.com.ng &bull; sms.extremesolutions.com.ng</span>
+            <span style="font-size: 7.8pt; color: #059669; text-transform: uppercase; font-weight: bold; letter-spacing: 0.5pt;">Enterprise Systems Architecture &amp; Software Engineering</span><br>
+            <span style="font-size: 7.5pt; color: #64748b;">extremesolutions.com.ng &bull; sms.extremesolutions.com.ng</span>
         </td>
         <td style="width: 28%; text-align: right; vertical-align: top;">
             <span style="font-size: 8.5pt; color: #0f172a; font-weight: bold;">{{ $dateStr }}</span><br>
