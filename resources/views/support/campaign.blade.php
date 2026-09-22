@@ -3,6 +3,11 @@
 @section('title', 'I have a message for you from ExtremeSolutions')
 @section('description', 'ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for institutions and businesses. We engineer end-to-end software, spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows designed to replace fragile manual processes with fast, resilient technology.')
 
+@php
+    $safePdfUrl = $pdfUrl ?? $exportPdfUrl ?? route('support.pdf', request()->query());
+    $safeWaShareUrl = $waShareUrl ?? ('https://api.whatsapp.com/send?text=' . urlencode("I have a message for you from ExtremeSolutions:\n\nSubject: Strategic Software Deployment — Commercial Infrastructure Rollout\n\n" . (!empty($name) && $name !== 'Sir/Madam' ? "Prepared for {$name}:\n" : "") . url()->current()));
+@endphp
+
 @section('content')
 <div class="max-w-4xl mx-auto">
 
@@ -28,7 +33,7 @@
                 </button>
 
                 <!-- Download Official PDF Button -->
-                <a href="{{ $pdfUrl }}"
+                <a href="{{ $safePdfUrl }}"
                    id="btn-download-pdf"
                    target="_blank"
                    class="inline-flex items-center px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium rounded-lg text-xs transition border border-slate-700">
@@ -39,7 +44,7 @@
                 </a>
 
                 <!-- WhatsApp Quick Share -->
-                <a href="{{ $waShareUrl }}"
+                <a href="{{ $safeWaShareUrl }}"
                    target="_blank"
                    class="inline-flex items-center px-3.5 py-2 bg-emerald-700/80 hover:bg-emerald-700 text-white font-medium rounded-lg text-xs transition">
                     <svg class="w-3.5 h-3.5 mr-1.5 fill-current" viewBox="0 0 24 24">
@@ -140,9 +145,18 @@
                     </div>
                 </div>
 
-                <p class="text-xs text-slate-700 italic">
-                    Your capital directly mobilizes a frontline technical deployment force that transforms broken institutional workflows into automated, recurring-revenue digital infrastructure. We are building the operational backbone of modern African institutions&mdash;starting on the ground, school by school.
-                </p>
+                <!-- How We Partner With Our Supporters -->
+                <div class="mt-4 pt-3 border-t border-slate-200">
+                    <p class="text-xs font-bold text-slate-900 uppercase tracking-wide mb-1.5">How We Partner With Our Supporters:</p>
+                    <p class="text-xs text-slate-700 leading-relaxed mb-2">
+                        Your contribution directly deploys our on-ground technical team to digitize classrooms and establish recurring commercial revenue. In recognition of your backing, we offer:
+                    </p>
+                    <ul class="list-disc pl-5 space-y-1.5 text-slate-800 text-[12px]">
+                        <li><strong>Institutional Brand Placement:</strong> Your name or company brand featured prominently as a Founding Sponsor across our school portal, report cards, and digital platforms.</li>
+                        <li><strong>Preferred Technical Services:</strong> Direct engineering support and a 25% lifetime discount on any custom software, web platform, or AI development for your personal business or organization.</li>
+                        <li><strong>Network Amplification:</strong> Periodic brand spotlights and mentions across ExtremeSolutions media channels and technical publications as our footprint grows.</li>
+                    </ul>
+                </div>
             </div>
 
             <!-- Sign-off Block (Exact Format) -->

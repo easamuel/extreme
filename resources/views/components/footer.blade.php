@@ -81,7 +81,7 @@
                             <a href="{{ route('partner.index') }}" class="text-xs text-white/70 hover:text-white transition-colors">Partner With Us</a>
                         </li>
                         <li>
-                            <a href="{{ route('support.index') }}" class="text-xs text-white/70 hover:text-white transition-colors">Support &amp; Mission</a>
+                            <a href="{{ route('support.index') }}" class="text-xs text-white/70 hover:text-white transition-colors">Support Our Projects</a>
                         </li>
                         <li>
                             <a href="{{ route('home') }}#featured-projects" class="text-xs text-white/70 hover:text-white transition-colors">Live Platforms</a>

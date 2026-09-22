@@ -44,13 +44,19 @@ class SupportController extends Controller
         $logoBase64 = $this->assetToBase64(public_path('images/es-mark.png'));
         $sigBase64 = $this->assetToBase64(public_path('images/signature.png'));
 
+        $pdfUrl = route('support.pdf', $sanitized['rawParams']);
+        $recipientText = !empty($sanitized['name']) && $sanitized['name'] !== 'Sir/Madam' ? "Prepared for {$sanitized['name']}:\n" : "";
+        $waShareUrl = 'https://api.whatsapp.com/send?text=' . urlencode("I have a message for you from ExtremeSolutions:\n\nSubject: Strategic Software Deployment — Commercial Infrastructure Rollout\n\n" . $recipientText . url()->current());
+
         return view('support.campaign', [
             'name' => $sanitized['name'],
             'referrer' => $sanitized['referrer'],
             'refCode' => $sanitized['refCode'],
             'dateStr' => $sanitized['dateStr'],
             'isPersonalized' => $sanitized['isPersonalized'],
-            'exportPdfUrl' => route('support.pdf', $sanitized['rawParams']),
+            'pdfUrl' => $pdfUrl,
+            'exportPdfUrl' => $pdfUrl,
+            'waShareUrl' => $waShareUrl,
             'logoBase64' => $logoBase64,
             'sigBase64' => $sigBase64,
         ]);

@@ -205,9 +205,18 @@
                     </div>
                 </div>
 
-                <p class="text-xs text-slate-700 italic">
-                    Your capital directly mobilizes a frontline technical deployment force that transforms broken institutional workflows into automated, recurring-revenue digital infrastructure. We are building the operational backbone of modern African institutions&mdash;starting on the ground, school by school.
-                </p>
+                <!-- How We Partner With Our Supporters -->
+                <div class="mt-4 pt-3 border-t border-slate-200">
+                    <p class="text-xs font-bold text-slate-900 uppercase tracking-wide mb-1.5">How We Partner With Our Supporters:</p>
+                    <p class="text-xs text-slate-700 leading-relaxed mb-2">
+                        Your contribution directly deploys our on-ground technical team to digitize classrooms and establish recurring commercial revenue. In recognition of your backing, we offer:
+                    </p>
+                    <ul class="list-disc pl-5 space-y-1.5 text-slate-800 text-[12px]">
+                        <li><strong>Institutional Brand Placement:</strong> Your name or company brand featured prominently as a Founding Sponsor across our school portal, report cards, and digital platforms.</li>
+                        <li><strong>Preferred Technical Services:</strong> Direct engineering support and a 25% lifetime discount on any custom software, web platform, or AI development for your personal business or organization.</li>
+                        <li><strong>Network Amplification:</strong> Periodic brand spotlights and mentions across ExtremeSolutions media channels and technical publications as our footprint grows.</li>
+                    </ul>
+                </div>
             </div>
 
             <!-- Option B Content Container (Invest / Capped Return) -->

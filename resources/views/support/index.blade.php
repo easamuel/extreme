@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Support & Mission | ExtremeSolutions')
+@section('title', 'Support Our Projects | ExtremeSolutions')
 @section('description', 'ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for institutions and businesses. We engineer end-to-end software, spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows designed to replace fragile manual processes with fast, resilient technology.')
 
 @section('content')
@@ -10,11 +10,6 @@
         <div class="brand-glow top-0 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-gradient-to-br from-[#1e3a5f] via-[#00ff88]/15 to-transparent"></div>
 
         <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-            <div class="inline-flex items-center gap-2 rounded-full border border-[#00ff88]/30 bg-[#00ff88]/10 px-4 py-1.5 text-xs font-semibold text-[#00ff88] mb-6">
-                <span class="w-2 h-2 rounded-full bg-[#00ff88] animate-pulse"></span>
-                <span>ENGINEERING STEWARDSHIP &bull; SLA STANDARD</span>
-            </div>
-
             <h1 class="mx-auto max-w-4xl text-3xl sm:text-5xl lg:text-[58px] tracking-tight leading-[1.14]">
                 <span class="font-light text-white/90">Changing Digital Software in Africa</span><br/>
                 <span class="font-bold text-white">By Building Systems That Last</span>
@@ -62,7 +57,7 @@
                     <div class="shrink-0 flex flex-col sm:flex-row lg:flex-col gap-3">
                         <a href="{{ $campaignUrl }}"
                            class="inline-flex items-center justify-center rounded-xl bg-[#00ff88] px-7 py-3.5 text-sm font-bold text-[#0c1f3a] hover:bg-[#00e67a] transition-all shadow-lg">
-                            Read The Support &amp; Backer Letter &rarr;
+                            Support SMS Project &rarr;
                         </a>
                         <span class="text-xs text-white/60 text-center">Unlisted Executive Briefing</span>
                     </div>

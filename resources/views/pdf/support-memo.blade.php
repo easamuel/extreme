@@ -188,9 +188,20 @@
         </tr>
     </table>
 
-    <p style="font-size: 7.5pt; font-style: italic; color: #334155; margin: 0 0 5pt 0; line-height: 1.30;">
-        Your capital directly mobilizes a frontline technical deployment force that transforms broken institutional workflows into automated, recurring-revenue digital infrastructure. We are building the operational backbone of modern African institutions&mdash;starting on the ground, school by school.
-    </p>
+    <!-- Supporter Partnership Terms -->
+    <div style="margin: 3pt 0 4pt 0; padding-top: 3pt; border-top: 0.5pt solid #cbd5e1;">
+        <div style="font-size: 7.5pt; font-weight: bold; color: #0f172a; text-transform: uppercase; letter-spacing: 0.3pt; margin-bottom: 1.5pt;">
+            How We Partner With Our Supporters:
+        </div>
+        <p style="font-size: 7.3pt; color: #334155; margin: 0 0 2pt 0; line-height: 1.25;">
+            Your contribution directly deploys our on-ground technical team to digitize classrooms and establish recurring commercial revenue. In recognition of your backing, we offer:
+        </p>
+        <ul style="margin: 1pt 0 2pt 10pt; padding: 0;">
+            <li style="font-size: 7.1pt; line-height: 1.25; margin-bottom: 1pt;"><strong>Institutional Brand Placement:</strong> Your name or company brand featured prominently as a Founding Sponsor across our school portal, report cards, and digital platforms.</li>
+            <li style="font-size: 7.1pt; line-height: 1.25; margin-bottom: 1pt;"><strong>Preferred Technical Services:</strong> Direct engineering support and a 25% lifetime discount on any custom software, web platform, or AI development for your personal business or organization.</li>
+            <li style="font-size: 7.1pt; line-height: 1.25; margin-bottom: 1pt;"><strong>Network Amplification:</strong> Periodic brand spotlights and mentions across ExtremeSolutions media channels and technical publications as our footprint grows.</li>
+        </ul>
+    </div>
 
     <!-- Sign-off Block (Exact Format) -->
     <table class="signature-table" style="page-break-inside: avoid;">
