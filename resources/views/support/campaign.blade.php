@@ -100,19 +100,15 @@
                 </p>
 
                 <p>
-                    Across the country, hundreds of secondary schools have computer laboratories that sit idle or are restricted to weekly theory notes. When national examinations like JAMB CBT arrive, students struggle not from lack of intelligence, but because they have never interacted with timed examination software. Simultaneously, school administrations spend three exhausting weeks at the end of every term compiling Continuous Assessments and terminal broadsheets manually with calculators—introducing computation errors, delaying vacations, and stalling tuition reconciliation.
+                    Across the country, hundreds of secondary schools have computer laboratories that sit idle while administrations spend three exhausting weeks compiling Continuous Assessments and terminal broadsheets manually with calculators. We built and shipped the operational engine: ExtremeSolutions School OS is live today (<a href="https://sms.extremesolutions.com.ng" target="_blank" class="text-slate-950 font-semibold underline">sms.extremesolutions.com.ng</a>)—completely automating Continuous Assessment scoring, generating 1-click terminal broadsheets, reconciling school fee payments, and embedding routine computer-based testing directly into the school's weekly academic schedule.
                 </p>
 
                 <p>
-                    We built and shipped the solution. ExtremeSolutions School OS is live and fully operational today. The platform completely automates Continuous Assessment scoring, generates 1-click terminal broadsheets, reconciles school fee payments, and integrates routine computer-based testing directly into the school's weekly academic schedule.
+                    Our commercial model is built for immediate self-sufficiency. We charge schools an integrated termly subscription of <strong>&#8358;500 to &#8358;1,000 per student</strong>, built directly into standard school fees (generating &#8358;150,000 to &#8358;300,000 per term for an average 250-student school). Because software infrastructure scales with near-zero marginal cost, <strong>onboarding just 3 secondary schools makes our core infrastructure, cloud servers, and field operations completely self-sustaining</strong> without requiring subsequent outside capital.
                 </p>
 
                 <p>
-                    Our model is built for immediate commercial sustainability. We charge schools a recurring subscription of <strong>&#8358;500 to &#8358;1,000 per student per term</strong>, built directly into standard school fees (generating &#8358;150,000 to &#8358;300,000 per term for an average 250-student school). Because software infrastructure scales with near-zero marginal cost, <strong>onboarding just 3 secondary schools makes our core infrastructure, cloud servers, and field operations completely self-sustaining</strong> without requiring subsequent outside capital.
-                </p>
-
-                <p>
-                    In basic education, software alone cannot close contracts; physical execution does. Schools pay after their first successful broadsheet run, meaning our team must physically enter campuses, digitize paper registers into the system within 48 hours, and train staff on-site. Once an institution completes its first terminal broadsheet on our system, retention is near 100%. We are raising a focused upfront Rollout Deployment Pool of <strong>&#8358;150,000 to &#8358;300,000</strong> to execute this direct cluster rollout:
+                    In basic education, software alone cannot close contracts; physical execution does. Schools pay after their first successful broadsheet run, requiring our team to physically enter campuses, digitize student registers within 48 hours, and train staff on-site. Once an institution completes its first broadsheet run on our platform, retention is near 100%. We are raising a focused upfront Rollout Deployment Pool of <strong>&#8358;150,000 to &#8358;300,000</strong> to execute this direct cluster rollout:
                 </p>
 
                 <ul class="list-disc pl-5 space-y-1 text-slate-800 text-[12.5px]">

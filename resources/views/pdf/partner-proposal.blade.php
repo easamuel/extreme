@@ -6,7 +6,7 @@
     <style>
         @page {
             size: A4 portrait;
-            margin: 14mm 18mm 14mm 18mm;
+            margin: 10mm 15mm 8mm 15mm;
         }
 
         * {
@@ -15,22 +15,31 @@
             print-color-adjust: exact;
         }
 
-        body {
-            font-family: 'DejaVu Sans', sans-serif;
-            color: #1e293b;
-            font-size: 8.5pt;
-            line-height: 1.42;
+        html, body {
             margin: 0;
             padding: 0;
             background: #ffffff;
         }
 
+        body {
+            font-family: 'DejaVu Sans', sans-serif;
+            color: #1e293b;
+            font-size: 8.2pt;
+            line-height: 1.35;
+            page-break-inside: avoid;
+        }
+
+        .page-wrap {
+            width: 100%;
+            page-break-inside: avoid;
+        }
+
         table.header-table {
             width: 100%;
             border-collapse: collapse;
-            border-bottom: 1.5pt solid #0f172a;
-            padding-bottom: 7pt;
-            margin-bottom: 10pt;
+            border-bottom: 1.2pt solid #0f172a;
+            padding-bottom: 5pt;
+            margin-bottom: 7pt;
         }
 
         table.header-table td {
@@ -38,65 +47,65 @@
         }
 
         .logo-img {
-            height: 26pt;
+            height: 22pt;
             width: auto;
         }
 
         .header-title {
-            font-size: 13pt;
+            font-size: 12.5pt;
             font-weight: bold;
             color: #0f172a;
-            letter-spacing: 0.5pt;
+            letter-spacing: 0.4pt;
         }
 
         .header-sub {
-            font-size: 7.5pt;
+            font-size: 7.2pt;
             color: #475569;
-            margin-top: 1.5pt;
+            margin-top: 1pt;
         }
 
         .header-date {
             text-align: right;
-            font-size: 8.5pt;
+            font-size: 8pt;
             color: #0f172a;
             font-weight: bold;
         }
 
         .salutation {
-            font-size: 9.5pt;
+            font-size: 9pt;
             font-weight: bold;
-            margin-bottom: 4pt;
+            margin-bottom: 2pt;
             color: #0f172a;
         }
 
         .subject-line {
-            font-size: 9pt;
+            font-size: 8.6pt;
             font-weight: bold;
             color: #0f172a;
             border-bottom: 0.5pt solid #cbd5e1;
-            padding-bottom: 3pt;
-            margin-bottom: 8pt;
+            padding-bottom: 2pt;
+            margin-bottom: 6pt;
         }
 
         p {
-            margin: 0 0 5.5pt 0;
+            margin: 0 0 4.5pt 0;
             text-align: justify;
         }
 
         .section-heading {
-            font-size: 8.5pt;
+            font-size: 8.2pt;
             font-weight: bold;
             color: #0f172a;
-            margin: 7pt 0 4pt 0;
+            margin: 5pt 0 3pt 0;
             border-bottom: 0.5pt solid #e2e8f0;
-            padding-bottom: 1.5pt;
+            padding-bottom: 1pt;
         }
 
         table.comparison-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 5pt 0 7pt 0;
-            font-size: 8pt;
+            margin: 4pt 0 5pt 0;
+            font-size: 7.6pt;
         }
 
         table.comparison-table th {
@@ -104,56 +113,56 @@
             color: #0f172a;
             font-weight: bold;
             text-align: left;
-            padding: 4pt 6pt;
+            padding: 3pt 5pt;
             border: 0.5pt solid #cbd5e1;
         }
 
         table.comparison-table td {
-            padding: 4pt 6pt;
+            padding: 3pt 5pt;
             border: 0.5pt solid #cbd5e1;
             vertical-align: top;
         }
 
         ul {
-            margin: 2pt 0 5.5pt 13pt;
+            margin: 1.5pt 0 4.5pt 12pt;
             padding: 0;
         }
 
         li {
-            margin-bottom: 2pt;
-            font-size: 8.5pt;
+            margin-bottom: 1.5pt;
+            font-size: 8pt;
         }
 
         .signature-block {
-            margin-top: 8pt;
-            padding-top: 4pt;
+            margin-top: 6pt;
+            padding-top: 3pt;
             border-top: 0.5pt solid #e2e8f0;
             page-break-inside: avoid;
         }
 
         .sig-img {
-            height: 24pt;
+            height: 22pt;
             width: auto;
-            margin: 2pt 0;
+            margin: 1.5pt 0 1pt 0;
         }
 
         @media screen {
             .print-bar {
                 background: #0f172a;
                 color: #ffffff;
-                padding: 10px 16px;
+                padding: 8px 14px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 font-family: sans-serif;
-                font-size: 13px;
-                margin-bottom: 16px;
+                font-size: 12px;
+                margin-bottom: 12px;
             }
             .print-btn {
                 background: #10b981;
                 color: #ffffff;
                 font-weight: bold;
-                padding: 6px 14px;
+                padding: 5px 12px;
                 border-radius: 4px;
                 border: none;
                 cursor: pointer;
@@ -165,6 +174,7 @@
     </style>
 </head>
 <body>
+<div class="page-wrap">
 
 @if(!empty($isPrintFallback))
 <div class="print-bar">
@@ -278,15 +288,16 @@
 
 <!-- Signature Block (Exact Format) -->
 <div class="signature-block">
-    <div style="font-size: 8.5pt; color: #334155; margin-bottom: 2pt;">Yours sincerely,</div>
+    <div style="font-size: 8pt; color: #334155; margin-bottom: 1pt;">Yours sincerely,</div>
     @if(!empty($sigBase64))
         <img src="{{ $sigBase64 }}" class="sig-img" alt="Samuel Ekunyan Signature">
     @endif
-    <div style="font-weight: bold; font-size: 9.5pt; color: #0f172a;">Samuel Ekunyan</div>
-    <div style="font-size: 8.5pt; color: #334155;">Lead Developer &amp; Founder, ExtremeSolutions</div>
-    <div style="font-size: 8pt; color: #475569;">samuel@ekunyansamuel.dev &bull; sms.extremesolutions.com.ng</div>
-    <div style="font-size: 8.5pt; color: #0f172a; font-weight: bold; margin-top: 1.5pt;">WhatsApp: +2348036375292</div>
+    <div style="font-weight: bold; font-size: 9pt; color: #0f172a;">Samuel Ekunyan</div>
+    <div style="font-size: 8pt; color: #334155;">Lead Developer &amp; Founder, ExtremeSolutions</div>
+    <div style="font-size: 7.5pt; color: #475569;">samuel@ekunyansamuel.dev &bull; sms.extremesolutions.com.ng</div>
+    <div style="font-size: 8pt; color: #0f172a; font-weight: bold; margin-top: 1pt;">WhatsApp: +2348036375292</div>
 </div>
 
+</div>
 </body>
 </html>

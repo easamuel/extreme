@@ -6,7 +6,7 @@
     <style>
         @page {
             size: A4 portrait;
-            margin: 18mm 20mm 18mm 20mm;
+            margin: 10mm 15mm 8mm 15mm;
         }
 
         * {
@@ -24,16 +24,22 @@
         body {
             font-family: 'DejaVu Sans', sans-serif;
             color: #1e293b;
-            font-size: 9.5pt;
-            line-height: 1.5;
+            font-size: 8.8pt;
+            line-height: 1.38;
+            page-break-inside: avoid;
+        }
+
+        .page-wrap {
+            width: 100%;
+            page-break-inside: avoid;
         }
 
         table.header-table {
             width: 100%;
             border-collapse: collapse;
-            border-bottom: 1.5pt solid #0f172a;
-            padding-bottom: 7pt;
-            margin-bottom: 12pt;
+            border-bottom: 1.2pt solid #0f172a;
+            padding-bottom: 5pt;
+            margin-bottom: 7pt;
         }
 
         table.header-table td {
@@ -41,48 +47,48 @@
         }
 
         .logo-img {
-            height: 26pt;
+            height: 22pt;
             width: auto;
         }
 
         .header-title {
-            font-size: 13pt;
+            font-size: 12.5pt;
             font-weight: bold;
             color: #0f172a;
-            letter-spacing: 0.5pt;
+            letter-spacing: 0.4pt;
         }
 
         .header-sub {
-            font-size: 7.5pt;
+            font-size: 7.2pt;
             color: #475569;
-            margin-top: 1.5pt;
+            margin-top: 1pt;
         }
 
         .header-date {
             text-align: right;
-            font-size: 8.5pt;
+            font-size: 8pt;
             color: #0f172a;
             font-weight: bold;
         }
 
         .salutation {
-            font-size: 10pt;
+            font-size: 9.2pt;
             font-weight: bold;
             color: #0f172a;
-            margin-bottom: 5pt;
+            margin-bottom: 2pt;
         }
 
         .subject-line {
-            font-size: 9.5pt;
+            font-size: 8.8pt;
             font-weight: bold;
             color: #0f172a;
             border-bottom: 0.5pt solid #cbd5e1;
-            padding-bottom: 3pt;
-            margin-bottom: 9pt;
+            padding-bottom: 2pt;
+            margin-bottom: 6pt;
         }
 
         p {
-            margin: 0 0 7.5pt 0;
+            margin: 0 0 5pt 0;
             text-align: justify;
         }
 
@@ -91,30 +97,31 @@
             border-collapse: collapse;
             border: 0.75pt solid #cbd5e1;
             background: #f8fafc;
-            margin: 6pt 0;
-            font-size: 8.5pt;
+            margin: 4pt 0;
+            font-size: 8pt;
         }
 
         .table-bank td {
-            padding: 4.5pt 8pt;
+            padding: 3.5pt 7pt;
             vertical-align: top;
         }
 
         .signature-block {
-            margin-top: 9pt;
-            padding-top: 5pt;
+            margin-top: 6pt;
+            padding-top: 4pt;
             border-top: 0.5pt solid #e2e8f0;
             page-break-inside: avoid;
         }
 
         .sig-img {
-            height: 26pt;
+            height: 22pt;
             width: auto;
-            margin: 3pt 0 2pt 0;
+            margin: 2pt 0 1pt 0;
         }
     </style>
 </head>
 <body>
+<div class="page-wrap">
 
 <!-- Letterhead -->
 <table class="header-table">
@@ -123,7 +130,7 @@
             <table style="border-collapse: collapse;">
                 <tr>
                     @if(!empty($logoBase64))
-                        <td style="padding-right: 9pt; vertical-align: middle;">
+                        <td style="padding-right: 8pt; vertical-align: middle;">
                             <img src="{{ $logoBase64 }}" class="logo-img" alt="ExtremeSolutions">
                         </td>
                     @endif
@@ -178,22 +185,23 @@
     </tr>
 </table>
 
-<p style="font-size: 8pt; font-style: italic; color: #475569; margin: 3pt 0 6pt 0;">
+<p style="font-size: 7.2pt; font-style: italic; color: #475569; margin: 2pt 0 4pt 0;">
     Backers receive a formal signed term sheet, direct monthly audit reports, and priority disbursement from onboarded school revenues.
 </p>
 
 <!-- Sign-off Block (Exact Format) -->
 <div class="signature-block">
-    <div style="font-size: 8.5pt; color: #334155; margin-bottom: 2pt;">Yours sincerely,</div>
+    <div style="font-size: 8pt; color: #334155; margin-bottom: 1pt;">Yours sincerely,</div>
     @if(!empty($sigBase64))
         <img src="{{ $sigBase64 }}" class="sig-img" alt="Samuel Ekunyan Signature">
     @endif
-    <div style="font-weight: bold; font-size: 9.5pt; color: #0f172a;">Samuel Ekunyan</div>
-    <div style="font-size: 8.5pt; color: #334155;">Lead Developer &amp; Founder, ExtremeSolutions</div>
-    <div style="font-size: 8pt; color: #475569;">samuel@ekunyansamuel.dev &bull; sms.extremesolutions.com.ng</div>
-    <div style="font-size: 8.5pt; color: #0f172a; font-weight: bold; margin-top: 1.5pt;">WhatsApp: +2348036375292</div>
+    <div style="font-weight: bold; font-size: 9pt; color: #0f172a;">Samuel Ekunyan</div>
+    <div style="font-size: 8pt; color: #334155;">Lead Developer &amp; Founder, ExtremeSolutions</div>
+    <div style="font-size: 7.5pt; color: #475569;">samuel@ekunyansamuel.dev &bull; sms.extremesolutions.com.ng</div>
+    <div style="font-size: 8pt; color: #0f172a; font-weight: bold; margin-top: 1pt;">WhatsApp: +2348036375292</div>
 </div>
 
+</div>
 </body>
 </html>
 
