@@ -158,7 +158,7 @@
             <!-- Option A Content Container -->
             <div id="container-option-a" class="space-y-3.5 text-slate-800 text-[13px]">
                 <p>
-                    ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for African institutions and businesses. We engineer end-to-end software&mdash;spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows&mdash;designed to replace fragile manual processes with fast, resilient technology. We are not an NGO, a charity, or a consultancy selling billable hours; we build, deploy, and operate proprietary digital machinery that systematically eliminates administrative guesswork and manual friction.
+                    ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for African institutions and businesses. We engineer end-to-end software&mdash;spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows&mdash;designed to replace fragile manual processes with fast, resilient technology.
                 </p>
 
                 <p>
@@ -170,7 +170,7 @@
                 </p>
 
                 <p>
-                    In basic institutions, software alone cannot close contracts; physical execution does. Institutions pay immediately upon experiencing their first automated terminal broadsheet run. To scale this transition, our technical deployment team physically enters campus clusters, migrates physical paper registers into our secure database within 48 hours, and certifies faculty on-site. Once an institution completes its first broadsheet cycle on our platform, operational switching costs make retention near 100%. We are opening a focused Upfront Deployment Pool of <strong>&#8358;150,000 to &#8358;300,000</strong> to execute this direct cluster rollout:
+                    For schools, seeing is believing: institutions subscribe the moment their first terminal broadsheet is produced without errors. Our deployment team handles the entire transition by digitizing paper registers in 48 hours and training teachers on campus. Once onboarded, schools never return to manual paperwork. We are raising a <strong>&#8358;150,000 to &#8358;300,000</strong> rollout fund to power this direct on-site setup:
                 </p>
 
                 <ul class="list-disc pl-5 space-y-1 text-slate-800 text-[12.5px]">
@@ -213,7 +213,7 @@
             <!-- Option B Content Container (Invest / Capped Return) -->
             <div id="container-option-b" class="space-y-3.5 text-slate-800 text-[13px] hidden">
                 <p>
-                    ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for African institutions and businesses. We engineer end-to-end software&mdash;spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows&mdash;designed to replace fragile manual processes with fast, resilient technology. We are not an NGO, a charity, or a consultancy selling billable hours; we build, deploy, and operate proprietary digital machinery that systematically eliminates administrative guesswork and manual friction.
+                    ExtremeSolutions is a software engineering company building modern digital infrastructure, custom enterprise platforms, and applied AI systems for African institutions and businesses. We engineer end-to-end software&mdash;spanning high-concurrency commercial platforms, operational systems, and intelligent digital workflows&mdash;designed to replace fragile manual processes with fast, resilient technology.
                 </p>
 
                 <p>
